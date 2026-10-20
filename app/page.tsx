@@ -27,6 +27,12 @@ function HomeContent() {
   const [selectedMonth, setSelectedMonth] = useState<string>('');
   const [viewMode, setViewMode] = useState<'list' | 'calendar'>('list');
   const [showFilters, setShowFilters] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  
+  // Mark component as mounted (for client-only rendering)
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   
   // Load data
   useEffect(() => {
@@ -579,7 +585,7 @@ function HomeContent() {
         {/* Stats */}
         <div className="mt-8 text-center text-sm text-gray-500">
           <p>{filteredEvents.length} 件のイベント</p>
-          {dataset.generatedAt && (
+          {mounted && dataset.generatedAt && (
             <p className="mt-1">
               データ更新: {format(parseISO(dataset.generatedAt), 'yyyy年M月d日 HH:mm', { locale: ja })}
             </p>
