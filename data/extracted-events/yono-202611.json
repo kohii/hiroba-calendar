@@ -1,0 +1,451 @@
+[
+  {
+    "id": "yono-2026-11-01-piyopiyo",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-202611",
+    "date": "2026-11-01",
+    "startTime": "09:00",
+    "endTime": "16:00",
+    "title": "ぴよぴよ広場",
+    "targetAge": "0～2歳",
+    "reservationRequired": false,
+    "tags": [
+      "自由遊び"
+    ]
+  },
+  {
+    "id": "yono-2026-11-02-piyopiyo",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-202611",
+    "date": "2026-11-02",
+    "startTime": "09:00",
+    "endTime": "16:00",
+    "title": "ぴよぴよ広場",
+    "targetAge": "0～2歳",
+    "reservationRequired": false,
+    "tags": [
+      "自由遊び"
+    ]
+  },
+  {
+    "id": "yono-2026-11-04-library",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-202611",
+    "date": "2026-11-04",
+    "startTime": "10:30",
+    "title": "与野図書館 赤ちゃんおはなし会",
+    "description": "与野図書館の方が来て、絵本の読み聞かせとわらべ歌を行います",
+    "targetAge": "0～2歳",
+    "reservationRequired": false,
+    "tags": [
+      "おはなし会",
+      "図書館"
+    ]
+  },
+  {
+    "id": "yono-2026-11-04-piyopiyo",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-202611",
+    "date": "2026-11-04",
+    "startTime": "09:00",
+    "endTime": "16:00",
+    "title": "ぴよぴよ広場",
+    "targetAge": "0～2歳",
+    "reservationRequired": false,
+    "tags": [
+      "自由遊び"
+    ]
+  },
+  {
+    "id": "yono-2026-11-05-piyopiyo",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-202611",
+    "date": "2026-11-05",
+    "startTime": "09:00",
+    "endTime": "16:00",
+    "title": "ぴよぴよ広場",
+    "targetAge": "0～2歳",
+    "reservationRequired": false,
+    "tags": [
+      "自由遊び"
+    ]
+  },
+  {
+    "id": "yono-2026-11-06-piyopiyo",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-202611",
+    "date": "2026-11-06",
+    "startTime": "09:00",
+    "endTime": "16:00",
+    "title": "ぴよぴよ広場",
+    "targetAge": "0～2歳",
+    "reservationRequired": false,
+    "tags": [
+      "自由遊び"
+    ]
+  },
+  {
+    "id": "yono-2026-11-07-piyopiyo",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-202611",
+    "date": "2026-11-07",
+    "startTime": "09:00",
+    "endTime": "16:00",
+    "title": "ぴよぴよ広場",
+    "targetAge": "0～2歳",
+    "reservationRequired": false,
+    "tags": [
+      "自由遊び"
+    ]
+  },
+  {
+    "id": "yono-2026-11-08-piyopiyo",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-202611",
+    "date": "2026-11-08",
+    "startTime": "09:00",
+    "endTime": "16:00",
+    "title": "ぴよぴよ広場",
+    "targetAge": "0～2歳",
+    "reservationRequired": false,
+    "tags": [
+      "自由遊び"
+    ]
+  },
+  {
+    "id": "yono-2026-11-09-piyopiyo",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-202611",
+    "date": "2026-11-09",
+    "startTime": "09:00",
+    "endTime": "16:00",
+    "title": "ぴよぴよ広場",
+    "targetAge": "0～2歳",
+    "reservationRequired": false,
+    "tags": [
+      "自由遊び"
+    ]
+  },
+  {
+    "id": "yono-2026-11-11-floor-theater",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-202611",
+    "date": "2026-11-11",
+    "startTime": "13:30",
+    "title": "フロアシアター",
+    "description": "大きな布の上でストーリーを展開していくフロアシアター。自由な身体表現や親子の触れ合いを楽しみます。歩ける子対象",
+    "targetAge": "歩ける子",
+    "reservationRequired": true,
+    "tags": [
+      "予約制",
+      "フロアシアター"
+    ]
+  },
+  {
+    "id": "yono-2026-11-12-piyopiyo",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-202611",
+    "date": "2026-11-12",
+    "startTime": "09:00",
+    "endTime": "16:00",
+    "title": "ぴよぴよ広場",
+    "targetAge": "0～2歳",
+    "reservationRequired": false,
+    "tags": [
+      "自由遊び"
+    ]
+  },
+  {
+    "id": "yono-2026-11-13-piyopiyo",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-202611",
+    "date": "2026-11-13",
+    "startTime": "09:00",
+    "endTime": "16:00",
+    "title": "ぴよぴよ広場",
+    "targetAge": "0～2歳",
+    "reservationRequired": false,
+    "tags": [
+      "自由遊び"
+    ]
+  },
+  {
+    "id": "yono-2026-11-14-piyopiyo",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-202611",
+    "date": "2026-11-14",
+    "startTime": "09:00",
+    "endTime": "16:00",
+    "title": "ぴよぴよ広場",
+    "targetAge": "0～2歳",
+    "reservationRequired": false,
+    "tags": [
+      "自由遊び"
+    ]
+  },
+  {
+    "id": "yono-2026-11-15-papa-sunday",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-202611",
+    "date": "2026-11-15",
+    "startTime": "10:30",
+    "title": "パパサンデー 離乳食講座",
+    "description": "中央区保健センター栄養士による講座。初期～幼児食についてお話します",
+    "targetAge": "0～2歳",
+    "reservationRequired": true,
+    "tags": [
+      "予約制",
+      "講座",
+      "離乳食"
+    ]
+  },
+  {
+    "id": "yono-2026-11-16-piyopiyo",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-202611",
+    "date": "2026-11-16",
+    "startTime": "09:00",
+    "endTime": "16:00",
+    "title": "ぴよぴよ広場",
+    "targetAge": "0～2歳",
+    "reservationRequired": false,
+    "tags": [
+      "自由遊び"
+    ]
+  },
+  {
+    "id": "yono-2026-11-17-piyopiyo",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-202611",
+    "date": "2026-11-17",
+    "startTime": "09:00",
+    "endTime": "16:00",
+    "title": "ぴよぴよ広場",
+    "targetAge": "0～2歳",
+    "reservationRequired": false,
+    "tags": [
+      "自由遊び"
+    ]
+  },
+  {
+    "id": "yono-2026-11-18-library",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-202611",
+    "date": "2026-11-18",
+    "startTime": "10:30",
+    "title": "与野図書館 赤ちゃんおはなし会",
+    "description": "与野図書館の方が来て、絵本の読み聞かせとわらべ歌を行います",
+    "targetAge": "0～2歳",
+    "reservationRequired": false,
+    "tags": [
+      "おはなし会",
+      "図書館"
+    ]
+  },
+  {
+    "id": "yono-2026-11-18-piyopiyo",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-202611",
+    "date": "2026-11-18",
+    "startTime": "09:00",
+    "endTime": "16:00",
+    "title": "ぴよぴよ広場",
+    "targetAge": "0～2歳",
+    "reservationRequired": false,
+    "tags": [
+      "自由遊び"
+    ]
+  },
+  {
+    "id": "yono-2026-11-19-birthday",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-202611",
+    "date": "2026-11-19",
+    "startTime": "10:30",
+    "title": "お誕生会",
+    "description": "お誕生月のお友達に手作りのカードと冠をプレゼントしてお祝いします。フォトコーナーもご用意します",
+    "targetAge": "0～2歳",
+    "reservationRequired": true,
+    "tags": [
+      "予約制",
+      "お誕生会"
+    ]
+  },
+  {
+    "id": "yono-2026-11-19-piyopiyo",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-202611",
+    "date": "2026-11-19",
+    "startTime": "09:00",
+    "endTime": "16:00",
+    "title": "ぴよぴよ広場",
+    "targetAge": "0～2歳",
+    "reservationRequired": false,
+    "tags": [
+      "自由遊び"
+    ]
+  },
+  {
+    "id": "yono-2026-11-20-measurement",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-202611",
+    "date": "2026-11-20",
+    "startTime": "09:15",
+    "endTime": "15:30",
+    "title": "のびのび身体測定",
+    "description": "ねんねのお友達はタオルをご持参下さい。初回に測定カードをお渡しします",
+    "targetAge": "0～2歳",
+    "reservationRequired": false,
+    "tags": [
+      "身体測定"
+    ]
+  },
+  {
+    "id": "yono-2026-11-21-futagotime",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-202611",
+    "date": "2026-11-21",
+    "startTime": "10:00",
+    "endTime": "11:30",
+    "title": "ふたごタイム",
+    "description": "ふたご限定（０～３歳未満）",
+    "targetAge": "0～2歳",
+    "reservationRequired": true,
+    "tags": [
+      "予約制",
+      "ふたご"
+    ]
+  },
+  {
+    "id": "yono-2026-11-21-measurement",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-202611",
+    "date": "2026-11-21",
+    "startTime": "09:15",
+    "endTime": "15:30",
+    "title": "のびのび身体測定",
+    "description": "ねんねのお友達はタオルをご持参下さい。初回に測定カードをお渡しします",
+    "targetAge": "0～2歳",
+    "reservationRequired": false,
+    "tags": [
+      "身体測定"
+    ]
+  },
+  {
+    "id": "yono-2026-11-22-measurement",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-202611",
+    "date": "2026-11-22",
+    "startTime": "09:15",
+    "endTime": "15:30",
+    "title": "のびのび身体測定",
+    "description": "ねんねのお友達はタオルをご持参下さい。初回に測定カードをお渡しします",
+    "targetAge": "0～2歳",
+    "reservationRequired": false,
+    "tags": [
+      "身体測定"
+    ]
+  },
+  {
+    "id": "yono-2026-11-25-measurement",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-202611",
+    "date": "2026-11-25",
+    "startTime": "09:15",
+    "endTime": "15:30",
+    "title": "のびのび身体測定",
+    "description": "ねんねのお友達はタオルをご持参下さい。初回に測定カードをお渡しします",
+    "targetAge": "0～2歳",
+    "reservationRequired": false,
+    "tags": [
+      "身体測定"
+    ]
+  },
+  {
+    "id": "yono-2026-11-25-futagonokai",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-202611",
+    "date": "2026-11-25",
+    "startTime": "10:30",
+    "endTime": "11:30",
+    "title": "保健センター合同企画 ふたごの会",
+    "description": "ふたご以上を妊娠している方、ふたご以上のお子さんを育てている方対象",
+    "targetAge": "0～2歳",
+    "reservationRequired": true,
+    "tags": [
+      "予約制",
+      "ふたご",
+      "保健センター"
+    ]
+  },
+  {
+    "id": "yono-2026-11-26-piyopiyo",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-202611",
+    "date": "2026-11-26",
+    "startTime": "09:00",
+    "endTime": "16:00",
+    "title": "ぴよぴよ広場",
+    "targetAge": "0～2歳",
+    "reservationRequired": false,
+    "tags": [
+      "自由遊び"
+    ]
+  },
+  {
+    "id": "yono-2026-11-27-piyopiyo",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-202611",
+    "date": "2026-11-27",
+    "startTime": "09:00",
+    "endTime": "16:00",
+    "title": "ぴよぴよ広場",
+    "targetAge": "0～2歳",
+    "reservationRequired": false,
+    "tags": [
+      "自由遊び"
+    ]
+  },
+  {
+    "id": "yono-2026-11-28-piyopiyo",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-202611",
+    "date": "2026-11-28",
+    "startTime": "09:00",
+    "endTime": "16:00",
+    "title": "ぴよぴよ広場",
+    "targetAge": "0～2歳",
+    "reservationRequired": false,
+    "tags": [
+      "自由遊び"
+    ]
+  },
+  {
+    "id": "yono-2026-11-29-piyopiyo",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-202611",
+    "date": "2026-11-29",
+    "startTime": "09:00",
+    "endTime": "16:00",
+    "title": "ぴよぴよ広場",
+    "targetAge": "0～2歳",
+    "reservationRequired": false,
+    "tags": [
+      "自由遊び"
+    ]
+  },
+  {
+    "id": "yono-2026-11-30-piyopiyo",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-202611",
+    "date": "2026-11-30",
+    "startTime": "09:00",
+    "endTime": "16:00",
+    "title": "ぴよぴよ広場",
+    "targetAge": "0～2歳",
+    "reservationRequired": false,
+    "tags": [
+      "自由遊び"
+    ]
+  }
+]

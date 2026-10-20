@@ -99,7 +99,7 @@
       "pdfUrl": "https://seisinkai.ed.jp/wp-content/uploads/2026/09/令和8年度１０月のカレンダー.pdf",
       "fetchedAt": "2026-10-20T06:00:00Z",
       "sha256": "placeholder",
-      "extractedAt": "2026-10-20T06:26:49.411Z"
+      "extractedAt": "2026-10-20T09:13:05.648Z"
     },
     {
       "id": "minuma-2026-10",
@@ -108,7 +108,7 @@
       "pdfUrl": "https://www.sainoko.net/minuma/pdf/202610minuma.pdf",
       "fetchedAt": "2026-10-20T06:00:00Z",
       "sha256": "placeholder",
-      "extractedAt": "2026-10-20T06:26:56.851Z"
+      "extractedAt": "2026-10-20T09:13:05.648Z"
     },
     {
       "id": "urawa-2026-10",
@@ -117,7 +117,79 @@
       "pdfUrl": "https://www.urawanyuyouji.com/admin/wp-content/uploads/2026/09/202610_urawa.pdf",
       "fetchedAt": "2026-10-20T06:00:00Z",
       "sha256": "placeholder",
-      "extractedAt": "2026-10-20T06:26:56.862Z"
+      "extractedAt": "2026-10-20T09:13:05.649Z"
+    },
+    {
+      "id": "iwatsuki-202610",
+      "centerId": "iwatsuki",
+      "month": "202610",
+      "pdfUrl": "https://kawai-daynursery.jp/shiencenter",
+      "fetchedAt": "2026-10-20T09:13:05.647Z",
+      "sha256": "",
+      "extractedAt": "2026-10-20T09:13:05.648Z"
+    },
+    {
+      "id": "iwatsuki-202611",
+      "centerId": "iwatsuki",
+      "month": "202611",
+      "pdfUrl": "https://kawai-daynursery.jp/shiencenter",
+      "fetchedAt": "2026-10-20T09:13:05.648Z",
+      "sha256": "",
+      "extractedAt": "2026-10-20T09:13:05.648Z"
+    },
+    {
+      "id": "minami-202610",
+      "centerId": "minami",
+      "month": "202610",
+      "pdfUrl": "https://www.urawanyuyouji.com/minami/",
+      "fetchedAt": "2026-10-20T09:13:05.648Z",
+      "sha256": "",
+      "extractedAt": "2026-10-20T09:13:05.648Z"
+    },
+    {
+      "id": "minami-202611",
+      "centerId": "minami",
+      "month": "202611",
+      "pdfUrl": "https://www.urawanyuyouji.com/minami/",
+      "fetchedAt": "2026-10-20T09:13:05.648Z",
+      "sha256": "",
+      "extractedAt": "2026-10-20T09:13:05.648Z"
+    },
+    {
+      "id": "omiya-202610",
+      "centerId": "omiya",
+      "month": "202610",
+      "pdfUrl": "https://www.wakaba-asunaro.jp/omiya",
+      "fetchedAt": "2026-10-20T09:13:05.648Z",
+      "sha256": "",
+      "extractedAt": "2026-10-20T09:13:05.648Z"
+    },
+    {
+      "id": "omiya-202611",
+      "centerId": "omiya",
+      "month": "202611",
+      "pdfUrl": "https://www.wakaba-asunaro.jp/omiya",
+      "fetchedAt": "2026-10-20T09:13:05.648Z",
+      "sha256": "",
+      "extractedAt": "2026-10-20T09:13:05.648Z"
+    },
+    {
+      "id": "yono-202610",
+      "centerId": "yono",
+      "month": "202610",
+      "pdfUrl": "https://www.himawarikkoland.com/yono",
+      "fetchedAt": "2026-10-20T09:13:05.649Z",
+      "sha256": "",
+      "extractedAt": "2026-10-20T09:13:05.649Z"
+    },
+    {
+      "id": "yono-202611",
+      "centerId": "yono",
+      "month": "202611",
+      "pdfUrl": "https://www.himawarikkoland.com/yono",
+      "fetchedAt": "2026-10-20T09:13:05.649Z",
+      "sha256": "",
+      "extractedAt": "2026-10-20T09:13:05.649Z"
     }
   ],
   "events": [
@@ -136,6 +208,36 @@
       ]
     },
     {
+      "id": "yono-2026-10-01-piyopiyo",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202610",
+      "date": "2026-10-01",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "title": "ぴよぴよ広場",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "iwatsuki-2026-10-01-rinyushoku",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-202610",
+      "date": "2026-10-01",
+      "startTime": "10:00",
+      "title": "離乳食・幼児食講座",
+      "description": "保健センター栄養士さんによる講座です。食品サンプルもご覧になれます。後半は質問もできます",
+      "targetAge": "0～2歳",
+      "reservationRequired": true,
+      "tags": [
+        "予約制",
+        "講座",
+        "離乳食"
+      ]
+    },
+    {
       "id": "nishi-2026-10-01-momo-pm",
       "centerId": "nishi",
       "sourceDocumentId": "nishi-2026-10",
@@ -148,6 +250,18 @@
       "reservationRequired": false,
       "tags": [
         "月齢限定"
+      ]
+    },
+    {
+      "id": "omiya-2026-10-01-wakuwaku",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202610",
+      "date": "2026-10-01",
+      "title": "わくわくひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
       ]
     },
     {
@@ -183,6 +297,102 @@
       ]
     },
     {
+      "id": "omiya-2026-10-02-wakuwaku",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202610",
+      "date": "2026-10-02",
+      "title": "わくわくひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "yono-2026-10-02-piyopiyo",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202610",
+      "date": "2026-10-02",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "title": "ぴよぴよ広場",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "omiya-2026-10-03-wakuwaku",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202610",
+      "date": "2026-10-03",
+      "title": "わくわくひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "yono-2026-10-03-piyopiyo",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202610",
+      "date": "2026-10-03",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "title": "ぴよぴよ広場",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "yono-2026-10-04-piyopiyo",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202610",
+      "date": "2026-10-04",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "title": "ぴよぴよ広場",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "omiya-2026-10-04-disaster-lecture",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202610",
+      "date": "2026-10-04",
+      "startTime": "10:00",
+      "title": "講座「災害が来る前に」",
+      "description": "こどものために、自分のためにできる事。講師：埼玉県助産師会",
+      "targetAge": "3歳未満",
+      "reservationRequired": true,
+      "tags": [
+        "講座",
+        "予約制"
+      ]
+    },
+    {
+      "id": "omiya-2026-10-04-wakuwaku-pm",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202610",
+      "date": "2026-10-04",
+      "startTime": "13:00",
+      "endTime": "16:00",
+      "title": "わくわくひろば",
+      "description": "午後のひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
       "id": "nishi-2026-10-05-shintai",
       "centerId": "nishi",
       "sourceDocumentId": "nishi-2026-10",
@@ -195,6 +405,35 @@
       "reservationRequired": false,
       "tags": [
         "身体測定"
+      ]
+    },
+    {
+      "id": "yono-2026-10-05-piyopiyo",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202610",
+      "date": "2026-10-05",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "title": "ぴよぴよ広場",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "minami-2026-10-05-hajime",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-202610",
+      "date": "2026-10-05",
+      "startTime": "10:00",
+      "endTime": "11:00",
+      "title": "はじめのいっぽ",
+      "description": "センターに遊びに行ってみたいけど不安だなと感じている方、いっぽ踏み出してみませんか？初めての方同士のおしゃべりやふれあい遊びなどを楽しみましょう。広場のご利用が初めての方対象",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "初回向け"
       ]
     },
     {
@@ -214,6 +453,37 @@
       ]
     },
     {
+      "id": "minami-2026-10-06-0age-hiroba",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-202610",
+      "date": "2026-10-06",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "title": "0歳さんの広場",
+      "description": "午前0歳専用",
+      "targetAge": "0歳",
+      "reservationRequired": false,
+      "tags": [
+        "年齢別"
+      ]
+    },
+    {
+      "id": "minami-2026-10-06-nursing-consult",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-202610",
+      "date": "2026-10-06",
+      "startTime": "09:00",
+      "endTime": "11:00",
+      "title": "看護師による育児相談",
+      "description": "経験豊かな保育園看護師による育児相談を行います。0歳さんの広場の時間内に相談室にて行います（1組30分程度）",
+      "targetAge": "0歳",
+      "reservationRequired": true,
+      "tags": [
+        "予約制",
+        "相談"
+      ]
+    },
+    {
       "id": "nishi-2026-10-06-gohan",
       "centerId": "nishi",
       "sourceDocumentId": "nishi-2026-10",
@@ -227,6 +497,164 @@
       "tags": [
         "講座",
         "予約制"
+      ]
+    },
+    {
+      "id": "omiya-2026-10-06-wakuwaku",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202610",
+      "date": "2026-10-06",
+      "title": "わくわくひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "yono-2026-10-06-piyopiyo",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202610",
+      "date": "2026-10-06",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "title": "ぴよぴよ広場",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "minami-2026-10-07-0age-measurement",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-202610",
+      "date": "2026-10-07",
+      "startTime": "09:30",
+      "endTime": "15:30",
+      "title": "0歳身体測定",
+      "description": "身長・体重測定。タオルをお持ちください。測定後遊ぶことはできません",
+      "targetAge": "0歳",
+      "reservationRequired": false,
+      "tags": [
+        "身体測定"
+      ]
+    },
+    {
+      "id": "minami-2026-10-07-health-consult",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-202610",
+      "date": "2026-10-07",
+      "startTime": "09:30",
+      "endTime": "11:00",
+      "title": "育児相談会",
+      "description": "南区保健センターによる育児相談会。保健師・管理栄養士・歯科衛生士が相談をお受けいたします",
+      "targetAge": "0歳",
+      "reservationRequired": false,
+      "tags": [
+        "相談",
+        "保健センター"
+      ]
+    },
+    {
+      "id": "omiya-2026-10-07-craft",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202610",
+      "date": "2026-10-07",
+      "startTime": "10:00",
+      "endTime": "10:30",
+      "title": "作ってあそぼう！",
+      "description": "お子さんと一緒にお絵かきやシールはりなど工作を楽しみましょう",
+      "targetAge": "1歳半～3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "工作"
+      ]
+    },
+    {
+      "id": "omiya-2026-10-07-wakuwaku",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202610",
+      "date": "2026-10-07",
+      "title": "わくわくひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "yono-2026-10-07-piyopiyo",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202610",
+      "date": "2026-10-07",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "title": "ぴよぴよ広場",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "yono-2026-10-07-library",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202610",
+      "date": "2026-10-07",
+      "startTime": "10:30",
+      "title": "与野図書館 赤ちゃんおはなし会",
+      "description": "与野図書館の方が来て、絵本の読み聞かせとわらべ歌を行います",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "おはなし会",
+        "図書館"
+      ]
+    },
+    {
+      "id": "yono-2026-10-08-piyopiyo",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202610",
+      "date": "2026-10-08",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "title": "ぴよぴよ広場",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "iwatsuki-2026-10-08-mushiba",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-202610",
+      "date": "2026-10-08",
+      "startTime": "10:00",
+      "title": "むし歯予防教室",
+      "description": "岩槻区保健センターで電子申請受付中。対象児：区内在住のR7年5~12月生まれ",
+      "targetAge": "R7年5~12月生まれ",
+      "reservationRequired": true,
+      "tags": [
+        "予約制",
+        "保健センター",
+        "歯科"
+      ]
+    },
+    {
+      "id": "minami-2026-10-08-eigo",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-202610",
+      "date": "2026-10-08",
+      "startTime": "10:00",
+      "endTime": "10:30",
+      "title": "えいごであそぼう",
+      "description": "ラフィンイングリッシュスクールの先生と一緒に楽しく英語で遊びませんか？歌やお話で英語に触れる体験を楽しんでみたい方はご参加ください",
+      "targetAge": "2歳",
+      "reservationRequired": false,
+      "tags": [
+        "英語"
       ]
     },
     {
@@ -247,6 +675,103 @@
       ]
     },
     {
+      "id": "omiya-2026-10-08-wakuwaku-pm",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202610",
+      "date": "2026-10-08",
+      "startTime": "13:00",
+      "endTime": "16:00",
+      "title": "わくわくひろば",
+      "description": "午後のひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "iwatsuki-2026-10-09-ohanashikai",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-202610",
+      "date": "2026-10-09",
+      "startTime": "10:45",
+      "title": "おはなし会",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "おはなし会"
+      ]
+    },
+    {
+      "id": "omiya-2026-10-09-wakuwaku",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202610",
+      "date": "2026-10-09",
+      "title": "わくわくひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "yono-2026-10-09-piyopiyo",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202610",
+      "date": "2026-10-09",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "title": "ぴよぴよ広場",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "omiya-2026-10-10-wakuwaku",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202610",
+      "date": "2026-10-10",
+      "title": "わくわくひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "yono-2026-10-10-piyopiyo",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202610",
+      "date": "2026-10-10",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "title": "ぴよぴよ広場",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "minami-2026-10-11-papa",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-202610",
+      "date": "2026-10-11",
+      "startTime": "10:00",
+      "endTime": "11:00",
+      "title": "にこにこパパの日",
+      "description": "パパプログラム「パパと子どものリトミック ～ウクレレとピアノの音にのせて～」1.2歳のお子さんとお父さん対象",
+      "targetAge": "1～2歳",
+      "reservationRequired": true,
+      "tags": [
+        "予約制",
+        "パパ向け",
+        "リトミック"
+      ]
+    },
+    {
       "id": "minuma-2026-10-11-papa",
       "centerId": "minuma",
       "sourceDocumentId": "minuma-2026-10",
@@ -261,6 +786,47 @@
         "パパ向け",
         "予約制",
         "Zoom参加可"
+      ]
+    },
+    {
+      "id": "omiya-2026-10-11-wakuwaku",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202610",
+      "date": "2026-10-11",
+      "title": "わくわくひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "yono-2026-10-11-piyopiyo",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202610",
+      "date": "2026-10-11",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "title": "ぴよぴよ広場",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "minami-2026-10-13-1age-hiroba",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-202610",
+      "date": "2026-10-13",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "title": "1歳さんの広場",
+      "description": "午前1歳専用",
+      "targetAge": "1歳",
+      "reservationRequired": false,
+      "tags": [
+        "年齢別"
       ]
     },
     {
@@ -282,6 +848,32 @@
       ]
     },
     {
+      "id": "omiya-2026-10-13-wakuwaku",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202610",
+      "date": "2026-10-13",
+      "title": "わくわくひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "yono-2026-10-13-piyopiyo",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202610",
+      "date": "2026-10-13",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "title": "ぴよぴよ広場",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
       "id": "urawa-2026-10-13-rizmumu",
       "centerId": "urawa",
       "sourceDocumentId": "urawa-2026-10",
@@ -297,19 +889,32 @@
       ]
     },
     {
-      "id": "nishi-2026-10-14-futago",
-      "centerId": "nishi",
-      "sourceDocumentId": "nishi-2026-10",
+      "id": "yono-2026-10-14-piyopiyo",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202610",
       "date": "2026-10-14",
-      "startTime": "10:00",
-      "endTime": "11:30",
-      "title": "ふたごの集い",
-      "description": "西区保健センターとの共催。10:15開始",
-      "targetAge": "0～3歳未満",
-      "reservationRequired": true,
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "title": "ぴよぴよ広場",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
       "tags": [
-        "多胎児向け",
-        "予約制"
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "minami-2026-10-14-1age-measurement",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-202610",
+      "date": "2026-10-14",
+      "startTime": "09:30",
+      "endTime": "15:30",
+      "title": "1歳身体測定",
+      "description": "身長・体重測定。タオルをお持ちください。測定後遊ぶことはできません",
+      "targetAge": "1歳",
+      "reservationRequired": false,
+      "tags": [
+        "身体測定"
       ]
     },
     {
@@ -330,19 +935,79 @@
       ]
     },
     {
-      "id": "urawa-2026-10-15-salon",
-      "centerId": "urawa",
-      "sourceDocumentId": "urawa-2026-10",
-      "date": "2026-10-15",
-      "startTime": "09:30",
+      "id": "nishi-2026-10-14-futago",
+      "centerId": "nishi",
+      "sourceDocumentId": "nishi-2026-10",
+      "date": "2026-10-14",
+      "startTime": "10:00",
       "endTime": "11:30",
-      "title": "サンサンサロン",
-      "description": "公認心理士・発達心理学講師・子育て支援員に相談されたことのある方や、発達に不安や心配のあるお子さんとご家族のふれあいの場",
-      "targetAge": "0～2歳",
+      "title": "ふたごの集い",
+      "description": "西区保健センターとの共催。10:15開始",
+      "targetAge": "0～3歳未満",
       "reservationRequired": true,
       "tags": [
-        "サロン",
+        "多胎児向け",
         "予約制"
+      ]
+    },
+    {
+      "id": "omiya-2026-10-14-welcome-saitama",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202610",
+      "date": "2026-10-14",
+      "startTime": "10:00",
+      "title": "ウエルカムさいたま",
+      "description": "さいたま市に転入後1年以内の方",
+      "targetAge": "3歳未満",
+      "reservationRequired": true,
+      "tags": [
+        "予約制",
+        "転入者向け"
+      ]
+    },
+    {
+      "id": "iwatsuki-2026-10-14-fureai",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-202610",
+      "date": "2026-10-14",
+      "startTime": "10:30",
+      "title": "ふれあいあそび",
+      "description": "1歳以上のお友だちが参加できます",
+      "targetAge": "1歳以上",
+      "reservationRequired": true,
+      "tags": [
+        "予約制"
+      ]
+    },
+    {
+      "id": "omiya-2026-10-14-wakuwaku-pm",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202610",
+      "date": "2026-10-14",
+      "startTime": "13:00",
+      "endTime": "16:00",
+      "title": "わくわくひろば",
+      "description": "午後のひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "minami-2026-10-15-warabeuta",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-202610",
+      "date": "2026-10-15",
+      "startTime": "10:00",
+      "endTime": "10:30",
+      "title": "わらべ唄とお話会",
+      "description": "お話サークルの方に、わらべ唄と絵本の読み聞かせをしていただきます",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "わらべ歌",
+        "おはなし会"
       ]
     },
     {
@@ -362,6 +1027,48 @@
       ]
     },
     {
+      "id": "omiya-2026-10-15-wakuwaku",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202610",
+      "date": "2026-10-15",
+      "title": "わくわくひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "yono-2026-10-15-piyopiyo",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202610",
+      "date": "2026-10-15",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "title": "ぴよぴよ広場",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "urawa-2026-10-15-salon",
+      "centerId": "urawa",
+      "sourceDocumentId": "urawa-2026-10",
+      "date": "2026-10-15",
+      "startTime": "09:30",
+      "endTime": "11:30",
+      "title": "サンサンサロン",
+      "description": "公認心理士・発達心理学講師・子育て支援員に相談されたことのある方や、発達に不安や心配のあるお子さんとご家族のふれあいの場",
+      "targetAge": "0～2歳",
+      "reservationRequired": true,
+      "tags": [
+        "サロン",
+        "予約制"
+      ]
+    },
+    {
       "id": "minuma-2026-10-16-welcome",
       "centerId": "minuma",
       "sourceDocumentId": "minuma-2026-10",
@@ -375,6 +1082,62 @@
       "tags": [
         "転入者向け",
         "予約制"
+      ]
+    },
+    {
+      "id": "iwatsuki-2026-10-16-baby-salon",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-202610",
+      "date": "2026-10-16",
+      "startTime": "10:30",
+      "title": "赤ちゃんサロン",
+      "description": "0歳のお友だちが参加できます。ふれあい遊びやわらべ歌、絵本などを楽しみましょう！身長/体重の計測も行います。持ち物：バスタオル",
+      "targetAge": "0歳",
+      "reservationRequired": true,
+      "tags": [
+        "予約制"
+      ]
+    },
+    {
+      "id": "iwatsuki-2026-10-16-baby-salon-pm",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-202610",
+      "date": "2026-10-16",
+      "startTime": "14:00",
+      "title": "赤ちゃんサロン",
+      "description": "0歳のお友だちが参加できます。ふれあい遊びやわらべ歌、絵本などを楽しみましょう！身長/体重の計測も行います。持ち物：バスタオル",
+      "targetAge": "0歳",
+      "reservationRequired": true,
+      "tags": [
+        "予約制"
+      ]
+    },
+    {
+      "id": "omiya-2026-10-16-wakuwaku",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202610",
+      "date": "2026-10-16",
+      "title": "わくわくひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "yono-2026-10-16-welcome-saitama",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202610",
+      "date": "2026-10-16",
+      "startTime": "10:00",
+      "endTime": "11:30",
+      "title": "ウェルカムさいたま",
+      "description": "転入1年以内の方で中央区近隣が主に生活圏の方。地域情報で交流します",
+      "targetAge": "0～2歳",
+      "reservationRequired": true,
+      "tags": [
+        "予約制",
+        "転入者向け"
       ]
     },
     {
@@ -428,6 +1191,51 @@
       ]
     },
     {
+      "id": "omiya-2026-10-17-wakuwaku",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202610",
+      "date": "2026-10-17",
+      "title": "わくわくひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "yono-2026-10-17-futagotime",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202610",
+      "date": "2026-10-17",
+      "startTime": "10:00",
+      "endTime": "11:30",
+      "title": "ふたごタイム",
+      "description": "ふたご限定（０～３歳未満）",
+      "targetAge": "0～2歳",
+      "reservationRequired": true,
+      "tags": [
+        "予約制",
+        "ふたご"
+      ]
+    },
+    {
+      "id": "minami-2026-10-18-craft",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-202610",
+      "date": "2026-10-18",
+      "startTime": "10:00",
+      "endTime": "11:00",
+      "title": "パパ＆ママと作ってあそぼう",
+      "description": "おとうさん、おかあさんと一緒に簡単な製作をして楽しみましょう。今月はハロウィンのリースを作ります",
+      "targetAge": "0～2歳",
+      "reservationRequired": true,
+      "tags": [
+        "予約制",
+        "工作",
+        "ハロウィン"
+      ]
+    },
+    {
       "id": "minuma-2026-10-18-papasalon",
       "centerId": "minuma",
       "sourceDocumentId": "minuma-2026-10",
@@ -442,6 +1250,33 @@
         "パパ向け",
         "予約制",
         "Zoom参加可"
+      ]
+    },
+    {
+      "id": "omiya-2026-10-18-wakuwaku",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202610",
+      "date": "2026-10-18",
+      "title": "わくわくひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "yono-2026-10-18-firstaid",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202610",
+      "date": "2026-10-18",
+      "startTime": "10:00",
+      "title": "応急手当講習",
+      "description": "乳幼児親子　１０組",
+      "targetAge": "0～2歳",
+      "reservationRequired": true,
+      "tags": [
+        "予約制",
+        "講座"
       ]
     },
     {
@@ -462,6 +1297,20 @@
       ]
     },
     {
+      "id": "yono-2026-10-19-piyopiyo",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202610",
+      "date": "2026-10-19",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "title": "ぴよぴよ広場",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
       "id": "minuma-2026-10-19-fureai",
       "centerId": "minuma",
       "sourceDocumentId": "minuma-2026-10",
@@ -475,6 +1324,35 @@
       "tags": [
         "ベビーマッサージ",
         "予約制"
+      ]
+    },
+    {
+      "id": "minami-2026-10-20-2age-hiroba",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-202610",
+      "date": "2026-10-20",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "title": "2歳さんの広場",
+      "description": "午前2歳専用",
+      "targetAge": "2歳",
+      "reservationRequired": false,
+      "tags": [
+        "年齢別"
+      ]
+    },
+    {
+      "id": "yono-2026-10-20-piyopiyo",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202610",
+      "date": "2026-10-20",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "title": "ぴよぴよ広場",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
       ]
     },
     {
@@ -510,6 +1388,36 @@
       ]
     },
     {
+      "id": "omiya-2026-10-20-concert",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202610",
+      "date": "2026-10-20",
+      "startTime": "10:30",
+      "title": "ミニコンサート",
+      "description": "チェントロみにみのみなさんの素敵なうたと指笛などの演奏を親子でお楽しみください",
+      "targetAge": "3歳未満",
+      "reservationRequired": true,
+      "tags": [
+        "コンサート",
+        "予約制"
+      ]
+    },
+    {
+      "id": "yono-2026-10-20-birthday",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202610",
+      "date": "2026-10-20",
+      "startTime": "10:30",
+      "title": "お誕生会",
+      "description": "お誕生月のお友達に手作りのカードと冠をプレゼントしてお祝いします。フォトコーナーもご用意します",
+      "targetAge": "0～2歳",
+      "reservationRequired": true,
+      "tags": [
+        "予約制",
+        "お誕生会"
+      ]
+    },
+    {
       "id": "minuma-2026-10-20-eigo",
       "centerId": "minuma",
       "sourceDocumentId": "minuma-2026-10",
@@ -522,6 +1430,53 @@
       "reservationRequired": true,
       "tags": [
         "英語",
+        "予約制",
+        "Zoom参加可"
+      ]
+    },
+    {
+      "id": "omiya-2026-10-20-health-nurse",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202610",
+      "date": "2026-10-20",
+      "startTime": "13:00",
+      "title": "保健師さんとお話",
+      "description": "子育ての悩みや不安などを保健師さんに相談してみませんか",
+      "targetAge": "3歳未満",
+      "reservationRequired": true,
+      "tags": [
+        "相談",
+        "予約制"
+      ]
+    },
+    {
+      "id": "minami-2026-10-21-2age-measurement",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-202610",
+      "date": "2026-10-21",
+      "startTime": "09:30",
+      "endTime": "15:30",
+      "title": "2歳身体測定",
+      "description": "身長・体重測定。タオルをお持ちください。測定後遊ぶことはできません",
+      "targetAge": "2歳",
+      "reservationRequired": false,
+      "tags": [
+        "身体測定"
+      ]
+    },
+    {
+      "id": "minuma-2026-10-21-futago",
+      "centerId": "minuma",
+      "sourceDocumentId": "minuma-2026-10",
+      "date": "2026-10-21",
+      "startTime": "10:00",
+      "endTime": "11:30",
+      "title": "ふたご座オリオン座（ふたご・みつご）サロン",
+      "description": "ふたごやみつご、きょうだいを育てながら感じることをゆっくり話す時間",
+      "targetAge": "0～2歳",
+      "reservationRequired": true,
+      "tags": [
+        "多胎児向け",
         "予約制",
         "Zoom参加可"
       ]
@@ -542,20 +1497,59 @@
       ]
     },
     {
-      "id": "minuma-2026-10-21-futago",
-      "centerId": "minuma",
-      "sourceDocumentId": "minuma-2026-10",
+      "id": "iwatsuki-2026-10-21-birthday",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-202610",
       "date": "2026-10-21",
-      "startTime": "10:00",
-      "endTime": "11:30",
-      "title": "ふたご座オリオン座（ふたご・みつご）サロン",
-      "description": "ふたごやみつご、きょうだいを育てながら感じることをゆっくり話す時間",
+      "startTime": "10:30",
+      "title": "お誕生日会",
+      "description": "10月生まれのお友だちが参加できます。足形スタンプをとりますので10:15頃までにお越しください。希望の方は身体測定を行います",
       "targetAge": "0～2歳",
       "reservationRequired": true,
       "tags": [
-        "多胎児向け",
         "予約制",
-        "Zoom参加可"
+        "お誕生会"
+      ]
+    },
+    {
+      "id": "omiya-2026-10-21-wakuwaku",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202610",
+      "date": "2026-10-21",
+      "title": "わくわくひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "yono-2026-10-21-piyopiyo",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202610",
+      "date": "2026-10-21",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "title": "ぴよぴよ広場",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "yono-2026-10-21-library",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202610",
+      "date": "2026-10-21",
+      "startTime": "10:30",
+      "title": "与野図書館 赤ちゃんおはなし会",
+      "description": "与野図書館の方が来て、絵本の読み聞かせとわらべ歌を行います",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "おはなし会",
+        "図書館"
       ]
     },
     {
@@ -591,6 +1585,63 @@
       ]
     },
     {
+      "id": "omiya-2026-10-22-birthday",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202610",
+      "date": "2026-10-22",
+      "startTime": "10:30",
+      "title": "10月のハッピーバースデー",
+      "description": "お誕生月のお子さんのお祝いをします",
+      "targetAge": "3歳未満",
+      "reservationRequired": true,
+      "tags": [
+        "お誕生会",
+        "予約制"
+      ]
+    },
+    {
+      "id": "minami-2026-10-22-ehon",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-202610",
+      "date": "2026-10-22",
+      "startTime": "15:00",
+      "endTime": "15:30",
+      "title": "あかちゃん絵本読み聞かせ",
+      "description": "絵本の会「とまと」の方々に、楽しく絵本の読み聞かせをしていただきます",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "絵本"
+      ]
+    },
+    {
+      "id": "omiya-2026-10-22-wakuwaku",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202610",
+      "date": "2026-10-22",
+      "title": "わくわくひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "yono-2026-10-22-measurement",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202610",
+      "date": "2026-10-22",
+      "startTime": "09:15",
+      "endTime": "15:30",
+      "title": "のびのび身体測定",
+      "description": "ねんねのお友達はタオルをご持参下さい。初回に測定カードをお渡しします",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "身体測定"
+      ]
+    },
+    {
       "id": "nishi-2026-10-23-bousai",
       "centerId": "nishi",
       "sourceDocumentId": "nishi-2026-10",
@@ -605,6 +1656,46 @@
         "防災",
         "講座",
         "予約制"
+      ]
+    },
+    {
+      "id": "iwatsuki-2026-10-23-ohanashikai",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-202610",
+      "date": "2026-10-23",
+      "startTime": "10:45",
+      "title": "おはなし会",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "おはなし会"
+      ]
+    },
+    {
+      "id": "omiya-2026-10-23-wakuwaku",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202610",
+      "date": "2026-10-23",
+      "title": "わくわくひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "yono-2026-10-23-measurement",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202610",
+      "date": "2026-10-23",
+      "startTime": "09:15",
+      "endTime": "15:30",
+      "title": "のびのび身体測定",
+      "description": "ねんねのお友達はタオルをご持参下さい。初回に測定カードをお渡しします",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "身体測定"
       ]
     },
     {
@@ -640,6 +1731,90 @@
       ]
     },
     {
+      "id": "omiya-2026-10-24-warabeuta",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202610",
+      "date": "2026-10-24",
+      "startTime": "10:30",
+      "title": "わらべ歌とおはなし",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "わらべ歌",
+        "おはなし"
+      ]
+    },
+    {
+      "id": "omiya-2026-10-24-wakuwaku",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202610",
+      "date": "2026-10-24",
+      "title": "わくわくひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "yono-2026-10-24-measurement",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202610",
+      "date": "2026-10-24",
+      "startTime": "09:15",
+      "endTime": "15:30",
+      "title": "のびのび身体測定",
+      "description": "ねんねのお友達はタオルをご持参下さい。初回に測定カードをお渡しします",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "身体測定"
+      ]
+    },
+    {
+      "id": "omiya-2026-10-25-wakuwaku",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202610",
+      "date": "2026-10-25",
+      "title": "わくわくひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "yono-2026-10-25-measurement",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202610",
+      "date": "2026-10-25",
+      "startTime": "09:15",
+      "endTime": "15:30",
+      "title": "のびのび身体測定",
+      "description": "ねんねのお友達はタオルをご持参下さい。初回に測定カードをお渡しします",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "身体測定"
+      ]
+    },
+    {
+      "id": "minami-2026-10-25-ongakukai",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-202610",
+      "date": "2026-10-25",
+      "startTime": "10:00",
+      "endTime": "11:00",
+      "title": "秋のお楽しみ会 みんなで作る音楽会",
+      "description": "楽しいお楽しみ会が始まります。みんなの知っている曲もたくさん聞けるといいな。一緒に楽しい音楽会をつくりましょう",
+      "targetAge": "0～2歳",
+      "reservationRequired": true,
+      "tags": [
+        "予約制",
+        "音楽会"
+      ]
+    },
+    {
       "id": "urawa-2026-10-25-papa-concert",
       "centerId": "urawa",
       "sourceDocumentId": "urawa-2026-10",
@@ -654,6 +1829,66 @@
         "パパ向け",
         "コンサート",
         "予約制"
+      ]
+    },
+    {
+      "id": "iwatsuki-2026-10-25-ehon",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-202610",
+      "date": "2026-10-25",
+      "startTime": "10:30",
+      "title": "絵本を楽しもう with岩槻図書館",
+      "description": "図書館員さんと絵本を楽しみましょう。図書館の楽しい利用の仕方も教えていただきます。参加してくれたお友達に『ハロウィンのスティック』をプレゼントします",
+      "targetAge": "0～2歳",
+      "reservationRequired": true,
+      "tags": [
+        "予約制",
+        "図書館",
+        "絵本"
+      ]
+    },
+    {
+      "id": "omiya-2026-10-25-rhythm",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202610",
+      "date": "2026-10-25",
+      "startTime": "10:30",
+      "title": "リズムあそび",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "リズム遊び"
+      ]
+    },
+    {
+      "id": "minami-2026-10-25-zoom-baby-massage",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-202610",
+      "date": "2026-10-25",
+      "startTime": "14:00",
+      "endTime": "14:30",
+      "title": "Zoom ベビーマッサージ",
+      "description": "ご自宅でゆったりとお子さんとの触れ合いを楽しんでみませんか？広場のマッサージとはまた違ったプログラムとなります",
+      "targetAge": "0歳",
+      "reservationRequired": true,
+      "tags": [
+        "予約制",
+        "オンライン",
+        "zoom"
+      ]
+    },
+    {
+      "id": "yono-2026-10-26-piyopiyo",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202610",
+      "date": "2026-10-26",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "title": "ぴよぴよ広場",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
       ]
     },
     {
@@ -674,6 +1909,60 @@
       ]
     },
     {
+      "id": "omiya-2026-10-26-warabeuta",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202610",
+      "date": "2026-10-26",
+      "startTime": "10:30",
+      "title": "わらべ歌とおはなし",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "わらべ歌",
+        "おはなし"
+      ]
+    },
+    {
+      "id": "omiya-2026-10-26-wakuwaku",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202610",
+      "date": "2026-10-26",
+      "title": "わくわくひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "omiya-2026-10-27-measurement",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202610",
+      "date": "2026-10-27",
+      "title": "すくすく測定",
+      "description": "身長・体重を測ってお子さんの成長を見守っていきましょう",
+      "targetAge": "3歳未満",
+      "reservationRequired": true,
+      "tags": [
+        "身体測定",
+        "予約制"
+      ]
+    },
+    {
+      "id": "yono-2026-10-27-piyopiyo",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202610",
+      "date": "2026-10-27",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "title": "ぴよぴよ広場",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
       "id": "nishi-2026-10-27-ritmiku",
       "centerId": "nishi",
       "sourceDocumentId": "nishi-2026-10",
@@ -688,6 +1977,67 @@
         "英語",
         "リトミック",
         "予約制"
+      ]
+    },
+    {
+      "id": "omiya-2026-10-28-measurement",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202610",
+      "date": "2026-10-28",
+      "title": "すくすく測定",
+      "description": "身長・体重を測ってお子さんの成長を見守っていきましょう",
+      "targetAge": "3歳未満",
+      "reservationRequired": true,
+      "tags": [
+        "身体測定",
+        "予約制"
+      ]
+    },
+    {
+      "id": "yono-2026-10-28-piyopiyo",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202610",
+      "date": "2026-10-28",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "title": "ぴよぴよ広場",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "minami-2026-10-28-baby-story",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-202610",
+      "date": "2026-10-28",
+      "startTime": "10:00",
+      "endTime": "10:30",
+      "title": "あかちゃんお話会",
+      "description": "武蔵浦和図書館共催。パネルシアターや絵本の読み聞かせなどをしていただきます",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "おはなし会",
+        "図書館"
+      ]
+    },
+    {
+      "id": "minuma-2026-10-28-seminar",
+      "centerId": "minuma",
+      "sourceDocumentId": "minuma-2026-10",
+      "date": "2026-10-28",
+      "startTime": "10:00",
+      "endTime": "11:30",
+      "title": "空飛ぶ教室✈「子育てセミナーみぬまっく」",
+      "description": "赤ちゃんたちの「ことば」に耳を傾けてみよう",
+      "targetAge": "0～2歳",
+      "reservationRequired": true,
+      "tags": [
+        "セミナー",
+        "予約制",
+        "Zoom参加可"
       ]
     },
     {
@@ -707,20 +2057,63 @@
       ]
     },
     {
-      "id": "minuma-2026-10-28-seminar",
-      "centerId": "minuma",
-      "sourceDocumentId": "minuma-2026-10",
-      "date": "2026-10-28",
+      "id": "omiya-2026-10-29-measurement",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202610",
+      "date": "2026-10-29",
+      "title": "すくすく測定",
+      "description": "身長・体重を測ってお子さんの成長を見守っていきましょう",
+      "targetAge": "3歳未満",
+      "reservationRequired": true,
+      "tags": [
+        "身体測定",
+        "予約制"
+      ]
+    },
+    {
+      "id": "yono-2026-10-29-piyopiyo",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202610",
+      "date": "2026-10-29",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "title": "ぴよぴよ広場",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "iwatsuki-2026-10-29-welcome-saitama",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-202610",
+      "date": "2026-10-29",
       "startTime": "10:00",
-      "endTime": "11:30",
-      "title": "空飛ぶ教室✈「子育てセミナーみぬまっく」",
-      "description": "赤ちゃんたちの「ことば」に耳を傾けてみよう",
+      "title": "ウエルカムさいたま",
+      "description": "『近所に友だちが欲しいな』『子どもと遊びに行くところ教えて』『岩槻の子育て情報が知りたいなぁ』おしゃべりしながら地域の情報交換をしましょう！お引越しされて１年以内の方が優先です",
       "targetAge": "0～2歳",
       "reservationRequired": true,
       "tags": [
-        "セミナー",
         "予約制",
-        "Zoom参加可"
+        "転入者向け"
+      ]
+    },
+    {
+      "id": "minami-2026-10-29-dakko",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-202610",
+      "date": "2026-10-29",
+      "startTime": "10:00",
+      "endTime": "11:00",
+      "title": "助産師による抱っこミニ講座",
+      "description": "向きぐせ・反り返り・頭の形・ママの腰痛肩痛腱鞘炎などで悩んでいませんか？毎日の抱っこがママと赤ちゃんのケアになります。助産師と一緒にどちらにとっても心地の良い抱っこを見つけてみましょう！抱っこ紐（お持ちの方）とバスタオルをお持ちください",
+      "targetAge": "0～1歳",
+      "reservationRequired": true,
+      "tags": [
+        "予約制",
+        "助産師",
+        "講座"
       ]
     },
     {
@@ -742,6 +2135,51 @@
       ]
     },
     {
+      "id": "omiya-2026-10-30-wakuwaku",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202610",
+      "date": "2026-10-30",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "title": "わくわくひろば",
+      "description": "午前のひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "yono-2026-10-30-piyopiyo",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202610",
+      "date": "2026-10-30",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "title": "ぴよぴよ広場",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "minami-2026-10-30-welcome-saitama",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-202610",
+      "date": "2026-10-30",
+      "startTime": "10:00",
+      "endTime": "11:30",
+      "title": "ウェルカムさいたま",
+      "description": "さいたま市に転入後1年以内の方。みんなで集まって楽しい時間を過ごしませんか？情報交換もできるといいですね",
+      "targetAge": "0～2歳",
+      "reservationRequired": true,
+      "tags": [
+        "予約制",
+        "転入者向け"
+      ]
+    },
+    {
       "id": "nishi-2026-10-30-halloween-am",
       "centerId": "nishi",
       "sourceDocumentId": "nishi-2026-10",
@@ -754,6 +2192,22 @@
       "reservationRequired": true,
       "tags": [
         "ハロウィン",
+        "予約制"
+      ]
+    },
+    {
+      "id": "omiya-2026-10-30-online",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202610",
+      "date": "2026-10-30",
+      "startTime": "13:00",
+      "title": "オンライン",
+      "description": "支援センターになかなか来られない方とオンライン（zoom）でお会いできたらと思います。簡単な手あそびなどを一緒にしませんか",
+      "targetAge": "3歳未満",
+      "reservationRequired": true,
+      "tags": [
+        "オンライン",
+        "zoom",
         "予約制"
       ]
     },
@@ -772,8 +2226,1336 @@
         "ハロウィン",
         "予約制"
       ]
+    },
+    {
+      "id": "minami-2026-10-30-zoom-ehon",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-202610",
+      "date": "2026-10-30",
+      "startTime": "14:00",
+      "endTime": "15:30",
+      "title": "Zoom 絵本大好き",
+      "description": "支援センターみなみの「今月のお勧め絵本」の紹介や手遊びなど、職員と一緒に楽しい時間を過ごしませんか？皆さんのお勧めの本もおしえてくださいね",
+      "targetAge": "0～2歳",
+      "reservationRequired": true,
+      "tags": [
+        "予約制",
+        "オンライン",
+        "zoom",
+        "絵本"
+      ]
+    },
+    {
+      "id": "omiya-2026-10-31-wakuwaku",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202610",
+      "date": "2026-10-31",
+      "title": "わくわくひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "yono-2026-10-31-piyopiyo",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202610",
+      "date": "2026-10-31",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "title": "ぴよぴよ広場",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "omiya-2026-11-01-wakuwaku",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202611",
+      "date": "2026-11-01",
+      "title": "わくわくひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "yono-2026-11-01-piyopiyo",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202611",
+      "date": "2026-11-01",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "title": "ぴよぴよ広場",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "yono-2026-11-02-piyopiyo",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202611",
+      "date": "2026-11-02",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "title": "ぴよぴよ広場",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "omiya-2026-11-04-wakuwaku",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202611",
+      "date": "2026-11-04",
+      "title": "わくわくひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "yono-2026-11-04-piyopiyo",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202611",
+      "date": "2026-11-04",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "title": "ぴよぴよ広場",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "minami-2026-11-04-0age-measurement",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-202611",
+      "date": "2026-11-04",
+      "startTime": "09:30",
+      "endTime": "15:30",
+      "title": "0歳身体測定",
+      "description": "身長・体重測定。タオルをお持ちください。測定後遊ぶことはできません",
+      "targetAge": "0歳",
+      "reservationRequired": false,
+      "tags": [
+        "身体測定"
+      ]
+    },
+    {
+      "id": "yono-2026-11-04-library",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202611",
+      "date": "2026-11-04",
+      "startTime": "10:30",
+      "title": "与野図書館 赤ちゃんおはなし会",
+      "description": "与野図書館の方が来て、絵本の読み聞かせとわらべ歌を行います",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "おはなし会",
+        "図書館"
+      ]
+    },
+    {
+      "id": "omiya-2026-11-05-wakuwaku",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202611",
+      "date": "2026-11-05",
+      "title": "わくわくひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "yono-2026-11-05-piyopiyo",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202611",
+      "date": "2026-11-05",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "title": "ぴよぴよ広場",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "minami-2026-11-05-eigo",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-202611",
+      "date": "2026-11-05",
+      "startTime": "10:00",
+      "endTime": "10:30",
+      "title": "えいごであそぼう",
+      "description": "ラフィンイングリッシュスクールの先生と一緒に楽しく英語で遊びませんか？歌やお話で英語に触れる体験を楽しんでみたい方はご参加ください",
+      "targetAge": "2歳",
+      "reservationRequired": false,
+      "tags": [
+        "英語"
+      ]
+    },
+    {
+      "id": "yono-2026-11-06-piyopiyo",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202611",
+      "date": "2026-11-06",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "title": "ぴよぴよ広場",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "minami-2026-11-06-hajime",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-202611",
+      "date": "2026-11-06",
+      "startTime": "10:00",
+      "endTime": "11:00",
+      "title": "はじめのいっぽ",
+      "description": "センターに遊びに行ってみたいけど不安だなと感じている方、いっぽ踏み出してみませんか？初めての方同士のおしゃべりやふれあい遊びなどを楽しみましょう。広場のご利用が初めての方対象",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "初回向け"
+      ]
+    },
+    {
+      "id": "omiya-2026-11-06-warabeuta",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202611",
+      "date": "2026-11-06",
+      "startTime": "10:30",
+      "title": "わらべ歌とおはなし",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "わらべ歌",
+        "おはなし"
+      ]
+    },
+    {
+      "id": "omiya-2026-11-06-wakuwaku",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202611",
+      "date": "2026-11-06",
+      "title": "わくわくひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "omiya-2026-11-07-wakuwaku",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202611",
+      "date": "2026-11-07",
+      "title": "わくわくひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "yono-2026-11-07-piyopiyo",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202611",
+      "date": "2026-11-07",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "title": "ぴよぴよ広場",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "yono-2026-11-08-piyopiyo",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202611",
+      "date": "2026-11-08",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "title": "ぴよぴよ広場",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "omiya-2026-11-08-concert",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202611",
+      "date": "2026-11-08",
+      "startTime": "10:30",
+      "title": "うたのコンサート",
+      "description": "うたを歌ったり、音楽に合わせてリズムをとったり親子で楽しい時間を過ごしませんか",
+      "targetAge": "3歳未満",
+      "reservationRequired": true,
+      "tags": [
+        "コンサート",
+        "予約制"
+      ]
+    },
+    {
+      "id": "omiya-2026-11-08-wakuwaku-pm",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202611",
+      "date": "2026-11-08",
+      "startTime": "13:00",
+      "endTime": "16:00",
+      "title": "わくわくひろば",
+      "description": "午後のひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "minami-2026-11-08-papa-baby-massage",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-202611",
+      "date": "2026-11-08",
+      "startTime": "13:15",
+      "endTime": "15:30",
+      "title": "パパとベビーマッサージ",
+      "description": "パパもベビーマッサージをしながら、お子さんとのスキンシップを楽しみましょう！パパとお子さんのみの入室になります。床に敷くバスタオルをお持ちください。初めての方対象",
+      "targetAge": "0歳",
+      "reservationRequired": true,
+      "tags": [
+        "予約制",
+        "パパ向け",
+        "ベビーマッサージ"
+      ]
+    },
+    {
+      "id": "omiya-2026-11-09-wakuwaku",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202611",
+      "date": "2026-11-09",
+      "title": "わくわくひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "yono-2026-11-09-piyopiyo",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202611",
+      "date": "2026-11-09",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "title": "ぴよぴよ広場",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "minami-2026-11-10-0age-hiroba",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-202611",
+      "date": "2026-11-10",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "title": "0歳さんの広場",
+      "description": "午前0歳専用",
+      "targetAge": "0歳",
+      "reservationRequired": false,
+      "tags": [
+        "年齢別"
+      ]
+    },
+    {
+      "id": "minami-2026-11-10-nursing-consult",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-202611",
+      "date": "2026-11-10",
+      "startTime": "09:00",
+      "endTime": "11:00",
+      "title": "看護師による育児相談",
+      "description": "経験豊かな保育園看護師による育児相談を行います。0歳さんの広場の時間内に相談室にて行います（1組30分程度）",
+      "targetAge": "0歳",
+      "reservationRequired": true,
+      "tags": [
+        "予約制",
+        "相談"
+      ]
+    },
+    {
+      "id": "minami-2026-11-11-1age-measurement",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-202611",
+      "date": "2026-11-11",
+      "startTime": "09:30",
+      "endTime": "15:30",
+      "title": "1歳身体測定",
+      "description": "身長・体重測定。タオルをお持ちください。測定後遊ぶことはできません",
+      "targetAge": "1歳",
+      "reservationRequired": false,
+      "tags": [
+        "身体測定"
+      ]
+    },
+    {
+      "id": "omiya-2026-11-11-wakuwaku",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202611",
+      "date": "2026-11-11",
+      "title": "わくわくひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "yono-2026-11-11-floor-theater",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202611",
+      "date": "2026-11-11",
+      "startTime": "13:30",
+      "title": "フロアシアター",
+      "description": "大きな布の上でストーリーを展開していくフロアシアター。自由な身体表現や親子の触れ合いを楽しみます。歩ける子対象",
+      "targetAge": "歩ける子",
+      "reservationRequired": true,
+      "tags": [
+        "予約制",
+        "フロアシアター"
+      ]
+    },
+    {
+      "id": "minami-2026-11-12-1age-hiroba",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-202611",
+      "date": "2026-11-12",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "title": "1歳さんの広場",
+      "description": "午前1歳専用",
+      "targetAge": "1歳",
+      "reservationRequired": false,
+      "tags": [
+        "年齢別"
+      ]
+    },
+    {
+      "id": "yono-2026-11-12-piyopiyo",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202611",
+      "date": "2026-11-12",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "title": "ぴよぴよ広場",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "omiya-2026-11-12-craft",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202611",
+      "date": "2026-11-12",
+      "startTime": "10:00",
+      "endTime": "10:30",
+      "title": "作ってあそぼう！",
+      "description": "お子さんと一緒にお絵かきやシールはりなど工作を楽しみましょう",
+      "targetAge": "1歳半～3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "工作"
+      ]
+    },
+    {
+      "id": "omiya-2026-11-12-wakuwaku",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202611",
+      "date": "2026-11-12",
+      "title": "わくわくひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "omiya-2026-11-13-wakuwaku",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202611",
+      "date": "2026-11-13",
+      "title": "わくわくひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "yono-2026-11-13-piyopiyo",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202611",
+      "date": "2026-11-13",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "title": "ぴよぴよ広場",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "minami-2026-11-13-chiiku",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-202611",
+      "date": "2026-11-13",
+      "startTime": "09:30",
+      "endTime": "10:00",
+      "title": "親子で知育遊び",
+      "description": "メーデルランドの先生と一緒に親子体操、歌、フラッシュカードなどの遊びを通して人間形成のもっとも大切なこの時期にできる教育を体験してみませんか。歩行可能なお子さん対象",
+      "targetAge": "歩行可能",
+      "reservationRequired": false,
+      "tags": [
+        "知育"
+      ]
+    },
+    {
+      "id": "iwatsuki-2026-11-13-ohanashikai",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-202611",
+      "date": "2026-11-13",
+      "startTime": "10:45",
+      "title": "おはなし会",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "おはなし会"
+      ]
+    },
+    {
+      "id": "omiya-2026-11-14-wakuwaku",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202611",
+      "date": "2026-11-14",
+      "title": "わくわくひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "yono-2026-11-14-piyopiyo",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202611",
+      "date": "2026-11-14",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "title": "ぴよぴよ広場",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "iwatsuki-2026-11-15-newyear-craft",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-202611",
+      "date": "2026-11-15",
+      "startTime": "10:00",
+      "title": "クラフトバンドでお正月飾り",
+      "description": "来年の干支、ひつじの飾りをつくります。お子さん連れで参加できます。参加費150円",
+      "targetAge": "0～2歳",
+      "reservationRequired": true,
+      "tags": [
+        "予約制",
+        "工作",
+        "有料"
+      ]
+    },
+    {
+      "id": "minami-2026-11-15-papa",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-202611",
+      "date": "2026-11-15",
+      "startTime": "10:00",
+      "endTime": "11:00",
+      "title": "にこにこパパの日",
+      "description": "パパプログラム「にこにこプチ運動会」1.2歳のお子さんとお父さん対象",
+      "targetAge": "1～2歳",
+      "reservationRequired": true,
+      "tags": [
+        "予約制",
+        "パパ向け",
+        "運動会"
+      ]
+    },
+    {
+      "id": "yono-2026-11-15-papa-sunday",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202611",
+      "date": "2026-11-15",
+      "startTime": "10:30",
+      "title": "パパサンデー 離乳食講座",
+      "description": "中央区保健センター栄養士による講座。初期～幼児食についてお話します",
+      "targetAge": "0～2歳",
+      "reservationRequired": true,
+      "tags": [
+        "予約制",
+        "講座",
+        "離乳食"
+      ]
+    },
+    {
+      "id": "omiya-2026-11-15-wakuwaku-pm",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202611",
+      "date": "2026-11-15",
+      "startTime": "13:00",
+      "endTime": "16:00",
+      "title": "わくわくひろば",
+      "description": "午後のひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "minami-2026-11-16-2age-hiroba",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-202611",
+      "date": "2026-11-16",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "title": "2歳さんの広場",
+      "description": "午前2歳専用",
+      "targetAge": "2歳",
+      "reservationRequired": false,
+      "tags": [
+        "年齢別"
+      ]
+    },
+    {
+      "id": "yono-2026-11-16-piyopiyo",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202611",
+      "date": "2026-11-16",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "title": "ぴよぴよ広場",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "yono-2026-11-17-piyopiyo",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202611",
+      "date": "2026-11-17",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "title": "ぴよぴよ広場",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "yono-2026-11-18-piyopiyo",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202611",
+      "date": "2026-11-18",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "title": "ぴよぴよ広場",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "minami-2026-11-18-baby-story",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-202611",
+      "date": "2026-11-18",
+      "startTime": "10:00",
+      "endTime": "10:30",
+      "title": "あかちゃんお話会",
+      "description": "武蔵浦和図書館共催。パネルシアターや絵本の読み聞かせなどをしていただきます",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "おはなし会",
+        "図書館"
+      ]
+    },
+    {
+      "id": "iwatsuki-2026-11-18-fureai",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-202611",
+      "date": "2026-11-18",
+      "startTime": "10:30",
+      "title": "ふれあいあそび",
+      "description": "今月は「さつまいもを作っていもほりごっご」で遊びましょう！！1歳以上のお友だちが参加できます",
+      "targetAge": "1歳以上",
+      "reservationRequired": true,
+      "tags": [
+        "予約制"
+      ]
+    },
+    {
+      "id": "omiya-2026-11-18-birthday",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202611",
+      "date": "2026-11-18",
+      "startTime": "10:30",
+      "title": "1１月のハッピーバースデー",
+      "description": "お誕生月のお子さんのお祝いをします",
+      "targetAge": "3歳未満",
+      "reservationRequired": true,
+      "tags": [
+        "お誕生会",
+        "予約制"
+      ]
+    },
+    {
+      "id": "omiya-2026-11-18-wakuwaku",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202611",
+      "date": "2026-11-18",
+      "title": "わくわくひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "yono-2026-11-18-library",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202611",
+      "date": "2026-11-18",
+      "startTime": "10:30",
+      "title": "与野図書館 赤ちゃんおはなし会",
+      "description": "与野図書館の方が来て、絵本の読み聞かせとわらべ歌を行います",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "おはなし会",
+        "図書館"
+      ]
+    },
+    {
+      "id": "omiya-2026-11-19-wakuwaku",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202611",
+      "date": "2026-11-19",
+      "title": "わくわくひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "yono-2026-11-19-piyopiyo",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202611",
+      "date": "2026-11-19",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "title": "ぴよぴよ広場",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "minami-2026-11-19-warabeuta",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-202611",
+      "date": "2026-11-19",
+      "startTime": "10:00",
+      "endTime": "10:30",
+      "title": "わらべ唄とお話会",
+      "description": "お話サークルの方に、わらべ唄と絵本の読み聞かせをしていただきます",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "わらべ歌",
+        "おはなし会"
+      ]
+    },
+    {
+      "id": "yono-2026-11-19-birthday",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202611",
+      "date": "2026-11-19",
+      "startTime": "10:30",
+      "title": "お誕生会",
+      "description": "お誕生月のお友達に手作りのカードと冠をプレゼントしてお祝いします。フォトコーナーもご用意します",
+      "targetAge": "0～2歳",
+      "reservationRequired": true,
+      "tags": [
+        "予約制",
+        "お誕生会"
+      ]
+    },
+    {
+      "id": "yono-2026-11-20-measurement",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202611",
+      "date": "2026-11-20",
+      "startTime": "09:15",
+      "endTime": "15:30",
+      "title": "のびのび身体測定",
+      "description": "ねんねのお友達はタオルをご持参下さい。初回に測定カードをお渡しします",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "身体測定"
+      ]
+    },
+    {
+      "id": "minami-2026-11-20-futago",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-202611",
+      "date": "2026-11-20",
+      "startTime": "10:00",
+      "endTime": "10:45",
+      "title": "ふたごの集い",
+      "description": "南区保健センター主催。詳細・ご予約はさいたま市ホームページをご覧ください",
+      "targetAge": "0～2歳",
+      "reservationRequired": true,
+      "tags": [
+        "予約制",
+        "ふたご",
+        "保健センター"
+      ]
+    },
+    {
+      "id": "omiya-2026-11-20-pharmacist",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202611",
+      "date": "2026-11-20",
+      "startTime": "10:00",
+      "endTime": "11:30",
+      "title": "薬剤師さんのお話",
+      "description": "子どもの感染症に備えましょう。講師：薬剤師 中村光伸氏",
+      "targetAge": "3歳未満",
+      "reservationRequired": true,
+      "tags": [
+        "講座",
+        "予約制"
+      ]
+    },
+    {
+      "id": "iwatsuki-2026-11-20-baby-salon",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-202611",
+      "date": "2026-11-20",
+      "startTime": "10:30",
+      "title": "赤ちゃんサロン",
+      "description": "0歳のお友だちが参加できます。ふれあい遊びやわらべ歌、絵本などを楽しみましょう！身長/体重の計測も行います。持ち物：バスタオル",
+      "targetAge": "0歳",
+      "reservationRequired": true,
+      "tags": [
+        "予約制"
+      ]
+    },
+    {
+      "id": "omiya-2026-11-20-wakuwaku-pm",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202611",
+      "date": "2026-11-20",
+      "startTime": "13:00",
+      "endTime": "16:00",
+      "title": "わくわくひろば",
+      "description": "午後のひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "minami-2026-11-20-kotsuban-care",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-202611",
+      "date": "2026-11-20",
+      "startTime": "13:15",
+      "endTime": "15:00",
+      "title": "産後ママの骨格ケア",
+      "description": "授乳と抱っこで肩や腰がつらい、産後の体型も気になるママ、どうしてる？忙しくて自分のことは後回しになっているママへ疲れていても時間がなくてもできる骨格を整えるセルフケアをお伝えします。快適な体でご機嫌に子育てを楽しもう！初めての方対象",
+      "targetAge": "0歳",
+      "reservationRequired": true,
+      "tags": [
+        "予約制",
+        "産後ケア"
+      ]
+    },
+    {
+      "id": "iwatsuki-2026-11-20-baby-salon-pm",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-202611",
+      "date": "2026-11-20",
+      "startTime": "14:00",
+      "title": "赤ちゃんサロン",
+      "description": "0歳のお友だちが参加できます。ふれあい遊びやわらべ歌、絵本などを楽しみましょう！身長/体重の計測も行います。持ち物：バスタオル",
+      "targetAge": "0歳",
+      "reservationRequired": true,
+      "tags": [
+        "予約制"
+      ]
+    },
+    {
+      "id": "omiya-2026-11-21-wakuwaku",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202611",
+      "date": "2026-11-21",
+      "title": "わくわくひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "yono-2026-11-21-measurement",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202611",
+      "date": "2026-11-21",
+      "startTime": "09:15",
+      "endTime": "15:30",
+      "title": "のびのび身体測定",
+      "description": "ねんねのお友達はタオルをご持参下さい。初回に測定カードをお渡しします",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "身体測定"
+      ]
+    },
+    {
+      "id": "yono-2026-11-21-futagotime",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202611",
+      "date": "2026-11-21",
+      "startTime": "10:00",
+      "endTime": "11:30",
+      "title": "ふたごタイム",
+      "description": "ふたご限定（０～３歳未満）",
+      "targetAge": "0～2歳",
+      "reservationRequired": true,
+      "tags": [
+        "予約制",
+        "ふたご"
+      ]
+    },
+    {
+      "id": "omiya-2026-11-22-wakuwaku",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202611",
+      "date": "2026-11-22",
+      "title": "わくわくひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "yono-2026-11-22-measurement",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202611",
+      "date": "2026-11-22",
+      "startTime": "09:15",
+      "endTime": "15:30",
+      "title": "のびのび身体測定",
+      "description": "ねんねのお友達はタオルをご持参下さい。初回に測定カードをお渡しします",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "身体測定"
+      ]
+    },
+    {
+      "id": "minami-2026-11-24-hamigaki",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-202611",
+      "date": "2026-11-24",
+      "startTime": "10:00",
+      "endTime": "11:00",
+      "title": "あかちゃん歯磨き講座",
+      "description": "保健センターの歯科衛生士によるあかちゃん歯磨き講座を行います。お子さんの歯について知りたいこと、気になっていることがある方はぜひご参加ください。歯が生えてきたお子さん対象",
+      "targetAge": "歯が生えてきたお子さん",
+      "reservationRequired": true,
+      "tags": [
+        "予約制",
+        "歯磨き",
+        "講座"
+      ]
+    },
+    {
+      "id": "omiya-2026-11-24-wakuwaku-pm",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202611",
+      "date": "2026-11-24",
+      "startTime": "13:00",
+      "endTime": "16:00",
+      "title": "わくわくひろば",
+      "description": "午後のひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "omiya-2026-11-25-wakuwaku",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202611",
+      "date": "2026-11-25",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "title": "わくわくひろば",
+      "description": "午前のひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "yono-2026-11-25-measurement",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202611",
+      "date": "2026-11-25",
+      "startTime": "09:15",
+      "endTime": "15:30",
+      "title": "のびのび身体測定",
+      "description": "ねんねのお友達はタオルをご持参下さい。初回に測定カードをお渡しします",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "身体測定"
+      ]
+    },
+    {
+      "id": "minami-2026-11-25-2age-measurement",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-202611",
+      "date": "2026-11-25",
+      "startTime": "09:30",
+      "endTime": "15:30",
+      "title": "2歳身体測定",
+      "description": "身長・体重測定。タオルをお持ちください。測定後遊ぶことはできません",
+      "targetAge": "2歳",
+      "reservationRequired": false,
+      "tags": [
+        "身体測定"
+      ]
+    },
+    {
+      "id": "iwatsuki-2026-11-25-birthday",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-202611",
+      "date": "2026-11-25",
+      "startTime": "10:30",
+      "title": "お誕生日会",
+      "description": "11月生まれのお友だちが参加できます。足形スタンプをとりますので10:15までにお越しください。希望の方は身体測定を行います",
+      "targetAge": "0～2歳",
+      "reservationRequired": true,
+      "tags": [
+        "予約制",
+        "お誕生会"
+      ]
+    },
+    {
+      "id": "yono-2026-11-25-futagonokai",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202611",
+      "date": "2026-11-25",
+      "startTime": "10:30",
+      "endTime": "11:30",
+      "title": "保健センター合同企画 ふたごの会",
+      "description": "ふたご以上を妊娠している方、ふたご以上のお子さんを育てている方対象",
+      "targetAge": "0～2歳",
+      "reservationRequired": true,
+      "tags": [
+        "予約制",
+        "ふたご",
+        "保健センター"
+      ]
+    },
+    {
+      "id": "omiya-2026-11-25-health-nurse",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202611",
+      "date": "2026-11-25",
+      "startTime": "13:00",
+      "title": "保健師さんとお話",
+      "description": "子育ての悩みや不安などを保健師さんに相談してみませんか",
+      "targetAge": "3歳未満",
+      "reservationRequired": true,
+      "tags": [
+        "相談",
+        "予約制"
+      ]
+    },
+    {
+      "id": "omiya-2026-11-26-measurement",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202611",
+      "date": "2026-11-26",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "title": "すくすく測定",
+      "description": "身長・体重を測ってお子さんの成長を見守っていきましょう",
+      "targetAge": "3歳未満",
+      "reservationRequired": true,
+      "tags": [
+        "身体測定",
+        "予約制"
+      ]
+    },
+    {
+      "id": "yono-2026-11-26-piyopiyo",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202611",
+      "date": "2026-11-26",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "title": "ぴよぴよ広場",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "minami-2026-11-26-zoom-baby-massage",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-202611",
+      "date": "2026-11-26",
+      "startTime": "14:00",
+      "endTime": "14:30",
+      "title": "Zoom ベビーマッサージ",
+      "description": "ご自宅でゆったりとお子さんとの触れ合いを楽しんでみませんか？広場のマッサージとはまた違ったプログラムとなります",
+      "targetAge": "0歳",
+      "reservationRequired": true,
+      "tags": [
+        "予約制",
+        "オンライン",
+        "zoom"
+      ]
+    },
+    {
+      "id": "minami-2026-11-26-ehon",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-202611",
+      "date": "2026-11-26",
+      "startTime": "15:00",
+      "endTime": "15:30",
+      "title": "あかちゃん絵本読み聞かせ",
+      "description": "絵本の会「とまと」の方々に、楽しく絵本の読み聞かせをしていただきます",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "絵本"
+      ]
+    },
+    {
+      "id": "omiya-2026-11-27-measurement",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202611",
+      "date": "2026-11-27",
+      "title": "すくすく測定",
+      "description": "身長・体重を測ってお子さんの成長を見守っていきましょう",
+      "targetAge": "3歳未満",
+      "reservationRequired": true,
+      "tags": [
+        "身体測定",
+        "予約制"
+      ]
+    },
+    {
+      "id": "yono-2026-11-27-piyopiyo",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202611",
+      "date": "2026-11-27",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "title": "ぴよぴよ広場",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "iwatsuki-2026-11-27-ohanashikai",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-202611",
+      "date": "2026-11-27",
+      "startTime": "10:45",
+      "title": "おはなし会",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "おはなし会"
+      ]
+    },
+    {
+      "id": "minami-2026-11-27-zoom-immune",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-202611",
+      "date": "2026-11-27",
+      "startTime": "14:00",
+      "endTime": "15:30",
+      "title": "Zoom 免疫力アップ×ふれあい遊び",
+      "description": "季節の変わり目も安心♪ おうちでできるふれあい遊びで「風邪に負けないからだづくり」をしませんか？お腹や足をやさしく刺激して、親子のスキンシップを楽しみながら免疫力をサポートします。助産師と一緒に楽しくからだを動かしましょう！",
+      "targetAge": "0～1歳",
+      "reservationRequired": true,
+      "tags": [
+        "予約制",
+        "オンライン",
+        "zoom"
+      ]
+    },
+    {
+      "id": "omiya-2026-11-28-wakuwaku",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202611",
+      "date": "2026-11-28",
+      "title": "わくわくひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "yono-2026-11-28-piyopiyo",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202611",
+      "date": "2026-11-28",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "title": "ぴよぴよ広場",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "yono-2026-11-29-piyopiyo",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202611",
+      "date": "2026-11-29",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "title": "ぴよぴよ広場",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "omiya-2026-11-30-wakuwaku",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202611",
+      "date": "2026-11-30",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "title": "わくわくひろば",
+      "description": "午前のひろば",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "yono-2026-11-30-piyopiyo",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-202611",
+      "date": "2026-11-30",
+      "startTime": "09:00",
+      "endTime": "16:00",
+      "title": "ぴよぴよ広場",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "自由遊び"
+      ]
+    },
+    {
+      "id": "omiya-2026-11-30-warabeuta",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202611",
+      "date": "2026-11-30",
+      "startTime": "10:30",
+      "title": "わらべ歌とおはなし",
+      "targetAge": "3歳未満",
+      "reservationRequired": false,
+      "tags": [
+        "わらべ歌",
+        "おはなし"
+      ]
+    },
+    {
+      "id": "omiya-2026-11-30-online",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-202611",
+      "date": "2026-11-30",
+      "startTime": "13:00",
+      "title": "オンライン",
+      "description": "支援センターになかなか来られない方とオンライン（zoom）でお会いできたらと思います。簡単な手あそびなどを一緒にしませんか",
+      "targetAge": "3歳未満",
+      "reservationRequired": true,
+      "tags": [
+        "オンライン",
+        "zoom",
+        "予約制"
+      ]
     }
   ],
-  "generatedAt": "2026-10-20T06:26:56.867Z",
+  "generatedAt": "2026-10-20T09:13:05.655Z",
   "version": "1.0.0"
 }

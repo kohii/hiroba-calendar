@@ -393,6 +393,12 @@ describe('Event ID Generation', () => {
 });
 
 describe('Time Validation', () => {
+  it('should accept valid 24-hour time format', () => {
+    const event = createValidEvent({ startTime: '14:30' });
+    const result = validateEvent_single(event);
+    expect(result.valid).toBe(true);
+  });
+});
 
 // Shared test data
 const createValidEvent = (overrides: Partial<Event> = {}): Event => ({

@@ -1,0 +1,148 @@
+[
+  {
+    "id": "iwatsuki-2026-10-01-rinyushoku",
+    "centerId": "iwatsuki",
+    "sourceDocumentId": "iwatsuki-202610",
+    "date": "2026-10-01",
+    "startTime": "10:00",
+    "title": "離乳食・幼児食講座",
+    "description": "保健センター栄養士さんによる講座です。食品サンプルもご覧になれます。後半は質問もできます",
+    "targetAge": "0～2歳",
+    "reservationRequired": true,
+    "tags": [
+      "予約制",
+      "講座",
+      "離乳食"
+    ]
+  },
+  {
+    "id": "iwatsuki-2026-10-08-mushiba",
+    "centerId": "iwatsuki",
+    "sourceDocumentId": "iwatsuki-202610",
+    "date": "2026-10-08",
+    "startTime": "10:00",
+    "title": "むし歯予防教室",
+    "description": "岩槻区保健センターで電子申請受付中。対象児：区内在住のR7年5~12月生まれ",
+    "targetAge": "R7年5~12月生まれ",
+    "reservationRequired": true,
+    "tags": [
+      "予約制",
+      "保健センター",
+      "歯科"
+    ]
+  },
+  {
+    "id": "iwatsuki-2026-10-09-ohanashikai",
+    "centerId": "iwatsuki",
+    "sourceDocumentId": "iwatsuki-202610",
+    "date": "2026-10-09",
+    "startTime": "10:45",
+    "title": "おはなし会",
+    "targetAge": "0～2歳",
+    "reservationRequired": false,
+    "tags": [
+      "おはなし会"
+    ]
+  },
+  {
+    "id": "iwatsuki-2026-10-14-fureai",
+    "centerId": "iwatsuki",
+    "sourceDocumentId": "iwatsuki-202610",
+    "date": "2026-10-14",
+    "startTime": "10:30",
+    "title": "ふれあいあそび",
+    "description": "1歳以上のお友だちが参加できます",
+    "targetAge": "1歳以上",
+    "reservationRequired": true,
+    "tags": [
+      "予約制"
+    ]
+  },
+  {
+    "id": "iwatsuki-2026-10-16-baby-salon",
+    "centerId": "iwatsuki",
+    "sourceDocumentId": "iwatsuki-202610",
+    "date": "2026-10-16",
+    "startTime": "10:30",
+    "title": "赤ちゃんサロン",
+    "description": "0歳のお友だちが参加できます。ふれあい遊びやわらべ歌、絵本などを楽しみましょう！身長/体重の計測も行います。持ち物：バスタオル",
+    "targetAge": "0歳",
+    "reservationRequired": true,
+    "tags": [
+      "予約制"
+    ]
+  },
+  {
+    "id": "iwatsuki-2026-10-16-baby-salon-pm",
+    "centerId": "iwatsuki",
+    "sourceDocumentId": "iwatsuki-202610",
+    "date": "2026-10-16",
+    "startTime": "14:00",
+    "title": "赤ちゃんサロン",
+    "description": "0歳のお友だちが参加できます。ふれあい遊びやわらべ歌、絵本などを楽しみましょう！身長/体重の計測も行います。持ち物：バスタオル",
+    "targetAge": "0歳",
+    "reservationRequired": true,
+    "tags": [
+      "予約制"
+    ]
+  },
+  {
+    "id": "iwatsuki-2026-10-21-birthday",
+    "centerId": "iwatsuki",
+    "sourceDocumentId": "iwatsuki-202610",
+    "date": "2026-10-21",
+    "startTime": "10:30",
+    "title": "お誕生日会",
+    "description": "10月生まれのお友だちが参加できます。足形スタンプをとりますので10:15頃までにお越しください。希望の方は身体測定を行います",
+    "targetAge": "0～2歳",
+    "reservationRequired": true,
+    "tags": [
+      "予約制",
+      "お誕生会"
+    ]
+  },
+  {
+    "id": "iwatsuki-2026-10-23-ohanashikai",
+    "centerId": "iwatsuki",
+    "sourceDocumentId": "iwatsuki-202610",
+    "date": "2026-10-23",
+    "startTime": "10:45",
+    "title": "おはなし会",
+    "targetAge": "0～2歳",
+    "reservationRequired": false,
+    "tags": [
+      "おはなし会"
+    ]
+  },
+  {
+    "id": "iwatsuki-2026-10-25-ehon",
+    "centerId": "iwatsuki",
+    "sourceDocumentId": "iwatsuki-202610",
+    "date": "2026-10-25",
+    "startTime": "10:30",
+    "title": "絵本を楽しもう with岩槻図書館",
+    "description": "図書館員さんと絵本を楽しみましょう。図書館の楽しい利用の仕方も教えていただきます。参加してくれたお友達に『ハロウィンのスティック』をプレゼントします",
+    "targetAge": "0～2歳",
+    "reservationRequired": true,
+    "tags": [
+      "予約制",
+      "図書館",
+      "絵本"
+    ]
+  },
+  {
+    "id": "iwatsuki-2026-10-29-welcome-saitama",
+    "centerId": "iwatsuki",
+    "sourceDocumentId": "iwatsuki-202610",
+    "date": "2026-10-29",
+    "startTime": "10:00",
+    "title": "ウエルカムさいたま",
+    "description": "『近所に友だちが欲しいな』『子どもと遊びに行くところ教えて』『岩槻の子育て情報が知りたいなぁ』おしゃべりしながら地域の情報交換をしましょう！お引越しされて１年以内の方が優先です",
+    "targetAge": "0～2歳",
+    "reservationRequired": true,
+    "tags": [
+      "予約制",
+      "転入者向け"
+    ]
+  }
+]
