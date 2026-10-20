@@ -52,8 +52,8 @@ function HomeContent() {
     
     if (centers) {
       setSelectedCenters(new Set(centers.split(',')));
-    } else {
-      // Default to favorites if no centers in URL
+    } else if (favorites.size > 0) {
+      // Default to favorites if no centers in URL and favorites are loaded
       setSelectedCenters(new Set(favorites));
     }
     
@@ -68,7 +68,7 @@ function HomeContent() {
     if (view === 'calendar' || view === 'list') {
       setViewMode(view);
     }
-  }, [searchParams]);
+  }, [searchParams, favorites]);
   
   // Update URL when state changes
   useEffect(() => {

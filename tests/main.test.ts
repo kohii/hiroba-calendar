@@ -220,7 +220,13 @@ describe('Event ID Generation', () => {
   });
   
   it('should follow ID naming convention', () => {
-    const event = validEvents[0];
+    const event: Event = {
+      id: 'nishi-2026-10-15-event1',
+      centerId: 'nishi',
+      sourceDocumentId: 'nishi-2026-10',
+      date: '2026-10-15',
+      title: 'Morning Event',
+    };
     // Format: {centerId}-{YYYY-MM-DD}-{slug}
     const pattern = /^[a-z]+-\d{4}-\d{2}-\d{2}-.+$/;
     expect(event.id).toMatch(pattern);
@@ -489,8 +495,8 @@ describe('Data Merging', () => {
 });
 
 describe('Schema Validation', () => {
-  it('should have all required fields in CENTERS', () => {
-    const { CENTERS } = require('../lib/schema');
+  it('should have all required fields in CENTERS', async () => {
+    const { CENTERS } = await import('../lib/schema');
     CENTERS.forEach((center: any) => {
       expect(center).toHaveProperty('id');
       expect(center).toHaveProperty('name');
@@ -502,15 +508,15 @@ describe('Schema Validation', () => {
     });
   });
   
-  it('should have unique center IDs', () => {
-    const { CENTERS } = require('../lib/schema');
+  it('should have unique center IDs', async () => {
+    const { CENTERS } = await import('../lib/schema');
     const ids = CENTERS.map((c: any) => c.id);
     const uniqueIds = new Set(ids);
     expect(uniqueIds.size).toBe(ids.length);
   });
   
-  it('should have 10 centers registered', () => {
-    const { CENTERS } = require('../lib/schema');
+  it('should have 10 centers registered', async () => {
+    const { CENTERS } = await import('../lib/schema');
     expect(CENTERS).toHaveLength(10);
   });
 });

@@ -129,11 +129,19 @@ npm test -- --watch
 
 ### Cloudflare Pages へのデプロイ
 
+このプロジェクトは静的サイトとして出力され、Cloudflare Pages に直接デプロイできます。
+
+**ビルド設定**:
+- **Build command**: `npm run build`
+- **Build output directory**: `out`
+
 1. **ビルド**
 
 ```bash
 npm run build
 ```
+
+ビルドにより、完全な静的HTMLファイルが `out/` ディレクトリに生成されます。
 
 2. **Wrangler設定** (wrangler.toml)
 

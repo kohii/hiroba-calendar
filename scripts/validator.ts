@@ -2,9 +2,11 @@
  * Validate AI-extracted events against the schema
  */
 
-import { Event, SourceDocument } from '../lib/schema';
+import { Event, SourceDocument, CENTERS } from '../lib/schema';
 import Ajv, { ValidateFunction } from 'ajv';
 import addFormats from 'ajv-formats';
+
+const VALID_CENTER_IDS = new Set(CENTERS.map(c => c.id));
 
 const ajv = new Ajv({ allErrors: true });
 addFormats(ajv);
@@ -73,6 +75,16 @@ export function validateEvent_single(event: any): ValidationResult {
     }
   }
   
+  // Validate centerId is a known center
+  if (event.centerId && !VALID_CENTER_IDS.has(event.centerId)) {
+    errors.push(`Invalid centerId: ${event.centerId} is not a registered center`);
+  }
+  
+  // Validate sourceDocumentId matches centerId prefix
+  if (event.centerId && event.sourceDocumentId && !event.sourceDocumentId.startsWith(event.centerId + '-')) {
+    errors.push(`sourceDocumentId ${event.sourceDocumentId} does not match centerId ${event.centerId}`);
+  }
+  
   return {
     valid: valid && errors.length === 0,
     errors,
@@ -92,6 +104,23 @@ export function validateExtractedEvents(
     errors: [],
     warnings: [],
   };
+  
+  // Check for empty events array
+  if (events.length === 0) {
+    result.warnings.push('No events found in source document');
+  }
+  
+  // Check for duplicate event IDs
+  const seenIds = new Set<string>();
+  for (const event of events) {
+    if (event.id && seenIds.has(event.id)) {
+      result.errors.push(`duplicate event ID: ${event.id}`);
+      result.valid = false;
+    }
+    if (event.id) {
+      seenIds.add(event.id);
+    }
+  }
   
   // Validate array structure
   if (!validateEventsArray(events)) {
