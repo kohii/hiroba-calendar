@@ -96,37 +96,47 @@
       "id": "nishi-2026-10",
       "centerId": "nishi",
       "month": "2026-10",
-      "pdfUrl": "https://seisinkai.ed.jp/wp-content/uploads/2026/09/%E4%BB%A4%E5%92%8C8%E5%B9%B4%E5%BA%A6%EF%BC%91%EF%BC%90%E6%9C%88%E3%81%AE%E3%82%AB%E3%83%AC%E3%83%B3%E3%83%80%E3%83%BC.pdf",
-      "fetchedAt": "2026-10-20T05:00:00Z",
-      "sha256": "abc123",
-      "extractedAt": "2026-10-20T05:30:00Z"
+      "pdfUrl": "https://seisinkai.ed.jp/wp-content/uploads/2026/09/令和8年度１０月のカレンダー.pdf",
+      "fetchedAt": "2026-10-20T06:00:00Z",
+      "sha256": "placeholder",
+      "extractedAt": "2026-10-20T06:26:49.411Z"
     },
     {
       "id": "minuma-2026-10",
       "centerId": "minuma",
       "month": "2026-10",
-      "pdfUrl": "https://www.sainoko.net/minuma/202610minuma.pdf",
-      "fetchedAt": "2026-10-20T05:00:00Z",
-      "sha256": "def456",
-      "extractedAt": "2026-10-20T05:30:00Z"
+      "pdfUrl": "https://www.sainoko.net/minuma/pdf/202610minuma.pdf",
+      "fetchedAt": "2026-10-20T06:00:00Z",
+      "sha256": "placeholder",
+      "extractedAt": "2026-10-20T06:26:56.851Z"
+    },
+    {
+      "id": "urawa-2026-10",
+      "centerId": "urawa",
+      "month": "2026-10",
+      "pdfUrl": "https://www.urawanyuyouji.com/admin/wp-content/uploads/2026/09/202610_urawa.pdf",
+      "fetchedAt": "2026-10-20T06:00:00Z",
+      "sha256": "placeholder",
+      "extractedAt": "2026-10-20T06:26:56.862Z"
     }
   ],
   "events": [
     {
-      "id": "nishi-2026-10-01-wakuwaku",
+      "id": "nishi-2026-10-01-minna-am",
       "centerId": "nishi",
       "sourceDocumentId": "nishi-2026-10",
       "date": "2026-10-01",
       "startTime": "09:00",
       "endTime": "12:00",
       "title": "みんなのひろば",
-      "description": "自由に遊べる時間です",
-      "targetAge": "0～3歳未満",
+      "description": "年齢制限はありません",
       "reservationRequired": false,
-      "tags": ["自由遊び"]
+      "tags": [
+        "自由遊び"
+      ]
     },
     {
-      "id": "nishi-2026-10-01-momochan-pm",
+      "id": "nishi-2026-10-01-momo-pm",
       "centerId": "nishi",
       "sourceDocumentId": "nishi-2026-10",
       "date": "2026-10-01",
@@ -136,23 +146,44 @@
       "description": "1歳2か月までのお子様専用の時間です",
       "targetAge": "1歳2か月まで",
       "reservationRequired": false,
-      "tags": ["月齢限定"]
+      "tags": [
+        "月齢限定"
+      ]
     },
     {
-      "id": "nishi-2026-10-02-shikaeiseishi",
+      "id": "nishi-2026-10-02-shika",
       "centerId": "nishi",
       "sourceDocumentId": "nishi-2026-10",
       "date": "2026-10-02",
       "startTime": "10:00",
       "endTime": "12:00",
       "title": "歯科衛生士講座「歯並びについて」",
-      "description": "歯科衛生士による講座です",
+      "description": "シリーズⅡ。10:15開始",
       "targetAge": "0～3歳未満",
       "reservationRequired": true,
-      "tags": ["講座", "予約制"]
+      "tags": [
+        "講座",
+        "予約制"
+      ]
     },
     {
-      "id": "nishi-2026-10-05-wake wakuwaku",
+      "id": "minuma-2026-10-02-bebibebe",
+      "centerId": "minuma",
+      "sourceDocumentId": "minuma-2026-10",
+      "date": "2026-10-02",
+      "startTime": "14:40",
+      "endTime": "16:00",
+      "title": "ベビベビとーく",
+      "description": "赤ちゃんの声や表情、全身の動きから気持ちを考える時間。ふれあい遊びも",
+      "targetAge": "0～2歳",
+      "reservationRequired": true,
+      "tags": [
+        "予約制",
+        "Zoom参加可"
+      ]
+    },
+    {
+      "id": "nishi-2026-10-05-shintai",
       "centerId": "nishi",
       "sourceDocumentId": "nishi-2026-10",
       "date": "2026-10-05",
@@ -162,125 +193,124 @@
       "description": "身体測定も実施します。バスタオルをご持参ください",
       "targetAge": "1歳3か月以上",
       "reservationRequired": false,
-      "tags": ["身体測定"]
+      "tags": [
+        "身体測定"
+      ]
+    },
+    {
+      "id": "urawa-2026-10-05-yoga",
+      "centerId": "urawa",
+      "sourceDocumentId": "urawa-2026-10",
+      "date": "2026-10-05",
+      "startTime": "11:00",
+      "endTime": "11:30",
+      "title": "リフレッシュヨガ",
+      "description": "親子で楽しめるやさしいストレッチです。心もからだもリラックス＆リフレッシュしましょう！",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "ヨガ",
+        "ライブ配信あり"
+      ]
+    },
+    {
+      "id": "nishi-2026-10-06-gohan",
+      "centerId": "nishi",
+      "sourceDocumentId": "nishi-2026-10",
+      "date": "2026-10-06",
+      "startTime": "10:00",
+      "endTime": "12:00",
+      "title": "歯科衛生士講座「ごはんのはなし」",
+      "description": "シリーズⅢ。10:15開始",
+      "targetAge": "0～3歳未満",
+      "reservationRequired": true,
+      "tags": [
+        "講座",
+        "予約制"
+      ]
     },
     {
       "id": "nishi-2026-10-08-mogumogu",
       "centerId": "nishi",
       "sourceDocumentId": "nishi-2026-10",
       "date": "2026-10-08",
-      "startTime": "10:10",
+      "startTime": "10:30",
       "endTime": "11:30",
       "title": "もぐもぐ教室",
-      "description": "離乳食・幼児食の教室です。材料費が必要です",
+      "description": "離乳食・材料費徴収。食器・食具持参。10:15入室",
       "targetAge": "離乳食開始〜",
       "reservationRequired": true,
-      "tags": ["離乳食", "予約制", "有料"]
+      "tags": [
+        "離乳食",
+        "予約制",
+        "有料"
+      ]
     },
     {
-      "id": "nishi-2026-10-13-oimoho",
-      "centerId": "nishi",
-      "sourceDocumentId": "nishi-2026-10",
-      "date": "2026-10-13",
-      "startTime": "10:15",
-      "endTime": "11:00",
-      "title": "お芋掘り",
-      "description": "現地集合・現地解散。保険料・お芋代が必要です",
-      "targetAge": "1歳以上",
-      "reservationRequired": true,
-      "location": "現地",
-      "tags": ["屋外イベント", "予約制", "有料"]
-    },
-    {
-      "id": "nishi-2026-10-20-welcome",
-      "centerId": "nishi",
-      "sourceDocumentId": "nishi-2026-10",
-      "date": "2026-10-20",
-      "startTime": "10:00",
-      "endTime": "11:30",
-      "title": "ウェルカムさいたま",
-      "description": "西区に転入して1年未満の方が対象です",
-      "targetAge": "0～3歳未満",
-      "reservationRequired": true,
-      "tags": ["転入者向け", "予約制"]
-    },
-    {
-      "id": "nishi-2026-10-21-eigo",
-      "centerId": "nishi",
-      "sourceDocumentId": "nishi-2026-10",
-      "date": "2026-10-21",
-      "startTime": "10:00",
-      "endTime": "12:00",
-      "title": "英語であそぼ！",
-      "description": "英語で遊びます",
-      "targetAge": "0～3歳未満",
-      "reservationRequired": true,
-      "tags": ["英語", "予約制"]
-    },
-    {
-      "id": "nishi-2026-10-23-bousai",
-      "centerId": "nishi",
-      "sourceDocumentId": "nishi-2026-10",
-      "date": "2026-10-23",
-      "startTime": "10:00",
-      "endTime": "12:00",
-      "title": "学びのひろば 防災講座",
-      "description": "防災の備えについて考える講座です",
-      "targetAge": "0～3歳未満",
-      "reservationRequired": true,
-      "tags": ["防災", "講座", "予約制"]
-    },
-    {
-      "id": "nishi-2026-10-24-papa",
-      "centerId": "nishi",
-      "sourceDocumentId": "nishi-2026-10",
-      "date": "2026-10-24",
-      "startTime": "10:00",
-      "endTime": "12:00",
-      "title": "パパサンデーイベント「パクパクおばけ」",
-      "description": "作って遊ぶイベントです",
-      "targetAge": "0～3歳未満",
-      "reservationRequired": true,
-      "tags": ["パパ向け", "工作", "予約制"]
-    },
-    {
-      "id": "nishi-2026-10-30-halloween",
-      "centerId": "nishi",
-      "sourceDocumentId": "nishi-2026-10",
-      "date": "2026-10-30",
-      "startTime": "10:15",
-      "endTime": "11:30",
-      "title": "ハロウィンパーティー（午前の部）",
-      "description": "1歳3か月以上児対象",
-      "targetAge": "1歳3か月以上",
-      "reservationRequired": true,
-      "tags": ["ハロウィン", "予約制"]
-    },
-    {
-      "id": "nishi-2026-10-30-halloween-pm",
-      "centerId": "nishi",
-      "sourceDocumentId": "nishi-2026-10",
-      "date": "2026-10-30",
-      "startTime": "13:45",
-      "endTime": "15:00",
-      "title": "ハロウィンパーティー（午後の部）",
-      "description": "1歳2か月迄のお子様対象",
-      "targetAge": "1歳2か月まで",
-      "reservationRequired": true,
-      "tags": ["ハロウィン", "予約制"]
-    },
-    {
-      "id": "minuma-2026-10-11-papaサンデー",
+      "id": "minuma-2026-10-11-papa",
       "centerId": "minuma",
       "sourceDocumentId": "minuma-2026-10",
       "date": "2026-10-11",
       "startTime": "10:00",
       "endTime": "11:30",
       "title": "あそんでマナブ♪パパサンデー",
-      "description": "「いろ・色・イロであそぼう♪」今月は色で遊びます",
+      "description": "「いろ・色・イロであそぼう♬」今月は色で遊びます",
       "targetAge": "0～2歳",
       "reservationRequired": true,
-      "tags": ["パパ向け", "Zoom参加可"]
+      "tags": [
+        "パパ向け",
+        "予約制",
+        "Zoom参加可"
+      ]
+    },
+    {
+      "id": "nishi-2026-10-13-oimo",
+      "centerId": "nishi",
+      "sourceDocumentId": "nishi-2026-10",
+      "date": "2026-10-13",
+      "startTime": "10:15",
+      "endTime": "11:00",
+      "title": "お芋掘り",
+      "description": "10時集合。現地集合・現地解散。保険料おひとり50円＋サツマイモ掘り代3株330円",
+      "targetAge": "1歳以上",
+      "reservationRequired": true,
+      "location": "現地",
+      "tags": [
+        "屋外イベント",
+        "予約制",
+        "有料"
+      ]
+    },
+    {
+      "id": "urawa-2026-10-13-rizmumu",
+      "centerId": "urawa",
+      "sourceDocumentId": "urawa-2026-10",
+      "date": "2026-10-13",
+      "startTime": "11:00",
+      "endTime": "11:30",
+      "title": "リズム遊び",
+      "description": "ボランティアの講師とピアノ演奏に合わせて親子でふれあいながら楽しく体を動かしましょう",
+      "targetAge": "0歳児",
+      "reservationRequired": false,
+      "tags": [
+        "リズム遊び"
+      ]
+    },
+    {
+      "id": "nishi-2026-10-14-futago",
+      "centerId": "nishi",
+      "sourceDocumentId": "nishi-2026-10",
+      "date": "2026-10-14",
+      "startTime": "10:00",
+      "endTime": "11:30",
+      "title": "ふたごの集い",
+      "description": "西区保健センターとの共催。10:15開始",
+      "targetAge": "0～3歳未満",
+      "reservationRequired": true,
+      "tags": [
+        "多胎児向け",
+        "予約制"
+      ]
     },
     {
       "id": "minuma-2026-10-14-momo",
@@ -293,7 +323,27 @@
       "description": "日々の子育てをゆっくり話し聴きあえる時間です",
       "targetAge": "0～2歳",
       "reservationRequired": true,
-      "tags": ["子育てサロン", "Zoom参加可"]
+      "tags": [
+        "子育てサロン",
+        "予約制",
+        "Zoom参加可"
+      ]
+    },
+    {
+      "id": "urawa-2026-10-15-salon",
+      "centerId": "urawa",
+      "sourceDocumentId": "urawa-2026-10",
+      "date": "2026-10-15",
+      "startTime": "09:30",
+      "endTime": "11:30",
+      "title": "サンサンサロン",
+      "description": "公認心理士・発達心理学講師・子育て支援員に相談されたことのある方や、発達に不安や心配のあるお子さんとご家族のふれあいの場",
+      "targetAge": "0～2歳",
+      "reservationRequired": true,
+      "tags": [
+        "サロン",
+        "予約制"
+      ]
     },
     {
       "id": "minuma-2026-10-15-ohanashi",
@@ -306,7 +356,10 @@
       "description": "楽器演奏付きの手遊びや紙芝居",
       "targetAge": "0～2歳",
       "reservationRequired": true,
-      "tags": ["おはなし会"]
+      "tags": [
+        "おはなし会",
+        "予約制"
+      ]
     },
     {
       "id": "minuma-2026-10-16-welcome",
@@ -316,23 +369,177 @@
       "startTime": "10:00",
       "endTime": "11:30",
       "title": "ウェルカムさいたま",
-      "description": "さいたま市に転入1年以内の方対象。市内転居の方もOK",
+      "description": "さいたま市に転入1年以内の方対象。市内転居の方もOK。親子遊びや情報交換",
       "targetAge": "0～2歳",
       "reservationRequired": true,
-      "tags": ["転入者向け"]
+      "tags": [
+        "転入者向け",
+        "予約制"
+      ]
+    },
+    {
+      "id": "urawa-2026-10-16-warabeuta",
+      "centerId": "urawa",
+      "sourceDocumentId": "urawa-2026-10",
+      "date": "2026-10-16",
+      "startTime": "11:00",
+      "endTime": "11:30",
+      "title": "親子でわらべうた",
+      "description": "おはなしサークルの方によるわらべうたと、おはなしの読み聞かせです",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "わらべうた",
+        "ライブ配信あり"
+      ]
+    },
+    {
+      "id": "minuma-2026-10-17-ritmiku",
+      "centerId": "minuma",
+      "sourceDocumentId": "minuma-2026-10",
+      "date": "2026-10-17",
+      "startTime": "14:00",
+      "endTime": "14:30",
+      "title": "親子ｄｅリトミック（第1部）",
+      "description": "キーボード演奏に合わせて身体を動かしましょう。生後5か月位から参加可能",
+      "targetAge": "5か月以上",
+      "reservationRequired": true,
+      "tags": [
+        "リトミック",
+        "予約制",
+        "Zoom参加可"
+      ]
+    },
+    {
+      "id": "minuma-2026-10-17-ritmiku2",
+      "centerId": "minuma",
+      "sourceDocumentId": "minuma-2026-10",
+      "date": "2026-10-17",
+      "startTime": "14:50",
+      "endTime": "15:20",
+      "title": "親子ｄｅリトミック（第2部）",
+      "description": "キーボード演奏に合わせて身体を動かしましょう。生後5か月位から参加可能",
+      "targetAge": "5か月以上",
+      "reservationRequired": true,
+      "tags": [
+        "リトミック",
+        "予約制",
+        "Zoom参加可"
+      ]
     },
     {
       "id": "minuma-2026-10-18-papasalon",
       "centerId": "minuma",
       "sourceDocumentId": "minuma-2026-10",
       "date": "2026-10-18",
-      "startTime": "10:15",
-      "endTime": "12:00",
+      "startTime": "10:00",
+      "endTime": "11:30",
       "title": "パパがひらく子育てサロン「すもも」",
-      "description": "パパの絵本シアターやパネルシアターを楽しむ時間",
+      "description": "パパの絵本シアターやパネルシアター、手遊び歌などを楽しむ時間",
       "targetAge": "0～2歳",
       "reservationRequired": true,
-      "tags": ["パパ向け", "Zoom参加可"]
+      "tags": [
+        "パパ向け",
+        "予約制",
+        "Zoom参加可"
+      ]
+    },
+    {
+      "id": "urawa-2026-10-18-papa-bousai",
+      "centerId": "urawa",
+      "sourceDocumentId": "urawa-2026-10",
+      "date": "2026-10-18",
+      "startTime": "14:00",
+      "endTime": "15:00",
+      "title": "パパのじかん「親子で学ぼう防災」",
+      "description": "「災害時も子どもの遊びは大切」をテーマに、いろいろな遊び（絵本、わらべうた、手遊びなど）を親子で体験。地域の防災士が参加",
+      "targetAge": "0～2歳",
+      "reservationRequired": true,
+      "tags": [
+        "パパ向け",
+        "防災",
+        "予約制"
+      ]
+    },
+    {
+      "id": "minuma-2026-10-19-fureai",
+      "centerId": "minuma",
+      "sourceDocumentId": "minuma-2026-10",
+      "date": "2026-10-19",
+      "startTime": "13:40",
+      "endTime": "15:00",
+      "title": "親子ふれあいひろば（ベビーマッサージ）",
+      "description": "オイルを使わないベビーマッサージ。1か月健診後の0歳の赤ちゃんが対象。バスタオル持参",
+      "targetAge": "0歳",
+      "reservationRequired": true,
+      "tags": [
+        "ベビーマッサージ",
+        "予約制"
+      ]
+    },
+    {
+      "id": "nishi-2026-10-20-welcome",
+      "centerId": "nishi",
+      "sourceDocumentId": "nishi-2026-10",
+      "date": "2026-10-20",
+      "startTime": "10:00",
+      "endTime": "11:30",
+      "title": "ウェルカムさいたま",
+      "description": "西区に転入し1年未満の方が対象。プロのバルーンパフォーマーのさくらさんのショー",
+      "targetAge": "0～3歳未満",
+      "reservationRequired": true,
+      "tags": [
+        "転入者向け",
+        "予約制"
+      ]
+    },
+    {
+      "id": "urawa-2026-10-20-futago",
+      "centerId": "urawa",
+      "sourceDocumentId": "urawa-2026-10",
+      "date": "2026-10-20",
+      "startTime": "10:00",
+      "endTime": "11:00",
+      "title": "ふたごのつどい",
+      "description": "妊娠16週以降の多胎妊婦、ふたご以上の子とその保護者対象。さいたま市電子申請にて募集",
+      "targetAge": "0～2歳",
+      "reservationRequired": true,
+      "tags": [
+        "多胎児向け",
+        "予約制"
+      ]
+    },
+    {
+      "id": "minuma-2026-10-20-eigo",
+      "centerId": "minuma",
+      "sourceDocumentId": "minuma-2026-10",
+      "date": "2026-10-20",
+      "startTime": "11:20",
+      "endTime": "11:35",
+      "title": "えいごあそび",
+      "description": "手遊びや絵本など、英語にふれてみよう。赤ちゃんからどうぞ",
+      "targetAge": "0～2歳",
+      "reservationRequired": true,
+      "tags": [
+        "英語",
+        "予約制",
+        "Zoom参加可"
+      ]
+    },
+    {
+      "id": "nishi-2026-10-21-eigo",
+      "centerId": "nishi",
+      "sourceDocumentId": "nishi-2026-10",
+      "date": "2026-10-21",
+      "startTime": "10:00",
+      "endTime": "12:00",
+      "title": "英語であそぼ！",
+      "description": "10:15開始。年齢制限なし",
+      "reservationRequired": true,
+      "tags": [
+        "英語",
+        "予約制"
+      ]
     },
     {
       "id": "minuma-2026-10-21-futago",
@@ -342,10 +549,162 @@
       "startTime": "10:00",
       "endTime": "11:30",
       "title": "ふたご座オリオン座（ふたご・みつご）サロン",
-      "description": "ふたごやみつご、きょうだいを育てながらの交流",
+      "description": "ふたごやみつご、きょうだいを育てながら感じることをゆっくり話す時間",
       "targetAge": "0～2歳",
       "reservationRequired": true,
-      "tags": ["多胎児向け", "Zoom参加可"]
+      "tags": [
+        "多胎児向け",
+        "予約制",
+        "Zoom参加可"
+      ]
+    },
+    {
+      "id": "urawa-2026-10-21-baby-ritmiku",
+      "centerId": "urawa",
+      "sourceDocumentId": "urawa-2026-10",
+      "date": "2026-10-21",
+      "startTime": "13:30",
+      "endTime": "14:00",
+      "title": "ベビーリトミック・ベビーマッサージ",
+      "description": "ピアノの音に合わせて体を動かすリトミックや成長促進に役立つマッサージ。初めての方限定。床に敷くタオルをご持参ください",
+      "targetAge": "0歳児",
+      "reservationRequired": true,
+      "tags": [
+        "ベビーマッサージ",
+        "リトミック",
+        "予約制"
+      ]
+    },
+    {
+      "id": "nishi-2026-10-22-sekai",
+      "centerId": "nishi",
+      "sourceDocumentId": "nishi-2026-10",
+      "date": "2026-10-22",
+      "startTime": "10:00",
+      "endTime": "12:00",
+      "title": "世界のことばでこんにちは！",
+      "description": "10:15開始",
+      "targetAge": "0～3歳未満",
+      "reservationRequired": true,
+      "tags": [
+        "予約制"
+      ]
+    },
+    {
+      "id": "nishi-2026-10-23-bousai",
+      "centerId": "nishi",
+      "sourceDocumentId": "nishi-2026-10",
+      "date": "2026-10-23",
+      "startTime": "10:00",
+      "endTime": "12:00",
+      "title": "学びのひろば 防災講座（地震）",
+      "description": "防災の備えについて考える。10:15開始",
+      "targetAge": "0～3歳未満",
+      "reservationRequired": true,
+      "tags": [
+        "防災",
+        "講座",
+        "予約制"
+      ]
+    },
+    {
+      "id": "urawa-2026-10-23-hajime",
+      "centerId": "urawa",
+      "sourceDocumentId": "urawa-2026-10",
+      "date": "2026-10-23",
+      "startTime": "13:30",
+      "endTime": "14:30",
+      "title": "はじめのいっぽ",
+      "description": "にこにこ広場に行ってみたいけれど、初めては少し不安…。そんなはじめてさん同士で交流しながら広場遊びを体験",
+      "targetAge": "0～2歳",
+      "reservationRequired": false,
+      "tags": [
+        "初心者向け"
+      ]
+    },
+    {
+      "id": "nishi-2026-10-24-papa",
+      "centerId": "nishi",
+      "sourceDocumentId": "nishi-2026-10",
+      "date": "2026-10-24",
+      "startTime": "10:00",
+      "endTime": "12:00",
+      "title": "パパサンデーイベント「パクパクおばけ」",
+      "description": "作って遊ぼう！10:15開始",
+      "targetAge": "0～3歳未満",
+      "reservationRequired": true,
+      "tags": [
+        "パパ向け",
+        "工作",
+        "予約制"
+      ]
+    },
+    {
+      "id": "urawa-2026-10-25-papa-concert",
+      "centerId": "urawa",
+      "sourceDocumentId": "urawa-2026-10",
+      "date": "2026-10-25",
+      "startTime": "10:00",
+      "endTime": "11:00",
+      "title": "パパサンデー「フルートコンサート」",
+      "description": "ボランティアのママによるフルートの生演奏会です",
+      "targetAge": "0～2歳",
+      "reservationRequired": true,
+      "tags": [
+        "パパ向け",
+        "コンサート",
+        "予約制"
+      ]
+    },
+    {
+      "id": "nishi-2026-10-26-ken",
+      "centerId": "nishi",
+      "sourceDocumentId": "nishi-2026-10",
+      "date": "2026-10-26",
+      "startTime": "10:00",
+      "endTime": "12:00",
+      "title": "ケンちゃんじいちゃんと福話来さん",
+      "description": "紙芝居・わらべ歌等。10:15開始。オンラインあり",
+      "targetAge": "0～3歳未満",
+      "reservationRequired": true,
+      "tags": [
+        "紙芝居",
+        "予約制",
+        "オンライン可"
+      ]
+    },
+    {
+      "id": "nishi-2026-10-27-ritmiku",
+      "centerId": "nishi",
+      "sourceDocumentId": "nishi-2026-10",
+      "date": "2026-10-27",
+      "startTime": "10:00",
+      "endTime": "12:00",
+      "title": "英語で楽しくリトミック♪",
+      "description": "10:15開始。対象：6か月以上",
+      "targetAge": "6か月以上",
+      "reservationRequired": true,
+      "tags": [
+        "英語",
+        "リトミック",
+        "予約制"
+      ]
+    },
+    {
+      "id": "nishi-2026-10-28-birthday",
+      "centerId": "nishi",
+      "sourceDocumentId": "nishi-2026-10",
+      "date": "2026-10-28",
+      "startTime": "10:00",
+      "endTime": "11:30",
+      "title": "10月生まれのお誕生日会＆ハーフバースデー",
+      "description": "10:15開始",
+      "targetAge": "0～3歳未満",
+      "reservationRequired": true,
+      "tags": [
+        "誕生日会",
+        "予約制"
+      ]
     },
     {
       "id": "minuma-2026-10-28-seminar",
@@ -354,11 +713,15 @@
       "date": "2026-10-28",
       "startTime": "10:00",
       "endTime": "11:30",
-      "title": "空飛ぶ教室✈『子育てセミナーみぬまっく』",
+      "title": "空飛ぶ教室✈「子育てセミナーみぬまっく」",
       "description": "赤ちゃんたちの「ことば」に耳を傾けてみよう",
       "targetAge": "0～2歳",
       "reservationRequired": true,
-      "tags": ["セミナー", "Zoom参加可"]
+      "tags": [
+        "セミナー",
+        "予約制",
+        "Zoom参加可"
+      ]
     },
     {
       "id": "minuma-2026-10-29-toshokan",
@@ -372,9 +735,45 @@
       "targetAge": "0～2歳",
       "reservationRequired": true,
       "capacity": 10,
-      "tags": ["おはなし会", "図書館"]
+      "tags": [
+        "おはなし会",
+        "図書館",
+        "予約制"
+      ]
+    },
+    {
+      "id": "nishi-2026-10-30-halloween-am",
+      "centerId": "nishi",
+      "sourceDocumentId": "nishi-2026-10",
+      "date": "2026-10-30",
+      "startTime": "10:15",
+      "endTime": "11:30",
+      "title": "ハロウィンパーティー（午前の部）",
+      "description": "10:00入室。仮装してきてね",
+      "targetAge": "1歳3か月以上",
+      "reservationRequired": true,
+      "tags": [
+        "ハロウィン",
+        "予約制"
+      ]
+    },
+    {
+      "id": "nishi-2026-10-30-halloween-pm",
+      "centerId": "nishi",
+      "sourceDocumentId": "nishi-2026-10",
+      "date": "2026-10-30",
+      "startTime": "13:45",
+      "endTime": "15:00",
+      "title": "ハロウィンパーティー（午後の部）",
+      "description": "13:30入室。仮装してきてね",
+      "targetAge": "1歳2か月まで",
+      "reservationRequired": true,
+      "tags": [
+        "ハロウィン",
+        "予約制"
+      ]
     }
   ],
-  "generatedAt": "2026-10-20T05:30:00Z",
+  "generatedAt": "2026-10-20T06:26:56.867Z",
   "version": "1.0.0"
 }

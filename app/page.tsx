@@ -3,7 +3,7 @@
 import { useState, useEffect, useMemo, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { Calendar, Filter, Star, ExternalLink, MapPin, Clock, Users } from 'lucide-react';
-import { format, parseISO } from 'date-fns';
+import { format, parseISO, startOfMonth, endOfMonth, eachDayOfInterval, getDay, addMonths, subMonths } from 'date-fns';
 import { ja } from 'date-fns/locale';
 import { DataSet, Event, Center } from '@/lib/schema';
 
@@ -142,6 +142,37 @@ function HomeContent() {
     return grouped;
   }, [filteredEvents]);
   
+  // Calendar grid data
+  const calendarDays = useMemo(() => {
+    if (!selectedMonth) return [];
+    
+    const [year, month] = selectedMonth.split('-').map(Number);
+    const monthStart = startOfMonth(new Date(year, month - 1));
+    const monthEnd = endOfMonth(monthStart);
+    const days = eachDayOfInterval({ start: monthStart, end: monthEnd });
+    
+    // Add padding days to start on Sunday
+    const startDay = getDay(monthStart);
+    const paddingDays = Array(startDay).fill(null);
+    
+    return [...paddingDays, ...days];
+  }, [selectedMonth]);
+  
+  // Navigate month
+  const goToPreviousMonth = () => {
+    if (!selectedMonth) return;
+    const [year, month] = selectedMonth.split('-').map(Number);
+    const newDate = subMonths(new Date(year, month - 1), 1);
+    setSelectedMonth(`${newDate.getFullYear()}-${String(newDate.getMonth() + 1).padStart(2, '0')}`);
+  };
+  
+  const goToNextMonth = () => {
+    if (!selectedMonth) return;
+    const [year, month] = selectedMonth.split('-').map(Number);
+    const newDate = addMonths(new Date(year, month - 1), 1);
+    setSelectedMonth(`${newDate.getFullYear()}-${String(newDate.getMonth() + 1).padStart(2, '0')}`);
+  };
+  
   // Get center by ID
   const getCenterById = (id: string): Center | undefined => {
     return dataset.centers.find(c => c.id === id);
@@ -151,6 +182,23 @@ function HomeContent() {
   const getSourcePDF = (event: Event): string | undefined => {
     const doc = dataset.sourceDocuments.find(d => d.id === event.sourceDocumentId);
     return doc?.pdfUrl;
+  };
+  
+  // Get color for center (consistent colors for each center)
+  const getCenterColor = (centerId: string): string => {
+    const colors: Record<string, string> = {
+      'nishi': '#3b82f6',     // blue-500
+      'kita': '#10b981',      // green-500
+      'omiya': '#f59e0b',     // amber-500
+      'minuma': '#ec4899',    // pink-500
+      'yono': '#8b5cf6',      // violet-500
+      'sakura': '#f43f5e',    // rose-500
+      'urawa': '#06b6d4',     // cyan-500
+      'minami': '#84cc16',    // lime-500
+      'midori': '#14b8a6',    // teal-500
+      'iwatsuki': '#a855f7',  // purple-500
+    };
+    return colors[centerId] || '#6b7280'; // gray-500 default
   };
   
   // Sort centers: favorites first, then alphabetically
@@ -303,7 +351,130 @@ function HomeContent() {
               センターと月を選択してください
             </p>
           </div>
+        ) : viewMode === 'calendar' ? (
+          /* Calendar View */
+          <div className="bg-white rounded-lg shadow overflow-hidden">
+            {/* Month navigation */}
+            <div className="bg-gray-50 px-4 py-3 border-b flex items-center justify-between">
+              <button
+                onClick={goToPreviousMonth}
+                className="px-3 py-1 rounded hover:bg-gray-200 text-gray-700"
+              >
+                ← 前月
+              </button>
+              <h2 className="font-bold text-lg text-gray-800">
+                {selectedMonth && format(parseISO(selectedMonth + '-01'), 'yyyy年M月', { locale: ja })}
+              </h2>
+              <button
+                onClick={goToNextMonth}
+                className="px-3 py-1 rounded hover:bg-gray-200 text-gray-700"
+              >
+                次月 →
+              </button>
+            </div>
+            
+            {/* Calendar grid */}
+            <div className="p-2 sm:p-4">
+              {/* Day headers */}
+              <div className="grid grid-cols-7 gap-1 mb-1">
+                {['日', '月', '火', '水', '木', '金', '土'].map((day, i) => (
+                  <div
+                    key={day}
+                    className={`text-center font-bold text-sm py-2 ${
+                      i === 0 ? 'text-red-600' : i === 6 ? 'text-blue-600' : 'text-gray-700'
+                    }`}
+                  >
+                    {day}
+                  </div>
+                ))}
+              </div>
+              
+              {/* Calendar days */}
+              <div className="grid grid-cols-7 gap-1">
+                {calendarDays.map((day, idx) => {
+                  if (!day) {
+                    return <div key={`empty-${idx}`} className="aspect-square" />;
+                  }
+                  
+                  const dateStr = format(day, 'yyyy-MM-dd');
+                  const dayEvents = eventsByDate.get(dateStr) || [];
+                  const dayOfWeek = getDay(day);
+                  const isToday = format(new Date(), 'yyyy-MM-dd') === dateStr;
+                  
+                  return (
+                    <div
+                      key={dateStr}
+                      className={`aspect-square border rounded overflow-hidden ${
+                        isToday ? 'border-blue-500 border-2' : 'border-gray-200'
+                      } ${
+                        dayOfWeek === 0 ? 'bg-red-50' : dayOfWeek === 6 ? 'bg-blue-50' : 'bg-white'
+                      }`}
+                    >
+                      <div className="h-full flex flex-col">
+                        {/* Date number */}
+                        <div
+                          className={`text-center font-bold text-xs sm:text-sm py-0.5 sm:py-1 ${
+                            dayOfWeek === 0 ? 'text-red-600' : dayOfWeek === 6 ? 'text-blue-600' : 'text-gray-700'
+                          }`}
+                        >
+                          {format(day, 'd')}
+                        </div>
+                        
+                        {/* Events */}
+                        <div className="flex-1 overflow-y-auto px-0.5 sm:px-1 pb-0.5 sm:pb-1 space-y-0.5">
+                          {dayEvents.map(event => {
+                            const center = getCenterById(event.centerId);
+                            return (
+                              <div
+                                key={event.id}
+                                className="text-xs p-0.5 sm:p-1 rounded cursor-pointer hover:opacity-80 transition-opacity"
+                                style={{
+                                  backgroundColor: getCenterColor(event.centerId),
+                                }}
+                                title={`${center?.nameJa}: ${event.title}${event.startTime ? ` ${event.startTime}` : ''}`}
+                              >
+                                <div className="font-medium text-white truncate leading-tight">
+                                  {center?.nameJa}
+                                </div>
+                                <div className="text-white truncate leading-tight opacity-90">
+                                  {event.title}
+                                </div>
+                                {event.startTime && (
+                                  <div className="text-white text-[10px] opacity-80">
+                                    {event.startTime}
+                                  </div>
+                                )}
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+            
+            {/* Legend */}
+            <div className="border-t p-4 bg-gray-50">
+              <h3 className="text-sm font-bold mb-2 text-gray-700">センター凡例</h3>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2">
+                {sortedCenters
+                  .filter(c => selectedCenters.size === 0 || selectedCenters.has(c.id))
+                  .map(center => (
+                    <div key={center.id} className="flex items-center gap-2">
+                      <div
+                        className="w-4 h-4 rounded"
+                        style={{ backgroundColor: getCenterColor(center.id) }}
+                      />
+                      <span className="text-sm">{center.nameJa}</span>
+                    </div>
+                  ))}
+              </div>
+            </div>
+          </div>
         ) : (
+          /* List View */
           <div className="space-y-6">
             {Array.from(eventsByDate.entries())
               .sort(([a], [b]) => a.localeCompare(b))

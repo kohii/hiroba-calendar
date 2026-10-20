@@ -12,7 +12,8 @@
     "download-pdfs": "tsx scripts/pdf-download.ts",
     "refresh-data": "tsx scripts/refresh-all.ts",
     "dataset-stats": "tsx scripts/merge-dataset.ts stats",
-    "cleanup": "tsx scripts/merge-dataset.ts cleanup"
+    "cleanup": "tsx scripts/merge-dataset.ts cleanup",
+    "verify-pdfs": "tsx scripts/verify-pdf-urls.ts"
   },
   "dependencies": {
     "ajv": "^8.17.1",
@@ -21,6 +22,8 @@
     "date-fns": "^4.1.0",
     "lucide-react": "^0.468.0",
     "next": "16.4.2",
+    "pdf-parse": "^2.4.5",
+    "pdfjs-dist": "^6.4.299",
     "react": "19.3.0",
     "react-dom": "19.3.0"
   },

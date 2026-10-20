@@ -1,0 +1,29 @@
+[
+  {
+    "id": "nishi-2026-10",
+    "centerId": "nishi",
+    "month": "2026-10",
+    "pdfUrl": "https://seisinkai.ed.jp/wp-content/uploads/2026/09/令和8年度１０月のカレンダー.pdf",
+    "fetchedAt": "2026-10-20T06:00:00Z",
+    "sha256": "e3d5903db3898526be908be2e926fa16e37eee48c95779275204ce33b63030f0",
+    "extractedAt": "2026-10-20T06:26:49.411Z"
+  },
+  {
+    "id": "minuma-2026-10",
+    "centerId": "minuma",
+    "month": "2026-10",
+    "pdfUrl": "https://www.sainoko.net/minuma/pdf/202610minuma.pdf",
+    "fetchedAt": "2026-10-20T06:00:00Z",
+    "sha256": "a6d26e5023426795d73199d27f981c920b89c7e5e43dbb43b5c58dcf882af1c8",
+    "extractedAt": "2026-10-20T06:26:56.851Z"
+  },
+  {
+    "id": "urawa-2026-10",
+    "centerId": "urawa",
+    "month": "2026-10",
+    "pdfUrl": "https://www.urawanyuyouji.com/admin/wp-content/uploads/2026/09/202610_urawa.pdf",
+    "fetchedAt": "2026-10-20T06:00:00Z",
+    "sha256": "0b8b5ef6726c928b6d034b5b5c2af79734258255cf55c59099644f7d135000ab",
+    "extractedAt": "2026-10-20T06:26:56.862Z"
+  }
+]

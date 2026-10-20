@@ -1,270 +1,284 @@
-# さいたま市子育て支援センタースケジュール更新スキル
+# さいたま市子育て支援センタースケジュール抽出スキル
 
-このスキルは、さいたま市の子育て支援センターのPDFスケジュールから イベント情報を抽出し、データセットを更新します。
+このスキルは、さいたま市の単独型子育て支援センター10箇所が公開するPDFスケジュールから、イベント情報を抽出してデータセットに統合します。
 
 ## 概要
 
-1. **PDF発見**: 各センターのウェブサイトから最新のPDFリンクを自動検出
-2. **PDFダウンロード**: PDFをダウンロードしてキャッシュ (SHA256でchange detection)
-3. **AI抽出**: PDFからイベント情報を抽出 (このスキルで実施)
-4. **検証**: 抽出データをスキーマに対して検証
-5. **マージ**: 検証済みデータをメインデータセットに統合
+エージェント自身がPDFテキストを読み取り、イベント情報をJSONとして抽出します。外部APIは使用しません。
 
-## 実行手順
+## ワークフロー
 
-### ステップ1: PDF発見とダウンロード
+### 1. PDF準備とテキスト抽出
 
 ```bash
-# PDFリンクの発見
-npm run discover-pdfs
-
-# PDFのダウンロード (新規・更新のみ)
+# PDFのダウンロード（最新のPDFを取得）
 npm run download-pdfs
-
-# まとめて実行
-npm run refresh-data
 ```
 
-これにより`data/pdf-cache/`にPDFが保存され、`data/source-documents.json`にメタデータが記録されます。
+PDFは `data/pdf-cache/{centerId}-{month}.pdf` に保存されます。
 
-### ステップ2: AI抽出が必要なPDFの確認
-
-抽出が必要なPDF (extractedAt が null) を確認:
+**テキスト抽出**には以下のコマンドを使用:
 
 ```bash
-npm run list-pending
+# pdf-parseを使用してテキスト抽出
+npx tsx -e "
+import { readFileSync } from 'fs';
+import PDFParser from 'pdf-parse';
+
+const pdfPath = 'data/pdf-cache/{centerId}-{month}.pdf';
+const dataBuffer = readFileSync(pdfPath);
+
+PDFParser(dataBuffer).then(data => {
+  console.log(data.text);
+}).catch(err => {
+  console.error('Error:', err);
+});
+"
 ```
 
-### ステップ3: PDF内容の抽出
+または、PDFを直接読み取ってテキストを表示:
 
-抽出が必要な各PDFに対して、以下を実施:
+```bash
+npm exec pdf-parse data/pdf-cache/nishi-2026-10.pdf
+```
 
-1. **PDFを読み込む**: `data/pdf-cache/{centerId}-{month}.pdf`
-2. **PDFをテキストまたは画像に変換** (pdf-parse または pdf-to-image)
-3. **AI (Claude) でイベント抽出**
-4. **結果を検証**
-5. **データセットにマージ**
+### 2. イベント情報の抽出
 
-## AI抽出の詳細
+エージェントは抽出したPDFテキストを読み、以下のJSON形式でイベント情報を出力します。
 
-### 入力
+**出力パス**: `data/extracted-events/{centerId}-{month}.json`
 
-- **PDF ファイルパス**: `data/pdf-cache/{centerId}-{month}.pdf`
-- **ソースドキュメント情報**: `data/source-documents.json` から取得
-  ```json
-  {
-    "id": "nishi-2026-10",
-    "centerId": "nishi",
-    "month": "2026-10",
-    "pdfUrl": "https://...",
-    "fetchedAt": "2026-10-20T...",
-    "sha256": "abc123..."
-  }
-  ```
-
-### 出力スキーマ
-
-AIは以下の形式のJSONを出力する必要があります:
+**出力形式**:
 
 ```json
 [
   {
-    "id": "nishi-2026-10-01-わくわくひろば",
+    "id": "nishi-2026-10-01-wakuwaku",
     "centerId": "nishi",
     "sourceDocumentId": "nishi-2026-10",
     "date": "2026-10-01",
     "startTime": "09:00",
     "endTime": "12:00",
-    "title": "わくわくひろば",
+    "title": "みんなのひろば",
     "description": "自由に遊べる時間です",
     "targetAge": "0～3歳未満",
     "reservationRequired": false,
-    "location": null,
-    "capacity": null,
     "tags": ["自由遊び"]
-  },
-  {
-    "id": "nishi-2026-10-13-お芋掘り",
-    "centerId": "nishi",
-    "sourceDocumentId": "nishi-2026-10",
-    "date": "2026-10-13",
-    "startTime": "10:15",
-    "endTime": "11:00",
-    "title": "お芋掘り",
-    "description": "現地集合・現地解散。保険料・お芋代有",
-    "targetAge": "1歳以上",
-    "reservationRequired": true,
-    "location": "現地",
-    "capacity": null,
-    "tags": ["屋外イベント", "予約制"]
   }
 ]
 ```
 
+### 3. データ検証
+
+抽出後、以下のコマンドで検証:
+
+```bash
+npx tsx scripts/validator.ts data/extracted-events/{centerId}-{month}.json
+```
+
+検証は以下をチェックします:
+- 必須フィールドの存在 (id, centerId, sourceDocumentId, date, title)
+- 日付形式 (YYYY-MM-DD)
+- 時刻形式 (HH:MM)
+- centerIdの整合性
+- sourceDocumentIdの整合性
+
+### 4. データセットへのマージ
+
+検証が成功したら、データセットに統合:
+
+```bash
+npx tsx scripts/merge-dataset.ts merge data/extracted-events/{centerId}-{month}.json
+```
+
+これにより `public/data/dataset.json` が更新されます。
+
+## フィールド定義
+
 ### 必須フィールド
 
-- `id`: 一意のID (`{centerId}-{month}-{day}-{イベント名の一部}` 形式推奨)
-- `centerId`: ソースドキュメントの centerId と同じ
-- `sourceDocumentId`: ソースドキュメントの id と同じ
-- `date`: YYYY-MM-DD 形式
-- `title`: イベント名
+- **id**: 一意のID。推奨形式: `{centerId}-{YYYY-MM-DD}-{イベント名の一部}`
+  - 例: `"nishi-2026-10-13-oimohori"`
+  
+- **centerId**: センターID (nishi, kita, omiya, minuma, yono, sakura, urawa, minami, midori, iwatsuki)
+
+- **sourceDocumentId**: ソースドキュメントID
+  - 形式: `{centerId}-{YYYY-MM}`
+  - 例: `"nishi-2026-10"`
+
+- **date**: イベント日付 (YYYY-MM-DD形式)
+  - 例: `"2026-10-13"`
+
+- **title**: イベント名
+  - 例: `"お芋掘り"`
 
 ### オプショナルフィールド
 
-- `startTime`, `endTime`: HH:MM 形式 (24時間制)
-- `description`: イベントの詳細説明
-- `targetAge`: 対象年齢 (例: "0～1歳", "1歳2か月まで")
-- `reservationRequired`: 予約が必要な場合 true
-- `location`: 開催場所 (センター以外の場所の場合)
-- `capacity`: 定員
-- `tags`: タグの配列
+- **startTime**: 開始時刻 (HH:MM形式、24時間制)
+  - 例: `"10:15"`
 
-### 抽出時の注意点
+- **endTime**: 終了時刻 (HH:MM形式、24時間制)
+  - 例: `"11:30"`
 
-1. **日付の解釈**
-   - PDFは月間カレンダー形式や日付リスト形式などさまざま
-   - 日付は必ず YYYY-MM-DD 形式に正規化
-   - 月は source document の month フィールドから取得
+- **description**: イベントの詳細説明
+  - 例: `"現地集合・現地解散。保険料・お芋代が必要です"`
 
-2. **時刻の解釈**
-   - "10:00～11:30" → startTime: "10:00", endTime: "11:30"
-   - "午前9時～12時" → startTime: "09:00", endTime: "12:00"
-   - "午後1時～4時" → startTime: "13:00", endTime: "16:00"
-   - 時刻情報がない場合は null
+- **targetAge**: 対象年齢
+  - 例: `"1歳以上"`, `"0～2歳"`, `"1歳2か月まで"`
 
-3. **予約の判定**
-   - "予約制", "要予約", "★", "申込み" などのキーワード
-   - "予約不要", "自由", "申込み不要" の場合は false
+- **reservationRequired**: 予約が必要な場合 true
+  - デフォルト: false
 
-4. **重複イベント**
-   - 同じイベントが複数日に開催される場合、日付ごとに別エントリを作成
-   - 例: "わくわくひろば" が毎日開催 → 日付ごとに個別のイベント
+- **location**: 開催場所（センター以外の場合のみ）
+  - 例: `"現地"`, `"公園"`
 
-5. **不明確な情報**
-   - 情報が不明確な場合は null を使用
-   - 確信が持てない場合は description に詳細を記載
+- **capacity**: 定員
+  - 例: `10`, `20`
 
-## 実装例
+- **tags**: タグの配列
+  - 例: `["屋外イベント", "予約制", "有料"]`
 
-```typescript
-import { readPDF } from './read-pdf';
-import { validateExtractedEvents } from './validator';
-import { loadDataSet, mergeSourceDocument, mergeEvents, saveDataSet } from './merge-dataset';
+## 抽出ガイドライン
 
-async function extractEventsFromPDF(sourceDoc: SourceDocument) {
-  // 1. PDFを読み込み
-  const pdfPath = `data/pdf-cache/${sourceDoc.centerId}-${sourceDoc.month}.pdf`;
-  const pdfText = await readPDF(pdfPath);
-  
-  // 2. AI (Claude) でイベント抽出
-  const prompt = `
-以下のPDFテキストから、イベント情報を抽出してJSON形式で出力してください。
+### 日付の解釈
 
-ソースドキュメント情報:
-${JSON.stringify(sourceDoc, null, 2)}
+- PDFの形式は月間カレンダー、日付リスト、説明文など様々
+- 月は `sourceDocumentId` から取得 (例: `nishi-2026-10` → 2026年10月)
+- 日付は必ず YYYY-MM-DD 形式に正規化
 
-出力スキーマ: (スキーマ定義...)
+### 時刻の解釈
 
-PDFテキスト:
-${pdfText}
-`;
-  
-  const extractedEvents = await callAI(prompt); // AIを呼び出し
-  
-  // 3. 検証
-  const validation = validateExtractedEvents(extractedEvents, sourceDoc);
-  if (!validation.valid) {
-    console.error('Validation failed:', validation.errors);
-    throw new Error('Invalid extracted events');
+- "10:00～11:30" → startTime: "10:00", endTime: "11:30"
+- "午前9時～12時" → startTime: "09:00", endTime: "12:00"
+- "午後1時～4時" → startTime: "13:00", endTime: "16:00"
+- 時刻情報がない場合は null
+
+### 予約の判定
+
+**予約必要 (reservationRequired: true)** のキーワード:
+- "予約制", "要予約", "★", "申込み", "申し込み"
+
+**予約不要 (reservationRequired: false)** のキーワード:
+- "予約不要", "自由", "申込み不要", "予約なし"
+
+### 重複イベント
+
+同じイベントが複数日に開催される場合、**日付ごとに別エントリを作成**:
+
+```json
+[
+  {
+    "id": "nishi-2026-10-01-wakuwaku",
+    "date": "2026-10-01",
+    "title": "わくわくひろば",
+    ...
+  },
+  {
+    "id": "nishi-2026-10-02-wakuwaku",
+    "date": "2026-10-02",
+    "title": "わくわくひろば",
+    ...
   }
-  
-  if (validation.warnings.length > 0) {
-    console.warn('Warnings:', validation.warnings);
-  }
-  
-  // 4. マージ
-  const dataset = await loadDataSet();
-  
-  sourceDoc.extractedAt = new Date().toISOString();
-  mergeSourceDocument(dataset, sourceDoc);
-  mergeEvents(dataset, extractedEvents, sourceDoc.id);
-  
-  await saveDataSet(dataset);
-  
-  console.log(`Extracted ${extractedEvents.length} events from ${sourceDoc.id}`);
-}
+]
 ```
 
-## 実際のPDF例
+### 不明確な情報
 
-### にし (2026年10月)
+- 確信が持てない場合は null を使用
+- 重要な情報は description に記載
 
+## センター別のPDF形式
+
+### にし (nishi)
 - 形式: 月間カレンダーグリッド
-- 特徴: 各日にイベント名と時間が記載
+- 特徴: 各日にイベント名と時間
 - 予約必要なイベントは ★ マーク
-- 年齢制限が各イベントに記載
 
-### おおみや (2026年9月)
-
+### おおみや (omiya)
 - 形式: 月間カレンダー + 詳細説明
-- 特徴: カレンダーにイベント名、下部に詳細説明
-- "わくわく広場" は予約不要
-- その他のプログラムは予約制
+- 特徴: カレンダーにイベント名、下部に詳細
 
-### みぬま
-
+### みぬま (minuma)
 - 形式: テキスト説明中心
 - 特徴: イベント一覧が日付順
 - Zoom参加可能なプログラムあり
-- 詳細な説明文が多い
 
-## 検証コマンド
+### その他
+- 各センターで形式が異なるため、柔軟に対応
 
-抽出後、以下で検証:
+## 単独型10センター一覧
+
+スケジュールPDFを公開している単独型センター:
+
+1. **にし** (nishi) - https://seisinkai.ed.jp/center/
+2. **きた** (kita)
+3. **おおみや** (omiya) - https://www.wakaba-asunaro.jp/omiya
+4. **みぬま** (minuma) - https://www.sainoko.net/minuma/
+5. **よの** (yono)
+6. **さくら** (sakura) - http://www.ichiju-fukushi.or.jp/sakura.html
+7. **うらわ** (urawa) - https://www.urawanyuyouji.com/urawa/
+8. **みなみ** (minami)
+9. **みどり** (midori) - https://www.instagram.com/shiencenter_midori/
+10. **いわつき** (iwatsuki)
+
+## 抽出パイプライン実行例
 
 ```bash
-# データセットの統計を表示
+# 1. PDFをダウンロード
+npm run download-pdfs
+
+# 2. テキスト抽出（エージェントが実行）
+npm exec pdf-parse data/pdf-cache/nishi-2026-10.pdf > /tmp/nishi-2026-10.txt
+
+# 3. テキストを読み取り、JSONを作成
+# （エージェントが /tmp/nishi-2026-10.txt を読んでイベントを抽出）
+# （エージェントが data/extracted-events/nishi-2026-10.json に書き込み）
+
+# 4. 検証
+npx tsx scripts/validator.ts data/extracted-events/nishi-2026-10.json
+
+# 5. マージ
+npx tsx scripts/merge-dataset.ts merge data/extracted-events/nishi-2026-10.json
+
+# 6. 統計確認
 npm run dataset-stats
-
-# 特定の月のイベント数を確認
-npm run list-events -- --month 2026-10
-
-# 検証のみ実行 (実際のマージはしない)
-npm run validate-events -- --dry-run
 ```
+
+## 既知の制限事項
+
+- AI抽出は100%正確ではない
+- 各イベントに元PDFへのリンクを表示してユーザーが確認可能
+- PDFが画像スキャンの場合、OCRが必要（pdf-to-imageなど）
+- 一部のセンターはPDFを公開していない
 
 ## トラブルシューティング
 
-### PDFが画像の場合
+### PDFが読み取れない
 
-PDFがスキャン画像の場合、OCRが必要:
-1. pdf-to-image で画像に変換
-2. Vision API (Claude) で画像を直接読み取り
-3. または Tesseract などでOCR
+PDFが画像ベースの場合:
+1. pdf-to-imageで画像に変換
+2. OCRツール (Tesseract等) でテキスト化
+3. または画像認識可能なLLMで直接読み取り
 
 ### 検証エラー
 
 - 日付形式を確認 (YYYY-MM-DD)
 - 時刻形式を確認 (HH:MM)
-- 必須フィールドが存在するか確認
-- centerId と sourceDocumentId が一致しているか確認
+- 必須フィールドの存在を確認
+- centerIdとsourceDocumentIdの整合性を確認
 
 ### データが不正確
 
-AI抽出は100%正確ではないため:
-1. 各イベントに pdfUrl へのリンクを表示
-2. ユーザーが元PDFで確認可能
-3. フィードバックを受けて再抽出
+- フィードバックを受けて再抽出
+- descriptionに詳細を追加
+- 元PDFリンクでユーザー確認可能
 
-## データセットの利用
+## データの利用
 
-最終的な`data/dataset.json`は静的サイトで直接利用可能:
+最終的な `public/data/dataset.json` は静的サイトで利用:
 
 ```typescript
-import dataset from '@/data/dataset.json';
-
-// センター一覧
-const centers = dataset.centers;
+import dataset from '@/public/data/dataset.json';
 
 // 特定月のイベント
 const octoberEvents = dataset.events.filter(
