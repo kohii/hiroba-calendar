@@ -1,0 +1,73 @@
+[
+  {
+    "centerId": "kita",
+    "centerName": "きた",
+    "websiteUrl": "https://kodomo-bunka.jp/support/",
+    "scheduleType": "image",
+    "octoberAvailable": false,
+    "novemberAvailable": false,
+    "notes": "Schedule displayed as images on website. Found images from 2026/08 and 2026/09 but no Oct/Nov PDFs. May require manual checking or image extraction."
+  },
+  {
+    "centerId": "omiya",
+    "centerName": "おおみや",
+    "websiteUrl": "https://www.wakaba-asunaro.jp/omiya",
+    "scheduleType": "pdf",
+    "octoberAvailable": true,
+    "novemberAvailable": true,
+    "octoberUrl": "https://www.wakaba-asunaro.jp/library/6662c3046985d13334e93bf0/6aa2318955d0ebeb15ea578c.pdf",
+    "novemberUrl": "https://www.wakaba-asunaro.jp/library/6662c3046985d13334e93bf0/6acec02b0e118c59d4e04436.pdf",
+    "notes": "Both October and November PDFs available. Update notices dated 2026.9.10 (Oct) and 2026.10.14 (Nov)."
+  },
+  {
+    "centerId": "yono",
+    "centerName": "よの",
+    "websiteUrl": "https://www.himawarikkoland.com/yono",
+    "scheduleType": "pdf",
+    "octoberAvailable": true,
+    "novemberAvailable": true,
+    "octoberUrl": "https://www.himawarikkoland.com/library/67e0faf1ee78e14239888cb6/6aab8fd00d9ae03ba8e0c508.pdf",
+    "novemberUrl": "https://www.himawarikkoland.com/library/67e0faf1ee78e14239888cb6/6ad6bab4055a68706e9f2176.pdf",
+    "notes": "Both October and November PDFs available. Dedicated pages per month with HTML preview and PDF download: /yono202610 and /yono202611."
+  },
+  {
+    "centerId": "sakura",
+    "centerName": "さくら",
+    "websiteUrl": "http://www.ichiju-fukushi.or.jp/sakuraSch_next.html",
+    "scheduleType": "not_found",
+    "octoberAvailable": false,
+    "novemberAvailable": false,
+    "notes": "Website mentions 'さくらチャンネル' schedule link but actual PDF/schedule not accessible online. May require phone contact or in-person visits. Only general facility info and consultation hours available."
+  },
+  {
+    "centerId": "minami",
+    "centerName": "みなみ",
+    "websiteUrl": "https://www.urawanyuyouji.com/minami/",
+    "scheduleType": "pdf",
+    "octoberAvailable": true,
+    "novemberAvailable": true,
+    "octoberUrl": "https://www.urawanyuyouji.com/admin/wp-content/uploads/2026/09/202610_minami.pdf",
+    "novemberUrl": "https://www.urawanyuyouji.com/admin/wp-content/uploads/2026/10/202611_minami.pdf",
+    "notes": "Both October and November PDFs available. Well-organized website with clear schedule links."
+  },
+  {
+    "centerId": "midori",
+    "centerName": "みどり",
+    "websiteUrl": "https://www.instagram.com/shiencenter_midori/",
+    "scheduleType": "instagram",
+    "octoberAvailable": false,
+    "novemberAvailable": false,
+    "notes": "Instagram account only - requires manual check or Instagram API. Cannot automatically scrape Instagram content. Schedule may be posted as Instagram images/posts."
+  },
+  {
+    "centerId": "iwatsuki",
+    "centerName": "いわつき",
+    "websiteUrl": "https://kawai-daynursery.jp/shiencenter",
+    "scheduleType": "pdf",
+    "octoberAvailable": true,
+    "novemberAvailable": true,
+    "octoberUrl": "https://kawai-daynursery.jp/wp-content/uploads/2026/09/hina-202610.pdf",
+    "novemberUrl": "https://kawai-daynursery.jp/wp-content/uploads/2026/10/hina-202611.pdf",
+    "notes": "Both October and November PDFs available. Published as '雛だより' (Hina Dayori) newsletter. Clean website with clear PDF links."
+  }
+]

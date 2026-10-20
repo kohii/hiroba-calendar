@@ -2,6 +2,8 @@
  * Data schema for Saitama City child-rearing support centers event schedules
  */
 
+export type ScheduleType = 'pdf' | 'html' | 'image' | 'instagram' | 'not_found';
+
 export interface Center {
   id: string;
   name: string;
@@ -10,6 +12,9 @@ export interface Center {
   phone: string;
   websiteUrl: string;
   closedDays: string;
+  scheduleType?: ScheduleType;
+  scheduleUrlPattern?: string; // Pattern for constructing schedule URLs
+  scheduleNotes?: string;
 }
 
 export interface SourceDocument {
@@ -62,8 +67,10 @@ export const CENTERS: Center[] = [
     nameJa: "きた",
     address: "北区宮原町3-432-2 岸ビル201",
     phone: "048-662-0022",
-    websiteUrl: "https://www.city.saitama.lg.jp/kosodate/map/category11/",
+    websiteUrl: "https://kodomo-bunka.jp/support/",
     closedDays: "第2・第4水曜日",
+    scheduleType: "image",
+    scheduleNotes: "Schedule displayed as images on website",
   },
   {
     id: "omiya",
@@ -73,6 +80,8 @@ export const CENTERS: Center[] = [
     phone: "048-649-3030",
     websiteUrl: "https://www.wakaba-asunaro.jp/omiya",
     closedDays: "第1・第3月曜日",
+    scheduleType: "pdf",
+    scheduleUrlPattern: "https://www.wakaba-asunaro.jp/library/6662c3046985d13334e93bf0/",
   },
   {
     id: "minuma",
@@ -89,8 +98,10 @@ export const CENTERS: Center[] = [
     nameJa: "よの",
     address: "中央区本町東3-5-23 与野本町小学校複合施設いーよの2階",
     phone: "048-840-1788",
-    websiteUrl: "https://www.city.saitama.lg.jp/kosodate/map/category11/",
+    websiteUrl: "https://www.himawarikkoland.com/yono",
     closedDays: "第2・第4火曜日",
+    scheduleType: "pdf",
+    scheduleUrlPattern: "https://www.himawarikkoland.com/yono{YYYYMM}",
   },
   {
     id: "sakura",
@@ -98,8 +109,10 @@ export const CENTERS: Center[] = [
     nameJa: "さくら",
     address: "桜区栄和6-9-4",
     phone: "048-859-3031",
-    websiteUrl: "http://www.ichiju-fukushi.or.jp/sakura.html",
+    websiteUrl: "http://www.ichiju-fukushi.or.jp/sakuraSch_next.html",
     closedDays: "第1・第3火曜日",
+    scheduleType: "not_found",
+    scheduleNotes: "Schedule not available online - contact center directly",
   },
   {
     id: "urawa",
@@ -116,8 +129,10 @@ export const CENTERS: Center[] = [
     nameJa: "みなみ",
     address: "南区別所7-20-1 サウスピア1階",
     phone: "048-844-7223",
-    websiteUrl: "https://www.city.saitama.lg.jp/kosodate/map/category11/",
+    websiteUrl: "https://www.urawanyuyouji.com/minami/",
     closedDays: "第2・第4月曜日",
+    scheduleType: "pdf",
+    scheduleUrlPattern: "https://www.urawanyuyouji.com/admin/wp-content/uploads/{YYYY}/{MM}/{YYYYMM}_minami.pdf",
   },
   {
     id: "midori",
@@ -127,6 +142,8 @@ export const CENTERS: Center[] = [
     phone: "048-874-7388",
     websiteUrl: "https://www.instagram.com/shiencenter_midori/",
     closedDays: "第2・第4水曜日",
+    scheduleType: "instagram",
+    scheduleNotes: "Schedule posted on Instagram - requires manual check",
   },
   {
     id: "iwatsuki",
@@ -134,7 +151,9 @@ export const CENTERS: Center[] = [
     nameJa: "いわつき",
     address: "岩槻区本町3-1-1 WATSU西館4階",
     phone: "048-790-0020",
-    websiteUrl: "https://www.city.saitama.lg.jp/kosodate/map/category11/",
+    websiteUrl: "https://kawai-daynursery.jp/shiencenter",
     closedDays: "第2火曜日・WATSU西館休館日",
+    scheduleType: "pdf",
+    scheduleUrlPattern: "https://kawai-daynursery.jp/wp-content/uploads/{YYYY}/{MM}/hina-{YYYYMM}.pdf",
   },
 ];
