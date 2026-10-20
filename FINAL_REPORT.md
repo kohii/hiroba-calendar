@@ -349,7 +349,7 @@ npm run build
 ./out/
 
 # Deploy with Wrangler
-npx wrangler pages deploy ./out --project-name=saitama-kosodate-schedule
+npx wrangler pages deploy ./out --project-name=hiroba-calendar
 ```
 
 ### Configuration

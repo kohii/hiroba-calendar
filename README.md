@@ -138,7 +138,7 @@ npm run build
 2. **Wrangler設定** (wrangler.toml)
 
 ```toml
-name = "saitama-kosodate-schedule"
+name = "hiroba-calendar"
 compatibility_date = "2024-01-01"
 
 [site]
@@ -148,7 +148,7 @@ bucket = "./out"
 3. **デプロイ**
 
 ```bash
-npx wrangler pages deploy ./out --project-name=saitama-kosodate-schedule
+npx wrangler pages deploy ./out --project-name=hiroba-calendar
 ```
 
 ### 静的エクスポート
