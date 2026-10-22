@@ -82,6 +82,8 @@ select {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
   margin-bottom: 1rem;
 }
 
@@ -340,6 +342,22 @@ select {
   opacity: 0.8;
 }
 
+a.calendar-event {
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+
+.calendar-event.regular-hours {
+  opacity: 0.45;
+}
+
+.calendar-event-regular {
+  font-size: 0.625rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
 .calendar-event-center {
   font-weight: 500;
   line-height: 1.2;
@@ -434,6 +452,19 @@ select {
   background: #f9fafb;
 }
 
+.event-item.regular-hours {
+  background: #f8fafc;
+}
+
+.event-item.regular-hours:hover {
+  background: #f1f5f9;
+}
+
+.event-item.regular-hours .event-title {
+  color: #6b7280;
+  font-weight: 500;
+}
+
 .event-content {
   display: flex;
   justify-content: space-between;
@@ -467,6 +498,15 @@ select {
   padding: 0.125rem 0.5rem;
   background: #fecaca;
   color: #991b1b;
+  font-size: 0.75rem;
+  border-radius: 0.25rem;
+}
+
+.event-regular-tag {
+  display: inline-block;
+  padding: 0.125rem 0.5rem;
+  background: #e5e7eb;
+  color: #4b5563;
   font-size: 0.75rem;
   border-radius: 0.25rem;
 }

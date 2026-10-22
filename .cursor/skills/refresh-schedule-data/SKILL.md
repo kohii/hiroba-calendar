@@ -43,6 +43,8 @@ python3 scripts/extract-pdf-text.py data/pdf-cache/nishi-2026-10.pdf /tmp/nishi-
     "description": "自由に遊べる時間です",
     "targetAge": "0～3歳未満",
     "reservationRequired": false,
+    "kind": "hiroba",
+    "origin": "extracted",
     "tags": ["自由遊び"]
   }
 ]
@@ -50,14 +52,16 @@ python3 scripts/extract-pdf-text.py data/pdf-cache/nishi-2026-10.pdf /tmp/nishi-
 
 ### 3. データ検証
 
-抽出後、以下のコマンドで検証:
+抽出後に検証する。`scripts/validator.ts` はファイルパスを受け取らない。`process.argv[2]` はイベント配列のJSON文字列、`process.argv[3]` はソースドキュメントのJSON文字列。
 
 ```bash
-node --experimental-strip-types scripts/validator.ts data/extracted-events/{centerId}-{month}.json
+node --experimental-strip-types scripts/validator.ts "$(cat data/extracted-events/nishi-2026-10.json)" '{"id":"nishi-2026-10","centerId":"nishi","month":"2026-10","pdfUrl":"https://example.com/nishi.pdf","fetchedAt":"2026-10-20T00:00:00Z","sha256":"abc"}'
 ```
 
 検証は以下をチェックします:
-- 必須フィールドの存在 (id, centerId, sourceDocumentId, date, title)
+- 必須フィールドの存在 (id, centerId, sourceDocumentId, date, title, kind, origin)
+- kind は `hiroba` または `event`
+- origin は `extracted` または `regular-hours`
 - 日付形式 (YYYY-MM-DD)
 - 時刻形式 (HH:MM)
 - centerIdの整合性
@@ -72,6 +76,16 @@ node --experimental-strip-types scripts/merge-dataset.ts merge data/extracted-ev
 ```
 
 これにより `public/data/dataset.json` が更新されます。
+
+### 5. 通常開室の補完
+
+抽出JSONに通常開室の行を足さない。補完は次のコマンドが行う。
+
+```bash
+pnpm apply-schedule-model
+```
+
+`scripts/apply-schedule-model.ts` は各センターの `regularHours` を読み、ひろば行が無い開室日だけ通常開室を足す。
 
 ## フィールド定義
 
@@ -91,6 +105,14 @@ node --experimental-strip-types scripts/merge-dataset.ts merge data/extracted-ev
 
 - **title**: イベント名
   - 例: `"お芋掘り"`
+
+- **kind**: `"hiroba"` または `"event"`
+  - ひろば、広場、フリー、自由遊び、ももちゃんタイムのような月齢限定の名称は `"hiroba"`
+  - 講座、測定、教室、ワークショップ、季節のイベントは `"event"`
+  - タイトルがひろばで、講座や測定の語も含むときは `"hiroba"`
+
+- **origin**: 抽出した行は `"extracted"`
+  - 通常開室の行は作らない。`scripts/apply-schedule-model.ts` がセンターの `regularHours` から足す
 
 ### オプショナルフィールド
 
@@ -151,16 +173,24 @@ node --experimental-strip-types scripts/merge-dataset.ts merge data/extracted-ev
     "id": "nishi-2026-10-01-wakuwaku",
     "date": "2026-10-01",
     "title": "わくわくひろば",
-    ...
+    "kind": "hiroba",
+    "origin": "extracted"
   },
   {
     "id": "nishi-2026-10-02-wakuwaku",
     "date": "2026-10-02",
     "title": "わくわくひろば",
-    ...
+    "kind": "hiroba",
+    "origin": "extracted"
   }
 ]
 ```
+
+### 種別
+
+自由あそびは `kind` を `"hiroba"` にする。タイトルに ひろば、広場、フリー、自由遊び があるとき、または ももちゃんタイム のような月齢限定の名称のときがそれにあたる。講座、測定、教室、ワークショップ、季節のイベントは `"event"`。タイトルがひろばであり、同時に講座や測定の語を含んでいても `kind` は `"hiroba"`。
+
+`origin` は `"extracted"`。通常開室の行を抽出JSONに足さない。空欄の日を自分で埋めない。
 
 ### 不明確な情報
 
@@ -208,8 +238,9 @@ Read `/tmp/nishi-2026-10.txt` and write the events to `data/extracted-events/nis
 ```bash
 pnpm download-pdfs
 python3 scripts/extract-pdf-text.py data/pdf-cache/nishi-2026-10.pdf /tmp/nishi-2026-10.txt
-node --experimental-strip-types scripts/validator.ts data/extracted-events/nishi-2026-10.json
+node --experimental-strip-types scripts/validator.ts "$(cat data/extracted-events/nishi-2026-10.json)" '{"id":"nishi-2026-10","centerId":"nishi","month":"2026-10","pdfUrl":"https://example.com/nishi.pdf","fetchedAt":"2026-10-20T00:00:00Z","sha256":"abc"}'
 node --experimental-strip-types scripts/merge-dataset.ts merge data/extracted-events/nishi-2026-10.json
+pnpm apply-schedule-model
 pnpm dataset-stats
 ```
 

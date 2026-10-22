@@ -22,7 +22,9 @@
     "extract-pdf-text": "python3 scripts/extract-pdf-text.py",
     "dataset-stats": "node --experimental-strip-types scripts/merge-dataset.ts stats",
     "cleanup": "node --experimental-strip-types scripts/merge-dataset.ts cleanup",
-    "verify-pdfs": "node --experimental-strip-types scripts/verify-pdf-urls.ts"
+    "verify-pdfs": "node --experimental-strip-types scripts/verify-pdf-urls.ts",
+    "generate-holidays": "python3 scripts/generate-holidays.py",
+    "apply-schedule-model": "node --experimental-strip-types scripts/apply-schedule-model.ts"
   },
   "dependencies": {
     "astro": "7.4.2"

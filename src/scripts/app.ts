@@ -1,5 +1,7 @@
+import { filterEvents } from "../../lib/filter-events.ts";
 import type { DataSet, Event } from "../../lib/schema.ts";
 import { decodeURLState, encodeURLState } from "../../lib/url-state.ts";
+import type { URLState } from "../../lib/url-state.ts";
 
 let dataset: DataSet = {
   centers: [],
@@ -12,6 +14,7 @@ let selectedCenters = new Set<string>();
 let favorites = new Set<string>();
 let selectedMonth = "";
 let viewMode: "list" | "calendar" = "list";
+let selectedType: URLState["type"] = "all";
 let showFilters = false;
 
 const centerColors: Record<string, string> = {
@@ -56,6 +59,7 @@ async function init() {
   }
 
   viewMode = urlState.view;
+  selectedType = urlState.type;
 
   setupEventListeners();
   renderCenterGrid();
@@ -78,6 +82,27 @@ function setupEventListeners() {
   document.getElementById("view-calendar")?.addEventListener("click", () => {
     viewMode = "calendar";
     updateViewButtons();
+    updateURL();
+    renderEvents();
+  });
+
+  document.getElementById("type-all")?.addEventListener("click", () => {
+    selectedType = "all";
+    updateTypeButtons();
+    updateURL();
+    renderEvents();
+  });
+
+  document.getElementById("type-hiroba")?.addEventListener("click", () => {
+    selectedType = "hiroba";
+    updateTypeButtons();
+    updateURL();
+    renderEvents();
+  });
+
+  document.getElementById("type-event")?.addEventListener("click", () => {
+    selectedType = "event";
+    updateTypeButtons();
     updateURL();
     renderEvents();
   });
@@ -118,6 +143,7 @@ function updateURL() {
     centers: Array.from(selectedCenters),
     month: selectedMonth || null,
     view: viewMode,
+    type: selectedType,
   });
   const newUrl = query ? `/?${query}` : "/";
   history.replaceState(null, "", newUrl);
@@ -126,6 +152,7 @@ function updateURL() {
 function updateUI() {
   updateFilterVisibility();
   updateViewButtons();
+  updateTypeButtons();
   updateMonthInput();
   updateFilterCount();
   renderEvents();
@@ -142,6 +169,12 @@ function updateFilterVisibility() {
 function updateViewButtons() {
   document.getElementById("view-list")?.classList.toggle("active", viewMode === "list");
   document.getElementById("view-calendar")?.classList.toggle("active", viewMode === "calendar");
+}
+
+function updateTypeButtons() {
+  document.getElementById("type-all")?.classList.toggle("active", selectedType === "all");
+  document.getElementById("type-hiroba")?.classList.toggle("active", selectedType === "hiroba");
+  document.getElementById("type-event")?.classList.toggle("active", selectedType === "event");
 }
 
 function updateMonthInput() {
@@ -240,16 +273,10 @@ function toggleCenter(centerId: string) {
 }
 
 function getFilteredEvents(): Event[] {
-  return dataset.events.filter((event) => {
-    if (selectedCenters.size > 0 && !selectedCenters.has(event.centerId)) {
-      return false;
-    }
-
-    if (selectedMonth && !event.date.startsWith(selectedMonth)) {
-      return false;
-    }
-
-    return true;
+  return filterEvents(dataset.events, {
+    centers: Array.from(selectedCenters),
+    month: selectedMonth || null,
+    type: selectedType,
   });
 }
 
@@ -313,12 +340,14 @@ function renderEventItem(event: Event): string {
   const center = dataset.centers.find((c) => c.id === event.centerId);
   const pdfUrl = dataset.sourceDocuments.find((d) => d.id === event.sourceDocumentId)?.pdfUrl;
 
+  const regular = event.origin === "regular-hours";
   return `
-    <div class="event-item">
+    <div class="event-item${regular ? " regular-hours" : ""}">
       <div class="event-content">
         <div class="event-main">
           <div class="event-tags-row">
             <span class="event-center-tag">${center?.nameJa || event.centerId}</span>
+            ${regular ? '<span class="event-regular-tag">通常開室</span>' : ""}
             ${event.reservationRequired ? '<span class="event-reservation-tag">要予約</span>' : ""}
           </div>
           
@@ -402,6 +431,27 @@ function renderEventItem(event: Event): string {
   `;
 }
 
+function renderCalendarEvent(event: Event): string {
+  const center = dataset.centers.find((item) => item.id === event.centerId);
+  const pdfUrl = dataset.sourceDocuments.find(
+    (document) => document.id === event.sourceDocumentId,
+  )?.pdfUrl;
+  const color = centerColors[event.centerId] || "#6b7280";
+  const regular = event.origin === "regular-hours";
+  const classes = regular ? "calendar-event regular-hours" : "calendar-event";
+  const title = `${center?.nameJa || event.centerId}: ${event.title}${event.startTime ? ` ${event.startTime}` : ""}`;
+  const body = `
+    <div class="calendar-event-center">${center?.nameJa || event.centerId}</div>
+    ${regular ? '<div class="calendar-event-regular">通常開室</div>' : ""}
+    <div class="calendar-event-title">${escapeHtml(event.title)}</div>
+    ${event.startTime ? `<div class="calendar-event-time">${event.startTime}</div>` : ""}
+  `;
+  if (regular && pdfUrl) {
+    return `<a class="${classes}" href="${escapeHtml(pdfUrl)}" target="_blank" rel="noopener noreferrer" style="background-color: ${color}" title="${escapeHtml(title)}">${body}</a>`;
+  }
+  return `<div class="${classes}" style="background-color: ${color}" title="${escapeHtml(title)}">${body}</div>`;
+}
+
 function renderCalendarView(container: HTMLElement, events: Event[]) {
   if (!selectedMonth) return;
 
@@ -460,19 +510,7 @@ function renderCalendarView(container: HTMLElement, events: Event[]) {
                   ${day.getDate()}
                 </div>
                 <div class="calendar-events">
-                  ${dayEvents
-                    .map((event) => {
-                      const center = dataset.centers.find((c) => c.id === event.centerId);
-                      const color = centerColors[event.centerId] || "#6b7280";
-                      return `
-                      <div class="calendar-event" style="background-color: ${color}" title="${center?.nameJa}: ${escapeHtml(event.title)}${event.startTime ? " " + event.startTime : ""}">
-                        <div class="calendar-event-center">${center?.nameJa || event.centerId}</div>
-                        <div class="calendar-event-title">${escapeHtml(event.title)}</div>
-                        ${event.startTime ? `<div class="calendar-event-time">${event.startTime}</div>` : ""}
-                      </div>
-                    `;
-                    })
-                    .join("")}
+                  ${dayEvents.map((event) => renderCalendarEvent(event)).join("")}
                 </div>
               </div>
             `;
@@ -523,7 +561,10 @@ function updateStats() {
   const events = getFilteredEvents();
   const countEl = document.getElementById("event-count");
   if (countEl) {
-    countEl.textContent = `${events.length} 件のイベント`;
+    let countLabel = `${events.length} 件`;
+    if (selectedType === "hiroba") countLabel = `${events.length} 件のひろば`;
+    if (selectedType === "event") countLabel = `${events.length} 件のイベント`;
+    countEl.textContent = countLabel;
   }
 
   const updatedEl = document.getElementById("data-updated");
