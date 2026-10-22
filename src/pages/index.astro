@@ -43,6 +43,12 @@ const description = 'さいたま市の子育て支援センターのイベン�
           </button>
           
           <div class="view-buttons">
+            <button id="type-all" class="view-button active">すべて</button>
+            <button id="type-hiroba" class="view-button">ひろばのみ</button>
+            <button id="type-event" class="view-button">イベントのみ</button>
+          </div>
+
+          <div class="view-buttons">
             <button id="view-list" class="view-button active">リスト</button>
             <button id="view-calendar" class="view-button">カレンダー</button>
           </div>
@@ -70,7 +76,7 @@ const description = 'さいたま市の子育て支援センターのイベン�
       <div id="events-container"></div>
       
       <div class="stats">
-        <p id="event-count">0 件のイベント</p>
+        <p id="event-count">0 件</p>
         <p id="data-updated" class="hidden"></p>
       </div>
     </div>
