@@ -857,6 +857,18 @@
       "targetAge": "０・１・２歳の親子"
     },
     {
+      "id": "nishi-2026-10-05-regular-hiroba",
+      "centerId": "nishi",
+      "sourceDocumentId": "nishi-2026-10",
+      "date": "2026-10-05",
+      "title": "みんなのひろば",
+      "description": "午前9:00～12:00 午後13:00～16:00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "０～３歳未満 (３歳を迎えた年の３月まで利用可 )"
+    },
+    {
       "id": "nishi-2026-10-05-shintai",
       "centerId": "nishi",
       "sourceDocumentId": "nishi-2026-10",
@@ -871,7 +883,7 @@
         "身体測定"
       ],
       "origin": "extracted",
-      "kind": "hiroba"
+      "kind": "event"
     },
     {
       "id": "urawa-2026-10-05-regular-hiroba",
@@ -2310,7 +2322,7 @@
         "予約制"
       ],
       "origin": "extracted",
-      "kind": "hiroba"
+      "kind": "event"
     },
     {
       "id": "nishi-2026-10-19-regular-hiroba",
@@ -2859,7 +2871,19 @@
         "予約制"
       ],
       "origin": "extracted",
-      "kind": "hiroba"
+      "kind": "event"
+    },
+    {
+      "id": "nishi-2026-10-23-regular-hiroba",
+      "centerId": "nishi",
+      "sourceDocumentId": "nishi-2026-10",
+      "date": "2026-10-23",
+      "title": "みんなのひろば",
+      "description": "午前9:00～12:00 午後13:00～16:00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "０～３歳未満 (３歳を迎えた年の３月まで利用可 )"
     },
     {
       "id": "omiya-2026-10-23-wakuwaku",
@@ -5707,6 +5731,6 @@
       "kind": "hiroba"
     }
   ],
-  "generatedAt": "2026-10-22T22:25:15.216Z",
+  "generatedAt": "2026-10-22T22:39:32.250Z",
   "version": "1.0.0"
 }
