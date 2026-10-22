@@ -11,35 +11,15 @@
 ### 1. PDF準備とテキスト抽出
 
 ```bash
-# PDFのダウンロード（最新のPDFを取得）
-npm run download-pdfs
+pnpm download-pdfs
 ```
 
 PDFは `data/pdf-cache/{centerId}-{month}.pdf` に保存されます。
 
-**テキスト抽出**には以下のコマンドを使用:
+**テキスト抽出**は Python の PyPDF2 を使います。`pip install -r requirements.txt` のあと、次を実行します。
 
 ```bash
-# pdf-parseを使用してテキスト抽出
-npx tsx -e "
-import { readFileSync } from 'fs';
-import PDFParser from 'pdf-parse';
-
-const pdfPath = 'data/pdf-cache/{centerId}-{month}.pdf';
-const dataBuffer = readFileSync(pdfPath);
-
-PDFParser(dataBuffer).then(data => {
-  console.log(data.text);
-}).catch(err => {
-  console.error('Error:', err);
-});
-"
-```
-
-または、PDFを直接読み取ってテキストを表示:
-
-```bash
-npm exec pdf-parse data/pdf-cache/nishi-2026-10.pdf
+python3 scripts/extract-pdf-text.py data/pdf-cache/nishi-2026-10.pdf /tmp/nishi-2026-10.txt
 ```
 
 ### 2. イベント情報の抽出
@@ -73,7 +53,7 @@ npm exec pdf-parse data/pdf-cache/nishi-2026-10.pdf
 抽出後、以下のコマンドで検証:
 
 ```bash
-npx tsx scripts/validator.ts data/extracted-events/{centerId}-{month}.json
+node --experimental-strip-types scripts/validator.ts data/extracted-events/{centerId}-{month}.json
 ```
 
 検証は以下をチェックします:
@@ -88,7 +68,7 @@ npx tsx scripts/validator.ts data/extracted-events/{centerId}-{month}.json
 検証が成功したら、データセットに統合:
 
 ```bash
-npx tsx scripts/merge-dataset.ts merge data/extracted-events/{centerId}-{month}.json
+node --experimental-strip-types scripts/merge-dataset.ts merge data/extracted-events/{centerId}-{month}.json
 ```
 
 これにより `public/data/dataset.json` が更新されます。
@@ -223,25 +203,14 @@ npx tsx scripts/merge-dataset.ts merge data/extracted-events/{centerId}-{month}.
 
 ## 抽出パイプライン実行例
 
+Read `/tmp/nishi-2026-10.txt` and write the events to `data/extracted-events/nishi-2026-10.json` before validation.
+
 ```bash
-# 1. PDFをダウンロード
-npm run download-pdfs
-
-# 2. テキスト抽出（エージェントが実行）
-npm exec pdf-parse data/pdf-cache/nishi-2026-10.pdf > /tmp/nishi-2026-10.txt
-
-# 3. テキストを読み取り、JSONを作成
-# （エージェントが /tmp/nishi-2026-10.txt を読んでイベントを抽出）
-# （エージェントが data/extracted-events/nishi-2026-10.json に書き込み）
-
-# 4. 検証
-npx tsx scripts/validator.ts data/extracted-events/nishi-2026-10.json
-
-# 5. マージ
-npx tsx scripts/merge-dataset.ts merge data/extracted-events/nishi-2026-10.json
-
-# 6. 統計確認
-npm run dataset-stats
+pnpm download-pdfs
+python3 scripts/extract-pdf-text.py data/pdf-cache/nishi-2026-10.pdf /tmp/nishi-2026-10.txt
+node --experimental-strip-types scripts/validator.ts data/extracted-events/nishi-2026-10.json
+node --experimental-strip-types scripts/merge-dataset.ts merge data/extracted-events/nishi-2026-10.json
+pnpm dataset-stats
 ```
 
 ## 既知の制限事項
@@ -280,12 +249,10 @@ PDFが画像ベースの場合:
 ```typescript
 import dataset from '@/public/data/dataset.json';
 
-// 特定月のイベント
 const octoberEvents = dataset.events.filter(
   e => e.date.startsWith('2026-10')
 );
 
-// 特定センターのイベント
 const nishiEvents = dataset.events.filter(
   e => e.centerId === 'nishi'
 );

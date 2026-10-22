@@ -24,21 +24,22 @@
 3. AI抽出 (.cursor/skills/refresh-schedule-data/SKILL.md)
    ↓ Claude APIでイベント情報抽出
 4. 検証 (scripts/validator.ts)
-   ↓ スキーマに対してAjvで検証
+   ↓ 手書きバリデータで検証
 5. マージ (scripts/merge-dataset.ts)
    ↓
 6. 静的JSON (public/data/dataset.json)
    ↓
-7. フロントエンド表示 (Next.js)
+7. フロントエンド表示 (Astro)
 ```
 
 ### ディレクトリ構成
 
 ```
 /workspace
-├── app/                      # Next.js App Router
-│   ├── layout.tsx
-│   └── page.tsx             # メインUI
+├── src/                      # Astro
+│   ├── pages/index.astro
+│   ├── scripts/app.ts
+│   └── styles/global.css
 ├── lib/
 │   ├── schema.ts            # TypeScript型定義とセンター一覧
 │   └── url-state.ts         # URL状態管理
@@ -47,7 +48,7 @@
 │   ├── pdf-download.ts      # ダウンロードとキャッシュ
 │   ├── validator.ts         # AI抽出結果の検証
 │   ├── merge-dataset.ts     # データセット統合
-│   └── refresh-all.ts       # 全体パイプライン実行
+│   └── extract-pdf-text.py  # PyPDF2 で PDF テキスト抽出
 ├── .cursor/skills/
 │   └── refresh-schedule-data/
 │       └── SKILL.md         # AI抽出スキル詳細
@@ -65,13 +66,14 @@
 ### 依存関係のインストール
 
 ```bash
-npm install
+pnpm install
+python3 -m pip install -r requirements.txt
 ```
 
 ### 開発サーバーの起動
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 ブラウザで http://localhost:43123 にアクセス
@@ -81,8 +83,9 @@ npm run dev
 ### 自動更新
 
 ```bash
-# PDF発見 → ダウンロード → 抽出待ちリスト表示
-npm run refresh-data
+pnpm discover-pdfs
+pnpm download-pdfs
+python3 scripts/extract-pdf-text.py data/pdf-cache/<centerId>-<month>.pdf /tmp/<centerId>-<month>.txt
 ```
 
 ### AI抽出 (Agent Skill使用)
@@ -97,27 +100,16 @@ npm run refresh-data
 ### 手動スクリプト
 
 ```bash
-# PDF URLを発見
-npm run discover-pdfs
-
-# PDFをダウンロード
-npm run download-pdfs
-
-# データセット統計
-npm run dataset-stats
-
-# 古いイベント削除
-npm run cleanup
+pnpm discover-pdfs
+pnpm download-pdfs
+pnpm dataset-stats
+pnpm cleanup
 ```
 
 ## テスト
 
 ```bash
-# 単体テスト実行
-npm test
-
-# テスト（ウォッチモード）
-npm test -- --watch
+pnpm test
 ```
 
 テスト対象:
@@ -132,16 +124,16 @@ npm test -- --watch
 このプロジェクトは静的サイトとして出力され、Cloudflare Pages に直接デプロイできます。
 
 **ビルド設定**:
-- **Build command**: `npm run build`
-- **Build output directory**: `out`
+- **Build command**: `pnpm build`
+- **Build output directory**: `dist`
 
 1. **ビルド**
 
 ```bash
-npm run build
+pnpm build
 ```
 
-ビルドにより、完全な静的HTMLファイルが `out/` ディレクトリに生成されます。
+ビルドにより、完全な静的HTMLファイルが `dist/` ディレクトリに生成されます。
 
 2. **Wrangler設定** (wrangler.toml)
 
@@ -150,27 +142,18 @@ name = "hiroba-calendar"
 compatibility_date = "2024-01-01"
 
 [site]
-bucket = "./out"
+bucket = "./dist"
 ```
 
 3. **デプロイ**
 
 ```bash
-npx wrangler pages deploy ./out --project-name=hiroba-calendar
+npx wrangler pages deploy ./dist --project-name=hiroba-calendar
 ```
 
-### 静的エクスポート
+### 静的出力
 
-Next.js の静的エクスポート機能を使用:
-
-```javascript
-// next.config.ts
-const nextConfig = {
-  output: 'export',
-};
-```
-
-ビルド後、`out/` ディレクトリに静的ファイルが生成されます。
+Astro は `output: 'static'` で `dist/` に書き出します。画像最適化は使わないので、`astro.config.mjs` の image service は noop です。
 
 ## データソース
 
@@ -180,24 +163,24 @@ const nextConfig = {
 
 | ID | 名前 | 所在地 | 2026年10月データ |
 |----|------|--------|-----------------|
-| nishi | にし | 西区三橋6-382-1 2階 | ✓ (18イベント) |
-| kita | きた | 北区宮原町3-432-2 岸ビル201 | - |
-| omiya | おおみや | 大宮区桜木町1-185-2 | - |
-| minuma | みぬま | 見沼区大和田町1-1387-1 | ✓ (13イベント) |
-| yono | よの | 中央区本町東3-5-23 | - |
-| sakura | さくら | 桜区栄和6-9-4 | - |
-| urawa | うらわ | 浦和区高砂1丁目10番1号-213区画 | ✓ (9イベント) |
-| minami | みなみ | 南区別所7-20-1 サウスピア1階 | - |
-| midori | みどり | 緑区東浦和7-20-4 | - |
-| iwatsuki | いわつき | 岩槻区本町3-1-1 WATSU西館4階 | - |
+| nishi | にし | 西区三橋6-382-1 2階 | 18 |
+| kita | きた | 北区宮原町3-432-2 岸ビル201 | 0 |
+| omiya | おおみや | 大宮区桜木町1-185-2 | 37 |
+| minuma | みぬま | 見沼区大和田町1-1387-1 | 13 |
+| yono | よの | 中央区本町東3-5-23 | 33 |
+| sakura | さくら | 桜区栄和6-9-4 | 0 |
+| urawa | うらわ | 浦和区高砂1丁目10番1号-213区画 | 9 |
+| minami | みなみ | 南区別所7-20-1 サウスピア1階 | 20 |
+| midori | みどり | 緑区東浦和7-20-4 | 0 |
+| iwatsuki | いわつき | 岩槻区本町3-1-1 WATSU西館4階 | 10 |
 
 **注**: 支援センターは「単独型」と「親子ひろば型」の2種類があり、このアプリは単独型10箇所のみを対象としています。
 
 ### 現在のデータ状況 (2026年10月20日時点)
 
-- **稼働中のセンター**: 3箇所 (にし、みぬま、うらわ)
-- **総イベント数**: 40件
-- **対象期間**: 2026年10月
+- **2026年10月にイベントがあるセンター**: 7箇所 (にし、よの、いわつき、おおみや、みぬま、みなみ、うらわ)
+- **2026年10月のイベント**: 140件
+- **データセット全体**: 229件。きた、さくら、みどりは登録のみでイベント 0件
 
 **PDFが確認できたセンター**:
 - **にし** (nishi): カレンダーグリッド形式、詳細な時間・対象年齢情報
@@ -242,19 +225,17 @@ AI抽出はこれらの異なる形式に対応する必要があります。
 
 ### 既知の問題
 
-- **きた、おおみや、よの、さくら、みなみ、みどり、いわつき**: PDFが確認できていないか、10月分が未公開
+- **きた、さくら、みどり**: データセットにイベントがない
 - 一部のセンターはInstagram等で情報公開しており、PDFスケジュールを公開していない可能性があります
 
 ## 技術スタック
 
-- **フロントエンド**: Next.js 16, React 19, TypeScript, Tailwind CSS
-- **アイコン**: lucide-react
-- **日付処理**: date-fns
-- **検証**: Ajv (JSON Schema)
-- **PDF処理**: ユーザーがスキルで選択 (pdf-parse, pdf-to-image + OCR等)
-- **AI**: Claude API (スキル内で使用)
-- **テスト**: Vitest
-- **デプロイ**: Cloudflare Pages対応
+- **フロントエンド**: Astro 7 の静的出力、Vanilla TypeScript、素の CSS
+- **検証**: `scripts/validator.ts` の手書きバリデータ
+- **PDFテキスト**: Python PyPDF2 (`scripts/extract-pdf-text.py`)
+- **テスト**: Node の `node:test`
+- **パッケージ**: pnpm。Node は `.nvmrc` の 22.23.4 以上
+- **デプロイ**: Cloudflare Pages。ビルドは `pnpm build`、出力は `dist`
 
 ## ライセンス
 

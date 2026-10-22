@@ -16,7 +16,6 @@ const description = 'さいたま市の子育て支援センターのイベン�
 </head>
 <body>
   <div class="min-h-screen">
-    <!-- Header -->
     <header class="header">
       <div class="container header-content">
         <h1>
@@ -32,9 +31,7 @@ const description = 'さいたま市の子育て支援センターのイベン�
       </div>
     </header>
 
-    <!-- Main Content -->
     <div class="container main-content">
-      <!-- Filters -->
       <div class="card">
         <div class="filter-header">
           <button id="filter-toggle" class="filter-button">
@@ -52,13 +49,11 @@ const description = 'さいたま市の子育て支援センターのイベン�
         </div>
         
         <div id="filter-content" class="filter-content hidden">
-          <!-- Month selector -->
           <div class="filter-section">
             <label class="filter-label" for="month-select">月を選択</label>
             <input type="month" id="month-select" class="month-input">
           </div>
           
-          <!-- Center selector -->
           <div class="filter-section">
             <label class="filter-label">センターを選択</label>
             <div id="center-grid" class="center-grid"></div>
@@ -72,17 +67,14 @@ const description = 'さいたま市の子育て支援センターのイベン�
         </div>
       </div>
       
-      <!-- Events -->
       <div id="events-container"></div>
       
-      <!-- Stats -->
       <div class="stats">
         <p id="event-count">0 件のイベント</p>
         <p id="data-updated" class="hidden"></p>
       </div>
     </div>
 
-    <!-- Footer -->
     <footer class="footer">
       <p>このサイトは各子育て支援センターの公開PDFから情報を収集しています。</p>
       <p>最新の情報は各センターのPDFリンクから元資料をご確認ください。</p>

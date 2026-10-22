@@ -1,6 +1,6 @@
 import type { DataSet, Event } from "../../lib/schema.ts";
+import { decodeURLState, encodeURLState } from "../../lib/url-state.ts";
 
-// State
 let dataset: DataSet = {
   centers: [],
   sourceDocuments: [],
@@ -14,7 +14,6 @@ let selectedMonth = "";
 let viewMode: "list" | "calendar" = "list";
 let showFilters = false;
 
-// Center colors
 const centerColors: Record<string, string> = {
   nishi: "#3b82f6",
   kita: "#10b981",
@@ -28,9 +27,7 @@ const centerColors: Record<string, string> = {
   iwatsuki: "#a855f7",
 };
 
-// Initialize
 async function init() {
-  // Load data
   try {
     const response = await fetch("/data/dataset.json");
     dataset = await response.json();
@@ -38,42 +35,33 @@ async function init() {
     console.error("Failed to load dataset:", err);
   }
 
-  // Load favorites
   const savedFavorites = localStorage.getItem("favorites");
   if (savedFavorites) {
     favorites = new Set(JSON.parse(savedFavorites));
   }
 
-  // Load state from URL
-  const params = new URLSearchParams(window.location.search);
-  const centersParam = params.get("centers");
-  const monthParam = params.get("month");
-  const viewParam = params.get("view");
+  const urlState = decodeURLState(new URLSearchParams(window.location.search));
 
-  if (centersParam) {
-    selectedCenters = new Set(centersParam.split(","));
+  if (urlState.centers.length > 0) {
+    selectedCenters = new Set(urlState.centers);
   } else if (favorites.size > 0) {
     selectedCenters = new Set(favorites);
   }
 
-  if (monthParam) {
-    selectedMonth = monthParam;
+  if (urlState.month) {
+    selectedMonth = urlState.month;
   } else {
     const now = new Date();
     selectedMonth = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}`;
   }
 
-  if (viewParam === "calendar" || viewParam === "list") {
-    viewMode = viewParam;
-  }
+  viewMode = urlState.view;
 
-  // Setup UI
   setupEventListeners();
   renderCenterGrid();
   updateUI();
 }
 
-// Setup event listeners
 function setupEventListeners() {
   document.getElementById("filter-toggle")?.addEventListener("click", () => {
     showFilters = !showFilters;
@@ -103,6 +91,7 @@ function setupEventListeners() {
   document.getElementById("select-all")?.addEventListener("click", () => {
     selectedCenters = new Set(dataset.centers.map((c) => c.id));
     renderCenterGrid();
+    updateFilterCount();
     updateURL();
     renderEvents();
   });
@@ -110,6 +99,7 @@ function setupEventListeners() {
   document.getElementById("clear-all")?.addEventListener("click", () => {
     selectedCenters.clear();
     renderCenterGrid();
+    updateFilterCount();
     updateURL();
     renderEvents();
   });
@@ -117,32 +107,22 @@ function setupEventListeners() {
   document.getElementById("favorites-only")?.addEventListener("click", () => {
     selectedCenters = new Set(favorites);
     renderCenterGrid();
+    updateFilterCount();
     updateURL();
     renderEvents();
   });
 }
 
-// Update URL
 function updateURL() {
-  const params = new URLSearchParams();
-
-  if (selectedCenters.size > 0) {
-    params.set("centers", Array.from(selectedCenters).join(","));
-  }
-
-  if (selectedMonth) {
-    params.set("month", selectedMonth);
-  }
-
-  if (viewMode !== "list") {
-    params.set("view", viewMode);
-  }
-
-  const newUrl = params.toString() ? `/?${params.toString()}` : "/";
+  const query = encodeURLState({
+    centers: Array.from(selectedCenters),
+    month: selectedMonth || null,
+    view: viewMode,
+  });
+  const newUrl = query ? `/?${query}` : "/";
   history.replaceState(null, "", newUrl);
 }
 
-// Update UI
 function updateUI() {
   updateFilterVisibility();
   updateViewButtons();
@@ -183,7 +163,6 @@ function updateFilterCount() {
   }
 }
 
-// Render center grid
 function renderCenterGrid() {
   const grid = document.getElementById("center-grid");
   if (!grid) return;
@@ -224,7 +203,6 @@ function renderCenterGrid() {
     )
     .join("");
 
-  // Add event listeners
   grid.querySelectorAll('[data-action="favorite"]').forEach((btn) => {
     btn.addEventListener("click", (e) => {
       const centerId = (e.currentTarget as HTMLElement).dataset.centerId!;
@@ -240,7 +218,6 @@ function renderCenterGrid() {
   });
 }
 
-// Toggle favorite
 function toggleFavorite(centerId: string) {
   if (favorites.has(centerId)) {
     favorites.delete(centerId);
@@ -251,7 +228,6 @@ function toggleFavorite(centerId: string) {
   renderCenterGrid();
 }
 
-// Toggle center
 function toggleCenter(centerId: string) {
   if (selectedCenters.has(centerId)) {
     selectedCenters.delete(centerId);
@@ -263,7 +239,6 @@ function toggleCenter(centerId: string) {
   renderEvents();
 }
 
-// Get filtered events
 function getFilteredEvents(): Event[] {
   return dataset.events.filter((event) => {
     if (selectedCenters.size > 0 && !selectedCenters.has(event.centerId)) {
@@ -278,7 +253,6 @@ function getFilteredEvents(): Event[] {
   });
 }
 
-// Render events
 function renderEvents() {
   const container = document.getElementById("events-container");
   if (!container) return;
@@ -292,6 +266,7 @@ function renderEvents() {
         <p>センターと月を選択してください</p>
       </div>
     `;
+    updateStats();
     return;
   }
 
@@ -300,9 +275,9 @@ function renderEvents() {
   } else {
     renderListView(container, events);
   }
+  updateStats();
 }
 
-// Render list view
 function renderListView(container: HTMLElement, events: Event[]) {
   const eventsByDate = new Map<string, Event[]>();
   events.forEach((event) => {
@@ -334,7 +309,6 @@ function renderListView(container: HTMLElement, events: Event[]) {
     .join("");
 }
 
-// Render event item
 function renderEventItem(event: Event): string {
   const center = dataset.centers.find((c) => c.id === event.centerId);
   const pdfUrl = dataset.sourceDocuments.find((d) => d.id === event.sourceDocumentId)?.pdfUrl;
@@ -428,7 +402,6 @@ function renderEventItem(event: Event): string {
   `;
 }
 
-// Render calendar view
 function renderCalendarView(container: HTMLElement, events: Event[]) {
   if (!selectedMonth) return;
 
@@ -546,7 +519,6 @@ function renderCalendarView(container: HTMLElement, events: Event[]) {
   });
 }
 
-// Update stats
 function updateStats() {
   const events = getFilteredEvents();
   const countEl = document.getElementById("event-count");
@@ -562,7 +534,6 @@ function updateStats() {
   }
 }
 
-// Utility functions
 function formatDate(date: Date): string {
   const dayOfWeek = ["日", "月", "火", "水", "木", "金", "土"][date.getDay()];
   return `${date.getMonth() + 1}月${date.getDate()}日(${dayOfWeek})`;
@@ -578,5 +549,4 @@ function escapeHtml(text: string): string {
   return div.innerHTML;
 }
 
-// Start
 init();
