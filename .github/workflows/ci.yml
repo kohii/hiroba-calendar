@@ -9,30 +9,41 @@ on:
 jobs:
   test-and-build:
     runs-on: ubuntu-latest
-
+    
     steps:
       - uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      
+      - uses: pnpm/action-setup@v4
         with:
-          node-version: '20'
-          cache: 'npm'
-
+          version: 10
+      
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'pnpm'
+      
       - name: Install dependencies
-        run: npm ci
-
-      - name: Run tests
-        run: npm test -- --run
-
+        run: pnpm install --frozen-lockfile
+      
+      - name: Format check
+        run: pnpm run fmt:check
+      
+      - name: Lint
+        run: pnpm run lint
+      
+      - name: Type check (scripts only)
+        run: tsc --noEmit --skipLibCheck lib/**/*.ts scripts/validator.ts scripts/pdf-discovery.ts scripts/validate-and-merge.ts scripts/verify-pdf-urls.ts scripts/batch-merge.ts scripts/merge-dataset.ts scripts/pdf-download.ts tests/**/*.ts
+      
+      - name: Test
+        run: pnpm test
+      
       - name: Build
-        run: npm run build
-
-      - name: Check build output
+        run: pnpm exec astro build
+      
+      - name: Verify build output
         run: |
-          if [ ! -d "out" ]; then
-            echo "Error: 'out' directory not found after build"
+          if [ ! -f dist/index.html ]; then
+            echo "Error: dist/index.html not found"
             exit 1
           fi
-          echo "Build output directory exists"
-          ls -la out/
+          echo "✓ Build successful"

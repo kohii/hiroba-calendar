@@ -1,105 +1,93 @@
-import { describe, it, expect } from 'vitest';
-import { encodeURLState, decodeURLState } from '../lib/url-state';
-import { validateEvent_single, validateExtractedEvents } from '../scripts/validator';
-import { Event, SourceDocument } from '../lib/schema';
+import { describe, it } from 'node:test';
+import assert from 'node:assert';
+import { encodeURLState, decodeURLState } from '../lib/url-state.ts';
+import { validateEvent_single, validateExtractedEvents } from '../scripts/validator.ts';
+import type { Event, SourceDocument } from '../lib/schema.ts';
 
 describe('URL State Management', () => {
   it('should encode empty state', () => {
-    const state = {
-      centers: [],
-      month: null,
-      view: 'list' as const,
-    };
-    expect(encodeURLState(state)).toBe('');
+    const state = { centers: [], month: null, view: 'list' as const };
+    assert.strictEqual(encodeURLState(state), '');
   });
   
   it('should encode state with centers', () => {
-    const state = {
-      centers: ['nishi', 'omiya'],
-      month: null,
-      view: 'list' as const,
-    };
-    expect(encodeURLState(state)).toBe('centers=nishi%2Comiya');
+    const state = { centers: ['nishi', 'omiya'], month: null, view: 'list' as const };
+    assert.strictEqual(encodeURLState(state), 'centers=nishi%2Comiya');
   });
   
   it('should encode full state', () => {
-    const state = {
-      centers: ['nishi'],
-      month: '2026-10',
-      view: 'calendar' as const,
-    };
+    const state = { centers: ['nishi'], month: '2026-10', view: 'calendar' as const };
     const encoded = encodeURLState(state);
-    expect(encoded).toContain('centers=nishi');
-    expect(encoded).toContain('month=2026-10');
-    expect(encoded).toContain('view=calendar');
+    assert.ok(encoded.includes('centers=nishi'));
+    assert.ok(encoded.includes('month=2026-10'));
+    assert.ok(encoded.includes('view=calendar'));
   });
   
   it('should decode empty params', () => {
     const params = new URLSearchParams('');
     const state = decodeURLState(params);
-    expect(state.centers).toEqual([]);
-    expect(state.month).toBeNull();
-    expect(state.view).toBe('list');
+    assert.deepStrictEqual(state.centers, []);
+    assert.strictEqual(state.month, null);
+    assert.strictEqual(state.view, 'list');
   });
   
   it('should decode centers param', () => {
     const params = new URLSearchParams('centers=nishi,omiya');
     const state = decodeURLState(params);
-    expect(state.centers).toEqual(['nishi', 'omiya']);
+    assert.deepStrictEqual(state.centers, ['nishi', 'omiya']);
   });
   
   it('should decode full params', () => {
     const params = new URLSearchParams('centers=nishi&month=2026-10&view=calendar');
     const state = decodeURLState(params);
-    expect(state.centers).toEqual(['nishi']);
-    expect(state.month).toBe('2026-10');
-    expect(state.view).toBe('calendar');
+    assert.deepStrictEqual(state.centers, ['nishi']);
+    assert.strictEqual(state.month, '2026-10');
+    assert.strictEqual(state.view, 'calendar');
   });
   
   it('should round-trip state', () => {
-    const original = {
-      centers: ['nishi', 'omiya', 'minuma'],
-      month: '2026-10',
-      view: 'calendar' as const,
-    };
+    const original = { centers: ['nishi', 'omiya', 'minuma'], month: '2026-10', view: 'calendar' as const };
     const encoded = encodeURLState(original);
     const decoded = decodeURLState(new URLSearchParams(encoded));
-    expect(decoded).toEqual(original);
+    assert.deepStrictEqual(decoded, original);
   });
 });
 
+const createValidEvent = (overrides: Partial<Event> = {}): Event => ({
+  id: 'test-1',
+  centerId: 'nishi',
+  sourceDocumentId: 'nishi-2026-10',
+  date: '2026-10-15',
+  title: 'Test Event',
+  ...overrides,
+});
+
 describe('Event Validation', () => {
-  const validEvent: Event = {
-    id: 'test-1',
-    centerId: 'nishi',
-    sourceDocumentId: 'nishi-2026-10',
-    date: '2026-10-15',
-    title: 'Test Event',
-  };
+  const validEvent: Event = createValidEvent();
   
   it('should validate a valid event', () => {
     const result = validateEvent_single(validEvent);
-    expect(result.valid).toBe(true);
-    expect(result.errors).toEqual([]);
+    assert.strictEqual(result.valid, true);
+    assert.deepStrictEqual(result.errors, []);
   });
   
   it('should reject event without required fields', () => {
     const invalid = { ...validEvent, title: undefined };
     const result = validateEvent_single(invalid);
-    expect(result.valid).toBe(false);
-    expect(result.errors.length).toBeGreaterThan(0);
+    assert.strictEqual(result.valid, false);
+    assert.ok(result.errors.length > 0);
   });
   
   it('should reject invalid date format', () => {
     const invalid = { ...validEvent, date: 'not-a-date' };
     const result = validateEvent_single(invalid);
-    expect(result.valid).toBe(false);
+    assert.strictEqual(result.valid, false);
   });
   
   it('should warn about startTime after endTime', () => {
     const event = { ...validEvent, startTime: '15:00', endTime: '10:00' };
     const result = validateEvent_single(event);
-    expect(result.warnings.length).toBeGreaterThan(0);
+    assert.ok(result.warnings.length > 0);
   });
   
   it('should validate event with optional fields', () => {
@@ -115,7 +103,7 @@ describe('Event Validation', () => {
       tags: ['test', 'example'],
     };
     const result = validateEvent_single(event);
-    expect(result.valid).toBe(true);
+    assert.strictEqual(result.valid, true);
   });
 });
 
@@ -130,106 +118,68 @@ describe('Event Array Validation', () => {
   };
   
   const validEvents: Event[] = [
-    {
-      id: 'test-1',
-      centerId: 'nishi',
-      sourceDocumentId: 'nishi-2026-10',
-      date: '2026-10-15',
-      title: 'Event 1',
-    },
-    {
-      id: 'test-2',
-      centerId: 'nishi',
-      sourceDocumentId: 'nishi-2026-10',
-      date: '2026-10-20',
-      title: 'Event 2',
-    },
+    createValidEvent({ id: 'test-1', date: '2026-10-15', title: 'Event 1' }),
+    createValidEvent({ id: 'test-2', date: '2026-10-20', title: 'Event 2' }),
   ];
   
   it('should validate valid event array', () => {
     const result = validateExtractedEvents(validEvents, sourceDoc);
-    expect(result.valid).toBe(true);
-    expect(result.errors).toEqual([]);
+    assert.strictEqual(result.valid, true);
+    assert.deepStrictEqual(result.errors, []);
   });
   
   it('should reject mismatched centerId', () => {
-    const invalid = [
-      { ...validEvents[0], centerId: 'wrong' },
-    ];
+    const invalid = [{ ...validEvents[0], centerId: 'wrong' }];
     const result = validateExtractedEvents(invalid, sourceDoc);
-    expect(result.valid).toBe(false);
-    expect(result.errors.some(e => e.includes('centerId'))).toBe(true);
+    assert.strictEqual(result.valid, false);
+    assert.ok(result.errors.some(e => e.includes('centerId')));
   });
   
   it('should reject mismatched sourceDocumentId', () => {
-    const invalid = [
-      { ...validEvents[0], sourceDocumentId: 'wrong-doc' },
-    ];
+    const invalid = [{ ...validEvents[0], sourceDocumentId: 'wrong-doc' }];
     const result = validateExtractedEvents(invalid, sourceDoc);
-    expect(result.valid).toBe(false);
-    expect(result.errors.some(e => e.includes('sourceDocumentId'))).toBe(true);
+    assert.strictEqual(result.valid, false);
+    assert.ok(result.errors.some(e => e.includes('sourceDocumentId')));
   });
   
   it('should warn about event date outside source month', () => {
-    const events = [
-      { ...validEvents[0], date: '2026-11-01' },
-    ];
+    const events = [{ ...validEvents[0], date: '2026-11-01' }];
     const result = validateExtractedEvents(events, sourceDoc);
-    expect(result.warnings.some(w => w.includes('not in source document month'))).toBe(true);
+    assert.ok(result.warnings.some(w => w.includes('not in source document month')));
   });
   
   it('should detect duplicate event IDs', () => {
     const duplicates = [
       validEvents[0],
-      { ...validEvents[1], id: validEvents[0].id }, // Duplicate ID
+      { ...validEvents[1], id: validEvents[0].id },
     ];
     const result = validateExtractedEvents(duplicates, sourceDoc);
-    expect(result.valid).toBe(false);
-    expect(result.errors.some(e => e.includes('duplicate'))).toBe(true);
+    assert.strictEqual(result.valid, false);
+    assert.ok(result.errors.some(e => e.includes('duplicate')));
   });
   
   it('should validate empty event array', () => {
     const result = validateExtractedEvents([], sourceDoc);
-    expect(result.valid).toBe(true);
-    expect(result.warnings.some(w => w.includes('No events'))).toBe(true);
+    assert.strictEqual(result.valid, true);
+    assert.ok(result.warnings.some(w => w.includes('No events')));
   });
 });
 
 describe('Event ID Generation', () => {
   it('should generate unique IDs for same-day events', () => {
     const events: Event[] = [
-      {
-        id: 'nishi-2026-10-15-event1',
-        centerId: 'nishi',
-        sourceDocumentId: 'nishi-2026-10',
-        date: '2026-10-15',
-        title: 'Morning Event',
-      },
-      {
-        id: 'nishi-2026-10-15-event2',
-        centerId: 'nishi',
-        sourceDocumentId: 'nishi-2026-10',
-        date: '2026-10-15',
-        title: 'Afternoon Event',
-      },
+      createValidEvent({ id: 'nishi-2026-10-15-event1', date: '2026-10-15', title: 'Morning Event' }),
+      createValidEvent({ id: 'nishi-2026-10-15-event2', date: '2026-10-15', title: 'Afternoon Event' }),
     ];
-    
     const ids = events.map(e => e.id);
     const uniqueIds = new Set(ids);
-    expect(uniqueIds.size).toBe(ids.length);
+    assert.strictEqual(uniqueIds.size, ids.length);
   });
   
   it('should follow ID naming convention', () => {
-    const event: Event = {
-      id: 'nishi-2026-10-15-event1',
-      centerId: 'nishi',
-      sourceDocumentId: 'nishi-2026-10',
-      date: '2026-10-15',
-      title: 'Morning Event',
-    };
-    // Format: {centerId}-{YYYY-MM-DD}-{slug}
+    const event = createValidEvent({ id: 'nishi-2026-10-15-event1' });
     const pattern = /^[a-z]+-\d{4}-\d{2}-\d{2}-.+$/;
-    expect(event.id).toMatch(pattern);
+    assert.ok(pattern.test(event.id));
   });
 });
 
@@ -237,25 +187,25 @@ describe('Time Validation', () => {
   it('should accept valid 24-hour time format', () => {
     const event = createValidEvent({ startTime: '09:30', endTime: '11:45' });
     const result = validateEvent_single(event);
-    expect(result.valid).toBe(true);
+    assert.strictEqual(result.valid, true);
   });
   
   it('should reject invalid time format', () => {
-    const event = createValidEvent({ startTime: '9:30' }); // Missing leading zero
+    const event = createValidEvent({ startTime: '9:30' });
     const result = validateEvent_single(event);
-    expect(result.valid).toBe(false);
+    assert.strictEqual(result.valid, false);
   });
   
   it('should reject out-of-range hours', () => {
     const event = createValidEvent({ startTime: '25:00' });
     const result = validateEvent_single(event);
-    expect(result.valid).toBe(false);
+    assert.strictEqual(result.valid, false);
   });
   
   it('should reject out-of-range minutes', () => {
     const event = createValidEvent({ startTime: '10:60' });
     const result = validateEvent_single(event);
-    expect(result.valid).toBe(false);
+    assert.strictEqual(result.valid, false);
   });
 });
 
@@ -263,25 +213,25 @@ describe('Date Validation', () => {
   it('should accept valid date format', () => {
     const event = createValidEvent({ date: '2026-10-15' });
     const result = validateEvent_single(event);
-    expect(result.valid).toBe(true);
+    assert.strictEqual(result.valid, true);
   });
   
   it('should reject invalid month', () => {
     const event = createValidEvent({ date: '2026-13-01' });
     const result = validateEvent_single(event);
-    expect(result.valid).toBe(false);
+    assert.strictEqual(result.valid, false);
   });
   
   it('should reject invalid day', () => {
     const event = createValidEvent({ date: '2026-10-32' });
     const result = validateEvent_single(event);
-    expect(result.valid).toBe(false);
+    assert.strictEqual(result.valid, false);
   });
   
   it('should reject February 30', () => {
     const event = createValidEvent({ date: '2026-02-30' });
     const result = validateEvent_single(event);
-    expect(result.valid).toBe(false);
+    assert.strictEqual(result.valid, false);
   });
 });
 
@@ -292,29 +242,28 @@ describe('Center ID Validation', () => {
     validCenterIds.forEach(centerId => {
       const event = createValidEvent({ centerId, sourceDocumentId: `${centerId}-2026-10` });
       const result = validateEvent_single(event);
-      expect(result.valid).toBe(true);
+      assert.strictEqual(result.valid, true);
     });
   });
   
   it('should reject invalid center ID', () => {
     const event = createValidEvent({ centerId: 'invalid-center' });
     const result = validateEvent_single(event);
-    expect(result.valid).toBe(false);
+    assert.strictEqual(result.valid, false);
   });
 });
 
 describe('Source Document Validation', () => {
   it('should validate sourceDocumentId format', () => {
     const event = createValidEvent();
-    // Format: {centerId}-{YYYY-MM}
     const pattern = /^[a-z]+-\d{4}-\d{2}$/;
-    expect(event.sourceDocumentId).toMatch(pattern);
+    assert.ok(pattern.test(event.sourceDocumentId));
   });
   
   it('should match centerId in sourceDocumentId', () => {
-    const event = createValidEvent({ sourceDocumentId: 'omiya-2026-10' }); // Mismatch
+    const event = createValidEvent({ sourceDocumentId: 'omiya-2026-10' });
     const result = validateEvent_single(event);
-    expect(result.valid).toBe(false);
+    assert.strictEqual(result.valid, false);
   });
 });
 
@@ -328,7 +277,7 @@ describe('Optional Fields', () => {
       title: 'Minimal Event',
     };
     const result = validateEvent_single(minimal);
-    expect(result.valid).toBe(true);
+    assert.strictEqual(result.valid, true);
   });
   
   it('should accept all optional fields', () => {
@@ -348,72 +297,47 @@ describe('Optional Fields', () => {
       tags: ['workshop', 'indoor'],
     };
     const result = validateEvent_single(complete);
-    expect(result.valid).toBe(true);
+    assert.strictEqual(result.valid, true);
   });
   
   it('should validate capacity as positive number', () => {
-    const event = createValidEvent({ capacity: -5 });
+    const event: any = {
+      id: 'test',
+      centerId: 'nishi',
+      sourceDocumentId: 'nishi-2026-10',
+      date: '2026-10-15',
+      title: 'Test',
+      capacity: -5,
+    };
     const result = validateEvent_single(event);
-    expect(result.valid).toBe(false);
+    assert.strictEqual(result.valid, false);
   });
   
   it('should accept capacity of zero', () => {
-    const event = createValidEvent({ capacity: 0 });
+    const event: Event = {
+      id: 'test',
+      centerId: 'nishi',
+      sourceDocumentId: 'nishi-2026-10',
+      date: '2026-10-15',
+      title: 'Test',
+      capacity: 0,
+    };
     const result = validateEvent_single(event);
-    expect(result.valid).toBe(true);
+    assert.strictEqual(result.valid, true);
   });
   
   it('should validate tags as array of strings', () => {
-    const event = createValidEvent({ tags: ['valid', 'tags'] });
+    const event: Event = {
+      id: 'test',
+      centerId: 'nishi',
+      sourceDocumentId: 'nishi-2026-10',
+      date: '2026-10-15',
+      title: 'Test',
+      tags: ['valid', 'tags'],
+    };
     const result = validateEvent_single(event);
-    expect(result.valid).toBe(true);
+    assert.strictEqual(result.valid, true);
   });
-});
-
-describe('Event ID Generation', () => {
-  it('should generate unique IDs for same-day events', () => {
-    const events: Event[] = [
-      createValidEvent({
-        id: 'nishi-2026-10-15-event1',
-        date: '2026-10-15',
-        title: 'Morning Event',
-      }),
-      createValidEvent({
-        id: 'nishi-2026-10-15-event2',
-        date: '2026-10-15',
-        title: 'Afternoon Event',
-      }),
-    ];
-    
-    const ids = events.map(e => e.id);
-    const uniqueIds = new Set(ids);
-    expect(uniqueIds.size).toBe(ids.length);
-  });
-  
-  it('should follow ID naming convention', () => {
-    const event = createValidEvent();
-    // Format: {centerId}-{YYYY-MM-DD}-{slug} or {centerId}-{other}
-    const pattern = /^[a-z]+-/;
-    expect(event.id).toMatch(pattern);
-  });
-});
-
-describe('Time Validation', () => {
-  it('should accept valid 24-hour time format', () => {
-    const event = createValidEvent({ startTime: '14:30' });
-    const result = validateEvent_single(event);
-    expect(result.valid).toBe(true);
-  });
-});
-
-// Shared test data
-const createValidEvent = (overrides: Partial<Event> = {}): Event => ({
-  id: 'test-1',
-  centerId: 'nishi',
-  sourceDocumentId: 'nishi-2026-10',
-  date: '2026-10-15',
-  title: 'Test Event',
-  ...overrides,
 });
 
 describe('Calendar Date Bucketing', () => {
@@ -430,14 +354,14 @@ describe('Calendar Date Bucketing', () => {
       return acc;
     }, {} as Record<string, Event[]>);
     
-    expect(Object.keys(byDate)).toHaveLength(3);
-    expect(byDate['2026-10-01']).toHaveLength(1);
+    assert.strictEqual(Object.keys(byDate).length, 3);
+    assert.strictEqual(byDate['2026-10-01'].length, 1);
   });
   
   it('should identify month start and end', () => {
     const dates = octoberEvents.map(e => e.date).sort();
-    expect(dates[0]).toBe('2026-10-01');
-    expect(dates[dates.length - 1]).toBe('2026-10-31');
+    assert.strictEqual(dates[0], '2026-10-01');
+    assert.strictEqual(dates[dates.length - 1], '2026-10-31');
   });
   
   it('should handle events across month boundary', () => {
@@ -449,8 +373,8 @@ describe('Calendar Date Bucketing', () => {
     const octoberEvents = crossMonth.filter(e => e.date.startsWith('2026-10'));
     const novemberEvents = crossMonth.filter(e => e.date.startsWith('2026-11'));
     
-    expect(octoberEvents).toHaveLength(1);
-    expect(novemberEvents).toHaveLength(1);
+    assert.strictEqual(octoberEvents.length, 1);
+    assert.strictEqual(novemberEvents.length, 1);
   });
 });
 
@@ -459,7 +383,7 @@ describe('Data Merging', () => {
     const event1 = createValidEvent({ id: 'event-1' });
     const event2 = createValidEvent({ id: 'event-2' });
     const existing: Event[] = [event1];
-    const newEvents: Event[] = [event1, event2]; // First one is duplicate
+    const newEvents: Event[] = [event1, event2];
     
     const merged = [...existing];
     newEvents.forEach(newEvent => {
@@ -468,7 +392,7 @@ describe('Data Merging', () => {
       }
     });
     
-    expect(merged).toHaveLength(2); // Should not duplicate first event
+    assert.strictEqual(merged.length, 2);
   });
   
   it('should replace center-month events on re-extraction', () => {
@@ -484,39 +408,73 @@ describe('Data Merging', () => {
       createValidEvent({ id: 'new-3', title: 'New Event 3' }),
     ];
     
-    // Remove old nishi-2026-10 events, keep others
     const sourceDocId = 'nishi-2026-10';
     const filtered = existing.filter(e => e.sourceDocumentId !== sourceDocId);
     const merged = [...filtered, ...reExtracted];
     
-    expect(merged.filter(e => e.sourceDocumentId === sourceDocId)).toHaveLength(3);
-    expect(merged.filter(e => e.centerId === 'omiya')).toHaveLength(1);
+    assert.strictEqual(merged.filter(e => e.sourceDocumentId === sourceDocId).length, 3);
+    assert.strictEqual(merged.filter(e => e.centerId === 'omiya').length, 1);
   });
 });
 
-describe('Schema Validation', () => {
+describe('Schema Validation', async () => {
   it('should have all required fields in CENTERS', async () => {
-    const { CENTERS } = await import('../lib/schema');
+    const { CENTERS } = await import('../lib/schema.ts');
     CENTERS.forEach((center: any) => {
-      expect(center).toHaveProperty('id');
-      expect(center).toHaveProperty('name');
-      expect(center).toHaveProperty('nameJa');
-      expect(center).toHaveProperty('address');
-      expect(center).toHaveProperty('phone');
-      expect(center).toHaveProperty('websiteUrl');
-      expect(center).toHaveProperty('closedDays');
+      assert.ok(center.id);
+      assert.ok(center.name);
+      assert.ok(center.nameJa);
+      assert.ok(center.address);
+      assert.ok(center.phone);
+      assert.ok(center.websiteUrl);
+      assert.ok(center.closedDays);
     });
   });
   
   it('should have unique center IDs', async () => {
-    const { CENTERS } = await import('../lib/schema');
+    const { CENTERS } = await import('../lib/schema.ts');
     const ids = CENTERS.map((c: any) => c.id);
     const uniqueIds = new Set(ids);
-    expect(uniqueIds.size).toBe(ids.length);
+    assert.strictEqual(uniqueIds.size, ids.length);
   });
   
   it('should have 10 centers registered', async () => {
-    const { CENTERS } = await import('../lib/schema');
-    expect(CENTERS).toHaveLength(10);
+    const { CENTERS } = await import('../lib/schema.ts');
+    assert.strictEqual(CENTERS.length, 10);
+  });
+});
+
+describe('Time Validation Extended', () => {
+  it('should accept valid 24-hour time format', () => {
+    const event = createValidEvent({ startTime: '14:30' });
+    const result = validateEvent_single(event);
+    assert.strictEqual(result.valid, true);
+  });
+});
+
+describe('Event ID Generation Extended', () => {
+  it('should generate unique IDs for same-day events', () => {
+    const events: Event[] = [
+      createValidEvent({
+        id: 'nishi-2026-10-15-event1',
+        date: '2026-10-15',
+        title: 'Morning Event',
+      }),
+      createValidEvent({
+        id: 'nishi-2026-10-15-event2',
+        date: '2026-10-15',
+        title: 'Afternoon Event',
+      }),
+    ];
+    
+    const ids = events.map(e => e.id);
+    const uniqueIds = new Set(ids);
+    assert.strictEqual(uniqueIds.size, ids.length);
+  });
+  
+  it('should follow ID naming convention', () => {
+    const event = createValidEvent();
+    const pattern = /^[a-z]+-/;
+    assert.ok(pattern.test(event.id));
   });
 });

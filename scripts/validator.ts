@@ -1,44 +1,12 @@
 /**
  * Validate AI-extracted events against the schema
+ * Hand-written validator (no Ajv dependency)
  */
 
-import { Event, SourceDocument, CENTERS } from '../lib/schema';
-import Ajv, { ValidateFunction } from 'ajv';
-import addFormats from 'ajv-formats';
+import type { Event, SourceDocument } from '../lib/schema.ts';
+import { CENTERS } from '../lib/schema.ts';
 
 const VALID_CENTER_IDS = new Set(CENTERS.map(c => c.id));
-
-const ajv = new Ajv({ allErrors: true });
-addFormats(ajv);
-
-const eventSchema = {
-  type: 'object',
-  properties: {
-    id: { type: 'string' },
-    centerId: { type: 'string' },
-    sourceDocumentId: { type: 'string' },
-    date: { type: 'string', format: 'date' },
-    startTime: { type: 'string', pattern: '^([0-1][0-9]|2[0-3]):[0-5][0-9]$' },
-    endTime: { type: 'string', pattern: '^([0-1][0-9]|2[0-3]):[0-5][0-9]$' },
-    title: { type: 'string', minLength: 1 },
-    description: { type: 'string' },
-    targetAge: { type: 'string' },
-    reservationRequired: { type: 'boolean' },
-    location: { type: 'string' },
-    capacity: { type: 'number', minimum: 0 },
-    tags: { type: 'array', items: { type: 'string' } },
-  },
-  required: ['id', 'centerId', 'sourceDocumentId', 'date', 'title'],
-  additionalProperties: false,
-};
-
-const eventsArraySchema = {
-  type: 'array',
-  items: eventSchema,
-};
-
-const validateEvent: ValidateFunction = ajv.compile(eventSchema);
-const validateEventsArray: ValidateFunction = ajv.compile(eventsArraySchema);
 
 export interface ValidationResult {
   valid: boolean;
@@ -47,46 +15,131 @@ export interface ValidationResult {
 }
 
 /**
+ * Validate date format YYYY-MM-DD
+ */
+function isValidDate(dateStr: string): boolean {
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(dateStr);
+  if (!match) return false;
+  
+  const [, year, month, day] = match;
+  const y = parseInt(year);
+  const m = parseInt(month);
+  const d = parseInt(day);
+  
+  if (m < 1 || m > 12) return false;
+  if (d < 1 || d > 31) return false;
+  
+  // Check valid date (handles Feb, 30/31 days)
+  const date = new Date(y, m - 1, d);
+  return date.getFullYear() === y && date.getMonth() === m - 1 && date.getDate() === d;
+}
+
+/**
+ * Validate time format HH:MM
+ */
+function isValidTime(timeStr: string): boolean {
+  const match = /^([0-1][0-9]|2[0-3]):([0-5][0-9])$/.exec(timeStr);
+  return match !== null;
+}
+
+/**
  * Validate a single event
  */
 export function validateEvent_single(event: any): ValidationResult {
-  const valid = validateEvent(event);
   const errors: string[] = [];
   const warnings: string[] = [];
   
-  if (!valid && validateEvent.errors) {
-    for (const error of validateEvent.errors) {
-      errors.push(`${error.instancePath} ${error.message}`);
+  // Required fields
+  if (!event.id || typeof event.id !== 'string') {
+    errors.push('id: required string field');
+  }
+  
+  if (!event.centerId || typeof event.centerId !== 'string') {
+    errors.push('centerId: required string field');
+  } else if (!VALID_CENTER_IDS.has(event.centerId)) {
+    errors.push(`Invalid centerId: ${event.centerId} is not a registered center`);
+  }
+  
+  if (!event.sourceDocumentId || typeof event.sourceDocumentId !== 'string') {
+    errors.push('sourceDocumentId: required string field');
+  } else if (event.centerId && !event.sourceDocumentId.startsWith(event.centerId + '-')) {
+    errors.push(`sourceDocumentId ${event.sourceDocumentId} does not match centerId ${event.centerId}`);
+  }
+  
+  if (!event.date || typeof event.date !== 'string') {
+    errors.push('date: required string field');
+  } else if (!isValidDate(event.date)) {
+    errors.push(`date: invalid format '${event.date}' (expected YYYY-MM-DD)`);
+  }
+  
+  if (!event.title || typeof event.title !== 'string' || event.title.length === 0) {
+    errors.push('title: required non-empty string field');
+  }
+  
+  // Optional fields
+  if (event.startTime !== undefined) {
+    if (typeof event.startTime !== 'string' || !isValidTime(event.startTime)) {
+      errors.push(`startTime: invalid format '${event.startTime}' (expected HH:MM)`);
     }
   }
   
-  // Additional validation rules
-  if (event.startTime && event.endTime) {
+  if (event.endTime !== undefined) {
+    if (typeof event.endTime !== 'string' || !isValidTime(event.endTime)) {
+      errors.push(`endTime: invalid format '${event.endTime}' (expected HH:MM)`);
+    }
+  }
+  
+  if (event.startTime && event.endTime && isValidTime(event.startTime) && isValidTime(event.endTime)) {
     if (event.startTime >= event.endTime) {
       warnings.push('startTime should be before endTime');
     }
   }
   
-  // Check date is in the correct month
-  if (event.date) {
-    const eventDate = new Date(event.date);
-    if (isNaN(eventDate.getTime())) {
-      errors.push('Invalid date format');
+  if (event.description !== undefined && typeof event.description !== 'string') {
+    errors.push('description: must be string');
+  }
+  
+  if (event.targetAge !== undefined && typeof event.targetAge !== 'string') {
+    errors.push('targetAge: must be string');
+  }
+  
+  if (event.reservationRequired !== undefined && typeof event.reservationRequired !== 'boolean') {
+    errors.push('reservationRequired: must be boolean');
+  }
+  
+  if (event.location !== undefined && typeof event.location !== 'string') {
+    errors.push('location: must be string');
+  }
+  
+  if (event.capacity !== undefined) {
+    if (typeof event.capacity !== 'number' || event.capacity < 0 || !Number.isInteger(event.capacity)) {
+      errors.push('capacity: must be non-negative integer');
     }
   }
   
-  // Validate centerId is a known center
-  if (event.centerId && !VALID_CENTER_IDS.has(event.centerId)) {
-    errors.push(`Invalid centerId: ${event.centerId} is not a registered center`);
+  if (event.tags !== undefined) {
+    if (!Array.isArray(event.tags)) {
+      errors.push('tags: must be array');
+    } else if (!event.tags.every((t: any) => typeof t === 'string')) {
+      errors.push('tags: must be array of strings');
+    }
   }
   
-  // Validate sourceDocumentId matches centerId prefix
-  if (event.centerId && event.sourceDocumentId && !event.sourceDocumentId.startsWith(event.centerId + '-')) {
-    errors.push(`sourceDocumentId ${event.sourceDocumentId} does not match centerId ${event.centerId}`);
+  // Check for unknown properties
+  const allowedKeys = new Set([
+    'id', 'centerId', 'sourceDocumentId', 'date', 'startTime', 'endTime',
+    'title', 'description', 'targetAge', 'reservationRequired',
+    'location', 'capacity', 'tags'
+  ]);
+  
+  for (const key of Object.keys(event)) {
+    if (!allowedKeys.has(key)) {
+      warnings.push(`unknown property: ${key}`);
+    }
   }
   
   return {
-    valid: valid && errors.length === 0,
+    valid: errors.length === 0,
     errors,
     warnings,
   };
@@ -105,6 +158,13 @@ export function validateExtractedEvents(
     warnings: [],
   };
   
+  // Check array
+  if (!Array.isArray(events)) {
+    result.errors.push('events must be an array');
+    result.valid = false;
+    return result;
+  }
+  
   // Check for empty events array
   if (events.length === 0) {
     result.warnings.push('No events found in source document');
@@ -120,17 +180,6 @@ export function validateExtractedEvents(
     if (event.id) {
       seenIds.add(event.id);
     }
-  }
-  
-  // Validate array structure
-  if (!validateEventsArray(events)) {
-    result.valid = false;
-    if (validateEventsArray.errors) {
-      for (const error of validateEventsArray.errors) {
-        result.errors.push(`${error.instancePath} ${error.message}`);
-      }
-    }
-    return result;
   }
   
   // Validate each event
@@ -154,7 +203,7 @@ export function validateExtractedEvents(
     }
     
     // Check event date is in the source document's month
-    if (event.date) {
+    if (event.date && isValidDate(event.date)) {
       const eventMonth = event.date.slice(0, 7);
       if (eventMonth !== sourceDoc.month) {
         eventResult.warnings.push(
@@ -181,7 +230,7 @@ export function validateExtractedEvents(
 /**
  * CLI interface for testing validation
  */
-if (require.main === module) {
+if (import.meta.url === `file://${process.argv[1]}`) {
   const testEvents = JSON.parse(process.argv[2] || '[]');
   const testSourceDoc = JSON.parse(process.argv[3] || '{}');
   

@@ -5,8 +5,8 @@
 import * as fs from 'fs/promises';
 import * as path from 'path';
 import * as crypto from 'crypto';
-import { PDFLink } from './pdf-discovery';
-import { SourceDocument } from '../lib/schema';
+import type { PDFLink } from './pdf-discovery.ts';
+import { SourceDocument } from '../lib/schema.ts';
 
 const CACHE_DIR = path.join(process.cwd(), 'data', 'pdf-cache');
 const METADATA_FILE = path.join(process.cwd(), 'data', 'source-documents.json');

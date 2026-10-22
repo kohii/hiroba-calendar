@@ -2,8 +2,8 @@
  * Batch merge all extracted and validated events into the dataset
  */
 import { readFileSync, writeFileSync, readdirSync } from 'fs';
-import { Event, DataSet, SourceDocument } from '../lib/schema';
-import { CENTERS } from '../lib/schema';
+import type { Event, DataSet, SourceDocument } from '../lib/schema.ts';
+import { CENTERS } from '../lib/schema.ts';
 
 const extractedDir = 'data/extracted-events';
 const datasetPath = 'public/data/dataset.json';

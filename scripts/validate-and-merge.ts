@@ -2,9 +2,9 @@
  * Validate and merge extracted events into the dataset
  */
 import { readFileSync, writeFileSync } from 'fs';
-import { Event, SourceDocument, DataSet } from '../lib/schema';
-import { validateExtractedEvents } from './validator';
-import { CENTERS } from '../lib/schema';
+import type { Event, SourceDocument, DataSet } from '../lib/schema.ts';
+import { validateExtractedEvents } from './validator.ts';
+import { CENTERS } from '../lib/schema.ts';
 
 const centerId = process.argv[2];
 const month = process.argv[3];

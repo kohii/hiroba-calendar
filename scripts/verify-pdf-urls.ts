@@ -4,7 +4,7 @@
 
 import * as fs from 'fs/promises';
 import * as path from 'path';
-import { SourceDocument } from '../lib/schema';
+import type { SourceDocument } from '../lib/schema.ts';
 
 const SOURCE_DOCS_FILE = path.join(process.cwd(), 'data', 'source-documents.json');
 

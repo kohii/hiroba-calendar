@@ -1,0 +1,94 @@
+---
+import '../styles/global.css';
+
+const title = 'さいたま市子育て支援センター イベントスケジュール';
+const description = 'さいたま市の子育て支援センターのイベントスケジュールを一覧で確認できます';
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content={description}>
+  <title>{title}</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+</head>
+<body>
+  <div class="min-h-screen">
+    <!-- Header -->
+    <header class="header">
+      <div class="container header-content">
+        <h1>
+          <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          さいたま市子育て支援センター イベントスケジュール
+        </h1>
+        <p>複数のセンターのスケジュールを一覧で確認できます</p>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container main-content">
+      <!-- Filters -->
+      <div class="card">
+        <div class="filter-header">
+          <button id="filter-toggle" class="filter-button">
+            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+            </svg>
+            フィルター
+            <span id="filter-count" class="badge hidden">0</span>
+          </button>
+          
+          <div class="view-buttons">
+            <button id="view-list" class="view-button active">リスト</button>
+            <button id="view-calendar" class="view-button">カレンダー</button>
+          </div>
+        </div>
+        
+        <div id="filter-content" class="filter-content hidden">
+          <!-- Month selector -->
+          <div class="filter-section">
+            <label class="filter-label" for="month-select">月を選択</label>
+            <input type="month" id="month-select" class="month-input">
+          </div>
+          
+          <!-- Center selector -->
+          <div class="filter-section">
+            <label class="filter-label">センターを選択</label>
+            <div id="center-grid" class="center-grid"></div>
+            
+            <div class="filter-actions">
+              <button id="select-all" class="filter-action">すべて選択</button>
+              <button id="clear-all" class="filter-action">クリア</button>
+              <button id="favorites-only" class="filter-action">お気に入りのみ</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Events -->
+      <div id="events-container"></div>
+      
+      <!-- Stats -->
+      <div class="stats">
+        <p id="event-count">0 件のイベント</p>
+        <p id="data-updated" class="hidden"></p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>このサイトは各子育て支援センターの公開PDFから情報を収集しています。</p>
+      <p>最新の情報は各センターのPDFリンクから元資料をご確認ください。</p>
+    </footer>
+  </div>
+
+  <script src="../scripts/app.ts"></script>
+</body>
+</html>
