@@ -29,8 +29,8 @@ jobs:
       - name: Lint
         run: pnpm run lint
       
-      - name: Type check (scripts only)
-        run: tsc --noEmit --skipLibCheck lib/**/*.ts scripts/validator.ts scripts/pdf-discovery.ts scripts/validate-and-merge.ts scripts/verify-pdf-urls.ts scripts/batch-merge.ts scripts/merge-dataset.ts scripts/pdf-download.ts tests/**/*.ts
+      - name: Type check
+        run: pnpm run typecheck
       
       - name: Test
         run: pnpm test
