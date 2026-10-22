@@ -8,7 +8,7 @@ const HIROBA_PATTERNS: readonly string[] = [
   "ももちゃんタイム",
 ];
 
-const LOW_CONFIDENCE_PATTERNS: readonly string[] = [
+const EVENT_PATTERNS: readonly string[] = [
   "講座",
   "測定",
   "教室",
@@ -24,9 +24,9 @@ export function classifyTitle(title: string): {
   confidence: ClassifyConfidence;
 } {
   const hiroba = HIROBA_PATTERNS.some((pattern) => title.includes(pattern));
-  if (!hiroba) {
-    return { kind: "event", confidence: "high" };
+  const event = EVENT_PATTERNS.some((pattern) => title.includes(pattern));
+  if (hiroba && !event) {
+    return { kind: "hiroba", confidence: "high" };
   }
-  const low = LOW_CONFIDENCE_PATTERNS.some((pattern) => title.includes(pattern));
-  return { kind: "hiroba", confidence: low ? "low" : "high" };
+  return { kind: "event", confidence: "high" };
 }

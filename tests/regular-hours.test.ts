@@ -190,6 +190,30 @@ describe("fillRegularHours", () => {
     assert.equal(hasRegular(events, "2026-10-07"), true);
   });
 
+  it("fills an opening day whose only extracted row is a hiroba title with an event word", () => {
+    const existing = fixtureEvent({
+      id: "mixed",
+      date: "2026-10-05",
+      kind: "event",
+      title: "みんなのひろば・身体測定",
+    });
+    const events = fillMonth(fillPolicy(), "2026-10", [existing]);
+    assert.equal(hasRegular(events, "2026-10-05"), true);
+  });
+
+  it("still skips that day when the center quote suppresses 身体測定", () => {
+    const existing = fixtureEvent({
+      id: "mixed",
+      date: "2026-10-05",
+      kind: "event",
+      title: "みんなのひろば・身体測定",
+    });
+    const events = fillMonth(fillPolicy({ suppressTitleIncludes: ["身体測定"] }), "2026-10", [
+      existing,
+    ]);
+    assert.equal(hasRegular(events, "2026-10-05"), false);
+  });
+
   it("closes the year-end range across the year boundary", () => {
     const events = fillRegularHours({
       events: [],

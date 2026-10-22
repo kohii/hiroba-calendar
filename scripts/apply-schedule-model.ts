@@ -120,9 +120,7 @@ function classifyEvent(value: unknown): Event {
   readString(value, "date");
   if (value.origin !== "regular-hours") {
     if (value.origin !== "extracted") value.origin = "extracted";
-    if (value.kind !== "hiroba" && value.kind !== "event") {
-      value.kind = classifyTitle(title).kind;
-    }
+    value.kind = classifyTitle(title).kind;
   } else if (value.kind !== "hiroba" && value.kind !== "event") {
     throw new Error(`regular-hours event ${id} is missing kind`);
   }
