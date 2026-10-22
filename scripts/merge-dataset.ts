@@ -4,8 +4,8 @@
 
 import * as fs from 'fs/promises';
 import * as path from 'path';
-import { DataSet, Event, SourceDocument } from '../lib/schema';
-import { CENTERS } from '../lib/schema';
+import type { DataSet, Event, SourceDocument } from '../lib/schema.ts';
+import { CENTERS } from '../lib/schema.ts';
 
 const DATASET_FILE = path.join(process.cwd(), 'data', 'dataset.json');
 

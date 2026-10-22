@@ -2,42 +2,35 @@
   "name": "hiroba-calendar",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.33.4",
+  "engines": {
+    "node": ">=22.23.4",
+    "pnpm": ">=10.16.0"
+  },
   "scripts": {
-    "dev": "next dev --port 43123",
-    "build": "next build",
-    "start": "next start --port 43123",
-    "lint": "eslint",
-    "test": "vitest",
-    "discover-pdfs": "tsx scripts/pdf-discovery.ts",
-    "download-pdfs": "tsx scripts/pdf-download.ts",
-    "refresh-data": "tsx scripts/refresh-all.ts",
-    "dataset-stats": "tsx scripts/merge-dataset.ts stats",
-    "cleanup": "tsx scripts/merge-dataset.ts cleanup",
-    "verify-pdfs": "tsx scripts/verify-pdf-urls.ts"
+    "dev": "astro dev --port 43123",
+    "build": "astro build",
+    "preview": "astro preview --port 43123",
+    "typecheck": "tsc --noEmit",
+    "lint": "oxlint src",
+    "fmt": "oxfmt src",
+    "fmt:check": "oxfmt --check src",
+    "test": "node --test --experimental-strip-types tests/**/*.test.ts",
+    "discover-pdfs": "node --experimental-strip-types scripts/pdf-discovery.ts",
+    "download-pdfs": "node --experimental-strip-types scripts/pdf-download.ts",
+    "extract-pdf-text": "python3 scripts/extract-pdf-text.py",
+    "dataset-stats": "node --experimental-strip-types scripts/merge-dataset.ts stats",
+    "cleanup": "node --experimental-strip-types scripts/merge-dataset.ts cleanup",
+    "verify-pdfs": "node --experimental-strip-types scripts/verify-pdf-urls.ts"
   },
   "dependencies": {
-    "ajv": "^8.17.1",
-    "ajv-formats": "^3.0.1",
-    "cheerio": "^1.0.0",
-    "date-fns": "^4.1.0",
-    "lucide-react": "^0.468.0",
-    "next": "16.4.2",
-    "pdf-parse": "^2.4.5",
-    "pdfjs-dist": "^6.4.299",
-    "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "astro": "7.4.2"
   },
   "devDependencies": {
-    "@tailwindcss/turbopack": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "@vitest/ui": "^2.1.8",
-    "eslint": "^9",
-    "eslint-config-next": "16.4.2",
-    "tailwindcss": "^4",
-    "tsx": "^4.19.2",
-    "typescript": "^5",
-    "vitest": "^2.1.8"
+    "@types/node": "^22.20.5",
+    "oxfmt": "^0.74.0",
+    "oxlint": "^1.89.0",
+    "typescript": "^7.0.2"
   }
 }

@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-"""Extract text from PDF using PyPDF2"""
 import sys
 from PyPDF2 import PdfReader
 

@@ -1,21 +1,39 @@
-/**
- * Deterministic script to discover PDF links for each center
- * This script scrapes each center's website to find current and next month PDF links
- */
-
-import * as cheerio from 'cheerio';
-import { CENTERS, Center } from '../lib/schema';
+import type { Center } from '../lib/schema.ts';
+import { CENTERS } from '../lib/schema.ts';
 
 export interface PDFLink {
   centerId: string;
-  month: string; // YYYY-MM
+  month: string;
   url: string;
   discoveredAt: string;
 }
 
-/**
- * Fetch and parse a center's website to find PDF links
- */
+export function extractPDFLinks(html: string, baseUrl: string): string[] {
+  const hrefPattern = /href\s*=\s*["']([^"']+?\.pdf(?:\?[^"'#]*)?)["']/gi;
+  const links: string[] = [];
+  let match;
+
+  while ((match = hrefPattern.exec(html)) !== null) {
+    links.push(new URL(match[1], baseUrl).href);
+  }
+
+  return Array.from(new Set(links));
+}
+
+export function monthFromFilename(filename: string): string | null {
+  const patterns = [/(\d{4})-(\d{2})/, /(\d{4})年(\d{1,2})月/, /(\d{4})(\d{2})/];
+
+  for (const pattern of patterns) {
+    const match = filename.match(pattern);
+    if (!match) continue;
+    const monthNum = Number(match[2]);
+    if (monthNum < 1 || monthNum > 12) continue;
+    return `${match[1]}-${String(monthNum).padStart(2, "0")}`;
+  }
+
+  return null;
+}
+
 async function discoverPDFsForCenter(center: Center): Promise<PDFLink[]> {
   console.log(`Discovering PDFs for ${center.nameJa}...`);
   
@@ -32,53 +50,23 @@ async function discoverPDFsForCenter(center: Center): Promise<PDFLink[]> {
     }
     
     const html = await response.text();
-    const $ = cheerio.load(html);
+    const pdfUrls = extractPDFLinks(html, center.websiteUrl);
+    const discoveredAt = new Date().toISOString();
     const links: PDFLink[] = [];
-    const now = new Date();
-    const currentMonth = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
-    const discoveredAt = now.toISOString();
     
-    // Find all PDF links
-    $('a[href$=".pdf"], a[href$=".PDF"]').each((_, element) => {
-      const href = $(element).attr('href');
-      if (!href) return;
-      
-      // Make absolute URL
-      let url = href;
-      if (href.startsWith('/')) {
-        const baseUrl = new URL(center.websiteUrl).origin;
-        url = baseUrl + href;
-      } else if (!href.startsWith('http')) {
-        url = new URL(href, center.websiteUrl).href;
+    for (const url of pdfUrls) {
+      const filename = url.split("/").pop() || "";
+      const month = monthFromFilename(filename);
+
+      if (month) {
+        links.push({
+          centerId: center.id,
+          month,
+          url,
+          discoveredAt,
+        });
       }
-      
-      // Try to extract month from filename or link text
-      const text = $(element).text().trim();
-      const filename = url.split('/').pop() || '';
-      const combined = text + ' ' + filename;
-      
-      // Look for patterns like "10月", "2026年10月", "202610", etc.
-      const monthMatch = combined.match(/(\d{4})[-年]?(\d{1,2})/);
-      const monthOnlyMatch = combined.match(/(\d{1,2})月/);
-      
-      let month = currentMonth;
-      if (monthMatch) {
-        const year = monthMatch[1];
-        const monthNum = monthMatch[2].padStart(2, '0');
-        month = `${year}-${monthNum}`;
-      } else if (monthOnlyMatch) {
-        // Use current year
-        const monthNum = monthOnlyMatch[1].padStart(2, '0');
-        month = `${now.getFullYear()}-${monthNum}`;
-      }
-      
-      links.push({
-        centerId: center.id,
-        month,
-        url,
-        discoveredAt,
-      });
-    });
+    }
     
     return links;
   } catch (error) {
@@ -87,10 +75,7 @@ async function discoverPDFsForCenter(center: Center): Promise<PDFLink[]> {
   }
 }
 
-/**
- * Discover all PDF links across all centers
- */
-export async function discoverAllPDFs(): Promise<PDFLink[]> {
+async function discoverAll(): Promise<PDFLink[]> {
   const allLinks: PDFLink[] = [];
   
   for (const center of CENTERS) {
@@ -101,27 +86,15 @@ export async function discoverAllPDFs(): Promise<PDFLink[]> {
   return allLinks;
 }
 
-/**
- * Filter PDFs to only include current and next month
- */
-export function filterRelevantPDFs(links: PDFLink[]): PDFLink[] {
-  const now = new Date();
-  const currentMonth = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
-  const nextMonthDate = new Date(now.getFullYear(), now.getMonth() + 1, 1);
-  const nextMonth = `${nextMonthDate.getFullYear()}-${String(nextMonthDate.getMonth() + 1).padStart(2, '0')}`;
+if (import.meta.url === `file://${process.argv[1]}`) {
+  const links = await discoverAll();
   
-  return links.filter(link => 
-    link.month === currentMonth || link.month === nextMonth
-  );
-}
-
-// CLI interface
-if (require.main === module) {
-  discoverAllPDFs().then(links => {
-    console.log('\nDiscovered PDFs:');
-    console.log(JSON.stringify(filterRelevantPDFs(links), null, 2));
-  }).catch(error => {
-    console.error('Error:', error);
-    process.exit(1);
-  });
+  console.log(`\n✅ Discovered ${links.length} PDF links:`);
+  
+  for (const link of links.sort((a, b) => a.centerId.localeCompare(b.centerId) || a.month.localeCompare(b.month))) {
+    console.log(`  ${link.centerId} ${link.month}: ${link.url}`);
+  }
+  
+  console.log(`\nJSON output:`);
+  console.log(JSON.stringify(links, null, 2));
 }

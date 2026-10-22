@@ -1,0 +1,10 @@
+packages: []
+
+minimumReleaseAge: 1440
+
+onlyBuiltDependencies:
+  - esbuild
+  - "@esbuild/linux-x64"
+
+ignoredOptionalDependencies:
+  - sharp
