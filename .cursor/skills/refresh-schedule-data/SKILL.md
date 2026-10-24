@@ -50,6 +50,28 @@ python3 scripts/extract-pdf-text.py data/pdf-cache/nishi-2026-10.pdf /tmp/nishi-
 ]
 ```
 
+休み・お休み・休館・休室・閉室・中止は、イベントとは別にソースドキュメントの `closures` へ取る。日付が特定できる印だけを書く。
+
+```json
+"closures": [
+  {
+    "date": "2026-10-06",
+    "scope": "all-day",
+    "quote": "終日 にこにこ広場 お休み"
+  }
+]
+```
+
+- **date**: `YYYY-MM-DD`。そのソースドキュメントの月に限る。
+- **scope**: `all-day`、`am`、`pm`。終日、休館、休室、閉室、終日測定のみは `all-day`。午前だけ、または `AM×` や午前閉館は `am`。午後だけは `pm`。
+- **quote**: PDFに書いてある文言をそのまま取る。例は「終日 にこにこ広場 お休み」「休館日」「終日測定のみ」「ウェルカムさいたまの為午前閉館」。
+
+予定表の見かたに「このマークがある時間帯は『にこにこ広場』はお休みです」とあるときは、そのマークが付いた日を `closures` に入れる。quote はその文を使う。
+
+「中止の際は」のように、中止したとは書いていない文は closure にしない。毎月の休館曜日はセンターの `regularHours.closed` にあり、同じ日を `closures` に重ねてよい。
+
+通常開室の補完は `closures` を読む。`all-day`、または午前と午後の両方がある日は行を作らない。その日に既にある `kind: "hiroba"` の抽出行も除く。`kind: "event"` の測定や講座は残す。`am` だけの日は午後の時間の引用だけ、`pm` だけの日は午前の引用だけを description にする。`hoursQuote` を午前と午後に分けられないときは、閉じた側を含む引用を出さないので行を作らない。
+
 ### 3. データ検証
 
 抽出後に検証する。`scripts/validator.ts` はファイルパスを受け取らない。`process.argv[2]` はイベント配列のJSON文字列、`process.argv[3]` はソースドキュメントのJSON文字列。
@@ -66,6 +88,7 @@ node --experimental-strip-types scripts/validator.ts "$(cat data/extracted-event
 - 時刻形式 (HH:MM)
 - centerIdの整合性
 - sourceDocumentIdの整合性
+- `closures` があるときは、各要素の date、scope（all-day / am / pm）、空でない quote。date はそのドキュメントの月の中にあること
 
 ### 4. データセットへのマージ
 

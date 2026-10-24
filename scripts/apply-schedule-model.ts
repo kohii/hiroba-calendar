@@ -39,8 +39,7 @@ function isRegularHours(value: unknown): value is RegularHoursPolicy {
     typeof value.hoursQuote === "string" &&
     Array.isArray(value.windows) &&
     Array.isArray(value.openWeekdays) &&
-    Array.isArray(value.closed) &&
-    Array.isArray(value.pdfClosedDates)
+    Array.isArray(value.closed)
   );
 }
 
@@ -69,6 +68,16 @@ function isCenter(value: unknown): value is Center {
   );
 }
 
+function isClosure(value: unknown): boolean {
+  if (!isRecord(value)) return false;
+  return (
+    typeof value.date === "string" &&
+    (value.scope === "all-day" || value.scope === "am" || value.scope === "pm") &&
+    typeof value.quote === "string" &&
+    value.quote.length > 0
+  );
+}
+
 function isSourceDocument(value: unknown): value is SourceDocument {
   if (!isRecord(value)) return false;
   return (
@@ -78,7 +87,9 @@ function isSourceDocument(value: unknown): value is SourceDocument {
     typeof value.pdfUrl === "string" &&
     typeof value.fetchedAt === "string" &&
     typeof value.sha256 === "string" &&
-    isOptionalString(value.extractedAt)
+    isOptionalString(value.extractedAt) &&
+    (value.closures === undefined ||
+      (Array.isArray(value.closures) && value.closures.every(isClosure)))
   );
 }
 

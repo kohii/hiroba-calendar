@@ -12,7 +12,7 @@
         "decision": "fill",
         "sourceUrl": "https://seisinkai.ed.jp/wp-content/uploads/2026/09/令和8年度１０月のカレンダー.pdf",
         "quote": "【開館時間】 ※12:00～13:00は一度閉室します。 午前9:00～12:00午後13:00～16:00 ◎毎月第１・３木曜日、第５日曜日、祝休日、年末年始 (12/29～1/3)は閉室となります。 ◎白い枠は、ご予約はいりませんが、イベントは (黄色い枠 )ご予約制となっております。",
-        "decisionNote": "白い枠は予約不要。開室日でひろば行が無い日だけ通常開室を足す。第1・第3木曜、第5日曜、祝休日、12/29～1/3は閉室。既存の抽出行は消さない。",
+        "decisionNote": "白い枠は予約不要。開室日でひろば行が無い日だけ通常開室を足す。第1・第3木曜、第5日曜、祝休日、12/29～1/3は閉室。日付の入った閉室日と午前のAM×はソースドキュメントの closures に持つ。",
         "title": "みんなのひろば",
         "targetAge": "０～３歳未満 (３歳を迎えた年の３月まで利用可 )",
         "hoursQuote": "午前9:00～12:00 午後13:00～16:00",
@@ -56,8 +56,7 @@
             "from": "12-29",
             "to": "01-03"
           }
-        ],
-        "pdfClosedDates": []
+        ]
       }
     },
     {
@@ -87,7 +86,7 @@
         "decision": "fill",
         "sourceUrl": "https://www.wakaba-asunaro.jp/omiya",
         "quote": "✤ようこそ わくわくひろばへ ✤ 月曜日～土曜日、日曜日（第１～第４） ※毎月第１・第３月曜日はお休みです。 ９：００～１２：００ / １３：００～１６：００",
-        "decisionNote": "ひろばの文は祝日休館を言わない。予定表が休館日と書いた日だけ追加で休む。一時預かりの国民の休日は使わない。第5日曜は「日曜日（第１～第４）」から閉じる。",
+        "decisionNote": "ひろばの文は祝日休館を言わない。予定表の休館日、または休館日と同じ斜線が入った日だけ追加で休む。一時預かりの国民の休日は使わない。第5日曜は「日曜日（第１～第４）」から閉じる。日付の入った休みはソースドキュメントの closures に持つ。",
         "title": "わくわくひろば",
         "hoursQuote": "９：００～１２：００ / １３：００～１６：００",
         "windows": [
@@ -122,16 +121,6 @@
             "kind": "sunday-from",
             "nth": 5
           }
-        ],
-        "pdfClosedDates": [
-          {
-            "date": "2026-10-12",
-            "quote": "休館日 スポーツの 日"
-          },
-          {
-            "date": "2026-11-03",
-            "quote": "休館日 文化の日"
-          }
         ]
       }
     },
@@ -162,7 +151,7 @@
         "decision": "fill",
         "sourceUrl": "https://www.himawarikkoland.com/yono",
         "quote": "開館時間　９：００～１２：００ １３：００～１６：００ 休館日　第２・４火曜日 第５日曜日 祝日・年末年始",
-        "decisionNote": "予定表は多くの日にぴよぴよ広場と書いてある。ひろば行が無い開室日だけ足す。年末年始の月日はPDFに無いので日付では閉じない。",
+        "decisionNote": "予定表は多くの日にぴよぴよ広場と書いてある。ひろば行が無い開室日だけ足す。休館日、斜線、午前閉館はソースドキュメントの closures に持つ。午前だけの休みは午後の引用だけ足す。年末年始の月日はPDFに無いので日付では閉じない。",
         "title": "ぴよぴよ広場",
         "hoursQuote": "９：００～１２：００ １３：００～１６：００",
         "windows": [
@@ -200,8 +189,7 @@
           {
             "kind": "public-holiday"
           }
-        ],
-        "pdfClosedDates": []
+        ]
       }
     },
     {
@@ -231,7 +219,7 @@
         "decision": "fill",
         "sourceUrl": "https://www.urawanyuyouji.com/admin/wp-content/uploads/2026/09/202610_urawa.pdf",
         "quote": "★にこにこ広場★ 【予約不要】 《利用対象》 ０・１・２歳のお子さんと保護者 《利用時間》 午前9:00～１２:００ 午後13:00～１６:００ 《休館日》 第２・４月曜日 第５日曜日 祝日 年末年始 マークなし、空欄部分・・ 『にこにこ広場』 予約なしでご利用できます。 ※にこにこ広場は終日お休みです。（測定のみの利用となります。",
-        "decisionNote": "空欄はにこにこ広場。測定日は終日ひろば休みだが、抽出テキストは測定日の日付を特定できない。抽出タイトルに身体測定が含まれる日だけ抑制する。",
+        "decisionNote": "空欄はにこにこ広場。終日・午前・午後の「にこにこ広場 お休み」と休館はソースドキュメントの closures に日付で持つ。終日と休館の日は通常開室を足さない。午前だけの休みは午後の引用だけ、午後だけの休みは午前の引用だけを足す。",
         "title": "にこにこ広場",
         "targetAge": "０・１・２歳のお子さんと保護者",
         "hoursQuote": "午前9:00～１２:００ 午後13:00～１６:００",
@@ -270,10 +258,6 @@
           {
             "kind": "public-holiday"
           }
-        ],
-        "pdfClosedDates": [],
-        "suppressTitleIncludes": [
-          "身体測定"
         ]
       }
     },
@@ -289,7 +273,7 @@
         "decision": "fill",
         "sourceUrl": "https://www.urawanyuyouji.com/minami/",
         "quote": "★にこにこ広場 ★～予約なしでみんなが遊べる広場です ～ 《利用対象》 ０・１・２歳の親子 《利用時間》 9：00～ 12：00 13： 00～ 16：00 《休館日》 第2・4月曜日 第5日曜日 祝日 年末年始 PM 空欄部分 『にこにこ広場』 予約なしで利用できます",
-        "decisionNote": "PMの空欄はにこにこ広場。終日測定のみの日は抽出タイトルに身体測定が含まれるので通常開室を足さない。年末年始の月日はPDFに無いので日付では閉じない。",
+        "decisionNote": "PMの空欄はにこにこ広場。終日測定のみ、休館、予定表の見かたにあるマークの時間帯はソースドキュメントの closures に持つ。終日の休みは通常開室を足さない。午前または午後だけの休みは開いている側の時間だけ足す。年末年始の月日はPDFに無いので日付では閉じない。",
         "title": "にこにこ広場",
         "targetAge": "０・１・２歳の親子",
         "hoursQuote": "9：00～ 12：00 13： 00～ 16：00",
@@ -328,10 +312,6 @@
           {
             "kind": "public-holiday"
           }
-        ],
-        "pdfClosedDates": [],
-        "suppressTitleIncludes": [
-          "身体測定"
         ]
       }
     },
@@ -374,7 +354,29 @@
       "pdfUrl": "https://seisinkai.ed.jp/wp-content/uploads/2026/09/令和8年度１０月のカレンダー.pdf",
       "fetchedAt": "2026-10-20T06:00:00Z",
       "sha256": "placeholder",
-      "extractedAt": "2026-10-20T09:13:05.648Z"
+      "extractedAt": "2026-10-20T09:13:05.648Z",
+      "closures": [
+        {
+          "date": "2026-10-01",
+          "scope": "all-day",
+          "quote": "閉室日"
+        },
+        {
+          "date": "2026-10-03",
+          "scope": "am",
+          "quote": "AM×"
+        },
+        {
+          "date": "2026-10-12",
+          "scope": "all-day",
+          "quote": "閉室日"
+        },
+        {
+          "date": "2026-10-15",
+          "scope": "all-day",
+          "quote": "閉室日"
+        }
+      ]
     },
     {
       "id": "minuma-2026-10",
@@ -392,7 +394,59 @@
       "pdfUrl": "https://www.urawanyuyouji.com/admin/wp-content/uploads/2026/09/202610_urawa.pdf",
       "fetchedAt": "2026-10-20T06:00:00Z",
       "sha256": "placeholder",
-      "extractedAt": "2026-10-20T09:13:05.649Z"
+      "extractedAt": "2026-10-20T09:13:05.649Z",
+      "closures": [
+        {
+          "date": "2026-10-01",
+          "scope": "all-day",
+          "quote": "終日 にこにこ広場 お休み"
+        },
+        {
+          "date": "2026-10-06",
+          "scope": "all-day",
+          "quote": "終日 にこにこ広場 お休み"
+        },
+        {
+          "date": "2026-10-07",
+          "scope": "all-day",
+          "quote": "終日 にこにこ広場 お休み"
+        },
+        {
+          "date": "2026-10-12",
+          "scope": "all-day",
+          "quote": "休館"
+        },
+        {
+          "date": "2026-10-15",
+          "scope": "am",
+          "quote": "午前 にこにこ広場 お休み"
+        },
+        {
+          "date": "2026-10-18",
+          "scope": "pm",
+          "quote": "午後 にこにこ広場 お休み"
+        },
+        {
+          "date": "2026-10-21",
+          "scope": "pm",
+          "quote": "午後 にこにこ広場 お休み"
+        },
+        {
+          "date": "2026-10-25",
+          "scope": "am",
+          "quote": "午前 にこにこ広場 お休み"
+        },
+        {
+          "date": "2026-10-26",
+          "scope": "all-day",
+          "quote": "休館"
+        },
+        {
+          "date": "2026-10-30",
+          "scope": "pm",
+          "quote": "午後 にこにこ広場 お休み"
+        }
+      ]
     },
     {
       "id": "iwatsuki-202610",
@@ -419,7 +473,49 @@
       "pdfUrl": "https://www.urawanyuyouji.com/minami/",
       "fetchedAt": "2026-10-20T09:13:05.648Z",
       "sha256": "",
-      "extractedAt": "2026-10-20T09:13:05.648Z"
+      "extractedAt": "2026-10-20T09:13:05.648Z",
+      "closures": [
+        {
+          "date": "2026-10-06",
+          "scope": "am",
+          "quote": "このマークがある時間帯は『にこにこ広場』はお休みです"
+        },
+        {
+          "date": "2026-10-07",
+          "scope": "all-day",
+          "quote": "終日測定のみ"
+        },
+        {
+          "date": "2026-10-12",
+          "scope": "all-day",
+          "quote": "休館 スポーツの日"
+        },
+        {
+          "date": "2026-10-13",
+          "scope": "am",
+          "quote": "このマークがある時間帯は『にこにこ広場』はお休みです"
+        },
+        {
+          "date": "2026-10-14",
+          "scope": "all-day",
+          "quote": "終日測定のみ"
+        },
+        {
+          "date": "2026-10-20",
+          "scope": "am",
+          "quote": "このマークがある時間帯は『にこにこ広場』はお休みです"
+        },
+        {
+          "date": "2026-10-21",
+          "scope": "all-day",
+          "quote": "終日測定のみ"
+        },
+        {
+          "date": "2026-10-26",
+          "scope": "all-day",
+          "quote": "休館"
+        }
+      ]
     },
     {
       "id": "minami-202611",
@@ -428,7 +524,59 @@
       "pdfUrl": "https://www.urawanyuyouji.com/minami/",
       "fetchedAt": "2026-10-20T09:13:05.648Z",
       "sha256": "",
-      "extractedAt": "2026-10-20T09:13:05.648Z"
+      "extractedAt": "2026-10-20T09:13:05.648Z",
+      "closures": [
+        {
+          "date": "2026-11-03",
+          "scope": "all-day",
+          "quote": "休館 文化の日"
+        },
+        {
+          "date": "2026-11-04",
+          "scope": "all-day",
+          "quote": "終日測定のみ"
+        },
+        {
+          "date": "2026-11-09",
+          "scope": "all-day",
+          "quote": "休館"
+        },
+        {
+          "date": "2026-11-10",
+          "scope": "am",
+          "quote": "このマークがある時間帯は『にこにこ広場』はお休みです"
+        },
+        {
+          "date": "2026-11-11",
+          "scope": "all-day",
+          "quote": "終日測定のみ"
+        },
+        {
+          "date": "2026-11-12",
+          "scope": "am",
+          "quote": "このマークがある時間帯は『にこにこ広場』はお休みです"
+        },
+        {
+          "date": "2026-11-16",
+          "scope": "am",
+          "quote": "このマークがある時間帯は『にこにこ広場』はお休みです"
+        },
+        {
+          "date": "2026-11-23",
+          "scope": "all-day",
+          "quote": "休館 勤労感謝の日"
+        },
+        {
+          "date": "2026-11-25",
+          "scope": "all-day",
+          "quote": "終日測定のみ"
+        },
+        {
+          "date": "2026-11-29",
+          "scope": "all-day",
+          "quote": "休館"
+        }
+      ]
     },
     {
       "id": "omiya-202610",
@@ -437,7 +585,24 @@
       "pdfUrl": "https://www.wakaba-asunaro.jp/omiya",
       "fetchedAt": "2026-10-20T09:13:05.648Z",
       "sha256": "",
-      "extractedAt": "2026-10-20T09:13:05.648Z"
+      "extractedAt": "2026-10-20T09:13:05.648Z",
+      "closures": [
+        {
+          "date": "2026-10-05",
+          "scope": "all-day",
+          "quote": "休館日"
+        },
+        {
+          "date": "2026-10-12",
+          "scope": "all-day",
+          "quote": "スポーツの日"
+        },
+        {
+          "date": "2026-10-19",
+          "scope": "all-day",
+          "quote": "休館日"
+        }
+      ]
     },
     {
       "id": "omiya-202611",
@@ -446,7 +611,34 @@
       "pdfUrl": "https://www.wakaba-asunaro.jp/omiya",
       "fetchedAt": "2026-10-20T09:13:05.648Z",
       "sha256": "",
-      "extractedAt": "2026-10-20T09:13:05.648Z"
+      "extractedAt": "2026-10-20T09:13:05.648Z",
+      "closures": [
+        {
+          "date": "2026-11-02",
+          "scope": "all-day",
+          "quote": "休館日"
+        },
+        {
+          "date": "2026-11-03",
+          "scope": "all-day",
+          "quote": "文化の日"
+        },
+        {
+          "date": "2026-11-16",
+          "scope": "all-day",
+          "quote": "休館日"
+        },
+        {
+          "date": "2026-11-23",
+          "scope": "all-day",
+          "quote": "勤労感謝の日"
+        },
+        {
+          "date": "2026-11-29",
+          "scope": "all-day",
+          "quote": "第5日曜日でお休み"
+        }
+      ]
     },
     {
       "id": "yono-202610",
@@ -455,7 +647,29 @@
       "pdfUrl": "https://www.himawarikkoland.com/yono",
       "fetchedAt": "2026-10-20T09:13:05.649Z",
       "sha256": "",
-      "extractedAt": "2026-10-20T09:13:05.649Z"
+      "extractedAt": "2026-10-20T09:13:05.649Z",
+      "closures": [
+        {
+          "date": "2026-10-12",
+          "scope": "all-day",
+          "quote": "スポーツの日"
+        },
+        {
+          "date": "2026-10-13",
+          "scope": "all-day",
+          "quote": "休館日"
+        },
+        {
+          "date": "2026-10-16",
+          "scope": "am",
+          "quote": "ウェルカムさいたまの為午前閉館"
+        },
+        {
+          "date": "2026-10-27",
+          "scope": "all-day",
+          "quote": "休館日"
+        }
+      ]
     },
     {
       "id": "yono-202611",
@@ -464,7 +678,29 @@
       "pdfUrl": "https://www.himawarikkoland.com/yono",
       "fetchedAt": "2026-10-20T09:13:05.649Z",
       "sha256": "",
-      "extractedAt": "2026-10-20T09:13:05.649Z"
+      "extractedAt": "2026-10-20T09:13:05.649Z",
+      "closures": [
+        {
+          "date": "2026-11-02",
+          "scope": "all-day",
+          "quote": "定期清掃の為休館"
+        },
+        {
+          "date": "2026-11-10",
+          "scope": "all-day",
+          "quote": "休館日"
+        },
+        {
+          "date": "2026-11-24",
+          "scope": "all-day",
+          "quote": "休館日"
+        },
+        {
+          "date": "2026-11-29",
+          "scope": "all-day",
+          "quote": "休館日"
+        }
+      ]
     }
   ],
   "events": [
@@ -499,39 +735,6 @@
       "targetAge": "０・１・２歳の親子"
     },
     {
-      "id": "nishi-2026-10-01-minna-am",
-      "centerId": "nishi",
-      "sourceDocumentId": "nishi-2026-10",
-      "date": "2026-10-01",
-      "startTime": "09:00",
-      "endTime": "12:00",
-      "title": "みんなのひろば",
-      "description": "年齢制限はありません",
-      "reservationRequired": false,
-      "tags": [
-        "自由遊び"
-      ],
-      "origin": "extracted",
-      "kind": "hiroba"
-    },
-    {
-      "id": "nishi-2026-10-01-momo-pm",
-      "centerId": "nishi",
-      "sourceDocumentId": "nishi-2026-10",
-      "date": "2026-10-01",
-      "startTime": "13:00",
-      "endTime": "16:00",
-      "title": "ももちゃんタイム",
-      "description": "1歳2か月までのお子様専用の時間です",
-      "targetAge": "1歳2か月まで",
-      "reservationRequired": false,
-      "tags": [
-        "月齢限定"
-      ],
-      "origin": "extracted",
-      "kind": "hiroba"
-    },
-    {
       "id": "omiya-2026-10-01-wakuwaku",
       "centerId": "omiya",
       "sourceDocumentId": "omiya-202610",
@@ -544,18 +747,6 @@
       ],
       "origin": "extracted",
       "kind": "hiroba"
-    },
-    {
-      "id": "urawa-2026-10-01-regular-hiroba",
-      "centerId": "urawa",
-      "sourceDocumentId": "urawa-2026-10",
-      "date": "2026-10-01",
-      "title": "にこにこ広場",
-      "description": "午前9:00～１２:００ 午後13:00～１６:００",
-      "reservationRequired": false,
-      "kind": "hiroba",
-      "origin": "regular-hours",
-      "targetAge": "０・１・２歳のお子さんと保護者"
     },
     {
       "id": "yono-2026-10-01-piyopiyo",
@@ -693,7 +884,7 @@
       "sourceDocumentId": "nishi-2026-10",
       "date": "2026-10-03",
       "title": "みんなのひろば",
-      "description": "午前9:00～12:00 午後13:00～16:00",
+      "description": "午後13:00～16:00",
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours",
@@ -1011,18 +1202,6 @@
       "kind": "hiroba"
     },
     {
-      "id": "urawa-2026-10-06-regular-hiroba",
-      "centerId": "urawa",
-      "sourceDocumentId": "urawa-2026-10",
-      "date": "2026-10-06",
-      "title": "にこにこ広場",
-      "description": "午前9:00～１２:００ 午後13:00～１６:００",
-      "reservationRequired": false,
-      "kind": "hiroba",
-      "origin": "regular-hours",
-      "targetAge": "０・１・２歳のお子さんと保護者"
-    },
-    {
       "id": "yono-2026-10-06-piyopiyo",
       "centerId": "yono",
       "sourceDocumentId": "yono-202610",
@@ -1115,18 +1294,6 @@
       ],
       "origin": "extracted",
       "kind": "hiroba"
-    },
-    {
-      "id": "urawa-2026-10-07-regular-hiroba",
-      "centerId": "urawa",
-      "sourceDocumentId": "urawa-2026-10",
-      "date": "2026-10-07",
-      "title": "にこにこ広場",
-      "description": "午前9:00～１２:００ 午後13:00～１６:００",
-      "reservationRequired": false,
-      "kind": "hiroba",
-      "origin": "regular-hours",
-      "targetAge": "０・１・２歳のお子さんと保護者"
     },
     {
       "id": "yono-2026-10-07-library",
@@ -1628,22 +1795,6 @@
       "kind": "event"
     },
     {
-      "id": "yono-2026-10-13-piyopiyo",
-      "centerId": "yono",
-      "sourceDocumentId": "yono-202610",
-      "date": "2026-10-13",
-      "startTime": "09:00",
-      "endTime": "16:00",
-      "title": "ぴよぴよ広場",
-      "targetAge": "0～2歳",
-      "reservationRequired": false,
-      "tags": [
-        "自由遊び"
-      ],
-      "origin": "extracted",
-      "kind": "hiroba"
-    },
-    {
       "id": "iwatsuki-2026-10-14-fureai",
       "centerId": "iwatsuki",
       "sourceDocumentId": "iwatsuki-202610",
@@ -1855,7 +2006,7 @@
       "sourceDocumentId": "urawa-2026-10",
       "date": "2026-10-15",
       "title": "にこにこ広場",
-      "description": "午前9:00～１２:００ 午後13:00～１６:００",
+      "description": "午後13:00～１６:００",
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours",
@@ -2019,7 +2170,7 @@
       "sourceDocumentId": "yono-202610",
       "date": "2026-10-16",
       "title": "ぴよぴよ広場",
-      "description": "９：００～１２：００ １３：００～１６：００",
+      "description": "１３：００～１６：００",
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours"
@@ -2260,7 +2411,7 @@
       "sourceDocumentId": "urawa-2026-10",
       "date": "2026-10-18",
       "title": "にこにこ広場",
-      "description": "午前9:00～１２:００ 午後13:00～１６:００",
+      "description": "午前9:00～１２:００",
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours",
@@ -2659,7 +2810,7 @@
       "sourceDocumentId": "urawa-2026-10",
       "date": "2026-10-21",
       "title": "にこにこ広場",
-      "description": "午前9:00～１２:００ 午後13:00～１６:００",
+      "description": "午前9:00～１２:００",
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours",
@@ -3202,7 +3353,7 @@
       "sourceDocumentId": "urawa-2026-10",
       "date": "2026-10-25",
       "title": "にこにこ広場",
-      "description": "午前9:00～１２:００ 午後13:00～１６:００",
+      "description": "午後13:00～１６:００",
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours",
@@ -3394,22 +3545,6 @@
       "kind": "hiroba",
       "origin": "regular-hours",
       "targetAge": "０・１・２歳のお子さんと保護者"
-    },
-    {
-      "id": "yono-2026-10-27-piyopiyo",
-      "centerId": "yono",
-      "sourceDocumentId": "yono-202610",
-      "date": "2026-10-27",
-      "startTime": "09:00",
-      "endTime": "16:00",
-      "title": "ぴよぴよ広場",
-      "targetAge": "0～2歳",
-      "reservationRequired": false,
-      "tags": [
-        "自由遊び"
-      ],
-      "origin": "extracted",
-      "kind": "hiroba"
     },
     {
       "id": "minami-2026-10-28-baby-story",
@@ -3819,7 +3954,7 @@
       "sourceDocumentId": "urawa-2026-10",
       "date": "2026-10-30",
       "title": "にこにこ広場",
-      "description": "午前9:00～１２:００ 午後13:00～１６:００",
+      "description": "午前9:00～１２:００",
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours",
@@ -3960,22 +4095,6 @@
       "kind": "hiroba",
       "origin": "regular-hours",
       "targetAge": "０・１・２歳の親子"
-    },
-    {
-      "id": "yono-2026-11-02-piyopiyo",
-      "centerId": "yono",
-      "sourceDocumentId": "yono-202611",
-      "date": "2026-11-02",
-      "startTime": "09:00",
-      "endTime": "16:00",
-      "title": "ぴよぴよ広場",
-      "targetAge": "0～2歳",
-      "reservationRequired": false,
-      "tags": [
-        "自由遊び"
-      ],
-      "origin": "extracted",
-      "kind": "hiroba"
     },
     {
       "id": "minami-2026-11-04-0age-measurement",
@@ -5238,17 +5357,6 @@
       "origin": "regular-hours"
     },
     {
-      "id": "omiya-2026-11-23-regular-hiroba",
-      "centerId": "omiya",
-      "sourceDocumentId": "omiya-202611",
-      "date": "2026-11-23",
-      "title": "わくわくひろば",
-      "description": "９：００～１２：００ / １３：００～１６：００",
-      "reservationRequired": false,
-      "kind": "hiroba",
-      "origin": "regular-hours"
-    },
-    {
       "id": "minami-2026-11-24-hamigaki",
       "centerId": "minami",
       "sourceDocumentId": "minami-202611",
@@ -5636,22 +5744,6 @@
       "kind": "hiroba"
     },
     {
-      "id": "yono-2026-11-29-piyopiyo",
-      "centerId": "yono",
-      "sourceDocumentId": "yono-202611",
-      "date": "2026-11-29",
-      "startTime": "09:00",
-      "endTime": "16:00",
-      "title": "ぴよぴよ広場",
-      "targetAge": "0～2歳",
-      "reservationRequired": false,
-      "tags": [
-        "自由遊び"
-      ],
-      "origin": "extracted",
-      "kind": "hiroba"
-    },
-    {
       "id": "minami-2026-11-30-regular-hiroba",
       "centerId": "minami",
       "sourceDocumentId": "minami-202611",
@@ -5731,6 +5823,6 @@
       "kind": "hiroba"
     }
   ],
-  "generatedAt": "2026-10-22T22:39:32.250Z",
+  "generatedAt": "2026-10-24T14:54:00.358Z",
   "version": "1.0.0"
 }

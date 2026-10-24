@@ -42,9 +42,7 @@ export type RegularHoursPolicy =
       windows: HoursWindow[];
       openWeekdays: Weekday[];
       closed: ClosedRule[];
-      pdfClosedDates: PdfClosedDate[];
       targetAge?: string;
-      suppressTitleIncludes?: string[];
     };
 
 export interface Center {
@@ -121,7 +119,7 @@ export const CENTERS: Center[] = [
       quote:
         "【開館時間】 ※12:00～13:00は一度閉室します。 午前9:00～12:00午後13:00～16:00 ◎毎月第１・３木曜日、第５日曜日、祝休日、年末年始 (12/29～1/3)は閉室となります。 ◎白い枠は、ご予約はいりませんが、イベントは (黄色い枠 )ご予約制となっております。",
       decisionNote:
-        "白い枠は予約不要。開室日でひろば行が無い日だけ通常開室を足す。第1・第3木曜、第5日曜、祝休日、12/29～1/3は閉室。既存の抽出行は消さない。",
+        "白い枠は予約不要。開室日でひろば行が無い日だけ通常開室を足す。第1・第3木曜、第5日曜、祝休日、12/29～1/3は閉室。日付の入った閉室日と午前のAM×はソースドキュメントの closures に持つ。",
       title: "みんなのひろば",
       targetAge: "０～３歳未満 (３歳を迎えた年の３月まで利用可 )",
       hoursQuote: "午前9:00～12:00 午後13:00～16:00",
@@ -133,7 +131,6 @@ export const CENTERS: Center[] = [
         { kind: "public-holiday" },
         { kind: "month-day-range", from: "12-29", to: "01-03" },
       ],
-      pdfClosedDates: [],
     },
   },
   {
@@ -169,7 +166,7 @@ export const CENTERS: Center[] = [
       quote:
         "✤ようこそ わくわくひろばへ ✤ 月曜日～土曜日、日曜日（第１～第４） ※毎月第１・第３月曜日はお休みです。 ９：００～１２：００ / １３：００～１６：００",
       decisionNote:
-        "ひろばの文は祝日休館を言わない。予定表が休館日と書いた日だけ追加で休む。一時預かりの国民の休日は使わない。第5日曜は「日曜日（第１～第４）」から閉じる。",
+        "ひろばの文は祝日休館を言わない。予定表の休館日、または休館日と同じ斜線が入った日だけ追加で休む。一時預かりの国民の休日は使わない。第5日曜は「日曜日（第１～第４）」から閉じる。日付の入った休みはソースドキュメントの closures に持つ。",
       title: "わくわくひろば",
       hoursQuote: "９：００～１２：００ / １３：００～１６：００",
       windows: splitDayWindows,
@@ -177,10 +174,6 @@ export const CENTERS: Center[] = [
       closed: [
         { kind: "nth-weekday", nth: [1, 3], weekday: 1 },
         { kind: "sunday-from", nth: 5 },
-      ],
-      pdfClosedDates: [
-        { date: "2026-10-12", quote: "休館日 スポーツの 日" },
-        { date: "2026-11-03", quote: "休館日 文化の日" },
       ],
     },
   },
@@ -217,7 +210,7 @@ export const CENTERS: Center[] = [
       quote:
         "開館時間　９：００～１２：００ １３：００～１６：００ 休館日　第２・４火曜日 第５日曜日 祝日・年末年始",
       decisionNote:
-        "予定表は多くの日にぴよぴよ広場と書いてある。ひろば行が無い開室日だけ足す。年末年始の月日はPDFに無いので日付では閉じない。",
+        "予定表は多くの日にぴよぴよ広場と書いてある。ひろば行が無い開室日だけ足す。休館日、斜線、午前閉館はソースドキュメントの closures に持つ。午前だけの休みは午後の引用だけ足す。年末年始の月日はPDFに無いので日付では閉じない。",
       title: "ぴよぴよ広場",
       hoursQuote: "９：００～１２：００ １３：００～１６：００",
       windows: splitDayWindows,
@@ -227,7 +220,6 @@ export const CENTERS: Center[] = [
         { kind: "sunday-from", nth: 5 },
         { kind: "public-holiday" },
       ],
-      pdfClosedDates: [],
     },
   },
   {
@@ -261,7 +253,7 @@ export const CENTERS: Center[] = [
       quote:
         "★にこにこ広場★ 【予約不要】 《利用対象》 ０・１・２歳のお子さんと保護者 《利用時間》 午前9:00～１２:００ 午後13:00～１６:００ 《休館日》 第２・４月曜日 第５日曜日 祝日 年末年始 マークなし、空欄部分・・ 『にこにこ広場』 予約なしでご利用できます。 ※にこにこ広場は終日お休みです。（測定のみの利用となります。",
       decisionNote:
-        "空欄はにこにこ広場。測定日は終日ひろば休みだが、抽出テキストは測定日の日付を特定できない。抽出タイトルに身体測定が含まれる日だけ抑制する。",
+        "空欄はにこにこ広場。終日・午前・午後の「にこにこ広場 お休み」と休館はソースドキュメントの closures に日付で持つ。終日と休館の日は通常開室を足さない。午前だけの休みは午後の引用だけ、午後だけの休みは午前の引用だけを足す。",
       title: "にこにこ広場",
       targetAge: "０・１・２歳のお子さんと保護者",
       hoursQuote: "午前9:00～１２:００ 午後13:00～１６:００",
@@ -272,8 +264,6 @@ export const CENTERS: Center[] = [
         { kind: "sunday-from", nth: 5 },
         { kind: "public-holiday" },
       ],
-      pdfClosedDates: [],
-      suppressTitleIncludes: ["身体測定"],
     },
   },
   {
@@ -293,7 +283,7 @@ export const CENTERS: Center[] = [
       quote:
         "★にこにこ広場 ★～予約なしでみんなが遊べる広場です ～ 《利用対象》 ０・１・２歳の親子 《利用時間》 9：00～ 12：00 13： 00～ 16：00 《休館日》 第2・4月曜日 第5日曜日 祝日 年末年始 PM 空欄部分 『にこにこ広場』 予約なしで利用できます",
       decisionNote:
-        "PMの空欄はにこにこ広場。終日測定のみの日は抽出タイトルに身体測定が含まれるので通常開室を足さない。年末年始の月日はPDFに無いので日付では閉じない。",
+        "PMの空欄はにこにこ広場。終日測定のみ、休館、予定表の見かたにあるマークの時間帯はソースドキュメントの closures に持つ。終日の休みは通常開室を足さない。午前または午後だけの休みは開いている側の時間だけ足す。年末年始の月日はPDFに無いので日付では閉じない。",
       title: "にこにこ広場",
       targetAge: "０・１・２歳の親子",
       hoursQuote: "9：00～ 12：00 13： 00～ 16：00",
@@ -304,8 +294,6 @@ export const CENTERS: Center[] = [
         { kind: "sunday-from", nth: 5 },
         { kind: "public-holiday" },
       ],
-      pdfClosedDates: [],
-      suppressTitleIncludes: ["身体測定"],
     },
   },
   {
