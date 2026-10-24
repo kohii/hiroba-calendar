@@ -245,6 +245,37 @@ describe("fillRegularHours", () => {
     assert.ok(events.every((event) => event.date.startsWith("2026-10")));
   });
 
+  it("does not fill urawa 2026-10-06 when the document says the plaza is closed all day", () => {
+    const urawa = CENTERS.find((center) => center.id === "urawa");
+    assert.ok(urawa);
+    const events = fillRegularHours({
+      events: [],
+      centers: [urawa],
+      sourceDocuments: [
+        {
+          id: "urawa-2026-10",
+          centerId: "urawa",
+          month: "2026-10",
+          pdfUrl: "https://example.test/urawa.pdf",
+          fetchedAt: "2026-10-01T00:00:00Z",
+          sha256: "abc",
+          closures: [
+            {
+              date: "2026-10-06",
+              scope: "all-day",
+              quote: "終日 にこにこ広場 お休み",
+            },
+          ],
+        },
+      ],
+      holidayDates: ["2026-10-12"],
+    });
+    assert.equal(
+      events.some((event) => event.date === "2026-10-06"),
+      false,
+    );
+  });
+
   it("returns the same ids when filling its own output", () => {
     const input = {
       events: [] as Event[],

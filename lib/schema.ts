@@ -17,8 +17,11 @@ export type ClosedRule =
   | { kind: "public-holiday" }
   | { kind: "month-day-range"; from: string; to: string };
 
-export interface PdfClosedDate {
+export type ClosureScope = "all-day" | "am" | "pm";
+
+export interface DayClosure {
   date: string;
+  scope: ClosureScope;
   quote: string;
 }
 
@@ -66,6 +69,7 @@ export interface SourceDocument {
   fetchedAt: string; // ISO date string
   sha256: string;
   extractedAt?: string; // ISO date string when AI extraction was performed
+  closures?: DayClosure[];
 }
 
 export interface Event {
