@@ -4,6 +4,7 @@ import { describe, it } from "node:test";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { fillRegularHours } from "../lib/regular-hours.ts";
+import { validateExtractedEvents } from "../scripts/validator.ts";
 import { CENTERS } from "../lib/schema.ts";
 import type { Center, Event, RegularHoursPolicy, SourceDocument, Weekday } from "../lib/schema.ts";
 
@@ -22,7 +23,6 @@ function fillPolicy(overrides: Partial<FillPolicy> = {}): FillPolicy {
     windows: [{ start: "09:00", end: "12:00" }],
     openWeekdays: EVERY_DAY,
     closed: [],
-    pdfClosedDates: [],
     ...overrides,
   };
 }
@@ -124,11 +124,13 @@ describe("fillRegularHours", () => {
     assert.equal(hasRegular(events, "2026-11-22"), true);
   });
 
-  it("skips a PDF closed Monday and fills the next day", () => {
-    const events = fillMonth(
-      fillPolicy({ pdfClosedDates: [{ date: "2026-10-05", quote: "休館日" }] }),
-      "2026-10",
-    );
+  it("skips a Monday the source document marks closed and fills the next day", () => {
+    const events = fillMonth(fillPolicy(), "2026-10", [], [], [
+      {
+        ...fixtureDoc("2026-10"),
+        closures: [{ date: "2026-10-05", scope: "all-day", quote: "休館日" }],
+      },
+    ]);
     assert.equal(hasRegular(events, "2026-10-05"), false);
     assert.equal(hasRegular(events, "2026-10-06"), true);
   });
@@ -176,17 +178,15 @@ describe("fillRegularHours", () => {
     );
   });
 
-  it("skips a day whose title contains a suppressed substring", () => {
+  it("fills a day whose only extracted row is a measurement", () => {
     const existing = fixtureEvent({
       id: "measure",
       date: "2026-10-06",
       kind: "event",
       title: "0歳身体測定",
     });
-    const events = fillMonth(fillPolicy({ suppressTitleIncludes: ["身体測定"] }), "2026-10", [
-      existing,
-    ]);
-    assert.equal(hasRegular(events, "2026-10-06"), false);
+    const events = fillMonth(fillPolicy(), "2026-10", [existing]);
+    assert.equal(hasRegular(events, "2026-10-06"), true);
     assert.equal(hasRegular(events, "2026-10-07"), true);
   });
 
@@ -201,17 +201,105 @@ describe("fillRegularHours", () => {
     assert.equal(hasRegular(events, "2026-10-05"), true);
   });
 
-  it("still skips that day when the center quote suppresses 身体測定", () => {
+  it("does not fill a measurement day the document marks closed all day", () => {
     const existing = fixtureEvent({
       id: "mixed",
       date: "2026-10-05",
       kind: "event",
       title: "みんなのひろば・身体測定",
     });
-    const events = fillMonth(fillPolicy({ suppressTitleIncludes: ["身体測定"] }), "2026-10", [
-      existing,
+    const events = fillMonth(fillPolicy(), "2026-10", [existing], [], [
+      {
+        ...fixtureDoc("2026-10"),
+        closures: [{ date: "2026-10-05", scope: "all-day", quote: "終日測定のみ" }],
+      },
     ]);
     assert.equal(hasRegular(events, "2026-10-05"), false);
+    assert.ok(events.some((event) => event.id === "mixed"));
+  });
+
+  it("quotes only the open half when the document closes one half", () => {
+    const policy = fillPolicy({
+      hoursQuote: "午前9:00～１２:００ 午後13:00～１６:００",
+      windows: [
+        { start: "09:00", end: "12:00" },
+        { start: "13:00", end: "16:00" },
+      ],
+    });
+    const events = fillMonth(policy, "2026-10", [], [], [
+      {
+        ...fixtureDoc("2026-10"),
+        closures: [
+          { date: "2026-10-15", scope: "am", quote: "午前 にこにこ広場 お休み" },
+          { date: "2026-10-18", scope: "pm", quote: "午後 にこにこ広場 お休み" },
+          { date: "2026-10-21", scope: "am", quote: "午前" },
+          { date: "2026-10-21", scope: "pm", quote: "午後" },
+        ],
+      },
+    ]);
+    assert.equal(
+      events.find((event) => event.id === regularId("2026-10-15"))?.description,
+      "午後13:00～１６:００",
+    );
+    assert.equal(
+      events.find((event) => event.id === regularId("2026-10-18"))?.description,
+      "午前9:00～１２:００",
+    );
+    assert.equal(hasRegular(events, "2026-10-21"), false);
+  });
+
+  it("splits a hours quote that has no 午後 marker", () => {
+    const policy = fillPolicy({
+      hoursQuote: "９：００～１２：００ / １３：００～１６：００",
+      windows: [
+        { start: "09:00", end: "12:00" },
+        { start: "13:00", end: "16:00" },
+      ],
+    });
+    const events = fillMonth(policy, "2026-10", [], [], [
+      {
+        ...fixtureDoc("2026-10"),
+        closures: [{ date: "2026-10-16", scope: "am", quote: "午前閉館" }],
+      },
+    ]);
+    assert.equal(
+      events.find((event) => event.id === regularId("2026-10-16"))?.description,
+      "１３：００～１６：００",
+    );
+  });
+
+  it("drops an extracted hiroba row on an all-day closure and keeps the program", () => {
+    const events = fillMonth(
+      fillPolicy(),
+      "2026-10",
+      [
+        fixtureEvent({
+          id: "open-plaza",
+          date: "2026-10-02",
+          kind: "hiroba",
+          title: "ぴよぴよ広場",
+        }),
+        fixtureEvent({
+          id: "cleaning-note",
+          date: "2026-10-02",
+          kind: "event",
+          title: "定期清掃",
+        }),
+      ],
+      [],
+      [
+        {
+          ...fixtureDoc("2026-10"),
+          closures: [{ date: "2026-10-02", scope: "all-day", quote: "定期清掃の為休館" }],
+        },
+      ],
+    );
+    assert.equal(
+      events.some((event) => event.id === "open-plaza"),
+      false,
+    );
+    assert.ok(events.some((event) => event.id === "cleaning-note"));
+    assert.equal(hasRegular(events, "2026-10-02"), false);
   });
 
   it("closes the year-end range across the year boundary", () => {
@@ -245,6 +333,37 @@ describe("fillRegularHours", () => {
     assert.ok(events.every((event) => event.date.startsWith("2026-10")));
   });
 
+  it("does not fill urawa 2026-10-06 when the document says the plaza is closed all day", () => {
+    const urawa = CENTERS.find((center) => center.id === "urawa");
+    assert.ok(urawa);
+    const events = fillRegularHours({
+      events: [],
+      centers: [urawa],
+      sourceDocuments: [
+        {
+          id: "urawa-2026-10",
+          centerId: "urawa",
+          month: "2026-10",
+          pdfUrl: "https://example.test/urawa.pdf",
+          fetchedAt: "2026-10-01T00:00:00Z",
+          sha256: "abc",
+          closures: [
+            {
+              date: "2026-10-06",
+              scope: "all-day",
+              quote: "終日 にこにこ広場 お休み",
+            },
+          ],
+        },
+      ],
+      holidayDates: ["2026-10-12"],
+    });
+    assert.equal(
+      events.some((event) => event.date === "2026-10-06"),
+      false,
+    );
+  });
+
   it("returns the same ids when filling its own output", () => {
     const input = {
       events: [] as Event[],
@@ -259,6 +378,58 @@ describe("fillRegularHours", () => {
       twice.map((event) => event.id),
       once.map((event) => event.id),
     );
+  });
+});
+
+describe("published schedule", () => {
+  const datasetPath = join(dirname(fileURLToPath(import.meta.url)), "../public/data/dataset.json");
+  const dataset = JSON.parse(readFileSync(datasetPath, "utf8")) as {
+    sourceDocuments: {
+      id: string;
+      closures?: { date: string; scope: string; quote: string }[];
+    }[];
+    events: Event[];
+  };
+
+  it("has no regular-hours row on urawa 2026-10-06", () => {
+    const closure = dataset.sourceDocuments
+      .find((document) => document.id === "urawa-2026-10")
+      ?.closures?.find((row) => row.date === "2026-10-06");
+    assert.deepStrictEqual(closure, {
+      date: "2026-10-06",
+      scope: "all-day",
+      quote: "終日 にこにこ広場 お休み",
+    });
+    assert.equal(
+      dataset.events.some(
+        (event) => event.centerId === "urawa" && event.date === "2026-10-06",
+      ),
+      false,
+    );
+  });
+
+  it("keeps only the open half of urawa regular hours", () => {
+    const description = (date: string) =>
+      dataset.events.find((event) => event.id === `urawa-${date}-regular-hiroba`)?.description;
+    assert.equal(description("2026-10-15"), "午後13:00～１６:００");
+    assert.equal(description("2026-10-18"), "午前9:00～１２:００");
+    assert.equal(description("2026-10-30"), "午前9:00～１２:００");
+  });
+});
+
+describe("closure validation", () => {
+  it("rejects a closure outside the source document month", () => {
+    const result = validateExtractedEvents([], {
+      id: "urawa-2026-10",
+      centerId: "urawa",
+      month: "2026-10",
+      pdfUrl: "https://example.test/urawa.pdf",
+      fetchedAt: "2026-10-01T00:00:00Z",
+      sha256: "abc",
+      closures: [{ date: "2026-11-01", scope: "all-day", quote: "休館" }],
+    });
+    assert.equal(result.valid, false);
+    assert.match(result.errors.join("\n"), /2026-11-01/);
   });
 });
 

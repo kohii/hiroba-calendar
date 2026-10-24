@@ -3,7 +3,7 @@
  * Hand-written validator (no Ajv dependency)
  */
 
-import type { Event, SourceDocument } from "../lib/schema.ts";
+import type { ClosureScope, Event, SourceDocument } from "../lib/schema.ts";
 import { CENTERS } from "../lib/schema.ts";
 
 const VALID_CENTER_IDS = new Set(CENTERS.map((c) => c.id));
@@ -176,6 +176,50 @@ export function validateEvent_single(event: any): ValidationResult {
   };
 }
 
+const CLOSURE_SCOPES = new Set<ClosureScope>(["all-day", "am", "pm"]);
+
+function documentMonth(month: string): string | null {
+  const compact = /^(\d{4})(\d{2})$/.exec(month);
+  if (compact) return `${compact[1]}-${compact[2]}`;
+  if (/^\d{4}-\d{2}$/.test(month)) return month;
+  return null;
+}
+
+function validateClosures(sourceDoc: SourceDocument, result: ValidationResult): void {
+  const closures = sourceDoc.closures;
+  if (closures === undefined) return;
+  if (!Array.isArray(closures)) {
+    result.errors.push("closures must be an array");
+    result.valid = false;
+    return;
+  }
+
+  const month = documentMonth(sourceDoc.month);
+  closures.forEach((closure, index) => {
+    const label = `closures[${index}]`;
+    if (typeof closure !== "object" || closure === null) {
+      result.errors.push(`${label}: must be an object`);
+      result.valid = false;
+      return;
+    }
+    if (typeof closure.date !== "string" || !isValidDate(closure.date)) {
+      result.errors.push(`${label}: date must be YYYY-MM-DD`);
+      result.valid = false;
+    } else if (month && !closure.date.startsWith(`${month}-`)) {
+      result.errors.push(`${label}: date ${closure.date} is not in month ${month}`);
+      result.valid = false;
+    }
+    if (!CLOSURE_SCOPES.has(closure.scope)) {
+      result.errors.push(`${label}: scope must be all-day, am, or pm`);
+      result.valid = false;
+    }
+    if (typeof closure.quote !== "string" || closure.quote.trim().length === 0) {
+      result.errors.push(`${label}: quote must be a non-empty string`);
+      result.valid = false;
+    }
+  });
+}
+
 /**
  * Validate an array of events extracted from a source document
  */
@@ -188,6 +232,9 @@ export function validateExtractedEvents(
     errors: [],
     warnings: [],
   };
+
+  validateClosures(sourceDoc, result);
+  if (!result.valid) return result;
 
   // Check array
   if (!Array.isArray(events)) {
