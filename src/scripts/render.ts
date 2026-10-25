@@ -15,7 +15,7 @@ import type { URLState, ViewState } from "../../lib/url-state.ts";
 
 export interface RenderContext {
   schedule: Schedule;
-  /** Centers shown in the week and day views, in display order. */
+  /** Centers shown in the schedule view, in display order. */
   centers: Center[];
   allCenters: Center[];
   favorites: ReadonlySet<string>;
@@ -29,8 +29,8 @@ export const WEEK_LENGTH = 7;
 
 // ---- Views ----
 
-export function renderWeek(ctx: RenderContext): string {
-  const days = dateRange(ctx.today, WEEK_LENGTH)
+export function renderSchedule(ctx: RenderContext, start: string): string {
+  const days = dateRange(start, WEEK_LENGTH)
     .map(
       (date) => `
       <section class="day-section">
@@ -39,23 +39,12 @@ export function renderWeek(ctx: RenderContext): string {
       </section>`,
     )
     .join("");
-  const next = addDays(ctx.today, WEEK_LENGTH);
-  return `${onboarding(ctx)}<div class="week">${days}</div>
-    <a class="more-link" href="${href(ctx, { view: "day", date: next })}" data-nav>${dateText(next)}以降の予定を見る${icon("chevron-right")}</a>`;
-}
-
-export function renderDay(ctx: RenderContext, date: string): string {
-  const prev = href(ctx, { view: "day", date: addDays(date, -1) });
-  const next = href(ctx, { view: "day", date: addDays(date, 1) });
+  const next = addDays(start, WEEK_LENGTH);
   return `
     ${onboarding(ctx)}
-    ${dateStrip(ctx, date)}
-    <div class="day-toolbar">
-      <a class="round-button" href="${prev}" data-nav="replace" aria-label="前の日">${icon("chevron-left")}</a>
-      <h2 class="day-title">${dayHeading(ctx, date, true)}</h2>
-      <a class="round-button" href="${next}" data-nav="replace" aria-label="次の日">${icon("chevron-right")}</a>
-    </div>
-    ${renderCentersOnDay(ctx, date)}`;
+    ${dateStrip(ctx, start)}
+    <div class="week">${days}</div>
+    <a class="more-link" href="${href(ctx, { view: "schedule", date: next })}" data-nav>${dateText(next)}からの7日間${icon("chevron-right")}</a>`;
 }
 
 export function renderCenter(
@@ -64,10 +53,11 @@ export function renderCenter(
   month: string,
   selectedDate: string,
 ): string {
-  const months = ctx.schedule.months;
+  const months = visibleMonths(ctx);
   const first = months[0] ?? month;
   const last = months[months.length - 1] ?? month;
   const document = documentFor(ctx, center.id, month);
+  const imported = ctx.documents.some((item) => item.centerId === center.id);
   const monthLink = (target: string, enabled: boolean, label: string, name: string) =>
     enabled
       ? `<a class="round-button" href="${href(ctx, { view: "center", center: center.id, month: target, date: null })}" data-nav="replace" aria-label="${label}">${icon(name)}</a>`
@@ -77,6 +67,8 @@ export function renderCenter(
     const day = ctx.schedule.centerDay(center.id, date);
     return day.status === "open" ? day.events : [];
   });
+  const upcoming = monthEvents.filter((event) => event.date >= ctx.today);
+  const past = monthEvents.filter((event) => event.date < ctx.today);
   const selected = selectedDate.startsWith(month) ? selectedDate : null;
 
   return `
@@ -99,6 +91,9 @@ export function renderCenter(
       </div>
     </section>
 
+    ${
+      imported
+        ? `
     <section class="month">
       <div class="month-toolbar">
         ${monthLink(shiftMonth(month, -1), month > first, "前の月", "chevron-left")}
@@ -109,13 +104,13 @@ export function renderCenter(
       <ul class="legend" aria-label="凡例">
         <li><span class="legend-hiroba"></span>ひろば</li>
         <li><span class="legend-event"></span>イベント</li>
-        <li><span class="legend-closed">休</span>休館</li>
+        <li><span class="legend-closed">休</span>お休み</li>
       </ul>
     </section>
 
     ${
       selected
-        ? `<section class="selected-day">
+        ? `<section class="selected-day" id="selected-day">
             <h3 class="section-title">${dayHeading(ctx, selected)}</h3>
             ${renderCenterDayBody(ctx, center, ctx.schedule.centerDay(center.id, selected))}
           </section>`
@@ -125,11 +120,19 @@ export function renderCenter(
     <section class="month-events">
       <h3 class="section-title">${monthNumber(month)}月のイベント <span class="count">${monthEvents.length}件</span></h3>
       ${
-        monthEvents.length > 0
-          ? eventList(ctx, monthEvents, true)
-          : `<p class="muted">${ctx.schedule.centerDay(center.id, `${month}-01`).status === "unpublished" ? "この月の予定表はまだ掲載されていません" : "この月のイベントはありません"}</p>`
+        !document
+          ? `<p class="muted">この月の予定表はまだありません</p>`
+          : monthEvents.length === 0
+            ? `<p class="muted">この月のイベントはありません</p>`
+            : `${eventList(ctx, upcoming, true)}${
+                past.length > 0
+                  ? `<details class="past-events"><summary>過去のイベント（${past.length}件）</summary>${eventList(ctx, past, true)}</details>`
+                  : ""
+              }`
       }
-    </section>`;
+    </section>`
+        : `<p class="notice">このサイトではこの施設の予定表を取り込めていません。予定は<a href="${escapeHtml(center.websiteUrl)}" target="_blank" rel="noopener noreferrer">公式サイト</a>で確認してください</p>`
+    }`;
 }
 
 // ---- Day contents ----
@@ -148,13 +151,13 @@ function renderCentersOnDay(ctx: RenderContext, date: string): string {
     else active.push(centerRow(ctx, center, date, day));
   }
   const summary = [
-    summaryLine(ctx, "休館", closed, date, "closed"),
-    summaryLine(ctx, "予定なし", quiet, date, "quiet"),
-    summaryLine(ctx, "予定表未掲載", unpublished, date, "unpublished"),
+    summaryLine(ctx, "お休み", closed, date, "closed"),
+    summaryLine(ctx, "イベントなし", quiet, date, "quiet"),
+    summaryLine(ctx, "予定表なし", unpublished, date, "unpublished"),
   ].join("");
   const empty =
-    closed.length > 0 && quiet.length === 0
-      ? `<p class="empty-day">${icon("moon")}開いている施設はありません</p>`
+    closed.length === ctx.centers.length
+      ? `<p class="empty-day">${icon("moon")}どの施設もお休みです</p>`
       : "";
   return `
     ${active.length > 0 ? `<ul class="center-rows">${active.join("")}</ul>` : empty}
@@ -180,13 +183,13 @@ function centerRow(
 function renderCenterDayBody(ctx: RenderContext, center: Center, day: CenterDay): string {
   switch (day.status) {
     case "unpublished":
-      return `<p class="muted">予定表がまだ掲載されていません。<a href="${escapeHtml(center.websiteUrl)}" target="_blank" rel="noopener noreferrer">公式サイト</a>で確認してください</p>`;
+      return `<p class="muted">この日の予定表がありません。<a href="${escapeHtml(center.websiteUrl)}" target="_blank" rel="noopener noreferrer">公式サイト</a>で確認してください</p>`;
     case "closed":
-      return `<p class="closed-note">${icon("moon")}休館日です</p>`;
+      return `<p class="closed-note">${icon("moon")}お休みです</p>`;
     case "open": {
       const hiroba = hirobaGroup(ctx, center, day);
       if (!hiroba && day.events.length === 0) {
-        return `<p class="muted">この日の予定はありません</p>`;
+        return `<p class="muted">この日のイベントはありません</p>`;
       }
       return `${hiroba}${eventList(ctx, day.events, false)}`;
     }
@@ -205,10 +208,13 @@ function hirobaGroup(
 }
 
 function hirobaChip(ctx: RenderContext, center: Center, event: Event): string {
-  const hours = hoursLabel(event);
   const policy = center.regularHours;
   // The center's usual hiroba needs no name; special ones such as "0歳さんの広場" do.
-  const special = !(policy.decision === "fill" && policy.title === event.title);
+  const regular = policy.decision === "fill" && policy.title === event.title;
+  const hours =
+    hoursLabel(event) ||
+    (regular && policy.decision === "fill" ? hoursLabel({ description: policy.hoursQuote }) : "");
+  const special = !regular;
   // Regular-hours entries carry only the quoted hours, which the chip already shows.
   const note =
     event.description && hoursLabel({ description: event.description }) === ""
@@ -242,6 +248,7 @@ function eventList(ctx: RenderContext, events: Event[], showDate: boolean): stri
 }
 
 function eventCard(ctx: RenderContext, event: Event, opts: { showDate: boolean }): string {
+  const phone = ctx.allCenters.find((center) => center.id === event.centerId)?.phone;
   const start = event.startTime ? event.startTime.replace(/^0/, "") : "";
   const end = event.endTime ? event.endTime.replace(/^0/, "") : "";
   const tags = (event.tags ?? []).filter((tag) => tag !== "予約制");
@@ -250,6 +257,9 @@ function eventCard(ctx: RenderContext, event: Event, opts: { showDate: boolean }
     event.targetAge ? fact("対象", event.targetAge) : "",
     event.location ? fact("場所", event.location) : "",
     event.capacity ? fact("定員", `${event.capacity}組`) : "",
+    event.reservationRequired && phone
+      ? `<p class="fact"><span class="fact-label">予約</span><a href="tel:${escapeHtml(phone)}">${escapeHtml(phone)}</a></p>`
+      : "",
     tags.length > 0
       ? `<div class="tags">${tags.map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("")}</div>`
       : "",
@@ -271,6 +281,7 @@ function eventCard(ctx: RenderContext, event: Event, opts: { showDate: boolean }
             ${event.targetAge ? `<span class="event-age">${escapeHtml(event.targetAge)}</span>` : ""}
           </span>
         </span>
+        ${icon("chevron-down")}
       </summary>
       <div class="entry-details">${details}</div>
     </details>`;
@@ -315,8 +326,8 @@ function onboarding(ctx: RenderContext): string {
 }
 
 function dateStrip(ctx: RenderContext, selected: string): string {
-  const months = ctx.schedule.months.length > 0 ? ctx.schedule.months : [selected.slice(0, 7)];
-  const items = months
+  const lastShown = addDays(selected, WEEK_LENGTH - 1);
+  const items = visibleMonths(ctx, selected)
     .flatMap((month) => daysInMonth(month))
     .map((date) => {
       const hasEvent = ctx.centers.some((center) => {
@@ -326,6 +337,7 @@ function dateStrip(ctx: RenderContext, selected: string): string {
       const classes = [
         "strip-day",
         date === selected ? "is-selected" : "",
+        date > selected && date <= lastShown ? "is-in-range" : "",
         date === ctx.today ? "is-today" : "",
         dayTone(ctx, date),
       ]
@@ -334,14 +346,18 @@ function dateStrip(ctx: RenderContext, selected: string): string {
       const monthMark = date.endsWith("-01")
         ? `<span class="strip-month">${monthNumber(date)}月</span>`
         : "";
-      return `${monthMark}<a class="${classes}" href="${href(ctx, { view: "day", date })}" data-nav="replace"${date === selected ? ' aria-current="date"' : ""}>
+      return `${monthMark}<a class="${classes}" href="${href(ctx, { view: "schedule", date: date === ctx.today ? null : date })}" data-nav="replace"${date === selected ? ' aria-current="date"' : ""}>
           <span class="strip-weekday">${weekdayLabel(date)}</span>
           <span class="strip-number">${Number(date.slice(8, 10))}</span>
           <span class="strip-dot${hasEvent ? " has-event" : ""}"></span>
         </a>`;
     })
     .join("");
-  return `<nav class="date-strip" aria-label="日付を選ぶ"><div class="date-strip-track">${items}</div></nav>`;
+  const back =
+    selected === ctx.today
+      ? ""
+      : `<a class="today-link" href="${href(ctx, { view: "schedule", date: null })}" data-nav="replace">今日に戻る</a>`;
+  return `<nav class="date-strip" aria-label="日付を選ぶ"><div class="date-strip-track">${items}</div></nav>${back}`;
 }
 
 function centerPicker(ctx: RenderContext, current: Center): string {
@@ -387,7 +403,7 @@ function monthGrid(
           : day.status === "open"
             ? `${day.hiroba.length > 0 ? `<span class="mark-hiroba"></span>` : ""}${day.events.length > 0 ? `<span class="mark-events">${day.events.map(() => "<i></i>").join("")}</span>` : ""}`
             : "";
-      return `<a class="${classes}" href="${href(ctx, { view: "center", center: center.id, month, date })}" data-nav="replace" aria-label="${dateText(date)}">
+      return `<a class="${classes}" href="${href(ctx, { view: "center", center: center.id, month, date })}" data-nav="replace" data-scroll="selected-day" aria-label="${dateText(date)}">
           <span class="grid-number">${Number(date.slice(8, 10))}</span>
           <span class="grid-marks">${marks}</span>
         </a>`;
@@ -415,6 +431,24 @@ function dayTone(ctx: RenderContext, date: string): string {
   if (ctx.holidays.has(date) || weekdayOf(date) === 0) return "tone-sun";
   if (weekdayOf(date) === 6) return "tone-sat";
   return "";
+}
+
+/** Months with schedules plus the months of the given dates, without gaps. */
+function visibleMonths(ctx: RenderContext, ...dates: string[]): string[] {
+  const wanted = [
+    ...ctx.schedule.months,
+    ctx.today.slice(0, 7),
+    ...dates.map((date) => date.slice(0, 7)),
+  ].sort();
+  const months: string[] = [];
+  for (
+    let month = wanted[0] ?? "";
+    month && month <= (wanted[wanted.length - 1] ?? "");
+    month = shiftMonth(month, 1)
+  ) {
+    months.push(month);
+  }
+  return months;
 }
 
 function centerHref(ctx: RenderContext, centerId: string, date: string): string {
@@ -454,6 +488,7 @@ export function escapeHtml(text: string): string {
 const ICONS: Record<string, string> = {
   "chevron-left": '<path d="M15 18l-6-6 6-6"/>',
   "chevron-right": '<path d="M9 18l6-6-6-6"/>',
+  "chevron-down": '<path d="M6 9l6 6 6-6"/>',
   star: '<path d="M12 3.5l2.6 5.3 5.9.9-4.25 4.1 1 5.8L12 16.9l-5.25 2.7 1-5.8L3.5 9.7l5.9-.9z"/>',
   external:
     '<path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/>',

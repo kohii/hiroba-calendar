@@ -36,13 +36,9 @@ const description = 'さいたま市の子育て支援センターのひろば�
   </footer>
 
   <nav class="tabbar" aria-label="表示の切り替え">
-    <a class="tab" data-view="week" href="./">
-      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
-      今週
-    </a>
-    <a class="tab" data-view="day" href="?view=day">
+    <a class="tab" data-view="schedule" href="./">
       <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></svg>
-      日付
+      予定
     </a>
     <a class="tab" data-view="center" href="?view=center">
       <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-6 8 6M6 10v9h12v-9M10 19v-5h4v5"/></svg>
@@ -56,7 +52,7 @@ const description = 'さいたま市の子育て支援センターのひろば�
         <h2 id="centers-dialog-title">マイ施設</h2>
         <button class="primary-button" value="done">完了</button>
       </div>
-      <p class="sheet-lead">よく行く施設を選ぶと、今週・日付の画面にはその施設だけが表示されます</p>
+      <p class="sheet-lead">よく行く施設を選ぶと、予定の画面にはその施設だけが表示されます</p>
       <ul class="dialog-list"></ul>
     </form>
   </dialog>

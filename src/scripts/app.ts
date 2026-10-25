@@ -3,7 +3,7 @@ import type { DataSet } from "../../lib/schema.ts";
 import { buildSchedule, todayIn } from "../../lib/schedule.ts";
 import { decodeURLState, encodeURLState } from "../../lib/url-state.ts";
 import type { URLState } from "../../lib/url-state.ts";
-import { escapeHtml, renderCenter, renderDay, renderWeek } from "./render.ts";
+import { escapeHtml, renderCenter, renderSchedule } from "./render.ts";
 import type { RenderContext } from "./render.ts";
 
 const FAVORITES_KEY = "favorites";
@@ -16,6 +16,8 @@ let dataset: DataSet | null = null;
 let schedule = buildSchedule({ centers: [], sourceDocuments: [], events: [] });
 let favorites = loadFavorites();
 let state: URLState = decodeURLState(new URLSearchParams(location.search));
+/** The center tab reopens the center seen last. */
+let lastCenter: string | null = null;
 
 async function init() {
   bindEvents();
@@ -55,11 +57,8 @@ function render() {
   const ctx = context();
   const { route } = state;
   switch (route.view) {
-    case "week":
-      main.innerHTML = renderWeek(ctx);
-      break;
-    case "day":
-      main.innerHTML = renderDay(ctx, route.date ?? ctx.today);
+    case "schedule":
+      main.innerHTML = renderSchedule(ctx, route.date ?? ctx.today);
       main
         .querySelector(".strip-day.is-selected")
         ?.scrollIntoView({ block: "nearest", inline: "center" });
@@ -70,6 +69,7 @@ function render() {
         ctx.allCenters.find((item) => favorites.has(item.id)) ??
         ctx.allCenters[0];
       if (!center) break;
+      lastCenter = center.id;
       const date = route.date ?? ctx.today;
       main.innerHTML = renderCenter(ctx, center, route.month ?? date.slice(0, 7), date);
       main
@@ -91,19 +91,13 @@ function renderChrome() {
       <a href="${link({ ...state, all: false })}" data-nav="replace" aria-pressed="${!state.all}">マイ施設</a>
       <a href="${link({ ...state, all: true })}" data-nav="replace" aria-pressed="${state.all}">すべて</a>`;
   }
-  const lastCenter = state.route.view === "center" ? state.route.center : null;
   for (const tab of document.querySelectorAll<HTMLAnchorElement>(".tab")) {
     const view = tab.dataset.view;
     tab.setAttribute("aria-current", String(view === state.route.view));
     tab.href =
-      view === "day"
-        ? link({ ...state, route: { view: "day", date: null } })
-        : view === "center"
-          ? link({
-              ...state,
-              route: { view: "center", center: lastCenter, month: null, date: null },
-            })
-          : link({ ...state, route: { view: "week" } });
+      view === "center"
+        ? link({ ...state, route: { view: "center", center: lastCenter, month: null, date: null } })
+        : link({ ...state, route: { view: "schedule", date: null } });
   }
 }
 
@@ -112,13 +106,16 @@ function link(next: URLState): string {
   return query ? `?${query}` : location.pathname;
 }
 
-function navigate(url: string, mode: "push" | "replace") {
+function navigate(url: string, mode: "push" | "replace", scrollTarget?: string) {
   const target = new URL(url, location.href);
   const previousView = state.route.view;
   state = decodeURLState(target.searchParams);
-  history[mode === "push" ? "pushState" : "replaceState"](null, "", target);
+  const push = mode === "push" && target.href !== location.href;
+  history[push ? "pushState" : "replaceState"](null, "", target);
   render();
-  if (mode === "push" || previousView !== state.route.view) window.scrollTo({ top: 0 });
+  const anchor = scrollTarget ? document.getElementById(scrollTarget) : null;
+  if (anchor) anchor.scrollIntoView({ block: "nearest", behavior: "smooth" });
+  else if (mode === "push" || previousView !== state.route.view) window.scrollTo({ top: 0 });
 }
 
 function bindEvents() {
@@ -127,7 +124,11 @@ function bindEvents() {
     const anchor = event.target.closest<HTMLAnchorElement>("a[data-nav], a.tab");
     if (anchor && !event.metaKey && !event.ctrlKey && !event.shiftKey) {
       event.preventDefault();
-      navigate(anchor.href, anchor.dataset.nav === "replace" ? "replace" : "push");
+      navigate(
+        anchor.href,
+        anchor.dataset.nav === "replace" ? "replace" : "push",
+        anchor.dataset.scroll,
+      );
       return;
     }
     const favorite = event.target.closest<HTMLElement>("[data-favorite]");
@@ -139,6 +140,7 @@ function bindEvents() {
   });
 
   window.addEventListener("popstate", () => {
+    if (dialog.open) dialog.close();
     state = decodeURLState(new URLSearchParams(location.search));
     render();
   });
