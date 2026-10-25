@@ -408,6 +408,33 @@ describe("published schedule", () => {
     );
   });
 
+  it("keeps marked open days for seiga and hinadori without filling blanks", () => {
+    const rows = (centerId: string, month: string) =>
+      dataset.events.filter(
+        (event) => event.centerId === centerId && event.date.startsWith(month),
+      );
+    assert.equal(rows("seiga", "2026-10").length, 25);
+    assert.equal(rows("hinadori", "2026-10").length, 13);
+    assert.equal(rows("seiga", "2026-11").length, 0);
+    assert.equal(rows("hinadori", "2026-11").length, 0);
+    for (const centerId of ["seiga", "hinadori"]) {
+      assert.equal(
+        rows(centerId, "2026-10").some((event) => event.origin === "regular-hours"),
+        false,
+      );
+    }
+    assert.equal(
+      dataset.events.some((event) => event.centerId === "hinadori" && event.title.includes("ひばり")),
+      false,
+    );
+    assert.equal(
+      dataset.events.some(
+        (event) => event.id === "hinadori-2026-10-09-hiroba" && event.title === "子育て広場",
+      ),
+      true,
+    );
+  });
+
   it("keeps only the open half of urawa regular hours", () => {
     const description = (date: string) =>
       dataset.events.find((event) => event.id === `urawa-${date}-regular-hiroba`)?.description;
@@ -449,6 +476,8 @@ describe("published center policies", () => {
       minami: "fill",
       midori: "unknown",
       iwatsuki: "unknown",
+      seiga: "unknown",
+      hinadori: "unknown",
     });
     for (const center of CENTERS) {
       if (center.regularHours.decision === "unknown") {

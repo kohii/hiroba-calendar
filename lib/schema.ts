@@ -333,4 +333,43 @@ export const CENTERS: Center[] = [
         "2026-10の予定表は開室日にひろばと書き、12日・13日・27日は休館日（12日はスポーツの日）。空欄＝通常ひろばとは書いていない。テキスト抽出はセルと日付の対応が崩れるので、ひろばラベルから日付を推測して埋めない。",
     },
   },
+  {
+    id: "seiga",
+    name: "Seiga",
+    nameJa: "菁莪保育園子育て支援センター",
+    address: "桜区西堀1-11-1 2階",
+    phone: "048-865-4321",
+    websiteUrl: "https://seiga.or.jp/support/",
+    closedDays: "金曜日、祝祭日等休園日、園行事",
+    scheduleType: "pdf",
+    scheduleNotes:
+      "桜区。子育て支援センター（保育施設併設型）。おたより一覧は https://seiga.or.jp/square/ 。2026-10-25時点で11月号は無い。支援直通は070-1466-8459。",
+    regularHours: {
+      decision: "unknown",
+      sourceUrl: "https://seiga.or.jp/wp-content/uploads/e26b4cee4f29eca0566d678a5008904b-1.pdf",
+      quote: "開室日 印 受付 7:30～12:00 お片付け 12:15 退室時間 12:30",
+      decisionNote:
+        "10月号は開室日にカボチャ印がある。印の無い日と「休」は開室にしない。支援ページは月曜から木曜と土曜の7:30～12:30、金曜と祝祭日等と園行事は休みと書くが、10月号は土曜の10日も休なので空欄を開室として埋めない。",
+    },
+  },
+  {
+    id: "hinadori",
+    name: "Hinadori",
+    nameJa: "ひなどり幼稚園子育て支援ROOM",
+    address: "桜区西堀2-6-18",
+    phone: "048-861-4708",
+    websiteUrl: "https://hinadori.ed.jp/category/support/",
+    closedDays: "OPEN印のない日",
+    scheduleType: "pdf",
+    scheduleNotes:
+      "桜区。認定こども園の子育て支援ROOM。市の保育施設併設型一覧には無く、市の施設ページは認定こども園 https://www.city.saitama.lg.jp/kosodate/map/category18/p105886.html 。与野ひなどり保育園（中央区本町西2-1-11）とは別。おたよりは https://hinadori.ed.jp/category/support/ 。2026-10-25時点で11月号は無い。",
+    regularHours: {
+      decision: "unknown",
+      sourceUrl:
+        "https://hinadori.ed.jp/wp-content/uploads/2026/09/9e44390e5305308ee6397861405a8985.pdf",
+      quote: "予約制 OPEN 印 利用時間 9：00 ～12：20",
+      decisionNote:
+        "10月号はOPEN印の日だけ予約制で開室する。印の無い日は埋めない。同じ予定表のひばり、見学会、入園説明会はOPEN印ではないので抽出しない。",
+    },
+  },
 ];

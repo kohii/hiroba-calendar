@@ -344,6 +344,40 @@
         "quote": "【利用時間 】９：００～１２：００ １３：００～１６：００ ひろば・おはなし会は予約不要です。",
         "decisionNote": "2026-10の予定表は開室日にひろばと書き、12日・13日・27日は休館日（12日はスポーツの日）。空欄＝通常ひろばとは書いていない。テキスト抽出はセルと日付の対応が崩れるので、ひろばラベルから日付を推測して埋めない。"
       }
+    },
+    {
+      "id": "seiga",
+      "name": "Seiga",
+      "nameJa": "菁莪保育園子育て支援センター",
+      "address": "桜区西堀1-11-1 2階",
+      "phone": "048-865-4321",
+      "websiteUrl": "https://seiga.or.jp/support/",
+      "closedDays": "金曜日、祝祭日等休園日、園行事",
+      "scheduleType": "pdf",
+      "scheduleNotes": "桜区。子育て支援センター（保育施設併設型）。おたより一覧は https://seiga.or.jp/square/ 。2026-10-25時点で11月号は無い。支援直通は070-1466-8459。",
+      "regularHours": {
+        "decision": "unknown",
+        "sourceUrl": "https://seiga.or.jp/wp-content/uploads/e26b4cee4f29eca0566d678a5008904b-1.pdf",
+        "quote": "開室日 印 受付 7:30～12:00 お片付け 12:15 退室時間 12:30",
+        "decisionNote": "10月号は開室日にカボチャ印がある。印の無い日と「休」は開室にしない。支援ページは月曜から木曜と土曜の7:30～12:30、金曜と祝祭日等と園行事は休みと書くが、10月号は土曜の10日も休なので空欄を開室として埋めない。"
+      }
+    },
+    {
+      "id": "hinadori",
+      "name": "Hinadori",
+      "nameJa": "ひなどり幼稚園子育て支援ROOM",
+      "address": "桜区西堀2-6-18",
+      "phone": "048-861-4708",
+      "websiteUrl": "https://hinadori.ed.jp/category/support/",
+      "closedDays": "OPEN印のない日",
+      "scheduleType": "pdf",
+      "scheduleNotes": "桜区。認定こども園の子育て支援ROOM。市の保育施設併設型一覧には無く、市の施設ページは認定こども園 https://www.city.saitama.lg.jp/kosodate/map/category18/p105886.html 。与野ひなどり保育園（中央区本町西2-1-11）とは別。おたよりは https://hinadori.ed.jp/category/support/ 。2026-10-25時点で11月号は無い。",
+      "regularHours": {
+        "decision": "unknown",
+        "sourceUrl": "https://hinadori.ed.jp/wp-content/uploads/2026/09/9e44390e5305308ee6397861405a8985.pdf",
+        "quote": "予約制 OPEN 印 利用時間 9：00 ～12：20",
+        "decisionNote": "10月号はOPEN印の日だけ予約制で開室する。印の無い日は埋めない。同じ予定表のひばり、見学会、入園説明会はOPEN印ではないので抽出しない。"
+      }
     }
   ],
   "sourceDocuments": [
@@ -701,6 +735,143 @@
           "quote": "休館日"
         }
       ]
+    },
+    {
+      "id": "seiga-2026-10",
+      "centerId": "seiga",
+      "month": "2026-10",
+      "pdfUrl": "https://seiga.or.jp/wp-content/uploads/e26b4cee4f29eca0566d678a5008904b-1.pdf",
+      "fetchedAt": "2026-10-25T06:00:00Z",
+      "sha256": "19d3811355b860a607ff771f42ebf04c4baa85e2958442f1b495e7d04e7832fc",
+      "closures": [
+        {
+          "date": "2026-10-02",
+          "scope": "all-day",
+          "quote": "休"
+        },
+        {
+          "date": "2026-10-04",
+          "scope": "all-day",
+          "quote": "休"
+        },
+        {
+          "date": "2026-10-09",
+          "scope": "all-day",
+          "quote": "休"
+        },
+        {
+          "date": "2026-10-10",
+          "scope": "all-day",
+          "quote": "休"
+        },
+        {
+          "date": "2026-10-11",
+          "scope": "all-day",
+          "quote": "休"
+        },
+        {
+          "date": "2026-10-12",
+          "scope": "all-day",
+          "quote": "休"
+        },
+        {
+          "date": "2026-10-16",
+          "scope": "all-day",
+          "quote": "休"
+        },
+        {
+          "date": "2026-10-18",
+          "scope": "all-day",
+          "quote": "休"
+        },
+        {
+          "date": "2026-10-23",
+          "scope": "all-day",
+          "quote": "休"
+        },
+        {
+          "date": "2026-10-25",
+          "scope": "all-day",
+          "quote": "休"
+        },
+        {
+          "date": "2026-10-30",
+          "scope": "all-day",
+          "quote": "休"
+        }
+      ],
+      "extractedAt": "2026-10-25T06:20:46.070Z"
+    },
+    {
+      "id": "hinadori-2026-10",
+      "centerId": "hinadori",
+      "month": "2026-10",
+      "pdfUrl": "https://hinadori.ed.jp/wp-content/uploads/2026/09/9e44390e5305308ee6397861405a8985.pdf",
+      "fetchedAt": "2026-10-25T06:00:00Z",
+      "sha256": "cf93e24ebdba4586ee804c9e37182bc2cde349094eaec86f7c5d109679354341",
+      "closures": [
+        {
+          "date": "2026-10-04",
+          "scope": "all-day",
+          "quote": "休"
+        },
+        {
+          "date": "2026-10-06",
+          "scope": "all-day",
+          "quote": "休"
+        },
+        {
+          "date": "2026-10-07",
+          "scope": "all-day",
+          "quote": "休"
+        },
+        {
+          "date": "2026-10-10",
+          "scope": "all-day",
+          "quote": "休"
+        },
+        {
+          "date": "2026-10-11",
+          "scope": "all-day",
+          "quote": "休"
+        },
+        {
+          "date": "2026-10-12",
+          "scope": "all-day",
+          "quote": "スポーツの日"
+        },
+        {
+          "date": "2026-10-17",
+          "scope": "all-day",
+          "quote": "休"
+        },
+        {
+          "date": "2026-10-18",
+          "scope": "all-day",
+          "quote": "休"
+        },
+        {
+          "date": "2026-10-19",
+          "scope": "all-day",
+          "quote": "休"
+        },
+        {
+          "date": "2026-10-24",
+          "scope": "all-day",
+          "quote": "休"
+        },
+        {
+          "date": "2026-10-25",
+          "scope": "all-day",
+          "quote": "休"
+        },
+        {
+          "date": "2026-10-31",
+          "scope": "all-day",
+          "quote": "休"
+        }
+      ],
+      "extractedAt": "2026-10-25T06:20:46.144Z"
     }
   ],
   "events": [
@@ -749,6 +920,21 @@
       "kind": "hiroba"
     },
     {
+      "id": "seiga-2026-10-01-hiroba",
+      "centerId": "seiga",
+      "sourceDocumentId": "seiga-2026-10",
+      "date": "2026-10-01",
+      "title": "せいがのひろば",
+      "kind": "hiroba",
+      "origin": "extracted",
+      "startTime": "07:30",
+      "endTime": "12:30",
+      "description": "開室日。受付 7:30～12:00、お片付け 12:15、退室 12:30。",
+      "targetAge": "生後6週～",
+      "reservationRequired": false,
+      "capacity": 25
+    },
+    {
       "id": "yono-2026-10-01-piyopiyo",
       "centerId": "yono",
       "sourceDocumentId": "yono-202610",
@@ -763,6 +949,21 @@
       ],
       "origin": "extracted",
       "kind": "hiroba"
+    },
+    {
+      "id": "hinadori-2026-10-02-hiroba",
+      "centerId": "hinadori",
+      "sourceDocumentId": "hinadori-2026-10",
+      "date": "2026-10-02",
+      "title": "子育て広場",
+      "kind": "hiroba",
+      "origin": "extracted",
+      "startTime": "09:00",
+      "endTime": "12:20",
+      "description": "予約制 OPEN。好きな時間で入退室ができます。毎週金曜日14:00～翌週分予約受付開始。",
+      "targetAge": "生後6週～未就園",
+      "reservationRequired": true,
+      "capacity": 6
     },
     {
       "id": "minami-2026-10-02-regular-hiroba",
@@ -867,6 +1068,20 @@
       "kind": "hiroba"
     },
     {
+      "id": "hinadori-2026-10-03-undokai",
+      "centerId": "hinadori",
+      "sourceDocumentId": "hinadori-2026-10",
+      "date": "2026-10-03",
+      "title": "運動会",
+      "kind": "event",
+      "origin": "extracted",
+      "startTime": "10:30",
+      "description": "ひなどり幼稚園の運動会。支援ROOMご利用の未就園児対象のかけっこ。予約不要。集合 10:30～10:40。",
+      "targetAge": "歩行をしている未就園児",
+      "reservationRequired": false,
+      "location": "ひなどり幼稚園駐車場"
+    },
+    {
       "id": "minami-2026-10-03-regular-hiroba",
       "centerId": "minami",
       "sourceDocumentId": "minami-202610",
@@ -903,6 +1118,21 @@
       ],
       "origin": "extracted",
       "kind": "hiroba"
+    },
+    {
+      "id": "seiga-2026-10-03-hiroba",
+      "centerId": "seiga",
+      "sourceDocumentId": "seiga-2026-10",
+      "date": "2026-10-03",
+      "title": "せいがのひろば",
+      "kind": "hiroba",
+      "origin": "extracted",
+      "startTime": "07:30",
+      "endTime": "12:30",
+      "description": "開室日。受付 7:30～12:00、お片付け 12:15、退室 12:30。",
+      "targetAge": "生後6週～",
+      "reservationRequired": false,
+      "capacity": 25
     },
     {
       "id": "urawa-2026-10-03-regular-hiroba",
@@ -1077,6 +1307,31 @@
       "kind": "event"
     },
     {
+      "id": "seiga-2026-10-05-hiroba",
+      "centerId": "seiga",
+      "sourceDocumentId": "seiga-2026-10",
+      "date": "2026-10-05",
+      "title": "せいがのひろば",
+      "kind": "hiroba",
+      "origin": "extracted",
+      "startTime": "07:30",
+      "endTime": "12:30",
+      "description": "開室日。受付 7:30～12:00、お片付け 12:15、退室 12:30。",
+      "targetAge": "生後6週～",
+      "reservationRequired": false,
+      "capacity": 25
+    },
+    {
+      "id": "seiga-2026-10-05-sokutei",
+      "centerId": "seiga",
+      "sourceDocumentId": "seiga-2026-10",
+      "date": "2026-10-05",
+      "title": "身体測定",
+      "kind": "event",
+      "origin": "extracted",
+      "description": "毎月、お子さまの身長・体重を計測できます。"
+    },
+    {
       "id": "urawa-2026-10-05-regular-hiroba",
       "centerId": "urawa",
       "sourceDocumentId": "urawa-2026-10",
@@ -1202,6 +1457,21 @@
       "kind": "hiroba"
     },
     {
+      "id": "seiga-2026-10-06-hiroba",
+      "centerId": "seiga",
+      "sourceDocumentId": "seiga-2026-10",
+      "date": "2026-10-06",
+      "title": "せいがのひろば",
+      "kind": "hiroba",
+      "origin": "extracted",
+      "startTime": "07:30",
+      "endTime": "12:30",
+      "description": "開室日。受付 7:30～12:00、お片付け 12:15、退室 12:30。",
+      "targetAge": "生後6週～",
+      "reservationRequired": false,
+      "capacity": 25
+    },
+    {
       "id": "yono-2026-10-06-piyopiyo",
       "centerId": "yono",
       "sourceDocumentId": "yono-202610",
@@ -1296,6 +1566,21 @@
       "kind": "hiroba"
     },
     {
+      "id": "seiga-2026-10-07-sawakai",
+      "centerId": "seiga",
+      "sourceDocumentId": "seiga-2026-10",
+      "date": "2026-10-07",
+      "title": "茶話会",
+      "kind": "event",
+      "origin": "extracted",
+      "startTime": "10:00",
+      "endTime": "11:30",
+      "description": "お母さんだけでゆっくりお話ししませんか。保護者様から離れられるお子さまは職員がみています。受付期間は9月28日(月)12:30～。親子6組、先着順。",
+      "targetAge": "1歳以上のお子さまと保護者様",
+      "reservationRequired": true,
+      "capacity": 6
+    },
+    {
       "id": "yono-2026-10-07-library",
       "centerId": "yono",
       "sourceDocumentId": "yono-202610",
@@ -1327,6 +1612,21 @@
       ],
       "origin": "extracted",
       "kind": "hiroba"
+    },
+    {
+      "id": "hinadori-2026-10-08-hiroba",
+      "centerId": "hinadori",
+      "sourceDocumentId": "hinadori-2026-10",
+      "date": "2026-10-08",
+      "title": "子育て広場",
+      "kind": "hiroba",
+      "origin": "extracted",
+      "startTime": "09:00",
+      "endTime": "12:20",
+      "description": "予約制 OPEN。好きな時間で入退室ができます。毎週金曜日14:00～翌週分予約受付開始。",
+      "targetAge": "生後6週～未就園",
+      "reservationRequired": true,
+      "capacity": 6
     },
     {
       "id": "iwatsuki-2026-10-08-mushiba",
@@ -1424,6 +1724,21 @@
       "kind": "hiroba"
     },
     {
+      "id": "seiga-2026-10-08-hiroba",
+      "centerId": "seiga",
+      "sourceDocumentId": "seiga-2026-10",
+      "date": "2026-10-08",
+      "title": "せいがのひろば",
+      "kind": "hiroba",
+      "origin": "extracted",
+      "startTime": "07:30",
+      "endTime": "12:30",
+      "description": "開室日。受付 7:30～12:00、お片付け 12:15、退室 12:30。",
+      "targetAge": "生後6週～",
+      "reservationRequired": false,
+      "capacity": 25
+    },
+    {
       "id": "urawa-2026-10-08-regular-hiroba",
       "centerId": "urawa",
       "sourceDocumentId": "urawa-2026-10",
@@ -1450,6 +1765,21 @@
       ],
       "origin": "extracted",
       "kind": "hiroba"
+    },
+    {
+      "id": "hinadori-2026-10-09-hiroba",
+      "centerId": "hinadori",
+      "sourceDocumentId": "hinadori-2026-10",
+      "date": "2026-10-09",
+      "title": "子育て広場",
+      "kind": "hiroba",
+      "origin": "extracted",
+      "startTime": "09:00",
+      "endTime": "12:20",
+      "description": "予約制 OPEN。好きな時間で入退室ができます。毎週金曜日14:00～翌週分予約受付開始。",
+      "targetAge": "生後6週～未就園",
+      "reservationRequired": true,
+      "capacity": 6
     },
     {
       "id": "iwatsuki-2026-10-09-ohanashikai",
@@ -1703,6 +2033,21 @@
       "kind": "hiroba"
     },
     {
+      "id": "hinadori-2026-10-13-hiroba",
+      "centerId": "hinadori",
+      "sourceDocumentId": "hinadori-2026-10",
+      "date": "2026-10-13",
+      "title": "子育て広場",
+      "kind": "hiroba",
+      "origin": "extracted",
+      "startTime": "09:00",
+      "endTime": "12:20",
+      "description": "予約制 OPEN。好きな時間で入退室ができます。毎週金曜日14:00～翌週分予約受付開始。",
+      "targetAge": "生後6週～未就園",
+      "reservationRequired": true,
+      "capacity": 6
+    },
+    {
       "id": "minami-2026-10-13-1age-hiroba",
       "centerId": "minami",
       "sourceDocumentId": "minami-202610",
@@ -1766,6 +2111,21 @@
       "kind": "hiroba"
     },
     {
+      "id": "seiga-2026-10-13-hiroba",
+      "centerId": "seiga",
+      "sourceDocumentId": "seiga-2026-10",
+      "date": "2026-10-13",
+      "title": "せいがのひろば",
+      "kind": "hiroba",
+      "origin": "extracted",
+      "startTime": "07:30",
+      "endTime": "12:30",
+      "description": "開室日。受付 7:30～12:00、お片付け 12:15、退室 12:30。",
+      "targetAge": "生後6週～",
+      "reservationRequired": false,
+      "capacity": 25
+    },
+    {
       "id": "urawa-2026-10-13-regular-hiroba",
       "centerId": "urawa",
       "sourceDocumentId": "urawa-2026-10",
@@ -1793,6 +2153,21 @@
       ],
       "origin": "extracted",
       "kind": "event"
+    },
+    {
+      "id": "hinadori-2026-10-14-hiroba",
+      "centerId": "hinadori",
+      "sourceDocumentId": "hinadori-2026-10",
+      "date": "2026-10-14",
+      "title": "子育て広場",
+      "kind": "hiroba",
+      "origin": "extracted",
+      "startTime": "09:00",
+      "endTime": "12:20",
+      "description": "予約制 OPEN。好きな時間で入退室ができます。毎週金曜日14:00～翌週分予約受付開始。",
+      "targetAge": "生後6週～未就園",
+      "reservationRequired": true,
+      "capacity": 6
     },
     {
       "id": "iwatsuki-2026-10-14-fureai",
@@ -1911,6 +2286,21 @@
       "kind": "event"
     },
     {
+      "id": "seiga-2026-10-14-hiroba",
+      "centerId": "seiga",
+      "sourceDocumentId": "seiga-2026-10",
+      "date": "2026-10-14",
+      "title": "せいがのひろば",
+      "kind": "hiroba",
+      "origin": "extracted",
+      "startTime": "07:30",
+      "endTime": "12:30",
+      "description": "開室日。受付 7:30～12:00、お片付け 12:15、退室 12:30。",
+      "targetAge": "生後6週～",
+      "reservationRequired": false,
+      "capacity": 25
+    },
+    {
       "id": "urawa-2026-10-14-regular-hiroba",
       "centerId": "urawa",
       "sourceDocumentId": "urawa-2026-10",
@@ -2001,6 +2391,21 @@
       "kind": "hiroba"
     },
     {
+      "id": "seiga-2026-10-15-hiroba",
+      "centerId": "seiga",
+      "sourceDocumentId": "seiga-2026-10",
+      "date": "2026-10-15",
+      "title": "せいがのひろば",
+      "kind": "hiroba",
+      "origin": "extracted",
+      "startTime": "07:30",
+      "endTime": "12:30",
+      "description": "開室日。受付 7:30～12:00、お片付け 12:15、退室 12:30。",
+      "targetAge": "生後6週～",
+      "reservationRequired": false,
+      "capacity": 25
+    },
+    {
       "id": "urawa-2026-10-15-regular-hiroba",
       "centerId": "urawa",
       "sourceDocumentId": "urawa-2026-10",
@@ -2045,6 +2450,21 @@
       ],
       "origin": "extracted",
       "kind": "hiroba"
+    },
+    {
+      "id": "hinadori-2026-10-16-hiroba",
+      "centerId": "hinadori",
+      "sourceDocumentId": "hinadori-2026-10",
+      "date": "2026-10-16",
+      "title": "子育て広場",
+      "kind": "hiroba",
+      "origin": "extracted",
+      "startTime": "09:00",
+      "endTime": "12:20",
+      "description": "予約制 OPEN。好きな時間で入退室ができます。毎週金曜日14:00～翌週分予約受付開始。",
+      "targetAge": "生後6週～未就園",
+      "reservationRequired": true,
+      "capacity": 6
     },
     {
       "id": "iwatsuki-2026-10-16-baby-salon",
@@ -2270,6 +2690,21 @@
       "kind": "hiroba"
     },
     {
+      "id": "seiga-2026-10-17-hiroba",
+      "centerId": "seiga",
+      "sourceDocumentId": "seiga-2026-10",
+      "date": "2026-10-17",
+      "title": "せいがのひろば",
+      "kind": "hiroba",
+      "origin": "extracted",
+      "startTime": "07:30",
+      "endTime": "12:30",
+      "description": "開室日。受付 7:30～12:00、お片付け 12:15、退室 12:30。",
+      "targetAge": "生後6週～",
+      "reservationRequired": false,
+      "capacity": 25
+    },
+    {
       "id": "urawa-2026-10-17-regular-hiroba",
       "centerId": "urawa",
       "sourceDocumentId": "urawa-2026-10",
@@ -2488,6 +2923,21 @@
       "targetAge": "０～３歳未満 (３歳を迎えた年の３月まで利用可 )"
     },
     {
+      "id": "seiga-2026-10-19-hiroba",
+      "centerId": "seiga",
+      "sourceDocumentId": "seiga-2026-10",
+      "date": "2026-10-19",
+      "title": "せいがのひろば",
+      "kind": "hiroba",
+      "origin": "extracted",
+      "startTime": "07:30",
+      "endTime": "12:30",
+      "description": "開室日。受付 7:30～12:00、お片付け 12:15、退室 12:30。",
+      "targetAge": "生後6週～",
+      "reservationRequired": false,
+      "capacity": 25
+    },
+    {
       "id": "urawa-2026-10-19-regular-hiroba",
       "centerId": "urawa",
       "sourceDocumentId": "urawa-2026-10",
@@ -2627,6 +3077,21 @@
       "origin": "regular-hours"
     },
     {
+      "id": "seiga-2026-10-20-hiroba",
+      "centerId": "seiga",
+      "sourceDocumentId": "seiga-2026-10",
+      "date": "2026-10-20",
+      "title": "せいがのひろば",
+      "kind": "hiroba",
+      "origin": "extracted",
+      "startTime": "07:30",
+      "endTime": "12:30",
+      "description": "開室日。受付 7:30～12:00、お片付け 12:15、退室 12:30。",
+      "targetAge": "生後6週～",
+      "reservationRequired": false,
+      "capacity": 25
+    },
+    {
       "id": "urawa-2026-10-20-futago",
       "centerId": "urawa",
       "sourceDocumentId": "urawa-2026-10",
@@ -2688,6 +3153,21 @@
       ],
       "origin": "extracted",
       "kind": "hiroba"
+    },
+    {
+      "id": "hinadori-2026-10-21-hiroba",
+      "centerId": "hinadori",
+      "sourceDocumentId": "hinadori-2026-10",
+      "date": "2026-10-21",
+      "title": "子育て広場",
+      "kind": "hiroba",
+      "origin": "extracted",
+      "startTime": "09:00",
+      "endTime": "12:20",
+      "description": "予約制 OPEN。好きな時間で入退室ができます。毎週金曜日14:00～翌週分予約受付開始。",
+      "targetAge": "生後6週～未就園",
+      "reservationRequired": true,
+      "capacity": 6
     },
     {
       "id": "iwatsuki-2026-10-21-birthday",
@@ -2784,6 +3264,21 @@
       ],
       "origin": "extracted",
       "kind": "hiroba"
+    },
+    {
+      "id": "seiga-2026-10-21-hiroba",
+      "centerId": "seiga",
+      "sourceDocumentId": "seiga-2026-10",
+      "date": "2026-10-21",
+      "title": "せいがのひろば",
+      "kind": "hiroba",
+      "origin": "extracted",
+      "startTime": "07:30",
+      "endTime": "12:30",
+      "description": "開室日。受付 7:30～12:00、お片付け 12:15、退室 12:30。",
+      "targetAge": "生後6週～",
+      "reservationRequired": false,
+      "capacity": 25
     },
     {
       "id": "urawa-2026-10-21-baby-ritmiku",
@@ -2939,6 +3434,21 @@
       "kind": "hiroba"
     },
     {
+      "id": "seiga-2026-10-22-hiroba",
+      "centerId": "seiga",
+      "sourceDocumentId": "seiga-2026-10",
+      "date": "2026-10-22",
+      "title": "せいがのひろば",
+      "kind": "hiroba",
+      "origin": "extracted",
+      "startTime": "07:30",
+      "endTime": "12:30",
+      "description": "開室日。受付 7:30～12:00、お片付け 12:15、退室 12:30。",
+      "targetAge": "生後6週～",
+      "reservationRequired": false,
+      "capacity": 25
+    },
+    {
       "id": "urawa-2026-10-22-regular-hiroba",
       "centerId": "urawa",
       "sourceDocumentId": "urawa-2026-10",
@@ -2977,6 +3487,21 @@
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours"
+    },
+    {
+      "id": "hinadori-2026-10-23-hiroba",
+      "centerId": "hinadori",
+      "sourceDocumentId": "hinadori-2026-10",
+      "date": "2026-10-23",
+      "title": "子育て広場",
+      "kind": "hiroba",
+      "origin": "extracted",
+      "startTime": "09:00",
+      "endTime": "12:20",
+      "description": "予約制 OPEN。好きな時間で入退室ができます。毎週金曜日14:00～翌週分予約受付開始。",
+      "targetAge": "生後6週～未就園",
+      "reservationRequired": true,
+      "capacity": 6
     },
     {
       "id": "iwatsuki-2026-10-23-ohanashikai",
@@ -3179,6 +3704,21 @@
       ],
       "origin": "extracted",
       "kind": "event"
+    },
+    {
+      "id": "seiga-2026-10-24-hiroba",
+      "centerId": "seiga",
+      "sourceDocumentId": "seiga-2026-10",
+      "date": "2026-10-24",
+      "title": "せいがのひろば",
+      "kind": "hiroba",
+      "origin": "extracted",
+      "startTime": "07:30",
+      "endTime": "12:30",
+      "description": "開室日。受付 7:30～12:00、お片付け 12:15、退室 12:30。",
+      "targetAge": "生後6週～",
+      "reservationRequired": false,
+      "capacity": 25
     },
     {
       "id": "urawa-2026-10-24-regular-hiroba",
@@ -3449,6 +3989,34 @@
       "kind": "event"
     },
     {
+      "id": "seiga-2026-10-26-halloween",
+      "centerId": "seiga",
+      "sourceDocumentId": "seiga-2026-10",
+      "date": "2026-10-26",
+      "title": "ハロウィン",
+      "kind": "event",
+      "origin": "extracted",
+      "startTime": "07:30",
+      "endTime": "12:30",
+      "description": "自由開放中に制作コーナーを設けます。仮装してきても構いません。",
+      "reservationRequired": false
+    },
+    {
+      "id": "seiga-2026-10-26-hiroba",
+      "centerId": "seiga",
+      "sourceDocumentId": "seiga-2026-10",
+      "date": "2026-10-26",
+      "title": "せいがのひろば",
+      "kind": "hiroba",
+      "origin": "extracted",
+      "startTime": "07:30",
+      "endTime": "12:30",
+      "description": "開室日。受付 7:30～12:00、お片付け 12:15、退室 12:30。",
+      "targetAge": "生後6週～",
+      "reservationRequired": false,
+      "capacity": 25
+    },
+    {
       "id": "yono-2026-10-26-piyopiyo",
       "centerId": "yono",
       "sourceDocumentId": "yono-202610",
@@ -3463,6 +4031,21 @@
       ],
       "origin": "extracted",
       "kind": "hiroba"
+    },
+    {
+      "id": "hinadori-2026-10-27-hiroba",
+      "centerId": "hinadori",
+      "sourceDocumentId": "hinadori-2026-10",
+      "date": "2026-10-27",
+      "title": "子育て広場",
+      "kind": "hiroba",
+      "origin": "extracted",
+      "startTime": "09:00",
+      "endTime": "12:20",
+      "description": "予約制 OPEN。好きな時間で入退室ができます。毎週金曜日14:00～翌週分予約受付開始。",
+      "targetAge": "生後6週～未就園",
+      "reservationRequired": true,
+      "capacity": 6
     },
     {
       "id": "minami-2026-10-27-regular-hiroba",
@@ -3535,6 +4118,34 @@
       "origin": "regular-hours"
     },
     {
+      "id": "seiga-2026-10-27-halloween",
+      "centerId": "seiga",
+      "sourceDocumentId": "seiga-2026-10",
+      "date": "2026-10-27",
+      "title": "ハロウィン",
+      "kind": "event",
+      "origin": "extracted",
+      "startTime": "07:30",
+      "endTime": "12:30",
+      "description": "自由開放中に制作コーナーを設けます。仮装してきても構いません。",
+      "reservationRequired": false
+    },
+    {
+      "id": "seiga-2026-10-27-tanjokai",
+      "centerId": "seiga",
+      "sourceDocumentId": "seiga-2026-10",
+      "date": "2026-10-27",
+      "title": "10月生まれさんのお誕生会",
+      "kind": "event",
+      "origin": "extracted",
+      "startTime": "10:00",
+      "endTime": "11:30",
+      "description": "手形、身長・体重を記録したお誕生カードを作ろう。受付期間は10月5日(月)12:30～。親子10組、先着順。",
+      "targetAge": "10月生まれ",
+      "reservationRequired": true,
+      "capacity": 10
+    },
+    {
       "id": "urawa-2026-10-27-regular-hiroba",
       "centerId": "urawa",
       "sourceDocumentId": "urawa-2026-10",
@@ -3545,6 +4156,21 @@
       "kind": "hiroba",
       "origin": "regular-hours",
       "targetAge": "０・１・２歳のお子さんと保護者"
+    },
+    {
+      "id": "hinadori-2026-10-28-hiroba",
+      "centerId": "hinadori",
+      "sourceDocumentId": "hinadori-2026-10",
+      "date": "2026-10-28",
+      "title": "子育て広場",
+      "kind": "hiroba",
+      "origin": "extracted",
+      "startTime": "09:00",
+      "endTime": "12:20",
+      "description": "予約制 OPEN。好きな時間で入退室ができます。毎週金曜日14:00～翌週分予約受付開始。",
+      "targetAge": "生後6週～未就園",
+      "reservationRequired": true,
+      "capacity": 6
     },
     {
       "id": "minami-2026-10-28-baby-story",
@@ -3653,6 +4279,34 @@
       "origin": "regular-hours"
     },
     {
+      "id": "seiga-2026-10-28-halloween",
+      "centerId": "seiga",
+      "sourceDocumentId": "seiga-2026-10",
+      "date": "2026-10-28",
+      "title": "ハロウィン",
+      "kind": "event",
+      "origin": "extracted",
+      "startTime": "07:30",
+      "endTime": "12:30",
+      "description": "自由開放中に制作コーナーを設けます。仮装してきても構いません。",
+      "reservationRequired": false
+    },
+    {
+      "id": "seiga-2026-10-28-hiroba",
+      "centerId": "seiga",
+      "sourceDocumentId": "seiga-2026-10",
+      "date": "2026-10-28",
+      "title": "せいがのひろば",
+      "kind": "hiroba",
+      "origin": "extracted",
+      "startTime": "07:30",
+      "endTime": "12:30",
+      "description": "開室日。受付 7:30～12:00、お片付け 12:15、退室 12:30。",
+      "targetAge": "生後6週～",
+      "reservationRequired": false,
+      "capacity": 25
+    },
+    {
       "id": "urawa-2026-10-28-regular-hiroba",
       "centerId": "urawa",
       "sourceDocumentId": "urawa-2026-10",
@@ -3679,6 +4333,22 @@
       ],
       "origin": "extracted",
       "kind": "hiroba"
+    },
+    {
+      "id": "hinadori-2026-10-29-oyako",
+      "centerId": "hinadori",
+      "sourceDocumentId": "hinadori-2026-10",
+      "date": "2026-10-29",
+      "title": "1.2歳児親子教室 ハロウィン制作",
+      "kind": "event",
+      "origin": "extracted",
+      "startTime": "10:00",
+      "endTime": "11:00",
+      "description": "ハロウィンごっこをします。好きな仮装をして参加できます。申し込みは10月13日（火）9:00～。未就園2歳児クラスとは異なります。",
+      "targetAge": "2023年4月2日～2025年4月1日生まれ",
+      "reservationRequired": true,
+      "capacity": 6,
+      "location": "ひなどり幼稚園支援ROOM"
     },
     {
       "id": "iwatsuki-2026-10-29-welcome-saitama",
@@ -3788,6 +4458,34 @@
       "origin": "regular-hours"
     },
     {
+      "id": "seiga-2026-10-29-halloween",
+      "centerId": "seiga",
+      "sourceDocumentId": "seiga-2026-10",
+      "date": "2026-10-29",
+      "title": "ハロウィン",
+      "kind": "event",
+      "origin": "extracted",
+      "startTime": "07:30",
+      "endTime": "12:30",
+      "description": "自由開放中に制作コーナーを設けます。仮装してきても構いません。",
+      "reservationRequired": false
+    },
+    {
+      "id": "seiga-2026-10-29-hiroba",
+      "centerId": "seiga",
+      "sourceDocumentId": "seiga-2026-10",
+      "date": "2026-10-29",
+      "title": "せいがのひろば",
+      "kind": "hiroba",
+      "origin": "extracted",
+      "startTime": "07:30",
+      "endTime": "12:30",
+      "description": "開室日。受付 7:30～12:00、お片付け 12:15、退室 12:30。",
+      "targetAge": "生後6週～",
+      "reservationRequired": false,
+      "capacity": 25
+    },
+    {
       "id": "urawa-2026-10-29-regular-hiroba",
       "centerId": "urawa",
       "sourceDocumentId": "urawa-2026-10",
@@ -3814,6 +4512,21 @@
       ],
       "origin": "extracted",
       "kind": "hiroba"
+    },
+    {
+      "id": "hinadori-2026-10-30-hiroba",
+      "centerId": "hinadori",
+      "sourceDocumentId": "hinadori-2026-10",
+      "date": "2026-10-30",
+      "title": "子育て広場",
+      "kind": "hiroba",
+      "origin": "extracted",
+      "startTime": "09:00",
+      "endTime": "12:20",
+      "description": "予約制 OPEN。好きな時間で入退室ができます。毎週金曜日14:00～翌週分予約受付開始。",
+      "targetAge": "生後6週～未就園",
+      "reservationRequired": true,
+      "capacity": 6
     },
     {
       "id": "minami-2026-10-30-regular-hiroba",
@@ -4013,6 +4726,21 @@
       ],
       "origin": "extracted",
       "kind": "hiroba"
+    },
+    {
+      "id": "seiga-2026-10-31-hiroba",
+      "centerId": "seiga",
+      "sourceDocumentId": "seiga-2026-10",
+      "date": "2026-10-31",
+      "title": "せいがのひろば",
+      "kind": "hiroba",
+      "origin": "extracted",
+      "startTime": "07:30",
+      "endTime": "12:30",
+      "description": "開室日。受付 7:30～12:00、お片付け 12:15、退室 12:30。",
+      "targetAge": "生後6週～",
+      "reservationRequired": false,
+      "capacity": 25
     },
     {
       "id": "urawa-2026-10-31-regular-hiroba",
@@ -5823,6 +6551,6 @@
       "kind": "hiroba"
     }
   ],
-  "generatedAt": "2026-10-24T14:54:00.358Z",
+  "generatedAt": "2026-10-25T06:20:46.527Z",
   "version": "1.0.0"
 }

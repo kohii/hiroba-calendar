@@ -1,6 +1,6 @@
 # さいたま市子育て支援センタースケジュール抽出スキル
 
-このスキルは、さいたま市の単独型子育て支援センター10箇所が公開するPDFスケジュールから、イベント情報を抽出してデータセットに統合します。
+このスキルは、さいたま市の単独型子育て支援センター10箇所と、桜区の菁莪保育園子育て支援センター、ひなどり幼稚園子育て支援ROOMが公開するスケジュールから、イベント情報を抽出してデータセットに統合します。
 
 ## 概要
 
@@ -144,7 +144,7 @@ pnpm apply-schedule-model
 - **id**: 一意のID。推奨形式: `{centerId}-{YYYY-MM-DD}-{イベント名の一部}`
   - 例: `"nishi-2026-10-13-oimohori"`
   
-- **centerId**: センターID (nishi, kita, omiya, minuma, yono, sakura, urawa, minami, midori, iwatsuki)
+- **centerId**: センターID (nishi, kita, omiya, minuma, yono, sakura, urawa, minami, midori, iwatsuki, seiga, hinadori)
 
 - **sourceDocumentId**: ソースドキュメントID
   - 形式: `{centerId}-{YYYY-MM}`
@@ -280,6 +280,14 @@ pnpm apply-schedule-model
 8. **みなみ** (minami)
 9. **みどり** (midori) - https://www.instagram.com/shiencenter_midori/
 10. **いわつき** (iwatsuki)
+
+## 桜区の併設・園内支援室
+
+単独型10箇所とは別施設。空欄を通常開室として埋めない。開室日は予定表の印だけ。
+
+11. **菁莪保育園子育て支援センター** (seiga) - 桜区西堀1-11-1。保育施設併設型。市の施設ページは https://www.city.saitama.lg.jp/kosodate/map/category10/p105322.html 。園のページは https://seiga.or.jp/support/ 。おたより一覧は https://seiga.or.jp/square/ 。PDFのファイル名に年月が無いので、一覧の最新投稿からPDFを取る。2026年10月号は https://seiga.or.jp/wp-content/uploads/e26b4cee4f29eca0566d678a5008904b-1.pdf 。開室日はカボチャ印。テキスト抽出は `# layout: visual-lines` になるので、印は `pdftoppm -png` で読む。2026-10-25時点で11月号は一覧に無い。
+
+12. **ひなどり幼稚園子育て支援ROOM** (hinadori) - 桜区西堀2-6-18。認定こども園の支援室。市の保育施設併設型一覧の「与野ひなどり保育園 子育て支援センター」（中央区本町西2-1-11、https://www.city.saitama.lg.jp/kosodate/map/category10/p105321.html ）とは別。市の施設ページは認定こども園 https://www.city.saitama.lg.jp/kosodate/map/category18/p105886.html 。おたよりは https://hinadori.ed.jp/category/support/ 。2026年10月号は https://hinadori.ed.jp/2026/09/28/30367/ と https://hinadori.ed.jp/wp-content/uploads/2026/09/9e44390e5305308ee6397861405a8985.pdf 。予約制のOPEN印の日だけ開室。予定表の文字の多くは画像なので `pdftoppm -png` で読む。同じ表の「ひばり」「見学会」「入園説明会」はOPEN印ではない。2026-10-25時点で11月号はカテゴリに無い。
 
 ## 抽出パイプライン実行例
 
