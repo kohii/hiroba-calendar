@@ -59,9 +59,7 @@ function render() {
   switch (route.view) {
     case "schedule":
       main.innerHTML = renderSchedule(ctx, route.date ?? ctx.today);
-      main
-        .querySelector(".strip-day.is-selected")
-        ?.scrollIntoView({ block: "nearest", inline: "center" });
+      centerInScroller(".strip-day.is-selected", ".date-strip");
       break;
     case "center": {
       const center =
@@ -72,13 +70,21 @@ function render() {
       lastCenter = center.id;
       const date = route.date ?? ctx.today;
       main.innerHTML = renderCenter(ctx, center, route.month ?? date.slice(0, 7), date);
-      main
-        .querySelector(".chip.is-selected")
-        ?.scrollIntoView({ block: "nearest", inline: "center" });
+      centerInScroller(".chip.is-selected", ".chip-scroller");
       break;
     }
   }
   renderChrome();
+}
+
+/** Scrolls a horizontal list so the item is centered, without moving the page. */
+function centerInScroller(itemSelector: string, scrollerSelector: string) {
+  const scroller = main.querySelector<HTMLElement>(scrollerSelector);
+  const item = scroller?.querySelector<HTMLElement>(itemSelector);
+  if (!scroller || !item) return;
+  const box = scroller.getBoundingClientRect();
+  const target = item.getBoundingClientRect();
+  scroller.scrollLeft += target.left - box.left - (box.width - target.width) / 2;
 }
 
 /** Header scope switch and tab bar, which live outside #main. */
