@@ -25,7 +25,7 @@ export interface RenderContext {
   all: boolean;
 }
 
-export const WEEK_LENGTH = 7;
+const WEEK_LENGTH = 7;
 
 // ---- Views ----
 
@@ -455,7 +455,7 @@ function centerHref(ctx: RenderContext, centerId: string, date: string): string 
   return href(ctx, { view: "center", center: centerId, month: date.slice(0, 7), date });
 }
 
-export function href(ctx: Pick<RenderContext, "all">, route: ViewState): string {
+function href(ctx: Pick<RenderContext, "all">, route: ViewState): string {
   const state: URLState = { route, all: ctx.all };
   const query = encodeURLState(state);
   return query ? `?${query}` : "./";
@@ -495,6 +495,6 @@ const ICONS: Record<string, string> = {
   moon: '<path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/>',
 };
 
-export function icon(name: string): string {
+function icon(name: string): string {
   return `<svg class="icon icon-${name}" viewBox="0 0 24 24" aria-hidden="true">${ICONS[name] ?? ""}</svg>`;
 }
