@@ -1,91 +1,65 @@
 ---
 import '../styles/global.css';
 
-const title = 'さいたま市子育て支援センター イベントスケジュール';
-const description = 'さいたま市の子育て支援センターのイベントスケジュールを一覧で確認できます';
+const title = 'ひろばカレンダー｜さいたま市 子育て支援センターの予定';
+const description = 'さいたま市の子育て支援センターのひろばとイベントの予定を、日付や施設ごとに確認できます';
 ---
 
 <!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="description" content={description}>
+  <meta name="theme-color" content="#fbf8f3" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1c1a17" media="(prefers-color-scheme: dark)">
   <title>{title}</title>
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 </head>
 <body>
-  <div class="min-h-screen">
-    <header class="header">
-      <div class="container header-content">
-        <h1>
-          <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-            <line x1="16" y1="2" x2="16" y2="6"></line>
-            <line x1="8" y1="2" x2="8" y2="6"></line>
-            <line x1="3" y1="10" x2="21" y2="10"></line>
-          </svg>
-          さいたま市子育て支援センター イベントスケジュール
-        </h1>
-        <p>複数のセンターのスケジュールを一覧で確認できます</p>
-      </div>
-    </header>
-
-    <div class="container main-content">
-      <div class="card">
-        <div class="filter-header">
-          <button id="filter-toggle" class="filter-button">
-            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
-            </svg>
-            フィルター
-            <span id="filter-count" class="badge hidden">0</span>
-          </button>
-          
-          <div class="view-buttons">
-            <button id="type-all" class="view-button active">すべて</button>
-            <button id="type-hiroba" class="view-button">ひろばのみ</button>
-            <button id="type-event" class="view-button">イベントのみ</button>
-          </div>
-
-          <div class="view-buttons">
-            <button id="view-list" class="view-button active">リスト</button>
-            <button id="view-calendar" class="view-button">カレンダー</button>
-          </div>
-        </div>
-        
-        <div id="filter-content" class="filter-content hidden">
-          <div class="filter-section">
-            <label class="filter-label" for="month-select">月を選択</label>
-            <input type="month" id="month-select" class="month-input">
-          </div>
-          
-          <div class="filter-section">
-            <label class="filter-label">センターを選択</label>
-            <div id="center-grid" class="center-grid"></div>
-            
-            <div class="filter-actions">
-              <button id="select-all" class="filter-action">すべて選択</button>
-              <button id="clear-all" class="filter-action">クリア</button>
-              <button id="favorites-only" class="filter-action">お気に入りのみ</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div id="events-container"></div>
-      
-      <div class="stats">
-        <p id="event-count">0 件</p>
-        <p id="data-updated" class="hidden"></p>
-      </div>
+  <header class="appbar">
+    <div class="appbar-inner">
+      <p class="brand">ひろばカレンダー</p>
+      <div id="scope" class="scope" hidden></div>
+      <button id="edit-centers" type="button" class="appbar-button" aria-label="マイ施設を選ぶ">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.25 4.1 1 5.8L12 16.9l-5.25 2.7 1-5.8L3.5 9.7l5.9-.9z"/></svg>
+      </button>
     </div>
+  </header>
 
-    <footer class="footer">
-      <p>このサイトは各子育て支援センターの公開PDFから情報を収集しています。</p>
-      <p>最新の情報は各センターのPDFリンクから元資料をご確認ください。</p>
-    </footer>
-  </div>
+  <main id="main" class="main" aria-live="polite">
+    <p class="loading">読み込み中…</p>
+  </main>
+
+  <footer class="footer">
+    <p>各子育て支援センターが公開している予定表PDFから作成した非公式のサイトです。最新の情報は各施設の予定表でご確認ください。</p>
+  </footer>
+
+  <nav class="tabbar" aria-label="表示の切り替え">
+    <a class="tab" data-view="week" href="./">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+      今週
+    </a>
+    <a class="tab" data-view="day" href="?view=day">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></svg>
+      日付
+    </a>
+    <a class="tab" data-view="center" href="?view=center">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-6 8 6M6 10v9h12v-9M10 19v-5h4v5"/></svg>
+      施設
+    </a>
+  </nav>
+
+  <dialog id="centers-dialog" class="sheet" aria-labelledby="centers-dialog-title">
+    <form method="dialog" class="sheet-inner">
+      <div class="sheet-head">
+        <h2 id="centers-dialog-title">マイ施設</h2>
+        <button class="primary-button" value="done">完了</button>
+      </div>
+      <p class="sheet-lead">よく行く施設を選ぶと、今週・日付の画面にはその施設だけが表示されます</p>
+      <ul class="dialog-list"></ul>
+    </form>
+  </dialog>
 
   <script src="../scripts/app.ts"></script>
 </body>
