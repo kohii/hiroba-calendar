@@ -53,7 +53,18 @@ function context(): RenderContext {
   };
 }
 
-function render() {
+interface MatrixScroll {
+  left: number;
+  top: number;
+}
+
+function matrixScroll(): MatrixScroll | null {
+  const matrix = main.querySelector<HTMLElement>(".matrix");
+  return matrix ? { left: matrix.scrollLeft, top: matrix.scrollTop } : null;
+}
+
+/** Redraws the view. The schedule table keeps its scroll position unless told otherwise. */
+function render(scroll: MatrixScroll | null = matrixScroll()) {
   if (!dataset) return;
   const ctx = context();
   const { route } = state;
@@ -74,7 +85,9 @@ function render() {
       break;
     }
   }
-  main.classList.toggle("is-wide", route.view === "schedule");
+  document.body.dataset.view = route.view;
+  const matrix = main.querySelector<HTMLElement>(".matrix");
+  if (matrix && scroll) matrix.scrollTo(scroll.left, scroll.top);
   renderChrome();
 }
 
@@ -115,15 +128,22 @@ function link(next: URLState): string {
 
 function navigate(url: string, mode: "push" | "replace", scrollTarget?: string) {
   const target = new URL(url, location.href);
-  const previousView = state.route.view;
+  const previous = state.route;
+  const scroll = matrixScroll();
   state = decodeURLState(target.searchParams);
   const push = mode === "push" && target.href !== location.href;
+  // Remember where the table was scrolled so going back returns to the same days.
+  if (push) history.replaceState({ matrix: scroll }, "", location.href);
   history[push ? "pushState" : "replaceState"](null, "", target);
   dayDialog.close();
-  render();
+  const sameDays =
+    previous.view === "schedule" &&
+    state.route.view === "schedule" &&
+    previous.date === state.route.date;
+  render(sameDays ? scroll : null);
   const anchor = scrollTarget ? document.getElementById(scrollTarget) : null;
   if (anchor) anchor.scrollIntoView({ block: "nearest", behavior: "smooth" });
-  else if (mode === "push" || previousView !== state.route.view) window.scrollTo({ top: 0 });
+  else if (mode === "push" || previous.view !== state.route.view) window.scrollTo({ top: 0 });
 }
 
 function bindEvents() {
@@ -167,11 +187,11 @@ function bindEvents() {
     }
   });
 
-  window.addEventListener("popstate", () => {
+  window.addEventListener("popstate", (event) => {
     dialog.close();
     dayDialog.close();
     state = decodeURLState(new URLSearchParams(location.search));
-    render();
+    render((event.state as { matrix?: MatrixScroll } | null)?.matrix ?? null);
   });
 
   dialog.addEventListener("change", (event) => {
@@ -179,7 +199,9 @@ function bindEvents() {
     if (input instanceof HTMLInputElement && input.dataset.center)
       toggleFavorite(input.dataset.center);
   });
-  dialog.addEventListener("close", () => render());
+  dialog.addEventListener("close", () => {
+    if (favoritesKey() !== favoritesAtOpen) render();
+  });
   for (const sheet of [dialog, dayDialog]) {
     sheet.addEventListener("click", (event) => {
       // A click on the backdrop lands on the dialog element itself.
@@ -196,7 +218,14 @@ function openDayDialog(cell: string) {
   dayDialog.showModal();
 }
 
+let favoritesAtOpen = "";
+
+function favoritesKey(): string {
+  return [...favorites].sort().join(",");
+}
+
 function openCentersDialog() {
+  favoritesAtOpen = favoritesKey();
   const list = dialog.querySelector(".dialog-list")!;
   list.innerHTML = (dataset?.centers ?? [])
     .map(

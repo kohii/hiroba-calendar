@@ -70,13 +70,22 @@ describe("schedule view", () => {
     const html = renderSchedule(context(["nishi"]), "2026-10-27");
     const nishi = cell(html, "nishi", "2026-10-27");
     assert.match(nishi, /class="cell-hiroba">9–12・13–16</);
-    assert.match(nishi, /class="cell-event"><b>10:00<\/b>英語で楽しくリトミック♪</);
+    assert.match(
+      nishi,
+      /class="cell-event"><b>10:00<\/b><i class="cell-reserve" title="要予約">予<\/i>英語で楽しくリトミック♪</,
+    );
   });
 
   it("fills in usual hours when an extracted hiroba has none", () => {
     // omiya's extracted "わくわくひろば" entries carry no times.
     const html = renderSchedule(context(["omiya"]), "2026-10-25");
     assert.match(cell(html, "omiya", "2026-10-25"), /class="cell-hiroba">9–12・13–16</);
+  });
+
+  it("says when a center's hiroba hours are unknown", () => {
+    // minuma does not fill regular hours and has no event on 2026-10-03.
+    const html = renderSchedule(context(["minuma"]), "2026-10-03");
+    assert.match(cell(html, "minuma", "2026-10-03"), /class="cell-note">ひろば情報なし</);
   });
 
   it("marks closed days and days without a schedule", () => {

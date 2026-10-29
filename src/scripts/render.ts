@@ -64,6 +64,7 @@ export function renderSchedule(ctx: RenderContext, start: string): string {
       <ul class="legend" aria-label="凡例">
         <li><span class="legend-hiroba"></span>ひろば</li>
         <li><span class="legend-event"></span>イベント</li>
+        <li><i class="cell-reserve">予</i>要予約</li>
         <li><span class="legend-closed">休</span>お休み</li>
       </ul>
     </div>
@@ -140,6 +141,7 @@ export function renderCenter(
       <ul class="legend" aria-label="凡例">
         <li><span class="legend-hiroba"></span>ひろば</li>
         <li><span class="legend-event"></span>イベント</li>
+        <li><i class="cell-reserve">予</i>要予約</li>
         <li><span class="legend-closed">休</span>お休み</li>
       </ul>
     </section>
@@ -186,11 +188,14 @@ function matrixCell(ctx: RenderContext, center: Center, date: string): string {
         : `<small>${escapeHtml(event.title)}</small>`;
       return `<span class="cell-hiroba">${hours ? escapeHtml(hours) : "ひろば"}${title}</span>`;
     });
-    if (day.hiroba.length === 0 && day.hirobaKnown)
-      hiroba.push(`<span class="cell-hiroba-off">ひろば休</span>`);
+    if (day.hiroba.length === 0) {
+      hiroba.push(
+        `<span class="cell-note">${day.hirobaKnown ? "ひろば休" : "ひろば情報なし"}</span>`,
+      );
+    }
     const events = day.events.map(
       (event) =>
-        `<span class="cell-event">${event.startTime ? `<b>${event.startTime.replace(/^0/, "")}</b>` : ""}${escapeHtml(event.title)}</span>`,
+        `<span class="cell-event">${event.startTime ? `<b>${event.startTime.replace(/^0/, "")}</b>` : ""}${event.reservationRequired ? `<i class="cell-reserve" title="要予約">予</i>` : ""}${escapeHtml(event.title)}</span>`,
     );
     body = [...hiroba, ...events].join("");
   }
@@ -331,7 +336,7 @@ function onboarding(ctx: RenderContext): string {
   if (ctx.favorites.size > 0) return "";
   return `
     <aside class="onboarding">
-      <p><strong>よく行く施設を選びましょう</strong><br>選んだ施設の予定だけを表示します</p>
+      <p>よく行く施設を選ぶと、その施設だけを表示します</p>
       <button type="button" class="primary-button" data-open-centers>施設を選ぶ</button>
     </aside>`;
 }
