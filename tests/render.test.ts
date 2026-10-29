@@ -67,9 +67,10 @@ describe("schedule view", () => {
   });
 
   it("summarizes hiroba as short hours and events as time and title", () => {
+    // nishi 2026-10-27: 英語で楽しくリトミック♪ in the morning, 1歳児ランド in the afternoon.
     const html = renderSchedule(context(["nishi"]), "2026-10-27");
     const nishi = cell(html, "nishi", "2026-10-27");
-    assert.match(nishi, /class="cell-hiroba">9–12・13–16</);
+    assert.match(nishi, /class="cell-hiroba">13–16<small>1歳児ランド<\/small></);
     assert.match(
       nishi,
       /class="cell-event"><b>10:00<\/b><i class="cell-reserve" title="要予約">予<\/i>英語で楽しくリトミック♪</,
@@ -77,7 +78,7 @@ describe("schedule view", () => {
   });
 
   it("fills in usual hours when an extracted hiroba has none", () => {
-    // omiya's extracted "わくわくひろば" entries carry no times.
+    // omiya's "わくわくひろば" rows are filled from regular hours and carry no times.
     const html = renderSchedule(context(["omiya"]), "2026-10-25");
     assert.match(cell(html, "omiya", "2026-10-25"), /class="cell-hiroba">9–12・13–16</);
   });
