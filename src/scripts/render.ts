@@ -65,7 +65,6 @@ export function renderSchedule(ctx: RenderContext, start: string): string {
         <li><span class="legend-hiroba"></span>ひろば</li>
         <li><span class="legend-event"></span>イベント</li>
         <li><i class="cell-reserve">予</i>要予約</li>
-        <li><span class="legend-closed">休</span>お休み</li>
       </ul>
     </div>
     <div class="matrix" style="--days: ${dates.length}">
@@ -141,8 +140,6 @@ export function renderCenter(
       <ul class="legend" aria-label="凡例">
         <li><span class="legend-hiroba"></span>ひろば</li>
         <li><span class="legend-event"></span>イベント</li>
-        <li><i class="cell-reserve">予</i>要予約</li>
-        <li><span class="legend-closed">休</span>お休み</li>
       </ul>
     </section>
 

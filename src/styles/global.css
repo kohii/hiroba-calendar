@@ -1124,11 +1124,6 @@ body[data-view="schedule"] .footer {
   background: var(--event);
 }
 
-.legend-closed {
-  font-weight: 700;
-  color: var(--closed);
-}
-
 .selected-day,
 .month-events {
   margin-top: 20px;
