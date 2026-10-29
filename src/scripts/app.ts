@@ -3,13 +3,14 @@ import type { DataSet } from "../../lib/schema.ts";
 import { buildSchedule, todayIn } from "../../lib/schedule.ts";
 import { decodeURLState, encodeURLState } from "../../lib/url-state.ts";
 import type { URLState } from "../../lib/url-state.ts";
-import { escapeHtml, renderCenter, renderSchedule } from "./render.ts";
+import { escapeHtml, renderCenter, renderDayDetail, renderSchedule } from "./render.ts";
 import type { RenderContext } from "./render.ts";
 
 const FAVORITES_KEY = "favorites";
 
 const main = document.getElementById("main")!;
 const dialog = document.getElementById("centers-dialog") as HTMLDialogElement;
+const dayDialog = document.getElementById("day-dialog") as HTMLDialogElement;
 const holidays = new Map(holidayData.holidays.map((holiday) => [holiday.date, holiday.name]));
 
 let dataset: DataSet | null = null;
@@ -59,7 +60,6 @@ function render() {
   switch (route.view) {
     case "schedule":
       main.innerHTML = renderSchedule(ctx, route.date ?? ctx.today);
-      centerInScroller(".strip-day.is-selected", ".date-strip");
       break;
     case "center": {
       const center =
@@ -74,6 +74,7 @@ function render() {
       break;
     }
   }
+  main.classList.toggle("is-wide", route.view === "schedule");
   renderChrome();
 }
 
@@ -118,6 +119,7 @@ function navigate(url: string, mode: "push" | "replace", scrollTarget?: string) 
   state = decodeURLState(target.searchParams);
   const push = mode === "push" && target.href !== location.href;
   history[push ? "pushState" : "replaceState"](null, "", target);
+  dayDialog.close();
   render();
   const anchor = scrollTarget ? document.getElementById(scrollTarget) : null;
   if (anchor) anchor.scrollIntoView({ block: "nearest", behavior: "smooth" });
@@ -142,11 +144,32 @@ function bindEvents() {
       toggleFavorite(favorite.dataset.favorite);
       return;
     }
+    if (event.target instanceof HTMLInputElement && event.target.id === "date-jump") {
+      try {
+        event.target.showPicker();
+      } catch {
+        // Browsers without showPicker open the picker on their own.
+      }
+      return;
+    }
+    const cell = event.target.closest<HTMLElement>("[data-cell]");
+    if (cell?.dataset.cell) {
+      openDayDialog(cell.dataset.cell);
+      return;
+    }
     if (event.target.closest("[data-open-centers]")) openCentersDialog();
   });
 
+  main.addEventListener("change", (event) => {
+    const input = event.target;
+    if (input instanceof HTMLInputElement && input.id === "date-jump" && input.value) {
+      navigate(link({ ...state, route: { view: "schedule", date: input.value } }), "replace");
+    }
+  });
+
   window.addEventListener("popstate", () => {
-    if (dialog.open) dialog.close();
+    dialog.close();
+    dayDialog.close();
     state = decodeURLState(new URLSearchParams(location.search));
     render();
   });
@@ -157,10 +180,20 @@ function bindEvents() {
       toggleFavorite(input.dataset.center);
   });
   dialog.addEventListener("close", () => render());
-  dialog.addEventListener("click", (event) => {
-    // A click on the backdrop lands on the dialog element itself.
-    if (event.target === dialog) dialog.close();
-  });
+  for (const sheet of [dialog, dayDialog]) {
+    sheet.addEventListener("click", (event) => {
+      // A click on the backdrop lands on the dialog element itself.
+      if (event.target === sheet) sheet.close();
+    });
+  }
+}
+
+function openDayDialog(cell: string) {
+  const [centerId, date] = cell.split("|");
+  const center = dataset?.centers.find((item) => item.id === centerId);
+  if (!center || !date) return;
+  dayDialog.querySelector("form")!.innerHTML = renderDayDetail(context(), center, date);
+  dayDialog.showModal();
 }
 
 function openCentersDialog() {

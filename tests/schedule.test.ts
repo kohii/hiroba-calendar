@@ -109,6 +109,15 @@ describe("hoursLabel", () => {
     }
   });
 
+  it("drops whole-hour minutes in the short style", () => {
+    assert.equal(
+      hoursLabel({ description: "午前9:00～12:00 午後13:00～16:00" }, "short"),
+      "9–12・13–16",
+    );
+    assert.equal(hoursLabel({ startTime: "09:30", endTime: "12:00" }, "short"), "9:30–12");
+    assert.equal(hoursLabel({ startTime: "10:00" }, "short"), "10〜");
+  });
+
   it("is empty when no time is given", () => {
     assert.equal(hoursLabel({ description: "午前のひろば" }), "");
     assert.equal(hoursLabel({}), "");

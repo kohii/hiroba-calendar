@@ -3,7 +3,7 @@ import { readFileSync } from "node:fs";
 import { describe, it } from "node:test";
 import { buildSchedule } from "../lib/schedule.ts";
 import type { DataSet } from "../lib/schema.ts";
-import { renderCenter, renderSchedule } from "../src/scripts/render.ts";
+import { renderCenter, renderDayDetail, renderSchedule } from "../src/scripts/render.ts";
 import type { RenderContext } from "../src/scripts/render.ts";
 
 const dataset = JSON.parse(
@@ -32,37 +32,33 @@ function center(id: string) {
   return found;
 }
 
-function centerNames(html: string): string[] {
-  return [...html.matchAll(/class="center-row-name"[^>]*>([^<]+)</g)].map(
-    (match) => match[1] ?? "",
-  );
+function columns(html: string): string[] {
+  return [...html.matchAll(/class="matrix-day">([^<]+)</g)].map((match) => match[1] ?? "");
 }
 
-function headings(html: string): string[] {
-  return [...html.matchAll(/class="day-heading"><span[^>]*>([^<]+)</g)].map(
-    (match) => match[1] ?? "",
-  );
+function rowNames(html: string): string[] {
+  return [...html.matchAll(/class="matrix-center"[^>]*>([^<]+)</g)].map((match) => match[1] ?? "");
+}
+
+function cell(html: string, centerId: string, date: string): string {
+  const match = new RegExp(`data-cell="${centerId}\\|${date}"[^>]*>([\\s\\S]*?)</button>`).exec(html);
+  assert.ok(match, `${centerId} ${date}`);
+  return match[1] ?? "";
 }
 
 describe("schedule view", () => {
-  it("shows seven days from the chosen date", () => {
-    const fromToday = renderSchedule(context(["omiya"]), "2026-10-25");
-    assert.deepEqual(headings(fromToday), [
-      "10月25日",
-      "10月26日",
-      "10月27日",
-      "10月28日",
-      "10月29日",
-      "10月30日",
-      "10月31日",
-    ]);
-    assert.ok(fromToday.includes('href="?date=2026-11-01"'));
-    assert.equal(headings(renderSchedule(context(["omiya"]), "2026-11-03"))[0], "11月3日");
+  it("starts at the chosen date and runs to the end of the published months", () => {
+    const fromToday = columns(renderSchedule(context(["omiya"]), "2026-10-25"));
+    assert.equal(fromToday[0], "10/25");
+    assert.equal(fromToday.at(-1), "11/30");
+    assert.equal(fromToday.length, 37);
+    const nearTheEnd = columns(renderSchedule(context(["omiya"]), "2026-11-28"));
+    assert.deepEqual(nearTheEnd, ["11/28", "11/29", "11/30", "12/1", "12/2", "12/3", "12/4"]);
   });
 
-  it("only lists the user's centers", () => {
+  it("has a row for each of the user's centers", () => {
     const html = renderSchedule(context(["omiya", "yono"]), "2026-10-25");
-    assert.deepEqual([...new Set(centerNames(html))].sort(), ["おおみや", "よの"]);
+    assert.deepEqual(rowNames(html), ["おおみや", "よの"]);
   });
 
   it("asks for centers until some are chosen", () => {
@@ -70,31 +66,33 @@ describe("schedule view", () => {
     assert.ok(!renderSchedule(context(["omiya"]), "2026-10-25").includes("data-open-centers"));
   });
 
-  it("renders hiroba and events with distinct markup", () => {
-    const html = renderSchedule(context(["omiya", "nishi"]), "2026-10-27");
-    assert.match(html, /<details class="hiroba">[\s\S]*?class="kind kind-hiroba">ひろば</);
-    assert.match(html, /<details class="event">[\s\S]*?class="kind kind-event">イベント</);
+  it("summarizes hiroba as short hours and events as time and title", () => {
+    const html = renderSchedule(context(["nishi"]), "2026-10-27");
+    const nishi = cell(html, "nishi", "2026-10-27");
+    assert.match(nishi, /class="cell-hiroba">9–12・13–16</);
+    assert.match(nishi, /class="cell-event"><b>10:00<\/b>英語で楽しくリトミック♪</);
   });
 
   it("fills in usual hours when an extracted hiroba has none", () => {
     // omiya's extracted "わくわくひろば" entries carry no times.
     const html = renderSchedule(context(["omiya"]), "2026-10-25");
-    assert.match(html, /class="hiroba-hours">9:00–12:00 \/ 13:00–16:00</);
+    assert.match(cell(html, "omiya", "2026-10-25"), /class="cell-hiroba">9–12・13–16</);
   });
 
-  it("collapses closed and unpublished centers into summary lines", () => {
-    // kita has no schedule document.
-    const html = renderSchedule(context(["kita", "omiya"]), "2026-10-27");
-    assert.match(html, /summary-unpublished[\s\S]*きた/);
-    assert.deepEqual([...new Set(centerNames(html))], ["おおみや"]);
+  it("marks closed days and days without a schedule", () => {
+    // 2026-11-03 is a holiday; kita has no schedule document.
+    const html = renderSchedule(context(["omiya", "kita"]), "2026-11-01");
+    assert.match(cell(html, "omiya", "2026-11-03"), /class="cell-closed">休</);
+    assert.match(cell(html, "kita", "2026-11-03"), /class="cell-none">—</);
   });
+});
 
-  it("says everything is closed only when every center is known to be closed", () => {
-    // 2026-11-03 is a holiday: omiya, yono and minami are closed, nishi has no November schedule.
-    const known = renderSchedule(context(["omiya", "yono", "minami"]), "2026-11-03");
-    assert.ok(known.includes("どの施設もお休みです"));
-    const unknown = renderSchedule(context(["omiya", "yono", "minami", "nishi"]), "2026-11-03");
-    assert.ok(!unknown.includes("どの施設もお休みです"));
+describe("day detail", () => {
+  it("shows the hiroba and expandable events of the day", () => {
+    const html = renderDayDetail(context(["nishi"]), center("nishi"), "2026-10-27");
+    assert.match(html, /<details class="hiroba">[\s\S]*?class="kind kind-hiroba">ひろば</);
+    assert.match(html, /<details class="event">[\s\S]*?class="kind kind-event">イベント</);
+    assert.ok(html.includes('href="?view=center&center=nishi&month=2026-10&date=2026-10-27"'));
   });
 });
 

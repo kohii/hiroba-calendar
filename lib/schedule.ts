@@ -76,19 +76,31 @@ function sortByTime(events: Event[]): Event[] {
 }
 
 /**
- * Opening hours as a short label such as "9:00–12:00 / 13:00–16:00".
+ * Opening hours as a label: "9:00–12:00 / 13:00–16:00", or "9–12・13–16" in the short style.
  * Uses the structured times first, then time ranges quoted in the description.
  */
-export function hoursLabel(event: Pick<Event, "startTime" | "endTime" | "description">): string {
-  if (event.startTime) {
-    const start = trimHour(event.startTime);
-    return event.endTime ? `${start}–${trimHour(event.endTime)}` : `${start}〜`;
-  }
+export function hoursLabel(
+  event: Pick<Event, "startTime" | "endTime" | "description">,
+  style: "full" | "short" = "full",
+): string {
+  const time = (value: string) => {
+    const trimmed = trimHour(value);
+    return style === "short" ? trimmed.replace(/:00$/, "") : trimmed;
+  };
+  return hourRanges(event)
+    .map(([start, end]) => (end ? `${time(start)}–${time(end)}` : `${time(start)}〜`))
+    .join(style === "short" ? "・" : " / ");
+}
+
+function hourRanges(
+  event: Pick<Event, "startTime" | "endTime" | "description">,
+): [string, string | undefined][] {
+  if (event.startTime) return [[event.startTime, event.endTime]];
   const text = toHalfWidth(event.description ?? "").replace(/\s+/g, "");
-  const ranges = [...text.matchAll(/(\d{1,2}:\d{2})[~～〜\-–ー](\d{1,2}:\d{2})/g)].map(
-    (match) => `${trimHour(match[1] ?? "")}–${trimHour(match[2] ?? "")}`,
-  );
-  return ranges.join(" / ");
+  return [...text.matchAll(/(\d{1,2}:\d{2})[~～〜\-–ー](\d{1,2}:\d{2})/g)].map((match) => [
+    match[1] ?? "",
+    match[2] ?? "",
+  ]);
 }
 
 function trimHour(time: string): string {
@@ -129,7 +141,7 @@ export function weekdayLabel(date: string): string {
   return WEEKDAY_LABELS[weekdayOf(date)] ?? "";
 }
 
-export function dateRange(start: string, count: number): string[] {
+function dateRange(start: string, count: number): string[] {
   return Array.from({ length: count }, (_, index) => addDays(start, index));
 }
 

@@ -2,7 +2,6 @@ import type { Center, Event, SourceDocument } from "../../lib/schema.ts";
 import {
   addDays,
   calendarWeeks,
-  dateRange,
   daysInMonth,
   hoursLabel,
   shiftMonth,
@@ -25,26 +24,63 @@ export interface RenderContext {
   all: boolean;
 }
 
-const WEEK_LENGTH = 7;
+/** The schedule shows at least this many days, and runs on to the end of the published months. */
+const MIN_DAYS = 7;
 
 // ---- Views ----
 
 export function renderSchedule(ctx: RenderContext, start: string): string {
-  const days = dateRange(start, WEEK_LENGTH)
+  const months = visibleMonths(ctx, start);
+  const lastDay = daysInMonth(months[months.length - 1] ?? start.slice(0, 7)).at(-1) ?? start;
+  const dates: string[] = [];
+  for (let date = start; date <= lastDay || dates.length < MIN_DAYS; date = addDays(date, 1)) {
+    dates.push(date);
+  }
+  const head = dates
     .map(
-      (date) => `
-      <section class="day-section">
-        <h2 class="day-heading">${dayHeading(ctx, date)}</h2>
-        ${renderCentersOnDay(ctx, date)}
-      </section>`,
+      (date) =>
+        `<div class="matrix-date ${dayTone(ctx, date)}${date === ctx.today ? " is-today" : ""}">
+          <span class="matrix-day">${monthNumber(date)}/${Number(date.slice(8, 10))}</span>
+          <span class="matrix-weekday">${weekdayLabel(date)}${ctx.holidays.has(date) ? "・祝" : ""}</span>
+        </div>`,
     )
     .join("");
-  const next = addDays(start, WEEK_LENGTH);
+  const rows = ctx.centers
+    .map(
+      (center) =>
+        `<a class="matrix-center" href="${centerHref(ctx, center.id, start)}" data-nav>${escapeHtml(center.nameJa)}</a>${dates
+          .map((date) => matrixCell(ctx, center, date))
+          .join("")}`,
+    )
+    .join("");
   return `
     ${onboarding(ctx)}
-    ${dateStrip(ctx, start)}
-    <div class="week">${days}</div>
-    <a class="more-link" href="${href(ctx, { view: "schedule", date: next })}" data-nav>${dateText(next)}からの7日間${icon("chevron-right")}</a>`;
+    <div class="schedule-toolbar">
+      <label class="date-jump">
+        ${icon("calendar")}<span>${start === ctx.today ? "日付を選ぶ" : `${dateText(start)}から`}</span>
+        <input type="date" id="date-jump" value="${start}" aria-label="表示を始める日">
+      </label>
+      ${start === ctx.today ? "" : `<a class="today-link" href="${href(ctx, { view: "schedule", date: null })}" data-nav="replace">今日から</a>`}
+      <ul class="legend" aria-label="凡例">
+        <li><span class="legend-hiroba"></span>ひろば</li>
+        <li><span class="legend-event"></span>イベント</li>
+        <li><span class="legend-closed">休</span>お休み</li>
+      </ul>
+    </div>
+    <div class="matrix" style="--days: ${dates.length}">
+      <div class="matrix-corner"></div>${head}${rows}
+    </div>`;
+}
+
+/** Details of one center on one day, shown in a sheet over the schedule. */
+export function renderDayDetail(ctx: RenderContext, center: Center, date: string): string {
+  return `
+    <div class="sheet-head">
+      <h2 class="detail-title">${escapeHtml(center.nameJa)}<span class="detail-date">${dayHeading(ctx, date)}</span></h2>
+      <button class="round-button" value="close" aria-label="閉じる">${icon("close")}</button>
+    </div>
+    <div class="detail-body">${renderCenterDayBody(ctx, center, ctx.schedule.centerDay(center.id, date))}</div>
+    <a class="detail-link" href="${centerHref(ctx, center.id, date)}" data-nav>${escapeHtml(center.nameJa)}の1か月を見る${icon("chevron-right")}</a>`;
 }
 
 export function renderCenter(
@@ -137,47 +173,28 @@ export function renderCenter(
 
 // ---- Day contents ----
 
-function renderCentersOnDay(ctx: RenderContext, date: string): string {
-  if (ctx.centers.length === 0) return "";
-  const active: string[] = [];
-  const closed: Center[] = [];
-  const quiet: Center[] = [];
-  const unpublished: Center[] = [];
-  for (const center of ctx.centers) {
-    const day = ctx.schedule.centerDay(center.id, date);
-    if (day.status === "closed") closed.push(center);
-    else if (day.status === "unpublished") unpublished.push(center);
-    else if (day.hiroba.length === 0 && day.events.length === 0) quiet.push(center);
-    else active.push(centerRow(ctx, center, date, day));
+function matrixCell(ctx: RenderContext, center: Center, date: string): string {
+  const day = ctx.schedule.centerDay(center.id, date);
+  let body = "";
+  if (day.status === "unpublished") body = `<span class="cell-none">—</span>`;
+  else if (day.status === "closed") body = `<span class="cell-closed">休</span>`;
+  else {
+    const hiroba = day.hiroba.map((event) => {
+      const hours = hirobaHours(center, event, "short");
+      const title = isRegularHiroba(center, event)
+        ? ""
+        : `<small>${escapeHtml(event.title)}</small>`;
+      return `<span class="cell-hiroba">${hours ? escapeHtml(hours) : "ひろば"}${title}</span>`;
+    });
+    if (day.hiroba.length === 0 && day.hirobaKnown)
+      hiroba.push(`<span class="cell-hiroba-off">ひろば休</span>`);
+    const events = day.events.map(
+      (event) =>
+        `<span class="cell-event">${event.startTime ? `<b>${event.startTime.replace(/^0/, "")}</b>` : ""}${escapeHtml(event.title)}</span>`,
+    );
+    body = [...hiroba, ...events].join("");
   }
-  const summary = [
-    summaryLine(ctx, "お休み", closed, date, "closed"),
-    summaryLine(ctx, "イベントなし", quiet, date, "quiet"),
-    summaryLine(ctx, "予定表なし", unpublished, date, "unpublished"),
-  ].join("");
-  const empty =
-    closed.length === ctx.centers.length
-      ? `<p class="empty-day">${icon("moon")}どの施設もお休みです</p>`
-      : "";
-  return `
-    ${active.length > 0 ? `<ul class="center-rows">${active.join("")}</ul>` : empty}
-    ${summary ? `<ul class="summary-lines">${summary}</ul>` : ""}`;
-}
-
-function centerRow(
-  ctx: RenderContext,
-  center: Center,
-  date: string,
-  day: Extract<CenterDay, { status: "open" }>,
-): string {
-  return `
-    <li class="center-row">
-      <div class="center-row-head">
-        <a class="center-row-name" href="${centerHref(ctx, center.id, date)}" data-nav>${escapeHtml(center.nameJa)}${icon("chevron-right")}</a>
-        ${hirobaGroup(ctx, center, day)}
-      </div>
-      ${eventList(ctx, day.events, false)}
-    </li>`;
+  return `<button type="button" class="cell${date === ctx.today ? " is-today" : ""}" data-cell="${center.id}|${date}" aria-label="${escapeHtml(center.nameJa)} ${dateText(date)}">${body}</button>`;
 }
 
 function renderCenterDayBody(ctx: RenderContext, center: Center, day: CenterDay): string {
@@ -207,14 +224,25 @@ function hirobaGroup(
   return `<div class="hiroba-group">${day.hiroba.map((event) => hirobaChip(ctx, center, event)).join("")}</div>`;
 }
 
-function hirobaChip(ctx: RenderContext, center: Center, event: Event): string {
+/** The center's usual hiroba needs no name; special ones such as "0歳さんの広場" do. */
+function isRegularHiroba(center: Center, event: Event): boolean {
   const policy = center.regularHours;
-  // The center's usual hiroba needs no name; special ones such as "0歳さんの広場" do.
-  const regular = policy.decision === "fill" && policy.title === event.title;
-  const hours =
-    hoursLabel(event) ||
-    (regular && policy.decision === "fill" ? hoursLabel({ description: policy.hoursQuote }) : "");
-  const special = !regular;
+  return policy.decision === "fill" && policy.title === event.title;
+}
+
+/** Hours of a hiroba, falling back to the center's usual hours for its usual hiroba. */
+function hirobaHours(center: Center, event: Event, style: "full" | "short"): string {
+  const policy = center.regularHours;
+  const usual =
+    policy.decision === "fill" && isRegularHiroba(center, event)
+      ? hoursLabel({ description: policy.hoursQuote }, style)
+      : "";
+  return hoursLabel(event, style) || usual;
+}
+
+function hirobaChip(ctx: RenderContext, center: Center, event: Event): string {
+  const hours = hirobaHours(center, event, "full");
+  const special = !isRegularHiroba(center, event);
   // Regular-hours entries carry only the quoted hours, which the chip already shows.
   const note =
     event.description && hoursLabel({ description: event.description }) === ""
@@ -287,23 +315,6 @@ function eventCard(ctx: RenderContext, event: Event, opts: { showDate: boolean }
     </details>`;
 }
 
-function summaryLine(
-  ctx: RenderContext,
-  label: string,
-  centers: Center[],
-  date: string,
-  tone: string,
-): string {
-  if (centers.length === 0) return "";
-  const names = centers
-    .map(
-      (center) =>
-        `<a href="${centerHref(ctx, center.id, date)}" data-nav>${escapeHtml(center.nameJa)}</a>`,
-    )
-    .join("、");
-  return `<li class="summary-line summary-${tone}"><span class="summary-label">${label}</span><span>${names}</span></li>`;
-}
-
 function fact(label: string, value: string): string {
   return `<p class="fact"><span class="fact-label">${label}</span>${escapeHtml(value)}</p>`;
 }
@@ -323,41 +334,6 @@ function onboarding(ctx: RenderContext): string {
       <p><strong>よく行く施設を選びましょう</strong><br>選んだ施設の予定だけを表示します</p>
       <button type="button" class="primary-button" data-open-centers>施設を選ぶ</button>
     </aside>`;
-}
-
-function dateStrip(ctx: RenderContext, selected: string): string {
-  const lastShown = addDays(selected, WEEK_LENGTH - 1);
-  const items = visibleMonths(ctx, selected)
-    .flatMap((month) => daysInMonth(month))
-    .map((date) => {
-      const hasEvent = ctx.centers.some((center) => {
-        const day = ctx.schedule.centerDay(center.id, date);
-        return day.status === "open" && day.events.length > 0;
-      });
-      const classes = [
-        "strip-day",
-        date === selected ? "is-selected" : "",
-        date > selected && date <= lastShown ? "is-in-range" : "",
-        date === ctx.today ? "is-today" : "",
-        dayTone(ctx, date),
-      ]
-        .filter(Boolean)
-        .join(" ");
-      const monthMark = date.endsWith("-01")
-        ? `<span class="strip-month">${monthNumber(date)}月</span>`
-        : "";
-      return `${monthMark}<a class="${classes}" href="${href(ctx, { view: "schedule", date: date === ctx.today ? null : date })}" data-nav="replace"${date === selected ? ' aria-current="date"' : ""}>
-          <span class="strip-weekday">${weekdayLabel(date)}</span>
-          <span class="strip-number">${Number(date.slice(8, 10))}</span>
-          <span class="strip-dot${hasEvent ? " has-event" : ""}"></span>
-        </a>`;
-    })
-    .join("");
-  const back =
-    selected === ctx.today
-      ? ""
-      : `<a class="today-link" href="${href(ctx, { view: "schedule", date: null })}" data-nav="replace">今日に戻る</a>`;
-  return `<nav class="date-strip" aria-label="日付を選ぶ"><div class="date-strip-track">${items}</div></nav>${back}`;
 }
 
 function centerPicker(ctx: RenderContext, current: Center): string {
@@ -493,6 +469,8 @@ const ICONS: Record<string, string> = {
   external:
     '<path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/>',
   moon: '<path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/>',
+  calendar: '<rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/>',
+  close: '<path d="M6 6l12 12M18 6L6 18"/>',
 };
 
 function icon(name: string): string {
