@@ -1,0 +1,219 @@
+[
+  {
+    "id": "omiya-2026-10-04-saigai",
+    "centerId": "omiya",
+    "sourceDocumentId": "omiya-2026-10",
+    "date": "2026-10-04",
+    "startTime": "10:00",
+    "endTime": "11:30",
+    "title": "講座「災害が来る前に」",
+    "description": "こどものために、自分のためにできる事。講師：埼玉県助産師会。9/14（月）から受付します。",
+    "targetAge": "3歳未満の親子",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "予約制",
+      "講座",
+      "防災"
+    ]
+  },
+  {
+    "id": "omiya-2026-10-07-tsukutte",
+    "centerId": "omiya",
+    "sourceDocumentId": "omiya-2026-10",
+    "date": "2026-10-07",
+    "startTime": "10:00",
+    "endTime": "10:30",
+    "title": "作ってあそぼう！",
+    "description": "お子さんと一緒にお絵かきやシールはりなど工作を楽しみましょう。申し込みは不要です。",
+    "targetAge": "1歳半～3歳未満",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "工作"
+    ]
+  },
+  {
+    "id": "omiya-2026-10-08-genkiup",
+    "centerId": "omiya",
+    "sourceDocumentId": "omiya-2026-10",
+    "date": "2026-10-08",
+    "title": "元気アップ講座",
+    "description": "午前。申し込み済の方",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "講座"
+    ]
+  },
+  {
+    "id": "omiya-2026-10-14-welcome",
+    "centerId": "omiya",
+    "sourceDocumentId": "omiya-2026-10",
+    "date": "2026-10-14",
+    "title": "ウエルカムさいたま",
+    "description": "午前",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "予約制",
+      "転入者向け"
+    ]
+  },
+  {
+    "id": "omiya-2026-10-20-concert",
+    "centerId": "omiya",
+    "sourceDocumentId": "omiya-2026-10",
+    "date": "2026-10-20",
+    "startTime": "10:30",
+    "title": "「チェントロみにみ」コンサート",
+    "description": "午前のミニコンサート。チェントロみにみのみなさんの素敵なうたと指笛などの演奏を親子でお楽しみください。10/13（火）から受付します。",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "予約制",
+      "音楽"
+    ]
+  },
+  {
+    "id": "omiya-2026-10-20-hokenshi",
+    "centerId": "omiya",
+    "sourceDocumentId": "omiya-2026-10",
+    "date": "2026-10-20",
+    "title": "保健師さんとお話",
+    "description": "午後。子育ての悩みや不安などを保健師さんに相談してみませんか。10/15（木）から受付します。",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "予約制",
+      "相談"
+    ]
+  },
+  {
+    "id": "omiya-2026-10-22-birthday",
+    "centerId": "omiya",
+    "sourceDocumentId": "omiya-2026-10",
+    "date": "2026-10-22",
+    "startTime": "10:30",
+    "title": "10月のハッピーバースデー",
+    "description": "お誕生月のお祝い。10月のお誕生月のお子さんのお祝いをします。予めお申し込みください。受付は10/16（金）から21（水）。定員あり。",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "予約制",
+      "誕生日会"
+    ]
+  },
+  {
+    "id": "omiya-2026-10-24-warabeuta",
+    "centerId": "omiya",
+    "sourceDocumentId": "omiya-2026-10",
+    "date": "2026-10-24",
+    "startTime": "10:30",
+    "title": "わらべ歌とおはなし",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "わらべ歌",
+      "おはなし"
+    ]
+  },
+  {
+    "id": "omiya-2026-10-25-rhythm",
+    "centerId": "omiya",
+    "sourceDocumentId": "omiya-2026-10",
+    "date": "2026-10-25",
+    "startTime": "10:30",
+    "title": "リズムあそび",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "リズム"
+    ]
+  },
+  {
+    "id": "omiya-2026-10-26-warabeuta",
+    "centerId": "omiya",
+    "sourceDocumentId": "omiya-2026-10",
+    "date": "2026-10-26",
+    "startTime": "10:30",
+    "title": "わらべ歌とおはなし",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "わらべ歌",
+      "おはなし"
+    ]
+  },
+  {
+    "id": "omiya-2026-10-27-sukusuku",
+    "centerId": "omiya",
+    "sourceDocumentId": "omiya-2026-10",
+    "date": "2026-10-27",
+    "title": "すくすく測定",
+    "description": "身長・体重を測ってお子さんの成長を見守っていきましょう。10/21（水）から前日まで受付します。",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "予約制",
+      "身体測定"
+    ]
+  },
+  {
+    "id": "omiya-2026-10-28-sukusuku",
+    "centerId": "omiya",
+    "sourceDocumentId": "omiya-2026-10",
+    "date": "2026-10-28",
+    "title": "すくすく測定",
+    "description": "身長・体重を測ってお子さんの成長を見守っていきましょう。10/21（水）から前日まで受付します。",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "予約制",
+      "身体測定"
+    ]
+  },
+  {
+    "id": "omiya-2026-10-29-sukusuku",
+    "centerId": "omiya",
+    "sourceDocumentId": "omiya-2026-10",
+    "date": "2026-10-29",
+    "title": "すくすく測定",
+    "description": "身長・体重を測ってお子さんの成長を見守っていきましょう。10/21（水）から前日まで受付します。",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "予約制",
+      "身体測定"
+    ]
+  },
+  {
+    "id": "omiya-2026-10-30-online",
+    "centerId": "omiya",
+    "sourceDocumentId": "omiya-2026-10",
+    "date": "2026-10-30",
+    "title": "オンラインわくわくひろば",
+    "description": "午後。支援センターになかなか来られない方とオンライン（zoom）でお会いできたらと思います。簡単な手あそびなどを一緒にしませんか。10/27（火）より電話で受付します。",
+    "reservationRequired": true,
+    "location": "オンライン（zoom）",
+    "kind": "hiroba",
+    "origin": "extracted",
+    "tags": [
+      "予約制",
+      "オンライン"
+    ]
+  }
+]

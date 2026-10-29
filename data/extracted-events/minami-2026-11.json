@@ -1,0 +1,452 @@
+[
+  {
+    "id": "minami-2026-11-04-sokutei-am",
+    "centerId": "minami",
+    "sourceDocumentId": "minami-2026-11",
+    "date": "2026-11-04",
+    "title": "0歳身体測定",
+    "startTime": "09:30",
+    "endTime": "11:30",
+    "description": "測定後遊ぶことはできません。タオルをお持ちください。3歳未満のごきょうだいは一緒に測定できます",
+    "targetAge": "0歳",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "身体測定"
+    ]
+  },
+  {
+    "id": "minami-2026-11-04-sokutei-pm",
+    "centerId": "minami",
+    "sourceDocumentId": "minami-2026-11",
+    "date": "2026-11-04",
+    "title": "0歳身体測定",
+    "startTime": "13:30",
+    "endTime": "15:30",
+    "description": "測定後遊ぶことはできません。タオルをお持ちください。3歳未満のごきょうだいは一緒に測定できます",
+    "targetAge": "0歳",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "身体測定"
+    ]
+  },
+  {
+    "id": "minami-2026-11-05-eigo",
+    "centerId": "minami",
+    "sourceDocumentId": "minami-2026-11",
+    "date": "2026-11-05",
+    "title": "えいごであそぼう",
+    "startTime": "10:00",
+    "endTime": "10:30",
+    "description": "ラフィンイングリッシュスクールの先生と一緒に楽しく英語で遊びませんか？この日のにこにこ広場は11:00～",
+    "targetAge": "2歳",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "英語"
+    ]
+  },
+  {
+    "id": "minami-2026-11-06-hajime",
+    "centerId": "minami",
+    "sourceDocumentId": "minami-2026-11",
+    "date": "2026-11-06",
+    "title": "はじめのいっぽ",
+    "startTime": "10:00",
+    "endTime": "11:00",
+    "description": "センターに遊びに行ってみたいけど不安だなと感じている方、いっぽ踏み出してみませんか？広場のご利用が初めての方対象",
+    "targetAge": "0～2歳",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "初回向け"
+    ]
+  },
+  {
+    "id": "minami-2026-11-08-papa-massage-1",
+    "centerId": "minami",
+    "sourceDocumentId": "minami-2026-11",
+    "date": "2026-11-08",
+    "title": "パパとベビーマッサージ",
+    "startTime": "13:15",
+    "endTime": "14:15",
+    "description": "パパとお子さんのみの入室。床に敷くバスタオルをお持ちください。各10組、初めての方",
+    "targetAge": "0歳",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "パパ向け",
+      "ベビーマッサージ",
+      "予約制"
+    ]
+  },
+  {
+    "id": "minami-2026-11-08-papa-massage-2",
+    "centerId": "minami",
+    "sourceDocumentId": "minami-2026-11",
+    "date": "2026-11-08",
+    "title": "パパとベビーマッサージ",
+    "startTime": "14:30",
+    "endTime": "15:30",
+    "description": "パパとお子さんのみの入室。床に敷くバスタオルをお持ちください。各10組、初めての方",
+    "targetAge": "0歳",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "パパ向け",
+      "ベビーマッサージ",
+      "予約制"
+    ]
+  },
+  {
+    "id": "minami-2026-11-10-zero-hiroba",
+    "centerId": "minami",
+    "sourceDocumentId": "minami-2026-11",
+    "date": "2026-11-10",
+    "title": "0歳さんの広場",
+    "description": "午前0歳専用",
+    "targetAge": "0歳",
+    "reservationRequired": false,
+    "kind": "hiroba",
+    "origin": "extracted",
+    "tags": [
+      "月齢限定"
+    ]
+  },
+  {
+    "id": "minami-2026-11-10-kango",
+    "centerId": "minami",
+    "sourceDocumentId": "minami-2026-11",
+    "date": "2026-11-10",
+    "title": "看護師による育児相談",
+    "startTime": "09:00",
+    "description": "『0歳さんの広場』の時間内に相談室にて。①9:00～ ②9:45～ ③10:30～ ④11:15～（1組30分程度）。4組。相談のみ予約",
+    "targetAge": "0歳",
+    "reservationRequired": true,
+    "location": "相談室",
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "相談",
+      "予約制"
+    ]
+  },
+  {
+    "id": "minami-2026-11-11-sokutei-am",
+    "centerId": "minami",
+    "sourceDocumentId": "minami-2026-11",
+    "date": "2026-11-11",
+    "title": "1歳身体測定",
+    "startTime": "09:30",
+    "endTime": "11:30",
+    "description": "測定後遊ぶことはできません。タオルをお持ちください。3歳未満のごきょうだいは一緒に測定できます",
+    "targetAge": "1歳",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "身体測定"
+    ]
+  },
+  {
+    "id": "minami-2026-11-11-sokutei-pm",
+    "centerId": "minami",
+    "sourceDocumentId": "minami-2026-11",
+    "date": "2026-11-11",
+    "title": "1歳身体測定",
+    "startTime": "13:30",
+    "endTime": "15:30",
+    "description": "測定後遊ぶことはできません。タオルをお持ちください。3歳未満のごきょうだいは一緒に測定できます",
+    "targetAge": "1歳",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "身体測定"
+    ]
+  },
+  {
+    "id": "minami-2026-11-12-one-hiroba",
+    "centerId": "minami",
+    "sourceDocumentId": "minami-2026-11",
+    "date": "2026-11-12",
+    "title": "1歳さんの広場",
+    "description": "午前1歳専用",
+    "targetAge": "1歳",
+    "reservationRequired": false,
+    "kind": "hiroba",
+    "origin": "extracted",
+    "tags": [
+      "月齢限定"
+    ]
+  },
+  {
+    "id": "minami-2026-11-13-chiiku",
+    "centerId": "minami",
+    "sourceDocumentId": "minami-2026-11",
+    "date": "2026-11-13",
+    "title": "親子で知育遊び",
+    "startTime": "09:30",
+    "endTime": "10:00",
+    "description": "メーデルランドの先生と一緒に親子体操、歌、フラッシュカードなどの遊び。この日のにこにこ広場は11:00～",
+    "targetAge": "歩行可能なお子さん",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "知育"
+    ]
+  },
+  {
+    "id": "minami-2026-11-15-papa",
+    "centerId": "minami",
+    "sourceDocumentId": "minami-2026-11",
+    "date": "2026-11-15",
+    "title": "パパプログラム『にこにこパパの日』",
+    "startTime": "10:00",
+    "endTime": "11:00",
+    "description": "にこにこプチ運動会。パパとお子さんのみのイベントの時間。11:00～12:00はイベント参加の方のご家族も入館して一緒に遊べます。14組",
+    "targetAge": "1・2歳",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "パパ向け",
+      "予約制"
+    ]
+  },
+  {
+    "id": "minami-2026-11-16-two-hiroba",
+    "centerId": "minami",
+    "sourceDocumentId": "minami-2026-11",
+    "date": "2026-11-16",
+    "title": "2歳さんの広場",
+    "description": "午前2歳専用",
+    "targetAge": "2歳",
+    "reservationRequired": false,
+    "kind": "hiroba",
+    "origin": "extracted",
+    "tags": [
+      "月齢限定"
+    ]
+  },
+  {
+    "id": "minami-2026-11-18-ohanashi",
+    "centerId": "minami",
+    "sourceDocumentId": "minami-2026-11",
+    "date": "2026-11-18",
+    "title": "あかちゃんお話会",
+    "startTime": "10:00",
+    "endTime": "10:30",
+    "description": "武蔵浦和図書館共催。パネルシアターや絵本の読み聞かせなど。この日のにこにこ広場は11:00～",
+    "targetAge": "0～2歳",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "おはなし会"
+    ]
+  },
+  {
+    "id": "minami-2026-11-19-warabeuta",
+    "centerId": "minami",
+    "sourceDocumentId": "minami-2026-11",
+    "date": "2026-11-19",
+    "title": "わらべ唄とお話会",
+    "startTime": "10:00",
+    "endTime": "10:30",
+    "description": "お話サークルの方に、わらべ唄と絵本の読み聞かせをしていただきます。この日のにこにこ広場は11:00～",
+    "targetAge": "0～2歳",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "わらべうた",
+      "おはなし会"
+    ]
+  },
+  {
+    "id": "minami-2026-11-20-futago",
+    "centerId": "minami",
+    "sourceDocumentId": "minami-2026-11",
+    "date": "2026-11-20",
+    "title": "ふたごの集い",
+    "startTime": "10:00",
+    "endTime": "10:45",
+    "description": "南区保健センター主催。詳細・ご予約はさいたま市ホームページをご覧ください",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "ふたご",
+      "予約制"
+    ]
+  },
+  {
+    "id": "minami-2026-11-20-kokkaku-1",
+    "centerId": "minami",
+    "sourceDocumentId": "minami-2026-11",
+    "date": "2026-11-20",
+    "title": "産後ママの骨格ケア",
+    "startTime": "13:15",
+    "endTime": "13:45",
+    "description": "疲れていても時間がなくてもできる骨格を整えるセルフケアをお伝えします。各10組、初めての方",
+    "targetAge": "0歳",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "産後ケア",
+      "予約制"
+    ]
+  },
+  {
+    "id": "minami-2026-11-20-kokkaku-2",
+    "centerId": "minami",
+    "sourceDocumentId": "minami-2026-11",
+    "date": "2026-11-20",
+    "title": "産後ママの骨格ケア",
+    "startTime": "14:30",
+    "endTime": "15:00",
+    "description": "疲れていても時間がなくてもできる骨格を整えるセルフケアをお伝えします。各10組、初めての方",
+    "targetAge": "0歳",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "産後ケア",
+      "予約制"
+    ]
+  },
+  {
+    "id": "minami-2026-11-24-hamigaki",
+    "centerId": "minami",
+    "sourceDocumentId": "minami-2026-11",
+    "date": "2026-11-24",
+    "title": "あかちゃん歯磨き講座",
+    "startTime": "10:00",
+    "endTime": "11:00",
+    "description": "保健センターの歯科衛生士によるあかちゃん歯磨き講座。30組",
+    "targetAge": "歯が生えてきたお子さん",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "歯磨き",
+      "予約制"
+    ]
+  },
+  {
+    "id": "minami-2026-11-25-sokutei-am",
+    "centerId": "minami",
+    "sourceDocumentId": "minami-2026-11",
+    "date": "2026-11-25",
+    "title": "2歳身体測定",
+    "startTime": "09:30",
+    "endTime": "11:30",
+    "description": "測定後遊ぶことはできません。タオルをお持ちください。3歳未満のごきょうだいは一緒に測定できます",
+    "targetAge": "2歳",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "身体測定"
+    ]
+  },
+  {
+    "id": "minami-2026-11-25-sokutei-pm",
+    "centerId": "minami",
+    "sourceDocumentId": "minami-2026-11",
+    "date": "2026-11-25",
+    "title": "2歳身体測定",
+    "startTime": "13:30",
+    "endTime": "15:30",
+    "description": "測定後遊ぶことはできません。タオルをお持ちください。3歳未満のごきょうだいは一緒に測定できます",
+    "targetAge": "2歳",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "身体測定"
+    ]
+  },
+  {
+    "id": "minami-2026-11-26-zoom-massage",
+    "centerId": "minami",
+    "sourceDocumentId": "minami-2026-11",
+    "date": "2026-11-26",
+    "title": "Zoom ベビーマッサージ",
+    "startTime": "14:00",
+    "endTime": "14:30",
+    "description": "オンラインイベント。広場のマッサージとはまた違ったプログラム。5組",
+    "targetAge": "0歳",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "オンライン",
+      "ベビーマッサージ",
+      "予約制"
+    ]
+  },
+  {
+    "id": "minami-2026-11-26-ehon",
+    "centerId": "minami",
+    "sourceDocumentId": "minami-2026-11",
+    "date": "2026-11-26",
+    "title": "あかちゃん絵本読み聞かせ",
+    "startTime": "15:00",
+    "endTime": "15:30",
+    "description": "絵本の会「とまと」の方々に、楽しく絵本の読み聞かせをしていただきます",
+    "targetAge": "0～2歳",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "絵本"
+    ]
+  },
+  {
+    "id": "minami-2026-11-27-zoom-meneki-1",
+    "centerId": "minami",
+    "sourceDocumentId": "minami-2026-11",
+    "date": "2026-11-27",
+    "title": "Zoom 免疫力アップ×ふれあい遊び",
+    "startTime": "14:00",
+    "endTime": "14:30",
+    "description": "オンラインイベント。おうちでできるふれあい遊びで「風邪に負けないからだづくり」。助産師と一緒に。5組",
+    "targetAge": "0・1歳",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "オンライン",
+      "予約制"
+    ]
+  },
+  {
+    "id": "minami-2026-11-27-zoom-meneki-2",
+    "centerId": "minami",
+    "sourceDocumentId": "minami-2026-11",
+    "date": "2026-11-27",
+    "title": "Zoom 免疫力アップ×ふれあい遊び",
+    "startTime": "15:00",
+    "endTime": "15:30",
+    "description": "オンラインイベント。おうちでできるふれあい遊びで「風邪に負けないからだづくり」。助産師と一緒に。5組",
+    "targetAge": "0・1歳",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "オンライン",
+      "予約制"
+    ]
+  }
+]

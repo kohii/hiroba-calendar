@@ -1,0 +1,408 @@
+[
+  {
+    "id": "urawa-2026-11-04-sokutei-am",
+    "centerId": "urawa",
+    "sourceDocumentId": "urawa-2026-11",
+    "date": "2026-11-04",
+    "title": "1歳児専用 身体測定",
+    "startTime": "09:30",
+    "endTime": "11:30",
+    "description": "フェイスタオルをご持参ください。にこにこ広場は終日お休み（測定のみの利用）。3歳未満のごきょうだいは一緒に測定できます",
+    "targetAge": "1歳児",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "身体測定"
+    ]
+  },
+  {
+    "id": "urawa-2026-11-04-sokutei-pm",
+    "centerId": "urawa",
+    "sourceDocumentId": "urawa-2026-11",
+    "date": "2026-11-04",
+    "title": "1歳児専用 身体測定",
+    "startTime": "13:30",
+    "endTime": "15:30",
+    "description": "フェイスタオルをご持参ください。にこにこ広場は終日お休み（測定のみの利用）。3歳未満のごきょうだいは一緒に測定できます",
+    "targetAge": "1歳児",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "身体測定"
+    ]
+  },
+  {
+    "id": "urawa-2026-11-05-sokutei-am",
+    "centerId": "urawa",
+    "sourceDocumentId": "urawa-2026-11",
+    "date": "2026-11-05",
+    "title": "0歳児専用 身体測定",
+    "startTime": "09:30",
+    "endTime": "11:30",
+    "description": "フェイスタオルをご持参ください。にこにこ広場は終日お休み（測定のみの利用）。3歳未満のごきょうだいは一緒に測定できます",
+    "targetAge": "0歳児",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "身体測定"
+    ]
+  },
+  {
+    "id": "urawa-2026-11-05-sokutei-pm",
+    "centerId": "urawa",
+    "sourceDocumentId": "urawa-2026-11",
+    "date": "2026-11-05",
+    "title": "0歳児専用 身体測定",
+    "startTime": "13:30",
+    "endTime": "15:30",
+    "description": "フェイスタオルをご持参ください。にこにこ広場は終日お休み（測定のみの利用）。3歳未満のごきょうだいは一緒に測定できます",
+    "targetAge": "0歳児",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "身体測定"
+    ]
+  },
+  {
+    "id": "urawa-2026-11-05-kango-am",
+    "centerId": "urawa",
+    "sourceDocumentId": "urawa-2026-11",
+    "date": "2026-11-05",
+    "title": "看護師による育児相談",
+    "startTime": "09:30",
+    "endTime": "11:30",
+    "description": "保育園での豊かな経験をもつ看護師が相談に応じます。先着5組、おひとり30分",
+    "reservationRequired": true,
+    "location": "相談室",
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "相談",
+      "予約制"
+    ]
+  },
+  {
+    "id": "urawa-2026-11-05-kango-pm",
+    "centerId": "urawa",
+    "sourceDocumentId": "urawa-2026-11",
+    "date": "2026-11-05",
+    "title": "看護師による育児相談",
+    "startTime": "13:30",
+    "endTime": "14:45",
+    "description": "保育園での豊かな経験をもつ看護師が相談に応じます。先着5組、おひとり30分",
+    "reservationRequired": true,
+    "location": "相談室",
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "相談",
+      "予約制"
+    ]
+  },
+  {
+    "id": "urawa-2026-11-06-salon",
+    "centerId": "urawa",
+    "sourceDocumentId": "urawa-2026-11",
+    "date": "2026-11-06",
+    "title": "サンサンサロン",
+    "startTime": "09:30",
+    "endTime": "11:30",
+    "description": "公認心理士・発達心理学講師・子育て支援員に相談をされたことのある方や、発達に不安や心配のあるお子さんとご家族のふれあいの場。子育て支援員が寄り添います",
+    "targetAge": "0～2歳",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "サロン",
+      "予約制"
+    ]
+  },
+  {
+    "id": "urawa-2026-11-08-papa-warabeuta",
+    "centerId": "urawa",
+    "sourceDocumentId": "urawa-2026-11",
+    "date": "2026-11-08",
+    "title": "パパサンデー『伝承わらべうた』",
+    "startTime": "10:00",
+    "endTime": "11:00",
+    "description": "「伝承のわらべうた」には子育てを豊かにするヒントがたくさんあります。パパならではのダイナミックな動きのあるわらべうたもご紹介します。先着15組。申込10/20(火)～",
+    "targetAge": "0～2歳児",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "パパ向け",
+      "わらべうた",
+      "予約制"
+    ]
+  },
+  {
+    "id": "urawa-2026-11-11-zero-hiroba",
+    "centerId": "urawa",
+    "sourceDocumentId": "urawa-2026-11",
+    "date": "2026-11-11",
+    "title": "0歳児専用広場",
+    "description": "《午後》0歳児専用広場◎（◎…その他の場所で遊べます）",
+    "targetAge": "0歳児",
+    "reservationRequired": false,
+    "kind": "hiroba",
+    "origin": "extracted",
+    "tags": [
+      "月齢限定"
+    ]
+  },
+  {
+    "id": "urawa-2026-11-11-oppai",
+    "centerId": "urawa",
+    "sourceDocumentId": "urawa-2026-11",
+    "date": "2026-11-11",
+    "title": "おっぱい相談",
+    "startTime": "14:30",
+    "endTime": "15:30",
+    "description": "助産師による相談。先着4名、おひとり15分",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "相談",
+      "予約制"
+    ]
+  },
+  {
+    "id": "urawa-2026-11-13-onetwo-hiroba",
+    "centerId": "urawa",
+    "sourceDocumentId": "urawa-2026-11",
+    "date": "2026-11-13",
+    "title": "1・2歳児専用広場",
+    "description": "《午前》1・2歳児専用広場",
+    "targetAge": "1・2歳児",
+    "reservationRequired": false,
+    "kind": "hiroba",
+    "origin": "extracted",
+    "tags": [
+      "月齢限定"
+    ]
+  },
+  {
+    "id": "urawa-2026-11-13-chiiku-ritomikku",
+    "centerId": "urawa",
+    "sourceDocumentId": "urawa-2026-11",
+    "date": "2026-11-13",
+    "title": "知育体操リトミック",
+    "startTime": "11:00",
+    "endTime": "11:30",
+    "description": "リトミック、絵カード、歌などの知育レッスン＋親子体操。歩行できるお子さん向けの内容です",
+    "targetAge": "1・2歳",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "リトミック",
+      "知育"
+    ]
+  },
+  {
+    "id": "urawa-2026-11-15-papa-bousai",
+    "centerId": "urawa",
+    "sourceDocumentId": "urawa-2026-11",
+    "date": "2026-11-15",
+    "title": "パパのじかん『親子で学ぼう防災』",
+    "startTime": "14:00",
+    "endTime": "15:00",
+    "description": "「災害時も子どもの遊びは大切」をテーマに、いろいろな遊び（絵本、わらべうた、手遊びなど）を親子で体験します。地域の防災士が参加します。先着15組。申込10/20(火)～",
+    "targetAge": "0～2歳児",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "パパ向け",
+      "防災",
+      "予約制"
+    ]
+  },
+  {
+    "id": "urawa-2026-11-17-salon-ouen",
+    "centerId": "urawa",
+    "sourceDocumentId": "urawa-2026-11",
+    "date": "2026-11-17",
+    "title": "子育て応援サロン～浦和区へようこそ～",
+    "startTime": "10:00",
+    "endTime": "11:30",
+    "description": "初めての子育て中の方や浦和区に転入して間もない親子を対象に地域情報の提供と参加者同士の交流などを行います。先着15組。申込10/20(火)～",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "サロン",
+      "予約制"
+    ]
+  },
+  {
+    "id": "urawa-2026-11-19-tagengo",
+    "centerId": "urawa",
+    "sourceDocumentId": "urawa-2026-11",
+    "date": "2026-11-19",
+    "title": "親子で遊ぼう♪多言語",
+    "startTime": "13:30",
+    "endTime": "14:00",
+    "description": "いろいろな国の歌や踊り、手遊びなどで多言語に親しみましょう！",
+    "targetAge": "0～2歳児",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "多言語"
+    ]
+  },
+  {
+    "id": "urawa-2026-11-20-warabeuta",
+    "centerId": "urawa",
+    "sourceDocumentId": "urawa-2026-11",
+    "date": "2026-11-20",
+    "title": "親子でわらべうた",
+    "startTime": "11:00",
+    "endTime": "11:30",
+    "description": "おはなしサークルの方によるわらべうたと、おはなしの読み聞かせです",
+    "targetAge": "0～2歳児",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "わらべうた"
+    ]
+  },
+  {
+    "id": "urawa-2026-11-24-zero-hiroba",
+    "centerId": "urawa",
+    "sourceDocumentId": "urawa-2026-11",
+    "date": "2026-11-24",
+    "title": "0歳児専用広場",
+    "description": "《午後》0歳児専用広場◎（◎…その他の場所で遊べます）",
+    "targetAge": "0歳児",
+    "reservationRequired": false,
+    "kind": "hiroba",
+    "origin": "extracted",
+    "tags": [
+      "月齢限定"
+    ]
+  },
+  {
+    "id": "urawa-2026-11-24-dakko",
+    "centerId": "urawa",
+    "sourceDocumentId": "urawa-2026-11",
+    "date": "2026-11-24",
+    "title": "気持ちのいい抱っこから始まる赤ちゃん何でも相談",
+    "startTime": "13:00",
+    "endTime": "15:00",
+    "description": "助産師による相談。先着4組、おひとり30分",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "相談",
+      "予約制"
+    ]
+  },
+  {
+    "id": "urawa-2026-11-25-onetwo-hiroba",
+    "centerId": "urawa",
+    "sourceDocumentId": "urawa-2026-11",
+    "date": "2026-11-25",
+    "title": "1・2歳児専用広場",
+    "description": "《午前》1・2歳児専用広場",
+    "targetAge": "1・2歳児",
+    "reservationRequired": false,
+    "kind": "hiroba",
+    "origin": "extracted",
+    "tags": [
+      "月齢限定"
+    ]
+  },
+  {
+    "id": "urawa-2026-11-25-norimono",
+    "centerId": "urawa",
+    "sourceDocumentId": "urawa-2026-11",
+    "date": "2026-11-25",
+    "title": "乗り物の日",
+    "description": "《午前》1・2歳児専用広場。※乗用玩具を出します",
+    "targetAge": "1・2歳児",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "乗り物"
+    ]
+  },
+  {
+    "id": "urawa-2026-11-26-rinyushoku-1",
+    "centerId": "urawa",
+    "sourceDocumentId": "urawa-2026-11",
+    "date": "2026-11-26",
+    "title": "離乳食講習会①中期食～後期食",
+    "startTime": "13:30",
+    "endTime": "14:15",
+    "description": "認可保育園の栄養士と保育士によるお話。離乳食中期食・後期食についての進め方をお話します。先着15組。申込11/2(月)～",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "離乳食",
+      "予約制"
+    ]
+  },
+  {
+    "id": "urawa-2026-11-26-rinyushoku-2",
+    "centerId": "urawa",
+    "sourceDocumentId": "urawa-2026-11",
+    "date": "2026-11-26",
+    "title": "離乳食講習会②後期食以降",
+    "startTime": "14:45",
+    "endTime": "15:30",
+    "description": "認可保育園の栄養士と保育士によるお話。離乳食後期以降の進め方や疑問や悩みに沿ってお話します。先着15組。申込11/2(月)～",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "離乳食",
+      "予約制"
+    ]
+  },
+  {
+    "id": "urawa-2026-11-27-minnanoheya-1",
+    "centerId": "urawa",
+    "sourceDocumentId": "urawa-2026-11",
+    "date": "2026-11-27",
+    "title": "みんなのお部屋（オンラインのみ）",
+    "startTime": "13:30",
+    "endTime": "14:30",
+    "description": "Zoomで行うオンライン行事。ボランティア登録の打ち合わせと「プレパパ・ママの会」。先着4組。申込10/20(火)～",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "オンライン",
+      "予約制"
+    ]
+  },
+  {
+    "id": "urawa-2026-11-27-minnanoheya-2",
+    "centerId": "urawa",
+    "sourceDocumentId": "urawa-2026-11",
+    "date": "2026-11-27",
+    "title": "みんなのお部屋（オンラインのみ）",
+    "startTime": "14:45",
+    "endTime": "15:45",
+    "description": "Zoomで行うオンライン行事。ボランティア登録の打ち合わせと「プレパパ・ママの会」。先着4組。申込10/20(火)～",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "オンライン",
+      "予約制"
+    ]
+  }
+]

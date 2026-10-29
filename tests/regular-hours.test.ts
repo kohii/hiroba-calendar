@@ -135,17 +135,31 @@ describe("fillRegularHours", () => {
     assert.equal(hasRegular(events, "2026-10-06"), true);
   });
 
-  it("does not add a second row on a day that already has a hiroba event", () => {
-    const existing = fixtureEvent({
-      id: "extracted-hiroba",
-      date: "2026-10-06",
-      kind: "hiroba",
-      title: "ひろば",
+  it("fills the open half next to an age-limited hiroba row in the closed half", () => {
+    const policy = fillPolicy({
+      hoursQuote: "9：00～ 12：00 13： 00～ 16：00",
+      windows: [
+        { start: "09:00", end: "12:00" },
+        { start: "13:00", end: "16:00" },
+      ],
     });
-    const events = fillMonth(fillPolicy(), "2026-10", [existing]);
-    assert.equal(hasRegular(events, "2026-10-06"), false);
-    assert.ok(events.some((event) => event.id === "extracted-hiroba"));
-    assert.equal(hasRegular(events, "2026-10-07"), true);
+    const existing = fixtureEvent({
+      id: "zero-age",
+      date: "2026-11-10",
+      kind: "hiroba",
+      title: "0歳さんの広場",
+    });
+    const events = fillMonth(policy, "2026-11", [existing], [], [
+      {
+        ...fixtureDoc("2026-11"),
+        closures: [{ date: "2026-11-10", scope: "am", quote: "午前0歳専用" }],
+      },
+    ]);
+    assert.ok(events.some((event) => event.id === "zero-age"));
+    assert.equal(
+      events.find((event) => event.id === regularId("2026-11-10"))?.description,
+      "13： 00～ 16：00",
+    );
   });
 
   it("adds a regular-hours row on a day that only has an event", () => {
@@ -268,38 +282,31 @@ describe("fillRegularHours", () => {
     );
   });
 
-  it("drops an extracted hiroba row on an all-day closure and keeps the program", () => {
+  it("keeps an age-limited hiroba row on a day the regular hiroba is closed in both halves", () => {
     const events = fillMonth(
       fillPolicy(),
-      "2026-10",
+      "2026-11",
       [
         fixtureEvent({
-          id: "open-plaza",
-          date: "2026-10-02",
+          id: "momo-time",
+          date: "2026-11-06",
           kind: "hiroba",
-          title: "ぴよぴよ広場",
-        }),
-        fixtureEvent({
-          id: "cleaning-note",
-          date: "2026-10-02",
-          kind: "event",
-          title: "定期清掃",
+          title: "ももちゃんタイム",
         }),
       ],
       [],
       [
         {
-          ...fixtureDoc("2026-10"),
-          closures: [{ date: "2026-10-02", scope: "all-day", quote: "定期清掃の為休館" }],
+          ...fixtureDoc("2026-11"),
+          closures: [
+            { date: "2026-11-06", scope: "am", quote: "作って遊ぼう！" },
+            { date: "2026-11-06", scope: "pm", quote: "ももちゃんタイム" },
+          ],
         },
       ],
     );
-    assert.equal(
-      events.some((event) => event.id === "open-plaza"),
-      false,
-    );
-    assert.ok(events.some((event) => event.id === "cleaning-note"));
-    assert.equal(hasRegular(events, "2026-10-02"), false);
+    assert.ok(events.some((event) => event.id === "momo-time"));
+    assert.equal(hasRegular(events, "2026-11-06"), false);
   });
 
   it("closes the year-end range across the year boundary", () => {
@@ -415,11 +422,15 @@ describe("published schedule", () => {
       );
     assert.equal(rows("seiga", "2026-10").length, 25);
     assert.equal(rows("hinadori", "2026-10").length, 13);
-    assert.equal(rows("seiga", "2026-11").length, 0);
+    assert.equal(rows("seiga", "2026-11").length, 21);
     assert.equal(rows("hinadori", "2026-11").length, 0);
-    for (const centerId of ["seiga", "hinadori"]) {
+    for (const [centerId, month] of [
+      ["seiga", "2026-10"],
+      ["seiga", "2026-11"],
+      ["hinadori", "2026-10"],
+    ]) {
       assert.equal(
-        rows(centerId, "2026-10").some((event) => event.origin === "regular-hours"),
+        rows(centerId, month).some((event) => event.origin === "regular-hours"),
         false,
       );
     }
@@ -432,6 +443,32 @@ describe("published schedule", () => {
         (event) => event.id === "hinadori-2026-10-09-hiroba" && event.title === "子育て広場",
       ),
       true,
+    );
+  });
+
+  it("has no hiroba row that runs through the lunch break", () => {
+    const spanning = dataset.events.filter(
+      (event) =>
+        event.kind === "hiroba" &&
+        event.startTime !== undefined &&
+        event.endTime !== undefined &&
+        event.startTime < "13:00" &&
+        event.endTime > "12:00" &&
+        CENTERS.find((center) => center.id === event.centerId)?.regularHours.decision === "fill",
+    );
+    assert.deepStrictEqual(spanning, []);
+  });
+
+  it("closes yono on the cleaning day and splits its regular hours", () => {
+    const yono = (date: string) =>
+      dataset.events.filter((event) => event.centerId === "yono" && event.date === date);
+    assert.deepStrictEqual(yono("2026-11-02"), []);
+    assert.equal(yono("2026-11-01")[0]?.description, "９：００～１２：００ １３：００～１６：００");
+  });
+
+  it("publishes urawa November", () => {
+    assert.ok(
+      dataset.events.some((event) => event.centerId === "urawa" && event.date.startsWith("2026-11")),
     );
   });
 

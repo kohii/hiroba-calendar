@@ -1,0 +1,230 @@
+[
+  {
+    "id": "omiya-2026-11-06-warabeuta",
+    "centerId": "omiya",
+    "sourceDocumentId": "omiya-2026-11",
+    "date": "2026-11-06",
+    "startTime": "10:30",
+    "title": "わらべ歌とおはなし",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "わらべ歌",
+      "おはなし"
+    ]
+  },
+  {
+    "id": "omiya-2026-11-08-concert",
+    "centerId": "omiya",
+    "sourceDocumentId": "omiya-2026-11",
+    "date": "2026-11-08",
+    "startTime": "10:30",
+    "title": "うたのコンサート",
+    "description": "午前。うたを歌ったり、音楽に合わせてリズムをとったり親子で楽しい時間を過ごしませんか。11/4（水）から受付します。",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "予約制",
+      "音楽"
+    ]
+  },
+  {
+    "id": "omiya-2026-11-10-magosodate",
+    "centerId": "omiya",
+    "sourceDocumentId": "omiya-2026-11",
+    "date": "2026-11-10",
+    "title": "孫育て講座",
+    "description": "お申込み済の方",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "講座"
+    ]
+  },
+  {
+    "id": "omiya-2026-11-12-tsukutte",
+    "centerId": "omiya",
+    "sourceDocumentId": "omiya-2026-11",
+    "date": "2026-11-12",
+    "startTime": "10:00",
+    "endTime": "10:30",
+    "title": "作ってあそぼう！",
+    "description": "お子さんと一緒にお絵かきやシールはりなど工作を楽しみましょう。申し込みは不要です。",
+    "targetAge": "1歳半～3歳未満",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "工作"
+    ]
+  },
+  {
+    "id": "omiya-2026-11-15-oukyuteate",
+    "centerId": "omiya",
+    "sourceDocumentId": "omiya-2026-11",
+    "date": "2026-11-15",
+    "title": "応急手当親子講習",
+    "description": "午前。申し込み済の方",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "講座"
+    ]
+  },
+  {
+    "id": "omiya-2026-11-17-magosodate",
+    "centerId": "omiya",
+    "sourceDocumentId": "omiya-2026-11",
+    "date": "2026-11-17",
+    "title": "孫育て講座",
+    "description": "お申込み済の方",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "講座"
+    ]
+  },
+  {
+    "id": "omiya-2026-11-18-birthday",
+    "centerId": "omiya",
+    "sourceDocumentId": "omiya-2026-11",
+    "date": "2026-11-18",
+    "startTime": "10:30",
+    "title": "11月のハッピーバースデー",
+    "description": "お誕生月のお祝い。11月のお誕生月のお子さんのお祝いをします。予めお申し込みください。受付は11/12（木）から17（火）。定員あり。",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "予約制",
+      "誕生日会"
+    ]
+  },
+  {
+    "id": "omiya-2026-11-20-yakuzaishi",
+    "centerId": "omiya",
+    "sourceDocumentId": "omiya-2026-11",
+    "date": "2026-11-20",
+    "startTime": "10:00",
+    "endTime": "11:30",
+    "title": "薬剤師さんのお話「子どもの感染症に備えましょう」",
+    "description": "講師：薬剤師 中村光伸氏。11/9（月）から受付します。",
+    "targetAge": "3歳未満の親子",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "予約制",
+      "講座"
+    ]
+  },
+  {
+    "id": "omiya-2026-11-24-magosodate",
+    "centerId": "omiya",
+    "sourceDocumentId": "omiya-2026-11",
+    "date": "2026-11-24",
+    "title": "孫育て講座",
+    "description": "午前。お申込み済の方",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "講座"
+    ]
+  },
+  {
+    "id": "omiya-2026-11-25-hokenshi",
+    "centerId": "omiya",
+    "sourceDocumentId": "omiya-2026-11",
+    "date": "2026-11-25",
+    "title": "保健師さんとお話",
+    "description": "午後。子育ての悩みや不安などを保健師さんに相談してみませんか。11/19（木）から受付します。",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "予約制",
+      "相談"
+    ]
+  },
+  {
+    "id": "omiya-2026-11-26-ikujigakkyu",
+    "centerId": "omiya",
+    "sourceDocumentId": "omiya-2026-11",
+    "date": "2026-11-26",
+    "title": "育児学級",
+    "description": "午後。予約済の方",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "予約制"
+    ]
+  },
+  {
+    "id": "omiya-2026-11-26-sukusuku",
+    "centerId": "omiya",
+    "sourceDocumentId": "omiya-2026-11",
+    "date": "2026-11-26",
+    "title": "すくすく測定",
+    "description": "午前。身長・体重を測ってお子さんの成長を見守っていきましょう。11/20（金）から前日まで受付します。",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "予約制",
+      "身体測定"
+    ]
+  },
+  {
+    "id": "omiya-2026-11-27-sukusuku",
+    "centerId": "omiya",
+    "sourceDocumentId": "omiya-2026-11",
+    "date": "2026-11-27",
+    "title": "すくすく測定",
+    "description": "身長・体重を測ってお子さんの成長を見守っていきましょう。11/20（金）から前日まで受付します。",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "予約制",
+      "身体測定"
+    ]
+  },
+  {
+    "id": "omiya-2026-11-30-online",
+    "centerId": "omiya",
+    "sourceDocumentId": "omiya-2026-11",
+    "date": "2026-11-30",
+    "title": "オンラインわくわくひろば",
+    "description": "午後。支援センターになかなか来られない方とオンライン（zoom）でお会いできたらと思います。簡単な手あそびなどを一緒にしませんか。11/26（木）より電話で受付します。",
+    "reservationRequired": true,
+    "location": "オンライン（zoom）",
+    "kind": "hiroba",
+    "origin": "extracted",
+    "tags": [
+      "予約制",
+      "オンライン"
+    ]
+  },
+  {
+    "id": "omiya-2026-11-30-warabeuta",
+    "centerId": "omiya",
+    "sourceDocumentId": "omiya-2026-11",
+    "date": "2026-11-30",
+    "startTime": "10:30",
+    "title": "わらべ歌とおはなし",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "わらべ歌",
+      "おはなし"
+    ]
+  }
+]

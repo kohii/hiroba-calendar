@@ -1,54 +1,55 @@
 [
   {
-    "id": "nishi-2026-10-01-minna-am",
+    "id": "nishi-2026-10-02-momo-pm",
     "centerId": "nishi",
     "sourceDocumentId": "nishi-2026-10",
-    "date": "2026-10-01",
-    "startTime": "09:00",
-    "endTime": "12:00",
-    "title": "みんなのひろば",
-    "description": "年齢制限はありません",
-    "reservationRequired": false,
-    "tags": ["自由遊び"]
-  },
-  {
-    "id": "nishi-2026-10-01-momo-pm",
-    "centerId": "nishi",
-    "sourceDocumentId": "nishi-2026-10",
-    "date": "2026-10-01",
+    "date": "2026-10-02",
     "startTime": "13:00",
     "endTime": "16:00",
     "title": "ももちゃんタイム",
     "description": "1歳2か月までのお子様専用の時間です",
-    "targetAge": "1歳2か月まで",
+    "targetAge": "1歳2か月迄",
     "reservationRequired": false,
-    "tags": ["月齢限定"]
+    "tags": [
+      "月齢限定"
+    ],
+    "kind": "hiroba",
+    "origin": "extracted"
   },
   {
-    "id": "nishi-2026-10-02-shika",
-    "centerId": "nishi",
-    "sourceDocumentId": "nishi-2026-10",
-    "date": "2026-10-02",
-    "startTime": "10:00",
-    "endTime": "12:00",
-    "title": "歯科衛生士講座「歯並びについて」",
-    "description": "シリーズⅡ。10:15開始",
-    "targetAge": "0～3歳未満",
-    "reservationRequired": true,
-    "tags": ["講座", "予約制"]
-  },
-  {
-    "id": "nishi-2026-10-05-shintai",
+    "id": "nishi-2026-10-05-sokutei-am",
     "centerId": "nishi",
     "sourceDocumentId": "nishi-2026-10",
     "date": "2026-10-05",
     "startTime": "09:00",
     "endTime": "12:00",
     "title": "みんなのひろば・身体測定",
-    "description": "身体測定も実施します。バスタオルをご持参ください",
+    "description": "身体測定",
     "targetAge": "1歳3か月以上",
     "reservationRequired": false,
-    "tags": ["身体測定"]
+    "tags": [
+      "身体測定"
+    ],
+    "kind": "event",
+    "origin": "extracted"
+  },
+  {
+    "id": "nishi-2026-10-05-momo-pm",
+    "centerId": "nishi",
+    "sourceDocumentId": "nishi-2026-10",
+    "date": "2026-10-05",
+    "startTime": "13:00",
+    "endTime": "16:00",
+    "title": "ももちゃんタイム",
+    "description": "身体測定 ※バスタオル持参",
+    "targetAge": "1歳2か月迄",
+    "reservationRequired": false,
+    "tags": [
+      "月齢限定",
+      "身体測定"
+    ],
+    "kind": "hiroba",
+    "origin": "extracted"
   },
   {
     "id": "nishi-2026-10-06-gohan",
@@ -57,11 +58,33 @@
     "date": "2026-10-06",
     "startTime": "10:00",
     "endTime": "12:00",
-    "title": "歯科衛生士講座「ごはんのはなし」",
-    "description": "シリーズⅢ。10:15開始",
-    "targetAge": "0～3歳未満",
+    "title": "歯科衛生士講座 シリーズⅢ「ごはんのはなし」",
+    "description": "※10:15開始",
     "reservationRequired": true,
-    "tags": ["講座", "予約制"]
+    "tags": [
+      "講座",
+      "予約制"
+    ],
+    "kind": "event",
+    "origin": "extracted"
+  },
+  {
+    "id": "nishi-2026-10-06-momo-hattatsu",
+    "centerId": "nishi",
+    "sourceDocumentId": "nishi-2026-10",
+    "date": "2026-10-06",
+    "startTime": "13:00",
+    "endTime": "16:00",
+    "title": "ももちゃんタイム『あかちゃんの発達講座Ⅰ』",
+    "description": "※13:15開始",
+    "targetAge": "寝返り前まで",
+    "reservationRequired": true,
+    "tags": [
+      "講座",
+      "予約制"
+    ],
+    "kind": "event",
+    "origin": "extracted"
   },
   {
     "id": "nishi-2026-10-08-mogumogu",
@@ -71,10 +94,32 @@
     "startTime": "10:30",
     "endTime": "11:30",
     "title": "もぐもぐ教室",
-    "description": "離乳食・材料費徴収。食器・食具持参。10:15入室",
-    "targetAge": "離乳食開始〜",
+    "description": "離乳食・材料費徴収（食器・食具持参）。※10:15入室。午後のみんなのひろばは「13:30～16:00」",
     "reservationRequired": true,
-    "tags": ["離乳食", "予約制", "有料"]
+    "tags": [
+      "離乳食",
+      "予約制",
+      "有料"
+    ],
+    "kind": "event",
+    "origin": "extracted"
+  },
+  {
+    "id": "nishi-2026-10-09-momo-pm",
+    "centerId": "nishi",
+    "sourceDocumentId": "nishi-2026-10",
+    "date": "2026-10-09",
+    "startTime": "13:00",
+    "endTime": "16:00",
+    "title": "ももちゃんタイム",
+    "description": "1歳2か月までのお子様専用の時間です",
+    "targetAge": "1歳2か月迄",
+    "reservationRequired": false,
+    "tags": [
+      "月齢限定"
+    ],
+    "kind": "hiroba",
+    "origin": "extracted"
   },
   {
     "id": "nishi-2026-10-13-oimo",
@@ -84,11 +129,33 @@
     "startTime": "10:15",
     "endTime": "11:00",
     "title": "お芋掘り",
-    "description": "10時集合。現地集合・現地解散。保険料おひとり50円＋サツマイモ掘り代3株330円",
+    "description": "10時集合。現地集合・現地解散。※保険料・お芋代有（保険料おひとり50円＋サツマイモ掘り代3株330円）。雨天予備日は10/16（金）・19（月）",
     "targetAge": "1歳以上",
     "reservationRequired": true,
     "location": "現地",
-    "tags": ["屋外イベント", "予約制", "有料"]
+    "tags": [
+      "屋外イベント",
+      "予約制",
+      "有料"
+    ],
+    "kind": "event",
+    "origin": "extracted"
+  },
+  {
+    "id": "nishi-2026-10-13-ichisaiji",
+    "centerId": "nishi",
+    "sourceDocumentId": "nishi-2026-10",
+    "date": "2026-10-13",
+    "startTime": "13:00",
+    "endTime": "16:00",
+    "title": "1歳児ランド",
+    "targetAge": "1歳以上～2歳未満",
+    "reservationRequired": false,
+    "tags": [
+      "月齢限定"
+    ],
+    "kind": "hiroba",
+    "origin": "extracted"
   },
   {
     "id": "nishi-2026-10-14-futago",
@@ -98,10 +165,66 @@
     "startTime": "10:00",
     "endTime": "11:30",
     "title": "ふたごの集い",
-    "description": "西区保健センターとの共催。10:15開始",
-    "targetAge": "0～3歳未満",
+    "description": "西区保健センターとの共催。※10:15開始",
     "reservationRequired": true,
-    "tags": ["多胎児向け", "予約制"]
+    "tags": [
+      "多胎児向け",
+      "予約制"
+    ],
+    "kind": "event",
+    "origin": "extracted"
+  },
+  {
+    "id": "nishi-2026-10-14-momo-pm",
+    "centerId": "nishi",
+    "sourceDocumentId": "nishi-2026-10",
+    "date": "2026-10-14",
+    "startTime": "13:00",
+    "endTime": "16:00",
+    "title": "ももちゃんタイム",
+    "description": "1歳2か月までのお子様専用の時間です",
+    "targetAge": "1歳2か月迄",
+    "reservationRequired": false,
+    "tags": [
+      "月齢限定"
+    ],
+    "kind": "hiroba",
+    "origin": "extracted"
+  },
+  {
+    "id": "nishi-2026-10-16-momo-stretch",
+    "centerId": "nishi",
+    "sourceDocumentId": "nishi-2026-10",
+    "date": "2026-10-16",
+    "startTime": "13:00",
+    "endTime": "16:00",
+    "title": "ももちゃんタイム ママのストレッチ",
+    "description": "※13:15開始 ※災害訓練あり",
+    "targetAge": "1歳2か月迄",
+    "reservationRequired": true,
+    "tags": [
+      "月齢限定",
+      "予約制"
+    ],
+    "kind": "hiroba",
+    "origin": "extracted"
+  },
+  {
+    "id": "nishi-2026-10-19-momo-pm",
+    "centerId": "nishi",
+    "sourceDocumentId": "nishi-2026-10",
+    "date": "2026-10-19",
+    "startTime": "13:00",
+    "endTime": "16:00",
+    "title": "ももちゃんタイム",
+    "description": "1歳2か月までのお子様専用の時間です",
+    "targetAge": "1歳2か月迄",
+    "reservationRequired": false,
+    "tags": [
+      "月齢限定"
+    ],
+    "kind": "hiroba",
+    "origin": "extracted"
   },
   {
     "id": "nishi-2026-10-20-welcome",
@@ -111,10 +234,14 @@
     "startTime": "10:00",
     "endTime": "11:30",
     "title": "ウェルカムさいたま",
-    "description": "西区に転入し1年未満の方が対象。プロのバルーンパフォーマーのさくらさんのショー",
-    "targetAge": "0～3歳未満",
+    "description": "対象：西区に転入し1年未満の方。プロのバルーンパフォーマーのさくらさんのショー",
     "reservationRequired": true,
-    "tags": ["転入者向け", "予約制"]
+    "tags": [
+      "転入者向け",
+      "予約制"
+    ],
+    "kind": "event",
+    "origin": "extracted"
   },
   {
     "id": "nishi-2026-10-21-eigo",
@@ -124,9 +251,31 @@
     "startTime": "10:00",
     "endTime": "12:00",
     "title": "英語であそぼ！",
-    "description": "10:15開始。年齢制限なし",
+    "description": "※10:15開始 ※年齢制限なし",
     "reservationRequired": true,
-    "tags": ["英語", "予約制"]
+    "tags": [
+      "英語",
+      "予約制"
+    ],
+    "kind": "event",
+    "origin": "extracted"
+  },
+  {
+    "id": "nishi-2026-10-21-momo-pm",
+    "centerId": "nishi",
+    "sourceDocumentId": "nishi-2026-10",
+    "date": "2026-10-21",
+    "startTime": "13:00",
+    "endTime": "16:00",
+    "title": "ももちゃんタイム",
+    "description": "1歳2か月までのお子様専用の時間です",
+    "targetAge": "1歳2か月迄",
+    "reservationRequired": false,
+    "tags": [
+      "月齢限定"
+    ],
+    "kind": "hiroba",
+    "origin": "extracted"
   },
   {
     "id": "nishi-2026-10-22-sekai",
@@ -136,10 +285,13 @@
     "startTime": "10:00",
     "endTime": "12:00",
     "title": "世界のことばでこんにちは！",
-    "description": "10:15開始",
-    "targetAge": "0～3歳未満",
+    "description": "※10:15開始",
     "reservationRequired": true,
-    "tags": ["予約制"]
+    "tags": [
+      "予約制"
+    ],
+    "kind": "event",
+    "origin": "extracted"
   },
   {
     "id": "nishi-2026-10-23-bousai",
@@ -148,24 +300,52 @@
     "date": "2026-10-23",
     "startTime": "10:00",
     "endTime": "12:00",
-    "title": "学びのひろば 防災講座（地震）",
-    "description": "防災の備えについて考える。10:15開始",
-    "targetAge": "0～3歳未満",
+    "title": "学びのひろば 防災講座（地震）「防災の備えについて考える」",
+    "description": "※10:15開始",
     "reservationRequired": true,
-    "tags": ["防災", "講座", "予約制"]
+    "tags": [
+      "防災",
+      "講座",
+      "予約制"
+    ],
+    "kind": "event",
+    "origin": "extracted"
   },
   {
-    "id": "nishi-2026-10-24-papa",
+    "id": "nishi-2026-10-23-massage",
     "centerId": "nishi",
     "sourceDocumentId": "nishi-2026-10",
-    "date": "2026-10-24",
+    "date": "2026-10-23",
+    "startTime": "13:00",
+    "endTime": "16:00",
+    "title": "わらべうたベビーマッサージ",
+    "description": "※13:15開始",
+    "targetAge": "2か月～歩行開始前まで",
+    "reservationRequired": true,
+    "tags": [
+      "ベビーマッサージ",
+      "予約制"
+    ],
+    "kind": "event",
+    "origin": "extracted"
+  },
+  {
+    "id": "nishi-2026-10-25-papa",
+    "centerId": "nishi",
+    "sourceDocumentId": "nishi-2026-10",
+    "date": "2026-10-25",
     "startTime": "10:00",
     "endTime": "12:00",
-    "title": "パパサンデーイベント「パクパクおばけ」",
-    "description": "作って遊ぼう！10:15開始",
-    "targetAge": "0～3歳未満",
+    "title": "パパサンデーイベント 作って遊ぼう！「パクパクおばけ」",
+    "description": "※10:15開始",
     "reservationRequired": true,
-    "tags": ["パパ向け", "工作", "予約制"]
+    "tags": [
+      "パパ向け",
+      "工作",
+      "予約制"
+    ],
+    "kind": "event",
+    "origin": "extracted"
   },
   {
     "id": "nishi-2026-10-26-ken",
@@ -175,23 +355,67 @@
     "startTime": "10:00",
     "endTime": "12:00",
     "title": "ケンちゃんじいちゃんと福話来さん",
-    "description": "紙芝居・わらべ歌等。10:15開始。オンラインあり",
-    "targetAge": "0～3歳未満",
+    "description": "※10:15開始。オンラインあり（オンラインプログラムは10:15～10:45。紙芝居・わらべ歌等）",
     "reservationRequired": true,
-    "tags": ["紙芝居", "予約制", "オンライン可"]
+    "tags": [
+      "紙芝居",
+      "予約制",
+      "オンライン可"
+    ],
+    "kind": "event",
+    "origin": "extracted"
   },
   {
-    "id": "nishi-2026-10-27-ritmiku",
+    "id": "nishi-2026-10-26-momo-piyo",
+    "centerId": "nishi",
+    "sourceDocumentId": "nishi-2026-10",
+    "date": "2026-10-26",
+    "startTime": "13:00",
+    "endTime": "16:00",
+    "title": "ももちゃんタイム ねんねのあかちゃん＋ピヨピヨランド",
+    "targetAge": "1歳2か月迄",
+    "reservationRequired": true,
+    "tags": [
+      "月齢限定",
+      "予約制"
+    ],
+    "kind": "hiroba",
+    "origin": "extracted"
+  },
+  {
+    "id": "nishi-2026-10-27-ritomikku",
     "centerId": "nishi",
     "sourceDocumentId": "nishi-2026-10",
     "date": "2026-10-27",
     "startTime": "10:00",
     "endTime": "12:00",
     "title": "英語で楽しくリトミック♪",
-    "description": "10:15開始。対象：6か月以上",
+    "description": "※10:15開始",
     "targetAge": "6か月以上",
     "reservationRequired": true,
-    "tags": ["英語", "リトミック", "予約制"]
+    "tags": [
+      "英語",
+      "リトミック",
+      "予約制"
+    ],
+    "kind": "event",
+    "origin": "extracted"
+  },
+  {
+    "id": "nishi-2026-10-27-ichisaiji",
+    "centerId": "nishi",
+    "sourceDocumentId": "nishi-2026-10",
+    "date": "2026-10-27",
+    "startTime": "13:00",
+    "endTime": "16:00",
+    "title": "1歳児ランド",
+    "targetAge": "1歳以上～2歳未満",
+    "reservationRequired": false,
+    "tags": [
+      "月齢限定"
+    ],
+    "kind": "hiroba",
+    "origin": "extracted"
   },
   {
     "id": "nishi-2026-10-28-birthday",
@@ -201,10 +425,31 @@
     "startTime": "10:00",
     "endTime": "11:30",
     "title": "10月生まれのお誕生日会＆ハーフバースデー",
-    "description": "10:15開始",
-    "targetAge": "0～3歳未満",
+    "description": "※10:15開始",
     "reservationRequired": true,
-    "tags": ["誕生日会", "予約制"]
+    "tags": [
+      "誕生日会",
+      "予約制"
+    ],
+    "kind": "event",
+    "origin": "extracted"
+  },
+  {
+    "id": "nishi-2026-10-28-momo-pm",
+    "centerId": "nishi",
+    "sourceDocumentId": "nishi-2026-10",
+    "date": "2026-10-28",
+    "startTime": "13:00",
+    "endTime": "16:00",
+    "title": "ももちゃんタイム",
+    "description": "1歳2か月までのお子様専用の時間です",
+    "targetAge": "1歳2か月迄",
+    "reservationRequired": false,
+    "tags": [
+      "月齢限定"
+    ],
+    "kind": "hiroba",
+    "origin": "extracted"
   },
   {
     "id": "nishi-2026-10-30-halloween-am",
@@ -217,7 +462,12 @@
     "description": "10:00入室。仮装してきてね",
     "targetAge": "1歳3か月以上",
     "reservationRequired": true,
-    "tags": ["ハロウィン", "予約制"]
+    "tags": [
+      "ハロウィン",
+      "予約制"
+    ],
+    "kind": "event",
+    "origin": "extracted"
   },
   {
     "id": "nishi-2026-10-30-halloween-pm",
@@ -228,8 +478,13 @@
     "endTime": "15:00",
     "title": "ハロウィンパーティー（午後の部）",
     "description": "13:30入室。仮装してきてね",
-    "targetAge": "1歳2か月まで",
+    "targetAge": "1歳2か月迄",
     "reservationRequired": true,
-    "tags": ["ハロウィン", "予約制"]
+    "tags": [
+      "ハロウィン",
+      "予約制"
+    ],
+    "kind": "event",
+    "origin": "extracted"
   }
 ]
