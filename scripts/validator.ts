@@ -5,6 +5,7 @@
 
 import type { ClosureScope, Event, SourceDocument } from "../lib/schema.ts";
 import { CENTERS } from "../lib/schema.ts";
+import { classifyTitle } from "../lib/classify-event.ts";
 
 const VALID_CENTER_IDS = new Set(CENTERS.map((c) => c.id));
 
@@ -226,7 +227,8 @@ function validateClosures(sourceDoc: SourceDocument, result: ValidationResult): 
  */
 function regularHoursErrors(event: any, centerId: string): string[] {
   const policy = CENTERS.find((c) => c.id === centerId)?.regularHours;
-  if (policy?.decision !== "fill" || event.kind !== "hiroba") return [];
+  // apply-schedule-model reclassifies extracted rows by title, so check the kind it will assign.
+  if (policy?.decision !== "fill" || classifyTitle(event.title ?? "").kind !== "hiroba") return [];
   const errors: string[] = [];
   if (event.title === policy.title) {
     errors.push(
