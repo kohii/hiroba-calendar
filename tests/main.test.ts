@@ -118,6 +118,35 @@ describe("Event Array Validation", () => {
     assert.strictEqual(result.valid, true);
     assert.ok(result.warnings.some((w) => w.includes("No events")));
   });
+
+  it("should reject a hiroba row that spans the regular-hours break", () => {
+    const events = [
+      createValidEvent({ title: "0歳さんの広場", kind: "hiroba", startTime: "09:00", endTime: "16:00" }),
+    ];
+    const result = validateExtractedEvents(events, sourceDoc);
+    assert.strictEqual(result.valid, false);
+    assert.ok(result.errors.some((e) => e.includes("12:00-13:00")));
+  });
+
+  it("should accept a hiroba row inside one regular-hours window", () => {
+    const events = [
+      createValidEvent({ title: "0歳さんの広場", kind: "hiroba", startTime: "09:00", endTime: "12:00" }),
+    ];
+    assert.strictEqual(validateExtractedEvents(events, sourceDoc).valid, true);
+  });
+
+  it("should reject a row of the regular hiroba of a filled center", () => {
+    for (const overrides of [
+      {},
+      { startTime: "13:00", endTime: "16:00" },
+      { kind: "event" as const },
+    ]) {
+      const events = [createValidEvent({ title: "みんなのひろば", kind: "hiroba", ...overrides })];
+      const result = validateExtractedEvents(events, sourceDoc);
+      assert.strictEqual(result.valid, false);
+      assert.ok(result.errors.some((e) => e.includes("apply-schedule-model")));
+    }
+  });
 });
 
 describe("Event ID Generation", () => {

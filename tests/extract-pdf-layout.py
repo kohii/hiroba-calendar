@@ -71,16 +71,16 @@ def main():
     require(nishi, 12, "閉")
     require(nishi, 15, "閉")
 
-    _text, omiya = page_text("omiya-202610.pdf")
+    _text, omiya = page_text("omiya-2026-10.pdf")
     require(omiya, 5, "休館日")
     require(omiya, 12, "スポーツの日")
     require(omiya, 19, "休館日")
 
-    _text, yono = page_text("yono-202610.pdf")
+    _text, yono = page_text("yono-2026-10.pdf")
     require(yono, 13, "休館日")
     require(yono, 16, "午前閉館")
 
-    _text, minami = page_text("minami-202610.pdf")
+    _text, minami = page_text("minami-2026-10.pdf")
     require(minami, 7, "終日測定のみ")
     require(minami, 12, "休館")
 

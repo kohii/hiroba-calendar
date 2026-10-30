@@ -41,7 +41,7 @@ python3 scripts/extract-pdf-text.py data/pdf-cache/nishi-2026-10.pdf /tmp/nishi-
 
 6 は 5 日のヨガの行末に付き、お休みは 7 と同じ行に出ます。失敗した段階はテキスト抽出です。お休みという語は残っていますが、6 日のセルには入っていません。座標で組むと `## cell 6` に「6」「終日」「身体測定」「にこにこ広場」「お休み」が入ります。
 
-`# layout: visual-lines` のページ、または文字にならない印があるページは、画像で日付と印を対応させます。みなみのハートがそれです。凡例に「このマークがある時間帯は『にこにこ広場』はお休みです」とあり、印自体はテキスト層にありません。
+`# layout: visual-lines` のページ、または文字にならない印があるページは、画像で日付と印を対応させます。みなみの「午前行事のみ」「午後行事のみ」「終日測定のみ」に付くグレーの地がそれです。凡例は「このマークがある時間帯は『にこにこ広場』はお休みです」と言い、グレーの地はテキスト層に出ません。白枠の「午前0歳専用」「11:00～にこにこ広場」と、ハートの「0歳さんの広場」はこのマークではありません。
 
 ```bash
 pdftoppm -png -f 1 -l 1 -r 150 data/pdf-cache/minami-202610.pdf /tmp/minami-202610
@@ -93,11 +93,11 @@ pdftoppm -png -f 1 -l 1 -r 150 data/pdf-cache/minami-202610.pdf /tmp/minami-2026
 - **scope**: `all-day`、`am`、`pm`。終日、休館、休室、閉室、終日測定のみは `all-day`。午前だけ、または `AM×` や午前閉館は `am`。午後だけは `pm`。
 - **quote**: PDFに書いてある文言をそのまま取る。例は「終日 にこにこ広場 お休み」「休館日」「終日測定のみ」「ウェルカムさいたまの為午前閉館」。
 
-予定表の見かたに「このマークがある時間帯は『にこにこ広場』はお休みです」とあるときは、そのマークが付いた日を `closures` に入れる。quote はその文を使う。
+予定表の見かたに「このマークがある時間帯は『にこにこ広場』はお休みです」とあるときは、そのマークが付いた日を `closures` に入れる。quote はその日のマークの文言（例「午前行事のみ」）を使う。
 
 「中止の際は」のように、中止したとは書いていない文は closure にしない。毎月の休館曜日はセンターの `regularHours.closed` にあり、同じ日を `closures` に重ねてよい。
 
-通常開室の補完は `closures` を読む。`all-day`、または午前と午後の両方がある日は行を作らない。その日に既にある `kind: "hiroba"` の抽出行も除く。`kind: "event"` の測定や講座は残す。`am` だけの日は午後の時間の引用だけ、`pm` だけの日は午前の引用だけを description にする。`hoursQuote` を午前と午後に分けられないときは、閉じた側を含む引用を出さないので行を作らない。
+通常開室の補完は開室時間から `closures` を除いた時間帯に行を作る。抽出した行の有無は見ず、抽出した行は消さない。`all-day`、または午前と午後の両方がある日は行を作らない。`am` だけの日は午後の時間の引用だけ、`pm` だけの日は午前の引用だけを description にする。`hoursQuote` を午前と午後に分けられないときは、閉じた側を含む引用を出さないので行を作らない。
 
 ### 3. データ検証
 
@@ -116,16 +116,17 @@ node --experimental-strip-types scripts/validator.ts "$(cat data/extracted-event
 - centerIdの整合性
 - sourceDocumentIdの整合性
 - `closures` があるときは、各要素の date、scope（all-day / am / pm）、空でない quote。date はそのドキュメントの月の中にあること
+- `regularHours` が `fill` のセンターでは、通常ひろば（`regularHours.title`）の行が無いこと。ほかのひろば行が通常時間帯の休憩（例 12:00-13:00）をまたがないこと
 
 ### 4. データセットへのマージ
 
-検証が成功したら、データセットに統合:
+ソースドキュメントは `data/source-documents.json` に書く。ID は `{centerId}-{YYYY-MM}`、`pdfUrl` はPDFそのもののURL、`sha256` は `data/pdf-cache/{centerId}-{YYYY-MM}.pdf` のハッシュ。`closures` もここに書く。検証とマージは次のコマンドで一度に行う。
 
 ```bash
-node --experimental-strip-types scripts/merge-dataset.ts merge data/extracted-events/{centerId}-{month}.json
+node --experimental-strip-types scripts/validate-and-merge.ts {centerId} {YYYY-MM}
 ```
 
-これにより `public/data/dataset.json` が更新されます。
+`public/data/dataset.json` の同じソースドキュメントのイベントが置き換わる。
 
 ### 5. 通常開室の補完
 
@@ -135,7 +136,9 @@ node --experimental-strip-types scripts/merge-dataset.ts merge data/extracted-ev
 pnpm apply-schedule-model
 ```
 
-`scripts/apply-schedule-model.ts` は各センターの `regularHours` を読み、ひろば行が無い開室日だけ通常開室を足す。
+`scripts/apply-schedule-model.ts` は各センターの `regularHours` を読み、開室日の `closures` で閉じていない時間帯に通常開室を足す。
+
+補完のあと `pnpm day-summary {centerId}-{YYYY-MM}` で日ごとの行と休みを出し、PDFのカレンダーと1日ずつ突き合わせる。
 
 ## フィールド定義
 
@@ -242,6 +245,8 @@ pnpm apply-schedule-model
 
 `origin` は `"extracted"`。通常開室の行を抽出JSONに足さない。空欄の日を自分で埋めない。
 
+`regularHours` が `fill` のセンターでは、通常ひろば（`regularHours.title`。例 ぴよぴよ広場、わくわくひろば）の行を作らない。通常開室は `apply-schedule-model` が開室時間から closures を除いて足す。通常ひろばが半日だけの日（「＜午後＞わくわくひろば」「★午前はお申込者のみ」、みなみの「午前0歳専用」など）は、通常ひろばが無い側を `am` / `pm` の closure にし、セルの文言を quote にする。おおみや・にしのように開いている日と時間帯に通常ひろばの名前を書く予定表では、その名前が無い時間帯と日も closure にする。月齢限定のひろば（0歳さんの広場など）は通常ひろばとは別の行として作る。欄外の「利用時間 ①9:00～12:00 ②13:00～16:00」を 09:00～16:00 のような1つの時間帯にまとめない。間の 12:00～13:00 は閉まっている。
+
 ### 不明確な情報
 
 - 確信が持てない場合は null を使用
@@ -285,9 +290,9 @@ pnpm apply-schedule-model
 
 単独型10箇所とは別施設。空欄を通常開室として埋めない。開室日は予定表の印だけ。
 
-11. **菁莪保育園子育て支援センター** (seiga) - 桜区西堀1-11-1。保育施設併設型。市の施設ページは https://www.city.saitama.lg.jp/kosodate/map/category10/p105322.html 。園のページは https://seiga.or.jp/support/ 。おたより一覧は https://seiga.or.jp/square/ 。PDFのファイル名に年月が無いので、一覧の最新投稿からPDFを取る。2026年10月号は https://seiga.or.jp/wp-content/uploads/e26b4cee4f29eca0566d678a5008904b-1.pdf 。開室日はカボチャ印。テキスト抽出は `# layout: visual-lines` になるので、印は `pdftoppm -png` で読む。2026-10-25時点で11月号は一覧に無い。
+11. **菁莪保育園子育て支援センター** (seiga) - 桜区西堀1-11-1。保育施設併設型。市の施設ページは https://www.city.saitama.lg.jp/kosodate/map/category10/p105322.html 。園のページは https://seiga.or.jp/support/ 。おたより一覧は https://seiga.or.jp/square/ 。PDFのファイル名に年月が無いので、一覧の「せいがのひろば○月号」の投稿からPDFを取る（投稿URLはPDFへリダイレクトする）。開室日は月ごとの絵の印（10月はカボチャ、11月はどんぐり）。テキスト抽出は `# layout: visual-lines` になるので、印は `pdftoppm -png` で読む。
 
-12. **ひなどり幼稚園子育て支援ROOM** (hinadori) - 桜区西堀2-6-18。認定こども園の支援室。市の保育施設併設型一覧の「与野ひなどり保育園 子育て支援センター」（中央区本町西2-1-11、https://www.city.saitama.lg.jp/kosodate/map/category10/p105321.html ）とは別。市の施設ページは認定こども園 https://www.city.saitama.lg.jp/kosodate/map/category18/p105886.html 。おたよりは https://hinadori.ed.jp/category/support/ 。2026年10月号は https://hinadori.ed.jp/2026/09/28/30367/ と https://hinadori.ed.jp/wp-content/uploads/2026/09/9e44390e5305308ee6397861405a8985.pdf 。予約制のOPEN印の日だけ開室。予定表の文字の多くは画像なので `pdftoppm -png` で読む。同じ表の「ひばり」「見学会」「入園説明会」はOPEN印ではない。2026-10-25時点で11月号はカテゴリに無い。
+12. **ひなどり幼稚園子育て支援ROOM** (hinadori) - 桜区西堀2-6-18。認定こども園の支援室。市の保育施設併設型一覧の「与野ひなどり保育園 子育て支援センター」（中央区本町西2-1-11、https://www.city.saitama.lg.jp/kosodate/map/category10/p105321.html ）とは別。市の施設ページは認定こども園 https://www.city.saitama.lg.jp/kosodate/map/category18/p105886.html 。おたよりは https://hinadori.ed.jp/category/support/ 。2026年10月号は https://hinadori.ed.jp/2026/09/28/30367/ と https://hinadori.ed.jp/wp-content/uploads/2026/09/9e44390e5305308ee6397861405a8985.pdf 。予約制のOPEN印の日だけ開室。予定表の文字の多くは画像なので `pdftoppm -png` で読む。同じ表の「ひばり」「見学会」「入園説明会」はOPEN印ではない。2026-10-29時点で11月号はカテゴリに無い。
 
 ## 抽出パイプライン実行例
 
@@ -297,7 +302,7 @@ Read `/tmp/nishi-2026-10.txt` and write the events to `data/extracted-events/nis
 pnpm download-pdfs
 python3 scripts/extract-pdf-text.py data/pdf-cache/nishi-2026-10.pdf /tmp/nishi-2026-10.txt
 node --experimental-strip-types scripts/validator.ts "$(cat data/extracted-events/nishi-2026-10.json)" '{"id":"nishi-2026-10","centerId":"nishi","month":"2026-10","pdfUrl":"https://example.com/nishi.pdf","fetchedAt":"2026-10-20T00:00:00Z","sha256":"abc"}'
-node --experimental-strip-types scripts/merge-dataset.ts merge data/extracted-events/nishi-2026-10.json
+node --experimental-strip-types scripts/validate-and-merge.ts nishi 2026-10
 pnpm apply-schedule-model
 pnpm dataset-stats
 ```

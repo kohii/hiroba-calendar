@@ -1,0 +1,337 @@
+[
+  {
+    "id": "yono-2026-10-07-ohanashi",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-2026-10",
+    "date": "2026-10-07",
+    "startTime": "10:30",
+    "title": "与野図書館 赤ちゃんおはなし会",
+    "description": "与野図書館の方が来て、絵本の読み聞かせとわらべ歌を行います。予約不要、参加者のみ入室可。10分前までにお越しください。参加以外の方は11:00～利用できます。",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "おはなし会",
+      "図書館"
+    ]
+  },
+  {
+    "id": "yono-2026-10-16-welcome",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-2026-10",
+    "date": "2026-10-16",
+    "startTime": "10:00",
+    "endTime": "11:30",
+    "title": "ウェルカムさいたま",
+    "description": "転入1年以内の方で中央区近隣が主に生活圏の方。地域情報で交流します。予約制（受付中～10/9締切）。★午前はお申込者のみとなります。",
+    "reservationRequired": true,
+    "capacity": 10,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "予約制",
+      "転入者向け"
+    ]
+  },
+  {
+    "id": "yono-2026-10-17-futagotime",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-2026-10",
+    "date": "2026-10-17",
+    "startTime": "10:00",
+    "endTime": "11:30",
+    "title": "ふたごタイム",
+    "description": "ふたご限定（0～3歳未満）。予約制（10/1～受付）。★午前はお申込者のみとなります。",
+    "targetAge": "0～3歳未満",
+    "reservationRequired": true,
+    "capacity": 5,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "予約制",
+      "多胎児向け"
+    ]
+  },
+  {
+    "id": "yono-2026-10-18-oukyuteate",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-2026-10",
+    "date": "2026-10-18",
+    "startTime": "10:00",
+    "title": "応急手当講習",
+    "description": "対象・定員 乳幼児親子 10組。申し込み受け付けは終了しました（さいたま市電子申請にて9/7～9/17受付）。★午前はお申込者のみとなります。",
+    "reservationRequired": true,
+    "capacity": 10,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "予約制",
+      "講座"
+    ]
+  },
+  {
+    "id": "yono-2026-10-20-birthday",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-2026-10",
+    "date": "2026-10-20",
+    "startTime": "10:30",
+    "title": "お誕生会",
+    "description": "お誕生月のお友達に手作りのカードと冠をプレゼントしてお祝いします。フォトコーナーもご用意します。定員はありません（事前お申込制）。誕生会までに3歳を迎えた方もご参加できます。★午前はお申込者のみとなります。",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "予約制",
+      "誕生日会"
+    ]
+  },
+  {
+    "id": "yono-2026-10-21-ohanashi",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-2026-10",
+    "date": "2026-10-21",
+    "startTime": "10:30",
+    "title": "与野図書館 赤ちゃんおはなし会",
+    "description": "与野図書館の方が来て、絵本の読み聞かせとわらべ歌を行います。予約不要、参加者のみ入室可。10分前までにお越しください。参加以外の方は11:00～利用できます。",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "おはなし会",
+      "図書館"
+    ]
+  },
+  {
+    "id": "yono-2026-10-22-sokutei-am",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-2026-10",
+    "date": "2026-10-22",
+    "startTime": "09:15",
+    "endTime": "11:15",
+    "title": "のびのび身体測定",
+    "description": "ねんねのお友達はタオルをご持参下さい。初回に測定カードをお渡しします。予約は不要です。",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "身体測定"
+    ]
+  },
+  {
+    "id": "yono-2026-10-22-sokutei-pm",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-2026-10",
+    "date": "2026-10-22",
+    "startTime": "13:00",
+    "endTime": "15:30",
+    "title": "のびのび身体測定",
+    "description": "ねんねのお友達はタオルをご持参下さい。初回に測定カードをお渡しします。予約は不要です。",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "身体測定"
+    ]
+  },
+  {
+    "id": "yono-2026-10-23-sokutei-am",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-2026-10",
+    "date": "2026-10-23",
+    "startTime": "09:15",
+    "endTime": "11:15",
+    "title": "のびのび身体測定",
+    "description": "ねんねのお友達はタオルをご持参下さい。初回に測定カードをお渡しします。予約は不要です。",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "身体測定"
+    ]
+  },
+  {
+    "id": "yono-2026-10-23-sokutei-pm",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-2026-10",
+    "date": "2026-10-23",
+    "startTime": "13:00",
+    "endTime": "15:30",
+    "title": "のびのび身体測定",
+    "description": "ねんねのお友達はタオルをご持参下さい。初回に測定カードをお渡しします。予約は不要です。",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "身体測定"
+    ]
+  },
+  {
+    "id": "yono-2026-10-24-halloween",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-2026-10",
+    "date": "2026-10-24",
+    "title": "ハロウィン制作コーナー",
+    "description": "10月24日（土）～31日（土）まで『黒ねこのにゃんにゃんお菓子入れ』が作れます。お気軽にご参加ください。期間中はフォトコーナーもあります。",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "ハロウィン",
+      "工作"
+    ]
+  },
+  {
+    "id": "yono-2026-10-24-sokutei-am",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-2026-10",
+    "date": "2026-10-24",
+    "startTime": "09:15",
+    "endTime": "11:15",
+    "title": "のびのび身体測定",
+    "description": "ねんねのお友達はタオルをご持参下さい。初回に測定カードをお渡しします。予約は不要です。",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "身体測定"
+    ]
+  },
+  {
+    "id": "yono-2026-10-24-sokutei-pm",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-2026-10",
+    "date": "2026-10-24",
+    "startTime": "13:00",
+    "endTime": "15:30",
+    "title": "のびのび身体測定",
+    "description": "ねんねのお友達はタオルをご持参下さい。初回に測定カードをお渡しします。予約は不要です。",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "身体測定"
+    ]
+  },
+  {
+    "id": "yono-2026-10-25-halloween",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-2026-10",
+    "date": "2026-10-25",
+    "title": "ハロウィン制作コーナー",
+    "description": "10月24日（土）～31日（土）まで『黒ねこのにゃんにゃんお菓子入れ』が作れます。お気軽にご参加ください。期間中はフォトコーナーもあります。",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "ハロウィン",
+      "工作"
+    ]
+  },
+  {
+    "id": "yono-2026-10-25-sokutei-am",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-2026-10",
+    "date": "2026-10-25",
+    "startTime": "09:15",
+    "endTime": "11:15",
+    "title": "のびのび身体測定",
+    "description": "ねんねのお友達はタオルをご持参下さい。初回に測定カードをお渡しします。予約は不要です。",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "身体測定"
+    ]
+  },
+  {
+    "id": "yono-2026-10-25-sokutei-pm",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-2026-10",
+    "date": "2026-10-25",
+    "startTime": "13:00",
+    "endTime": "15:30",
+    "title": "のびのび身体測定",
+    "description": "ねんねのお友達はタオルをご持参下さい。初回に測定カードをお渡しします。予約は不要です。",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "身体測定"
+    ]
+  },
+  {
+    "id": "yono-2026-10-26-halloween",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-2026-10",
+    "date": "2026-10-26",
+    "title": "ハロウィン制作コーナー",
+    "description": "10月24日（土）～31日（土）まで『黒ねこのにゃんにゃんお菓子入れ』が作れます。お気軽にご参加ください。期間中はフォトコーナーもあります。",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "ハロウィン",
+      "工作"
+    ]
+  },
+  {
+    "id": "yono-2026-10-28-halloween",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-2026-10",
+    "date": "2026-10-28",
+    "title": "ハロウィン制作コーナー",
+    "description": "10月24日（土）～31日（土）まで『黒ねこのにゃんにゃんお菓子入れ』が作れます。お気軽にご参加ください。期間中はフォトコーナーもあります。",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "ハロウィン",
+      "工作"
+    ]
+  },
+  {
+    "id": "yono-2026-10-29-halloween",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-2026-10",
+    "date": "2026-10-29",
+    "title": "ハロウィン制作コーナー",
+    "description": "10月24日（土）～31日（土）まで『黒ねこのにゃんにゃんお菓子入れ』が作れます。お気軽にご参加ください。期間中はフォトコーナーもあります。",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "ハロウィン",
+      "工作"
+    ]
+  },
+  {
+    "id": "yono-2026-10-30-halloween",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-2026-10",
+    "date": "2026-10-30",
+    "title": "ハロウィン制作コーナー",
+    "description": "10月24日（土）～31日（土）まで『黒ねこのにゃんにゃんお菓子入れ』が作れます。お気軽にご参加ください。期間中はフォトコーナーもあります。",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "ハロウィン",
+      "工作"
+    ]
+  },
+  {
+    "id": "yono-2026-10-31-halloween",
+    "centerId": "yono",
+    "sourceDocumentId": "yono-2026-10",
+    "date": "2026-10-31",
+    "title": "ハロウィン制作コーナー",
+    "description": "10月24日（土）～31日（土）まで『黒ねこのにゃんにゃんお菓子入れ』が作れます。お気軽にご参加ください。期間中はフォトコーナーもあります。",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted",
+    "tags": [
+      "ハロウィン",
+      "工作"
+    ]
+  }
+]

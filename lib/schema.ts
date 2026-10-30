@@ -166,7 +166,7 @@ export const CENTERS: Center[] = [
       quote:
         "✤ようこそ わくわくひろばへ ✤ 月曜日～土曜日、日曜日（第１～第４） ※毎月第１・第３月曜日はお休みです。 ９：００～１２：００ / １３：００～１６：００",
       decisionNote:
-        "ひろばの文は祝日休館を言わない。予定表の休館日、または休館日と同じ斜線が入った日だけ追加で休む。一時預かりの国民の休日は使わない。第5日曜は「日曜日（第１～第４）」から閉じる。日付の入った休みはソースドキュメントの closures に持つ。",
+        "ひろばの文は祝日休館を言わない。予定表は開いている日と時間帯に「わくわくひろば」と書くので、休館日・斜線の日と、わくわくひろばの無い日・時間帯を closures に持つ。一時預かりの国民の休日は使わない。第5日曜は「日曜日（第１～第４）」から閉じる。",
       title: "わくわくひろば",
       hoursQuote: "９：００～１２：００ / １３：００～１６：００",
       windows: splitDayWindows,
@@ -343,7 +343,7 @@ export const CENTERS: Center[] = [
     closedDays: "金曜日、祝祭日等休園日、園行事",
     scheduleType: "pdf",
     scheduleNotes:
-      "桜区。子育て支援センター（保育施設併設型）。おたより一覧は https://seiga.or.jp/square/ 。2026-10-25時点で11月号は無い。支援直通は070-1466-8459。",
+      "桜区。子育て支援センター（保育施設併設型）。おたより一覧は https://seiga.or.jp/square/ 。支援直通は070-1466-8459。",
     regularHours: {
       decision: "unknown",
       sourceUrl: "https://seiga.or.jp/wp-content/uploads/e26b4cee4f29eca0566d678a5008904b-1.pdf",
@@ -362,7 +362,7 @@ export const CENTERS: Center[] = [
     closedDays: "OPEN印のない日",
     scheduleType: "pdf",
     scheduleNotes:
-      "桜区。認定こども園の子育て支援ROOM。市の保育施設併設型一覧には無く、市の施設ページは認定こども園 https://www.city.saitama.lg.jp/kosodate/map/category18/p105886.html 。与野ひなどり保育園（中央区本町西2-1-11）とは別。おたよりは https://hinadori.ed.jp/category/support/ 。2026-10-25時点で11月号は無い。",
+      "桜区。認定こども園の子育て支援ROOM。市の保育施設併設型一覧には無く、市の施設ページは認定こども園 https://www.city.saitama.lg.jp/kosodate/map/category18/p105886.html 。与野ひなどり保育園（中央区本町西2-1-11）とは別。おたよりは https://hinadori.ed.jp/category/support/ 。2026-10-29時点で11月号は無い。",
     regularHours: {
       decision: "unknown",
       sourceUrl:

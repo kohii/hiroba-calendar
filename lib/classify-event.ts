@@ -6,6 +6,8 @@ const HIROBA_PATTERNS: readonly string[] = [
   "フリー",
   "自由遊び",
   "ももちゃんタイム",
+  "歳児ランド",
+  "みんなの時間",
 ];
 
 const EVENT_PATTERNS: readonly string[] = [

@@ -26,11 +26,13 @@
    ↓ Claude APIでイベント情報抽出
 4. 検証 (scripts/validator.ts)
    ↓ 手書きバリデータで検証
-5. マージ (scripts/merge-dataset.ts)
+5. マージ (scripts/validate-and-merge.ts)
    ↓
-6. 静的JSON (public/data/dataset.json)
+6. 通常ひろばの補完 (scripts/apply-schedule-model.ts)
+   ↓ 開室時間から closures を除いた時間帯
+7. 静的JSON (public/data/dataset.json)
    ↓
-7. フロントエンド表示 (Astro)
+8. フロントエンド表示 (Astro)
 ```
 
 ### ディレクトリ構成
@@ -95,8 +97,9 @@ python3 scripts/extract-pdf-text.py data/pdf-cache/<centerId>-<month>.pdf /tmp/<
 
 1. `.cursor/skills/refresh-schedule-data/SKILL.md` を参照
 2. `data/pdf-cache/` 内のPDFからClaude APIで情報抽出
-3. `scripts/validator.ts` で検証
-4. `scripts/merge-dataset.ts` でマージ
+3. `scripts/validate-and-merge.ts` で検証してマージ
+4. `pnpm apply-schedule-model` で通常ひろばを補完
+5. `pnpm day-summary <sourceDocumentId>` で日ごとの結果をPDFと突き合わせる
 
 抽出スキルの詳細は [SKILL.md](./.cursor/skills/refresh-schedule-data/SKILL.md) を参照してください。
 

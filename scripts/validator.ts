@@ -5,6 +5,7 @@
 
 import type { ClosureScope, Event, SourceDocument } from "../lib/schema.ts";
 import { CENTERS } from "../lib/schema.ts";
+import { classifyTitle } from "../lib/classify-event.ts";
 
 const VALID_CENTER_IDS = new Set(CENTERS.map((c) => c.id));
 
@@ -221,6 +222,35 @@ function validateClosures(sourceDoc: SourceDocument, result: ValidationResult): 
 }
 
 /**
+ * apply-schedule-model fills the regular hiroba from regularHours minus closures, so an
+ * extracted row of it would duplicate that. Other hiroba rows must not cover the closed break.
+ */
+function regularHoursErrors(event: any, centerId: string): string[] {
+  const policy = CENTERS.find((c) => c.id === centerId)?.regularHours;
+  // apply-schedule-model reclassifies extracted rows by title, so check the kind it will assign.
+  if (policy?.decision !== "fill" || classifyTitle(event.title ?? "").kind !== "hiroba") return [];
+  const errors: string[] = [];
+  if (event.title === policy.title) {
+    errors.push(
+      `${policy.title} is filled by apply-schedule-model; record the closed half in closures instead`,
+    );
+  }
+  if (event.startTime && event.endTime) {
+    const windows = [...policy.windows].sort((a, b) => a.start.localeCompare(b.start));
+    for (let i = 1; i < windows.length; i++) {
+      const breakStart = windows[i - 1].end;
+      const breakEnd = windows[i].start;
+      if (event.startTime < breakEnd && event.endTime > breakStart) {
+        errors.push(
+          `${event.startTime}-${event.endTime} spans the closed break ${breakStart}-${breakEnd}`,
+        );
+      }
+    }
+  }
+  return errors;
+}
+
+/**
  * Validate an array of events extracted from a source document
  */
 export function validateExtractedEvents(
@@ -279,6 +309,9 @@ export function validateExtractedEvents(
       );
       eventResult.valid = false;
     }
+
+    eventResult.errors.push(...regularHoursErrors(event, sourceDoc.centerId));
+    if (eventResult.errors.length > 0) eventResult.valid = false;
 
     // Check event date is in the source document's month
     if (event.date && isValidDate(event.date)) {

@@ -20,20 +20,8 @@ export function fillRegularHours(input: {
   holidayDates: readonly string[];
 }): Event[] {
   const kept = input.events.filter((event) => event.origin !== "regular-hours");
-  const keptByDay = new Map<string, Event[]>();
-  for (const event of kept) {
-    const key = `${event.centerId}\t${event.date}`;
-    const bucket = keptByDay.get(key);
-    if (bucket) {
-      bucket.push(event);
-    } else {
-      keptByDay.set(key, [event]);
-    }
-  }
-
   const holidays = new Set(input.holidayDates);
   const generated: Event[] = [];
-  const dropped = new Set<string>();
   for (const center of input.centers) {
     const policy = center.regularHours;
     if (policy.decision !== "fill") continue;
@@ -42,18 +30,9 @@ export function fillRegularHours(input: {
       const month = canonicalizeMonth(document.month);
       if (!month) continue;
       for (const date of datesInMonth(month)) {
-        const dayClosures = closuresOn(document, date);
-        const existing = keptByDay.get(`${center.id}\t${date}`) ?? [];
-        if (fullyClosed(dayClosures)) {
-          for (const event of existing) {
-            if (event.kind === "hiroba") dropped.add(event.id);
-          }
-          continue;
-        }
         if (!isOpeningDay(date, policy, holidays)) continue;
-        const open = openWindows(policy.windows, dayClosures);
+        const open = openWindows(policy.windows, closuresOn(document, date));
         if (open.length === 0) continue;
-        if (existing.some((event) => event.kind === "hiroba")) continue;
         const description = descriptionFor(policy, open);
         if (description === null) continue;
         generated.push(regularHoursEvent(center.id, document.id, date, policy, description));
@@ -61,7 +40,7 @@ export function fillRegularHours(input: {
     }
   }
 
-  return [...kept.filter((event) => !dropped.has(event.id)), ...generated].sort(
+  return [...kept, ...generated].sort(
     (a, b) => a.date.localeCompare(b.date) || a.id.localeCompare(b.id),
   );
 }

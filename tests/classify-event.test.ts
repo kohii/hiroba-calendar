@@ -10,6 +10,8 @@ const cases = [
   ["ももちゃんタイム", "hiroba", "high"],
   ["0歳さんの広場", "hiroba", "high"],
   ["0歳児限定ひろば", "hiroba", "high"],
+  ["1歳児ランド", "hiroba", "high"],
+  ["みんなの時間", "hiroba", "high"],
   ["お芋掘り", "event", "high"],
   ["むし歯予防教室", "event", "high"],
   ["うたのコンサート", "event", "high"],
