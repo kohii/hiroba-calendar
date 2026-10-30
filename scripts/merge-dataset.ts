@@ -119,7 +119,7 @@ export function getDataSetStats(dataset: DataSet): {
 }
 
 // CLI interface
-if (require.main === module) {
+if (import.meta.main) {
   const command = process.argv[2];
   
   if (command === 'stats') {
