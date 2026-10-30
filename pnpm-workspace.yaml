@@ -2,9 +2,9 @@ packages: []
 
 minimumReleaseAge: 1440
 
-onlyBuiltDependencies:
-  - esbuild
-  - "@esbuild/linux-x64"
+allowBuilds:
+  esbuild: true
+  "@esbuild/linux-x64": true
 
 ignoredOptionalDependencies:
   - sharp

@@ -238,7 +238,7 @@ AI抽出はこれらの異なる形式に対応する必要があります。
 - **検証**: `scripts/validator.ts` の手書きバリデータ
 - **PDFテキスト**: Python PyPDF2 (`scripts/extract-pdf-text.py`)
 - **テスト**: Node の `node:test`
-- **パッケージ**: pnpm。Node は `.nvmrc` の 22.23.4 以上
+- **パッケージ**: pnpm（`package.json` の `packageManager`）。Node は `.node-version` のバージョン
 - **デプロイ**: Cloudflare Pages。ビルドは `pnpm build`、出力は `dist`
 
 ## ライセンス
