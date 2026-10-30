@@ -142,7 +142,7 @@ export function needsExtraction(doc: SourceDocument): boolean {
 }
 
 // CLI interface
-if (require.main === module) {
+if (import.meta.main) {
   const links = JSON.parse(process.argv[2] || '[]') as PDFLink[];
   downloadAllPDFs(links).then(docs => {
     console.log('\nDownloaded documents:');

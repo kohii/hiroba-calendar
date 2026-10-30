@@ -118,7 +118,7 @@ export async function removeInvalidSourceDocuments(): Promise<number> {
 }
 
 // CLI interface
-if (require.main === module) {
+if (import.meta.main) {
   const command = process.argv[2];
   
   if (command === 'remove') {

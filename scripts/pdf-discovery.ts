@@ -86,7 +86,7 @@ async function discoverAll(): Promise<PDFLink[]> {
   return allLinks;
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.main) {
   const links = await discoverAll();
   
   console.log(`\n✅ Discovered ${links.length} PDF links:`);
