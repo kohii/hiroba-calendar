@@ -1949,7 +1949,7 @@
       "fetchedAt": "2026-11-21T13:00:00Z",
       "sha256": "eb245165ae4eab70ff22a43ed0ac5c5f11343756ffea5d531ca195300c488bb5",
       "closures": [],
-      "extractedAt": "2026-11-21T13:13:31.323Z"
+      "extractedAt": "2026-11-21T13:18:16.666Z"
     }
   ],
   "events": [
@@ -6767,6 +6767,21 @@
       "targetAge": "０・１・２歳のお子さんと保護者"
     },
     {
+      "id": "hinadori-2026-11-04-hiroba",
+      "centerId": "hinadori",
+      "sourceDocumentId": "hinadori-2026-11",
+      "date": "2026-11-04",
+      "title": "子育て広場",
+      "kind": "hiroba",
+      "origin": "extracted",
+      "startTime": "09:00",
+      "endTime": "12:20",
+      "description": "予約制 OPEN。好きな時間で入退室ができます。毎週金曜日14:00～翌週分予約受付開始。",
+      "targetAge": "生後6週～未就園",
+      "reservationRequired": true,
+      "capacity": 6
+    },
+    {
       "id": "iwatsuki-2026-11-04-hiroba",
       "centerId": "iwatsuki",
       "sourceDocumentId": "iwatsuki-2026-11",
@@ -7175,6 +7190,21 @@
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours"
+    },
+    {
+      "id": "hinadori-2026-11-06-hiroba",
+      "centerId": "hinadori",
+      "sourceDocumentId": "hinadori-2026-11",
+      "date": "2026-11-06",
+      "title": "子育て広場",
+      "kind": "hiroba",
+      "origin": "extracted",
+      "startTime": "09:00",
+      "endTime": "12:20",
+      "description": "予約制 OPEN。好きな時間で入退室ができます。毎週金曜日14:00～翌週分予約受付開始。",
+      "targetAge": "生後6週～未就園",
+      "reservationRequired": true,
+      "capacity": 6
     },
     {
       "id": "iwatsuki-2026-11-06-hiroba",
@@ -7808,6 +7838,21 @@
       "origin": "regular-hours"
     },
     {
+      "id": "hinadori-2026-11-10-hiroba",
+      "centerId": "hinadori",
+      "sourceDocumentId": "hinadori-2026-11",
+      "date": "2026-11-10",
+      "title": "子育て広場",
+      "kind": "hiroba",
+      "origin": "extracted",
+      "startTime": "09:00",
+      "endTime": "12:20",
+      "description": "予約制 OPEN。好きな時間で入退室ができます。毎週金曜日14:00～翌週分予約受付開始。",
+      "targetAge": "生後6週～未就園",
+      "reservationRequired": true,
+      "capacity": 6
+    },
+    {
       "id": "minami-2026-11-10-kango",
       "centerId": "minami",
       "sourceDocumentId": "minami-2026-11",
@@ -7951,6 +7996,21 @@
       "targetAge": "生後6週～",
       "reservationRequired": false,
       "capacity": 25
+    },
+    {
+      "id": "hinadori-2026-11-11-hiroba",
+      "centerId": "hinadori",
+      "sourceDocumentId": "hinadori-2026-11",
+      "date": "2026-11-11",
+      "title": "子育て広場",
+      "kind": "hiroba",
+      "origin": "extracted",
+      "startTime": "09:00",
+      "endTime": "12:20",
+      "description": "予約制 OPEN。好きな時間で入退室ができます。毎週金曜日14:00～翌週分予約受付開始。",
+      "targetAge": "生後6週～未就園",
+      "reservationRequired": true,
+      "capacity": 6
     },
     {
       "id": "iwatsuki-2026-11-11-hiroba",
@@ -8305,6 +8365,21 @@
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours"
+    },
+    {
+      "id": "hinadori-2026-11-13-hiroba",
+      "centerId": "hinadori",
+      "sourceDocumentId": "hinadori-2026-11",
+      "date": "2026-11-13",
+      "title": "子育て広場",
+      "kind": "hiroba",
+      "origin": "extracted",
+      "startTime": "09:00",
+      "endTime": "12:20",
+      "description": "予約制 OPEN。好きな時間で入退室ができます。毎週金曜日14:00～翌週分予約受付開始。",
+      "targetAge": "生後6週～未就園",
+      "reservationRequired": true,
+      "capacity": 6
     },
     {
       "id": "iwatsuki-2026-11-13-gogo-hiroba",
@@ -8940,6 +9015,21 @@
       "origin": "regular-hours"
     },
     {
+      "id": "hinadori-2026-11-17-hiroba",
+      "centerId": "hinadori",
+      "sourceDocumentId": "hinadori-2026-11",
+      "date": "2026-11-17",
+      "title": "子育て広場",
+      "kind": "hiroba",
+      "origin": "extracted",
+      "startTime": "09:00",
+      "endTime": "12:20",
+      "description": "予約制 OPEN。好きな時間で入退室ができます。毎週金曜日14:00～翌週分予約受付開始。",
+      "targetAge": "生後6週～未就園",
+      "reservationRequired": true,
+      "capacity": 6
+    },
+    {
       "id": "iwatsuki-2026-11-17-hiroba",
       "centerId": "iwatsuki",
       "sourceDocumentId": "iwatsuki-2026-11",
@@ -9109,6 +9199,21 @@
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours"
+    },
+    {
+      "id": "hinadori-2026-11-18-hiroba",
+      "centerId": "hinadori",
+      "sourceDocumentId": "hinadori-2026-11",
+      "date": "2026-11-18",
+      "title": "子育て広場",
+      "kind": "hiroba",
+      "origin": "extracted",
+      "startTime": "09:00",
+      "endTime": "12:20",
+      "description": "予約制 OPEN。好きな時間で入退室ができます。毎週金曜日14:00～翌週分予約受付開始。",
+      "targetAge": "生後6週～未就園",
+      "reservationRequired": true,
+      "capacity": 6
     },
     {
       "id": "iwatsuki-2026-11-18-fureai",
@@ -9476,6 +9581,21 @@
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours"
+    },
+    {
+      "id": "hinadori-2026-11-20-hiroba",
+      "centerId": "hinadori",
+      "sourceDocumentId": "hinadori-2026-11",
+      "date": "2026-11-20",
+      "title": "子育て広場",
+      "kind": "hiroba",
+      "origin": "extracted",
+      "startTime": "09:00",
+      "endTime": "12:20",
+      "description": "予約制 OPEN。好きな時間で入退室ができます。毎週金曜日14:00～翌週分予約受付開始。",
+      "targetAge": "生後6週～未就園",
+      "reservationRequired": true,
+      "capacity": 6
     },
     {
       "id": "hinadori-2026-11-20-imo-hori",
@@ -10125,6 +10245,21 @@
       ]
     },
     {
+      "id": "hinadori-2026-11-24-hiroba",
+      "centerId": "hinadori",
+      "sourceDocumentId": "hinadori-2026-11",
+      "date": "2026-11-24",
+      "title": "子育て広場",
+      "kind": "hiroba",
+      "origin": "extracted",
+      "startTime": "09:00",
+      "endTime": "12:20",
+      "description": "予約制 OPEN。好きな時間で入退室ができます。毎週金曜日14:00～翌週分予約受付開始。",
+      "targetAge": "生後6週～未就園",
+      "reservationRequired": true,
+      "capacity": 6
+    },
+    {
       "id": "minami-2026-11-24-hamigaki",
       "centerId": "minami",
       "sourceDocumentId": "minami-2026-11",
@@ -10309,6 +10444,21 @@
       "tags": [
         "月齢限定"
       ]
+    },
+    {
+      "id": "hinadori-2026-11-25-hiroba",
+      "centerId": "hinadori",
+      "sourceDocumentId": "hinadori-2026-11",
+      "date": "2026-11-25",
+      "title": "子育て広場",
+      "kind": "hiroba",
+      "origin": "extracted",
+      "startTime": "09:00",
+      "endTime": "12:20",
+      "description": "予約制 OPEN。好きな時間で入退室ができます。毎週金曜日14:00～翌週分予約受付開始。",
+      "targetAge": "生後6週～未就園",
+      "reservationRequired": true,
+      "capacity": 6
     },
     {
       "id": "iwatsuki-2026-11-25-birthday",
@@ -10795,6 +10945,21 @@
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours"
+    },
+    {
+      "id": "hinadori-2026-11-27-hiroba",
+      "centerId": "hinadori",
+      "sourceDocumentId": "hinadori-2026-11",
+      "date": "2026-11-27",
+      "title": "子育て広場",
+      "kind": "hiroba",
+      "origin": "extracted",
+      "startTime": "09:00",
+      "endTime": "12:20",
+      "description": "予約制 OPEN。好きな時間で入退室ができます。毎週金曜日14:00～翌週分予約受付開始。",
+      "targetAge": "生後6週～未就園",
+      "reservationRequired": true,
+      "capacity": 6
     },
     {
       "id": "iwatsuki-2026-11-27-gogo-hiroba",
@@ -13956,6 +14121,6 @@
       "origin": "regular-hours"
     }
   ],
-  "generatedAt": "2026-11-21T13:13:31.483Z",
+  "generatedAt": "2026-11-21T13:18:16.822Z",
   "version": "1.0.0"
 }
