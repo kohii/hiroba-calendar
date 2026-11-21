@@ -1630,6 +1630,11 @@
           "quote": "<午前>★うたのコンサート10:30予約制"
         },
         {
+          "date": "2026-12-15",
+          "scope": "pm",
+          "quote": "★保健師さんとお話 予約制"
+        },
+        {
           "date": "2026-12-21",
           "scope": "all-day",
           "quote": "休館日"
@@ -1665,7 +1670,7 @@
           "quote": "12/29（火）～1/3（日）は年末年始のためお休みです"
         }
       ],
-      "extractedAt": "2026-11-21T13:07:01.767Z"
+      "extractedAt": "2026-11-21T13:37:56.230Z"
     },
     {
       "id": "iwatsuki-2026-12",
@@ -1706,7 +1711,7 @@
           "quote": "休館日"
         }
       ],
-      "extractedAt": "2026-11-21T13:08:38.345Z"
+      "extractedAt": "2026-11-21T13:37:56.300Z"
     },
     {
       "id": "yono-2026-12",
@@ -1762,7 +1767,7 @@
           "quote": "12月29日(火)～1月3日(日)休館"
         }
       ],
-      "extractedAt": "2026-11-21T13:09:52.695Z"
+      "extractedAt": "2026-11-21T13:37:56.381Z"
     },
     {
       "id": "minami-2026-12",
@@ -1772,6 +1777,11 @@
       "fetchedAt": "2026-11-21T13:00:00Z",
       "sha256": "f3149af82fcf887e5482459ade4155250e797a71e16a536598ef7cbdf4d6c1b9",
       "closures": [
+        {
+          "date": "2026-12-03",
+          "scope": "am",
+          "quote": "11:00～にこにこ広場"
+        },
         {
           "date": "2026-12-07",
           "scope": "am",
@@ -1806,6 +1816,11 @@
           "date": "2026-12-16",
           "scope": "all-day",
           "quote": "終日測定のみ"
+        },
+        {
+          "date": "2026-12-17",
+          "scope": "am",
+          "quote": "11:00～にこにこ広場"
         },
         {
           "date": "2026-12-20",
@@ -1853,7 +1868,7 @@
           "quote": "年末年始休館（12/29～1/3）"
         }
       ],
-      "extractedAt": "2026-11-21T13:11:16.025Z"
+      "extractedAt": "2026-11-21T13:37:56.454Z"
     },
     {
       "id": "urawa-2026-12",
@@ -1882,6 +1897,11 @@
           "date": "2026-12-08",
           "scope": "am",
           "quote": "《午前》1・2歳児専用広場"
+        },
+        {
+          "date": "2026-12-09",
+          "scope": "pm",
+          "quote": "《午後》0歳児専用広場"
         },
         {
           "date": "2026-12-13",
@@ -1939,7 +1959,7 @@
           "quote": "年末年始休館"
         }
       ],
-      "extractedAt": "2026-11-21T13:12:37.258Z"
+      "extractedAt": "2026-11-21T13:38:05.247Z"
     },
     {
       "id": "hinadori-2026-11",
@@ -1960,7 +1980,7 @@
           "quote": "休"
         }
       ],
-      "extractedAt": "2026-11-21T13:25:53.203Z"
+      "extractedAt": "2026-11-21T13:38:05.338Z"
     }
   ],
   "events": [
@@ -11676,6 +11696,7 @@
       "startTime": "09:00",
       "endTime": "12:00",
       "title": "ひろば",
+      "description": "にこにこ身測ウィーク",
       "kind": "hiroba",
       "origin": "extracted"
     },
@@ -11687,7 +11708,7 @@
       "startTime": "13:00",
       "endTime": "16:00",
       "title": "ひろば",
-      "description": "にこにこ身測",
+      "description": "にこにこ身測ウィーク",
       "kind": "hiroba",
       "origin": "extracted"
     },
@@ -11711,7 +11732,7 @@
       "sourceDocumentId": "minami-2026-12",
       "date": "2026-12-03",
       "title": "にこにこ広場",
-      "description": "9：00～ 12：00 13： 00～ 16：00",
+      "description": "13： 00～ 16：00",
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours",
@@ -11771,6 +11792,20 @@
       "origin": "extracted"
     },
     {
+      "id": "urawa-2026-12-03-kangoshi-soudan-pm",
+      "centerId": "urawa",
+      "sourceDocumentId": "urawa-2026-12",
+      "date": "2026-12-03",
+      "startTime": "13:30",
+      "endTime": "14:45",
+      "title": "看護師育児相談",
+      "description": "相談室にて。保育園での豊かな経験をもつ看護師が相談に応じます。おひとり30分。",
+      "capacity": 5,
+      "reservationRequired": true,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
       "id": "yono-2026-12-03-regular-hiroba",
       "centerId": "yono",
       "sourceDocumentId": "yono-2026-12",
@@ -11789,7 +11824,7 @@
       "startTime": "09:00",
       "endTime": "12:00",
       "title": "ひろば",
-      "description": "ウィーク",
+      "description": "にこにこ身測ウィーク",
       "kind": "hiroba",
       "origin": "extracted"
     },
@@ -11801,7 +11836,7 @@
       "startTime": "13:00",
       "endTime": "16:00",
       "title": "ひろば",
-      "description": "ウィーク",
+      "description": "にこにこ身測ウィーク",
       "kind": "hiroba",
       "origin": "extracted"
     },
@@ -12118,6 +12153,19 @@
       "targetAge": "０・１・２歳の親子"
     },
     {
+      "id": "omiya-2026-12-08-mushiba",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-2026-12",
+      "date": "2026-12-08",
+      "startTime": "10:00",
+      "endTime": "10:30",
+      "title": "むし歯予防教室",
+      "description": "お申込み済の方対象",
+      "reservationRequired": true,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
       "id": "omiya-2026-12-08-regular-hiroba",
       "centerId": "omiya",
       "sourceDocumentId": "omiya-2026-12",
@@ -12239,7 +12287,7 @@
       "startTime": "13:00",
       "endTime": "16:00",
       "title": "0歳児専用広場",
-      "description": "おっぱい相談あり（予約制：助産師による相談、先着4名、おひとり15分、13:30～14:45 / 14:30～15:30）",
+      "description": "おっぱい相談あり（予約制：助産師による相談、先着4名、おひとり15分、14:30～15:30）",
       "targetAge": "0歳児",
       "reservationRequired": false,
       "kind": "hiroba",
@@ -12250,7 +12298,7 @@
       "centerId": "urawa",
       "sourceDocumentId": "urawa-2026-12",
       "date": "2026-12-09",
-      "startTime": "13:30",
+      "startTime": "14:30",
       "endTime": "15:30",
       "title": "おっぱい相談",
       "description": "助産師による相談。先着4名、おひとり15分。",
@@ -12265,7 +12313,7 @@
       "sourceDocumentId": "urawa-2026-12",
       "date": "2026-12-09",
       "title": "にこにこ広場",
-      "description": "午前9:00～１２:００ 午後13:00～１６:００",
+      "description": "午前9:00～１２:００",
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours",
@@ -12739,7 +12787,7 @@
       "sourceDocumentId": "omiya-2026-12",
       "date": "2026-12-15",
       "title": "わくわくひろば",
-      "description": "９：００～１２：００ / １３：００～１６：００",
+      "description": "９：００～１２：００",
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours"
@@ -12787,7 +12835,20 @@
       "startTime": "13:00",
       "endTime": "16:00",
       "title": "ひろば",
+      "description": "バースデーフォトコーナー",
       "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
+      "id": "iwatsuki-2026-12-16-online-birthday",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-16",
+      "startTime": "14:30",
+      "title": "オンラインdeお誕生日会",
+      "description": "PDF下部の注記参照",
+      "reservationRequired": true,
+      "kind": "event",
       "origin": "extracted"
     },
     {
@@ -12907,7 +12968,7 @@
       "sourceDocumentId": "minami-2026-12",
       "date": "2026-12-17",
       "title": "にこにこ広場",
-      "description": "9：00～ 12：00 13： 00～ 16：00",
+      "description": "13： 00～ 16：00",
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours",
@@ -12944,8 +13005,8 @@
       "date": "2026-12-17",
       "startTime": "10:00",
       "endTime": "11:30",
-      "title": "発達相談 サンサンサロン",
-      "description": "公認心理士・発達心理学講師による相談。先着3組、おひとり30分。公認心理士・発達心理学講師・子育て支援員に相談をされたことのある方や、発達に不安や心配のあるお子さんとご家族は、ふれあいの場としてお気軽にご利用ください。ゆったりと遊びながら安心して過ごせるように子育て支援員が寄り添います。",
+      "title": "発達相談",
+      "description": "公認心理士・発達心理学講師による相談。先着3組、おひとり30分。",
       "capacity": 3,
       "reservationRequired": true,
       "kind": "event",
@@ -12962,6 +13023,19 @@
       "kind": "hiroba",
       "origin": "regular-hours",
       "targetAge": "０・１・２歳のお子さんと保護者"
+    },
+    {
+      "id": "urawa-2026-12-17-sunsun-salon",
+      "centerId": "urawa",
+      "sourceDocumentId": "urawa-2026-12",
+      "date": "2026-12-17",
+      "startTime": "09:30",
+      "endTime": "11:30",
+      "title": "サンサンサロン",
+      "description": "公認心理士・発達心理学講師・子育て支援員に相談をされたことのある方や、発達に不安や心配のあるお子さんとご家族は、ふれあいの場としてお気軽にご利用ください。ゆったりと遊びながら安心して過ごせるように子育て支援員が寄り添います。",
+      "reservationRequired": false,
+      "kind": "event",
+      "origin": "extracted"
     },
     {
       "id": "yono-2026-12-17-regular-hiroba",
@@ -13149,9 +13223,9 @@
       "startTime": "10:00",
       "endTime": "11:30",
       "title": "ふたごタイム",
-      "description": "ふたご限定（0～3歳未満）。対象・定員：乳幼児親子 15組",
+      "description": "ふたご限定（0～3歳未満）。対象・定員：乳幼児親子 5組",
       "targetAge": "ふたご限定（0～3歳未満）",
-      "capacity": 15,
+      "capacity": 5,
       "reservationRequired": true,
       "kind": "event",
       "origin": "extracted"
@@ -13288,8 +13362,8 @@
       "date": "2026-12-20",
       "startTime": "10:30",
       "title": "口腔ケア講座",
-      "description": "講師：中央区保健センター歯科衛生士。歯の磨き方やむし歯予防を学びます。定員：5組",
-      "capacity": 5,
+      "description": "講師：中央区保健センター歯科衛生士。歯の磨き方やむし歯予防を学びます。定員：15組",
+      "capacity": 15,
       "reservationRequired": true,
       "kind": "event",
       "origin": "extracted"
@@ -13572,8 +13646,8 @@
       "date": "2026-12-23",
       "startTime": "10:30",
       "title": "お誕生会",
-      "description": "お誕生月のお友達に手作りのカードと冠をプレゼントしてお祝いします。ねんねのお友達はタオルをご持参下さい。お誕生会までに3歳を迎えた方もご参加できます。",
-      "reservationRequired": false,
+      "description": "お誕生月のお友達に手作りのカードと冠をプレゼントしてお祝いします。お誕生会までに3歳を迎えた方もご参加できます。事前お申込制。",
+      "reservationRequired": true,
       "kind": "event",
       "origin": "extracted"
     },
@@ -13685,8 +13759,8 @@
       "centerId": "yono",
       "sourceDocumentId": "yono-2026-12",
       "date": "2026-12-24",
-      "startTime": "13:01",
-      "endTime": "15:03",
+      "startTime": "13:00",
+      "endTime": "15:30",
       "title": "のびのび身体測定",
       "description": "初回に測定カードをお渡しします。予約不要",
       "reservationRequired": false,
@@ -13846,8 +13920,8 @@
       "centerId": "yono",
       "sourceDocumentId": "yono-2026-12",
       "date": "2026-12-25",
-      "startTime": "13:01",
-      "endTime": "15:03",
+      "startTime": "13:00",
+      "endTime": "15:30",
       "title": "のびのび身体測定",
       "description": "初回に測定カードをお渡しします。予約不要",
       "reservationRequired": false,
@@ -13942,8 +14016,8 @@
       "centerId": "yono",
       "sourceDocumentId": "yono-2026-12",
       "date": "2026-12-26",
-      "startTime": "13:01",
-      "endTime": "15:03",
+      "startTime": "13:00",
+      "endTime": "15:30",
       "title": "のびのび身体測定",
       "description": "初回に測定カードをお渡しします。予約不要",
       "reservationRequired": false,
@@ -14038,8 +14112,8 @@
       "centerId": "yono",
       "sourceDocumentId": "yono-2026-12",
       "date": "2026-12-27",
-      "startTime": "13:01",
-      "endTime": "15:03",
+      "startTime": "13:00",
+      "endTime": "15:30",
       "title": "のびのび身体測定",
       "description": "初回に測定カードをお渡しします。予約不要",
       "reservationRequired": false,
@@ -14117,6 +14191,6 @@
       "origin": "regular-hours"
     }
   ],
-  "generatedAt": "2026-11-21T13:25:56.335Z",
+  "generatedAt": "2026-11-21T13:38:10.559Z",
   "version": "1.0.0"
 }

@@ -52,6 +52,7 @@
     "startTime": "09:00",
     "endTime": "12:00",
     "title": "ひろば",
+    "description": "にこにこ身測ウィーク",
     "kind": "hiroba",
     "origin": "extracted"
   },
@@ -63,7 +64,7 @@
     "startTime": "13:00",
     "endTime": "16:00",
     "title": "ひろば",
-    "description": "にこにこ身測",
+    "description": "にこにこ身測ウィーク",
     "kind": "hiroba",
     "origin": "extracted"
   },
@@ -75,7 +76,7 @@
     "startTime": "09:00",
     "endTime": "12:00",
     "title": "ひろば",
-    "description": "ウィーク",
+    "description": "にこにこ身測ウィーク",
     "kind": "hiroba",
     "origin": "extracted"
   },
@@ -87,7 +88,7 @@
     "startTime": "13:00",
     "endTime": "16:00",
     "title": "ひろば",
-    "description": "ウィーク",
+    "description": "にこにこ身測ウィーク",
     "kind": "hiroba",
     "origin": "extracted"
   },
@@ -328,6 +329,18 @@
     "origin": "extracted"
   },
   {
+    "id": "iwatsuki-2026-12-16-online-birthday",
+    "centerId": "iwatsuki",
+    "sourceDocumentId": "iwatsuki-2026-12",
+    "date": "2026-12-16",
+    "startTime": "14:30",
+    "title": "オンラインdeお誕生日会",
+    "description": "PDF下部の注記参照",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted"
+  },
+  {
     "id": "iwatsuki-2026-12-16-hiroba-pm",
     "centerId": "iwatsuki",
     "sourceDocumentId": "iwatsuki-2026-12",
@@ -335,6 +348,7 @@
     "startTime": "13:00",
     "endTime": "16:00",
     "title": "ひろば",
+    "description": "バースデーフォトコーナー",
     "kind": "hiroba",
     "origin": "extracted"
   },

@@ -1,5 +1,18 @@
 [
   {
+    "id": "omiya-2026-12-08-mushiba",
+    "centerId": "omiya",
+    "sourceDocumentId": "omiya-2026-12",
+    "date": "2026-12-08",
+    "startTime": "10:00",
+    "endTime": "10:30",
+    "title": "むし歯予防教室",
+    "description": "お申込み済の方対象",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted"
+  },
+  {
     "id": "omiya-2026-12-09-tsukutte-asobo",
     "centerId": "omiya",
     "sourceDocumentId": "omiya-2026-12",
