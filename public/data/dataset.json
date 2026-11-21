@@ -1666,6 +1666,47 @@
         }
       ],
       "extractedAt": "2026-11-21T13:07:01.767Z"
+    },
+    {
+      "id": "iwatsuki-2026-12",
+      "centerId": "iwatsuki",
+      "month": "2026-12",
+      "pdfUrl": "https://kawai-daynursery.jp/wp-content/uploads/2026/11/hina-202612.pdf",
+      "fetchedAt": "2026-11-21T13:00:00Z",
+      "sha256": "bf427bfbc927feb6433451d343d6c2ceee724adc9be5119327bdc2783a2b33e4",
+      "closures": [
+        {
+          "date": "2026-12-08",
+          "scope": "all-day",
+          "quote": "休館日"
+        },
+        {
+          "date": "2026-12-12",
+          "scope": "pm",
+          "quote": "イベント準備のため午後は休館になります"
+        },
+        {
+          "date": "2026-12-22",
+          "scope": "all-day",
+          "quote": "休館日"
+        },
+        {
+          "date": "2026-12-29",
+          "scope": "all-day",
+          "quote": "休館日"
+        },
+        {
+          "date": "2026-12-30",
+          "scope": "all-day",
+          "quote": "休館日"
+        },
+        {
+          "date": "2026-12-31",
+          "scope": "all-day",
+          "quote": "休館日"
+        }
+      ],
+      "extractedAt": "2026-11-21T13:08:38.345Z"
     }
   ],
   "events": [
@@ -11027,6 +11068,28 @@
       "origin": "regular-hours"
     },
     {
+      "id": "iwatsuki-2026-12-01-hiroba",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-01",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "title": "ひろば",
+      "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
+      "id": "iwatsuki-2026-12-01-hiroba-pm",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-01",
+      "startTime": "13:00",
+      "endTime": "16:00",
+      "title": "ひろば",
+      "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
       "id": "omiya-2026-12-01-regular-hiroba",
       "centerId": "omiya",
       "sourceDocumentId": "omiya-2026-12",
@@ -11036,6 +11099,29 @@
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours"
+    },
+    {
+      "id": "iwatsuki-2026-12-02-ehon-mama",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-02",
+      "startTime": "09:45",
+      "title": "絵本でママの交流会",
+      "description": "絵本は子どもだけではなく大人も楽しめます。普段のいそがしさを忘れてホッと一息、絵本を見ながら交流を楽しみましょう。講座中はお子様を別室でお預かりします。託児付き！6～8名募集",
+      "reservationRequired": true,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "iwatsuki-2026-12-02-hiroba-pm",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-02",
+      "startTime": "13:00",
+      "endTime": "16:00",
+      "title": "ひろば",
+      "kind": "hiroba",
+      "origin": "extracted"
     },
     {
       "id": "omiya-2026-12-02-regular-hiroba",
@@ -11049,6 +11135,29 @@
       "origin": "regular-hours"
     },
     {
+      "id": "iwatsuki-2026-12-03-hiroba",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-03",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "title": "ひろば",
+      "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
+      "id": "iwatsuki-2026-12-03-hiroba-pm",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-03",
+      "startTime": "13:00",
+      "endTime": "16:00",
+      "title": "ひろば",
+      "description": "にこにこ身測",
+      "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
       "id": "omiya-2026-12-03-regular-hiroba",
       "centerId": "omiya",
       "sourceDocumentId": "omiya-2026-12",
@@ -11058,6 +11167,30 @@
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours"
+    },
+    {
+      "id": "iwatsuki-2026-12-04-hiroba",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-04",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "title": "ひろば",
+      "description": "ウィーク",
+      "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
+      "id": "iwatsuki-2026-12-04-hiroba-pm",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-04",
+      "startTime": "13:00",
+      "endTime": "16:00",
+      "title": "ひろば",
+      "description": "ウィーク",
+      "kind": "hiroba",
+      "origin": "extracted"
     },
     {
       "id": "omiya-2026-12-04-regular-hiroba",
@@ -11071,6 +11204,30 @@
       "origin": "regular-hours"
     },
     {
+      "id": "iwatsuki-2026-12-05-hiroba",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-05",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "title": "ひろば",
+      "description": "【プラレールの日】",
+      "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
+      "id": "iwatsuki-2026-12-05-hiroba-pm",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-05",
+      "startTime": "13:00",
+      "endTime": "16:00",
+      "title": "ひろば",
+      "description": "【プラレールの日】",
+      "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
       "id": "omiya-2026-12-05-regular-hiroba",
       "centerId": "omiya",
       "sourceDocumentId": "omiya-2026-12",
@@ -11080,6 +11237,30 @@
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours"
+    },
+    {
+      "id": "iwatsuki-2026-12-06-hiroba",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-06",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "title": "ひろば",
+      "description": "【プラレールの日】",
+      "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
+      "id": "iwatsuki-2026-12-06-hiroba-pm",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-06",
+      "startTime": "13:00",
+      "endTime": "16:00",
+      "title": "ひろば",
+      "description": "【プラレールの日】",
+      "kind": "hiroba",
+      "origin": "extracted"
     },
     {
       "id": "omiya-2026-12-06-regular-hiroba",
@@ -11093,6 +11274,30 @@
       "origin": "regular-hours"
     },
     {
+      "id": "iwatsuki-2026-12-07-hiroba",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-07",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "title": "ひろば",
+      "description": "【プラレールの日】",
+      "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
+      "id": "iwatsuki-2026-12-07-hiroba-pm",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-07",
+      "startTime": "13:00",
+      "endTime": "16:00",
+      "title": "ひろば",
+      "description": "【プラレールの日】",
+      "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
       "id": "omiya-2026-12-08-regular-hiroba",
       "centerId": "omiya",
       "sourceDocumentId": "omiya-2026-12",
@@ -11102,6 +11307,30 @@
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours"
+    },
+    {
+      "id": "iwatsuki-2026-12-09-fureai",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-09",
+      "startTime": "10:30",
+      "title": "ふれあいあそび",
+      "description": "1歳以上のお友達が参加できます。お家に飾れる簡単なクリスマス飾りを作ります。",
+      "targetAge": "1歳以上",
+      "reservationRequired": true,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "iwatsuki-2026-12-09-hiroba-pm",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-09",
+      "startTime": "13:00",
+      "endTime": "16:00",
+      "title": "ひろば",
+      "kind": "hiroba",
+      "origin": "extracted"
     },
     {
       "id": "omiya-2026-12-09-regular-hiroba",
@@ -11129,6 +11358,28 @@
       "origin": "extracted"
     },
     {
+      "id": "iwatsuki-2026-12-10-hiroba",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-10",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "title": "ひろば",
+      "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
+      "id": "iwatsuki-2026-12-10-hiroba-pm",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-10",
+      "startTime": "13:00",
+      "endTime": "16:00",
+      "title": "ひろば",
+      "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
       "id": "omiya-2026-12-10-regular-hiroba",
       "centerId": "omiya",
       "sourceDocumentId": "omiya-2026-12",
@@ -11138,6 +11389,28 @@
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours"
+    },
+    {
+      "id": "iwatsuki-2026-12-11-hiroba-pm",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-11",
+      "startTime": "13:00",
+      "endTime": "16:00",
+      "title": "ひろば",
+      "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
+      "id": "iwatsuki-2026-12-11-ohanashikai",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-11",
+      "startTime": "10:45",
+      "title": "おはなしかい",
+      "reservationRequired": false,
+      "kind": "event",
+      "origin": "extracted"
     },
     {
       "id": "omiya-2026-12-11-gospel-concert",
@@ -11163,6 +11436,18 @@
       "origin": "regular-hours"
     },
     {
+      "id": "iwatsuki-2026-12-12-hiroba",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-12",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "title": "ひろば",
+      "description": "午前のみ",
+      "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
       "id": "omiya-2026-12-12-regular-hiroba",
       "centerId": "omiya",
       "sourceDocumentId": "omiya-2026-12",
@@ -11172,6 +11457,30 @@
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours"
+    },
+    {
+      "id": "iwatsuki-2026-12-13-christmas",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-13",
+      "startTime": "10:30",
+      "title": "クリスマス会",
+      "description": "わくわくサンデー 午前の部 10:30〜（10:15開室）午後の部 13:30〜（13:15開室）楽しいプログラムを企画中です！",
+      "reservationRequired": true,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "iwatsuki-2026-12-13-christmas-pm",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-13",
+      "startTime": "13:30",
+      "title": "クリスマス会",
+      "description": "わくわくサンデー 午後の部",
+      "reservationRequired": true,
+      "kind": "event",
+      "origin": "extracted"
     },
     {
       "id": "omiya-2026-12-13-regular-hiroba",
@@ -11197,6 +11506,30 @@
       "origin": "extracted"
     },
     {
+      "id": "iwatsuki-2026-12-14-hiroba",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-14",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "title": "ひろば",
+      "description": "バースデーフォトコーナー",
+      "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
+      "id": "iwatsuki-2026-12-14-hiroba-pm",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-14",
+      "startTime": "13:00",
+      "endTime": "16:00",
+      "title": "ひろば",
+      "description": "バースデーフォトコーナー",
+      "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
       "id": "omiya-2026-12-14-regular-hiroba",
       "centerId": "omiya",
       "sourceDocumentId": "omiya-2026-12",
@@ -11206,6 +11539,30 @@
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours"
+    },
+    {
+      "id": "iwatsuki-2026-12-15-hiroba",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-15",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "title": "ひろば",
+      "description": "バースデーフォトコーナー",
+      "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
+      "id": "iwatsuki-2026-12-15-hiroba-pm",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-15",
+      "startTime": "13:00",
+      "endTime": "16:00",
+      "title": "ひろば",
+      "description": "バースデーフォトコーナー",
+      "kind": "hiroba",
+      "origin": "extracted"
     },
     {
       "id": "omiya-2026-12-15-happy-birthday",
@@ -11244,6 +11601,29 @@
       "origin": "regular-hours"
     },
     {
+      "id": "iwatsuki-2026-12-16-birthday",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-16",
+      "startTime": "10:30",
+      "title": "お誕生日会",
+      "description": "12月生まれのお友だちが参加できます。足形スタンプをとりますので10:15までにお越しください。",
+      "reservationRequired": true,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "iwatsuki-2026-12-16-hiroba-pm",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-16",
+      "startTime": "13:00",
+      "endTime": "16:00",
+      "title": "ひろば",
+      "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
       "id": "omiya-2026-12-16-regular-hiroba",
       "centerId": "omiya",
       "sourceDocumentId": "omiya-2026-12",
@@ -11253,6 +11633,28 @@
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours"
+    },
+    {
+      "id": "iwatsuki-2026-12-17-hiroba",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-17",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "title": "ひろば",
+      "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
+      "id": "iwatsuki-2026-12-17-hiroba-pm",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-17",
+      "startTime": "13:00",
+      "endTime": "16:00",
+      "title": "ひろば",
+      "kind": "hiroba",
+      "origin": "extracted"
     },
     {
       "id": "omiya-2026-12-17-regular-hiroba",
@@ -11266,6 +11668,32 @@
       "origin": "regular-hours"
     },
     {
+      "id": "iwatsuki-2026-12-18-akachan-am",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-18",
+      "startTime": "10:30",
+      "title": "赤ちゃんサロン",
+      "description": "0歳のお友達が参加できます。ふれあい遊び、わらべ歌、絵本などを親子で楽しみましょう！身長、体重の計測も行います。持ち物：バスタオル",
+      "targetAge": "0歳",
+      "reservationRequired": true,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "iwatsuki-2026-12-18-akachan-pm",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-18",
+      "startTime": "14:00",
+      "title": "赤ちゃんサロン",
+      "description": "0歳のお友達が参加できます。ふれあい遊び、わらべ歌、絵本などを親子で楽しみましょう！身長、体重の計測も行います。持ち物：バスタオル",
+      "targetAge": "0歳",
+      "reservationRequired": true,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
       "id": "omiya-2026-12-18-regular-hiroba",
       "centerId": "omiya",
       "sourceDocumentId": "omiya-2026-12",
@@ -11275,6 +11703,30 @@
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours"
+    },
+    {
+      "id": "iwatsuki-2026-12-19-hiroba",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-19",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "title": "ひろば",
+      "description": "【ボールプールの日】",
+      "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
+      "id": "iwatsuki-2026-12-19-hiroba-pm",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-19",
+      "startTime": "13:00",
+      "endTime": "16:00",
+      "title": "ひろば",
+      "description": "【ボールプールの日】",
+      "kind": "hiroba",
+      "origin": "extracted"
     },
     {
       "id": "omiya-2026-12-19-regular-hiroba",
@@ -11288,6 +11740,30 @@
       "origin": "regular-hours"
     },
     {
+      "id": "iwatsuki-2026-12-20-hiroba",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-20",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "title": "ひろば",
+      "description": "【ボールプールの日】",
+      "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
+      "id": "iwatsuki-2026-12-20-hiroba-pm",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-20",
+      "startTime": "13:00",
+      "endTime": "16:00",
+      "title": "ひろば",
+      "description": "【ボールプールの日】",
+      "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
       "id": "omiya-2026-12-20-regular-hiroba",
       "centerId": "omiya",
       "sourceDocumentId": "omiya-2026-12",
@@ -11297,6 +11773,30 @@
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours"
+    },
+    {
+      "id": "iwatsuki-2026-12-21-hiroba",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-21",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "title": "ひろば",
+      "description": "【ボールプールの日】",
+      "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
+      "id": "iwatsuki-2026-12-21-hiroba-pm",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-21",
+      "startTime": "13:00",
+      "endTime": "16:00",
+      "title": "ひろば",
+      "description": "【ボールプールの日】",
+      "kind": "hiroba",
+      "origin": "extracted"
     },
     {
       "id": "omiya-2026-12-22-regular-hiroba",
@@ -11321,6 +11821,28 @@
       "origin": "extracted"
     },
     {
+      "id": "iwatsuki-2026-12-23-hiroba",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-23",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "title": "ひろば",
+      "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
+      "id": "iwatsuki-2026-12-23-hiroba-pm",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-23",
+      "startTime": "13:00",
+      "endTime": "16:00",
+      "title": "ひろば",
+      "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
       "id": "omiya-2026-12-23-measurement",
       "centerId": "omiya",
       "sourceDocumentId": "omiya-2026-12",
@@ -11332,6 +11854,28 @@
       "origin": "extracted"
     },
     {
+      "id": "iwatsuki-2026-12-24-hiroba",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-24",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "title": "ひろば",
+      "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
+      "id": "iwatsuki-2026-12-24-hiroba-pm",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-24",
+      "startTime": "13:00",
+      "endTime": "16:00",
+      "title": "ひろば",
+      "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
       "id": "omiya-2026-12-24-measurement",
       "centerId": "omiya",
       "sourceDocumentId": "omiya-2026-12",
@@ -11339,6 +11883,28 @@
       "title": "すくすく測定",
       "description": "身長・体重を測ってお子さんの成長を見守っていきましょう。",
       "reservationRequired": true,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "iwatsuki-2026-12-25-hiroba-pm",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-25",
+      "startTime": "13:00",
+      "endTime": "16:00",
+      "title": "ひろば",
+      "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
+      "id": "iwatsuki-2026-12-25-ohanashikai",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-25",
+      "startTime": "10:45",
+      "title": "おはなしかい",
+      "reservationRequired": false,
       "kind": "event",
       "origin": "extracted"
     },
@@ -11354,6 +11920,30 @@
       "origin": "regular-hours"
     },
     {
+      "id": "iwatsuki-2026-12-26-hiroba",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-26",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "title": "ひろば",
+      "description": "【ブロックの日】",
+      "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
+      "id": "iwatsuki-2026-12-26-hiroba-pm",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-26",
+      "startTime": "13:00",
+      "endTime": "16:00",
+      "title": "ひろば",
+      "description": "【ブロックの日】",
+      "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
       "id": "omiya-2026-12-26-regular-hiroba",
       "centerId": "omiya",
       "sourceDocumentId": "omiya-2026-12",
@@ -11365,6 +11955,30 @@
       "origin": "regular-hours"
     },
     {
+      "id": "iwatsuki-2026-12-27-hiroba",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-27",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "title": "ひろば",
+      "description": "【ブロックの日】",
+      "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
+      "id": "iwatsuki-2026-12-27-hiroba-pm",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-27",
+      "startTime": "13:00",
+      "endTime": "16:00",
+      "title": "ひろば",
+      "description": "【ブロックの日】",
+      "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
       "id": "omiya-2026-12-27-regular-hiroba",
       "centerId": "omiya",
       "sourceDocumentId": "omiya-2026-12",
@@ -11374,6 +11988,30 @@
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours"
+    },
+    {
+      "id": "iwatsuki-2026-12-28-hiroba",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-28",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "title": "ひろば",
+      "description": "【ブロックの日】",
+      "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
+      "id": "iwatsuki-2026-12-28-hiroba-pm",
+      "centerId": "iwatsuki",
+      "sourceDocumentId": "iwatsuki-2026-12",
+      "date": "2026-12-28",
+      "startTime": "13:00",
+      "endTime": "16:00",
+      "title": "ひろば",
+      "description": "【ブロックの日】",
+      "kind": "hiroba",
+      "origin": "extracted"
     },
     {
       "id": "omiya-2026-12-28-online",
@@ -11400,6 +12038,6 @@
       "origin": "regular-hours"
     }
   ],
-  "generatedAt": "2026-11-21T13:07:07.118Z",
+  "generatedAt": "2026-11-21T13:08:39.014Z",
   "version": "1.0.0"
 }

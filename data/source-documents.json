@@ -1232,5 +1232,46 @@
       }
     ],
     "extractedAt": "2026-11-21T13:07:01.767Z"
+  },
+  {
+    "id": "iwatsuki-2026-12",
+    "centerId": "iwatsuki",
+    "month": "2026-12",
+    "pdfUrl": "https://kawai-daynursery.jp/wp-content/uploads/2026/11/hina-202612.pdf",
+    "fetchedAt": "2026-11-21T13:00:00Z",
+    "sha256": "bf427bfbc927feb6433451d343d6c2ceee724adc9be5119327bdc2783a2b33e4",
+    "closures": [
+      {
+        "date": "2026-12-08",
+        "scope": "all-day",
+        "quote": "休館日"
+      },
+      {
+        "date": "2026-12-12",
+        "scope": "pm",
+        "quote": "イベント準備のため午後は休館になります"
+      },
+      {
+        "date": "2026-12-22",
+        "scope": "all-day",
+        "quote": "休館日"
+      },
+      {
+        "date": "2026-12-29",
+        "scope": "all-day",
+        "quote": "休館日"
+      },
+      {
+        "date": "2026-12-30",
+        "scope": "all-day",
+        "quote": "休館日"
+      },
+      {
+        "date": "2026-12-31",
+        "scope": "all-day",
+        "quote": "休館日"
+      }
+    ],
+    "extractedAt": "2026-11-21T13:08:38.345Z"
   }
 ]
