@@ -1420,5 +1420,91 @@
       }
     ],
     "extractedAt": "2026-11-21T13:11:16.025Z"
+  },
+  {
+    "id": "urawa-2026-12",
+    "centerId": "urawa",
+    "month": "2026-12",
+    "pdfUrl": "https://www.urawanyuyouji.com/admin/wp-content/uploads/2026/11/202612_urawa.pdf",
+    "fetchedAt": "2026-11-21T13:00:00Z",
+    "sha256": "7dc2fadde1008b6e7cc2f2b69fda9fc2ffbab68a850660b8216d59d2aff29e03",
+    "closures": [
+      {
+        "date": "2026-12-01",
+        "scope": "all-day",
+        "quote": "終日 にこにこ広場 お休み"
+      },
+      {
+        "date": "2026-12-02",
+        "scope": "all-day",
+        "quote": "終日 にこにこ広場 お休み"
+      },
+      {
+        "date": "2026-12-03",
+        "scope": "all-day",
+        "quote": "終日 にこにこ広場 お休み"
+      },
+      {
+        "date": "2026-12-08",
+        "scope": "am",
+        "quote": "《午前》1・2歳児専用広場"
+      },
+      {
+        "date": "2026-12-13",
+        "scope": "am",
+        "quote": "午前 にこにこ広場 お休み"
+      },
+      {
+        "date": "2026-12-14",
+        "scope": "all-day",
+        "quote": "休館"
+      },
+      {
+        "date": "2026-12-16",
+        "scope": "pm",
+        "quote": "午後 にこにこ広場 お休み"
+      },
+      {
+        "date": "2026-12-17",
+        "scope": "am",
+        "quote": "午前 にこにこ広場 お休み"
+      },
+      {
+        "date": "2026-12-20",
+        "scope": "am",
+        "quote": "午前 にこにこ広場 お休み"
+      },
+      {
+        "date": "2026-12-23",
+        "scope": "am",
+        "quote": "《午前》1・2歳児専用広場"
+      },
+      {
+        "date": "2026-12-25",
+        "scope": "pm",
+        "quote": "午後 にこにこ広場 お休み"
+      },
+      {
+        "date": "2026-12-28",
+        "scope": "all-day",
+        "quote": "年末年始休館"
+      },
+      {
+        "date": "2026-12-29",
+        "scope": "all-day",
+        "quote": "年末年始休館"
+      },
+      {
+        "date": "2026-12-30",
+        "scope": "all-day",
+        "quote": "年末年始休館"
+      },
+      {
+        "date": "2026-12-31",
+        "scope": "all-day",
+        "quote": "年末年始休館"
+      }
+    ],
+    "extractedAt": "2026-11-21T13:12:37.258Z"
   }
 ]
