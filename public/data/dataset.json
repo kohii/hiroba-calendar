@@ -1940,6 +1940,16 @@
         }
       ],
       "extractedAt": "2026-11-21T13:12:37.258Z"
+    },
+    {
+      "id": "hinadori-2026-11",
+      "centerId": "hinadori",
+      "month": "2026-11",
+      "pdfUrl": "https://hinadori.ed.jp/wp-content/uploads/2026/10/1b5cb02dfc41bd9e51291714843efc4b.pdf",
+      "fetchedAt": "2026-11-21T13:00:00Z",
+      "sha256": "eb245165ae4eab70ff22a43ed0ac5c5f11343756ffea5d531ca195300c488bb5",
+      "closures": [],
+      "extractedAt": "2026-11-21T13:13:31.323Z"
     }
   ],
   "events": [
@@ -9468,6 +9478,22 @@
       "origin": "regular-hours"
     },
     {
+      "id": "hinadori-2026-11-20-imo-hori",
+      "centerId": "hinadori",
+      "sourceDocumentId": "hinadori-2026-11",
+      "date": "2026-11-20",
+      "startTime": "10:00",
+      "endTime": "10:30",
+      "title": "芋掘り体験",
+      "description": "親子で芋掘り体験をします。採れたさつま芋はお持ち帰りできます。服装：親子で汚れても良い服装・長靴または靴。持ち物：水分補給できるもの。大人用軍手・シャベルは園よりお貸しします。集合場所：芋畑…桜区西堀5-8 (フレンズドッグランとフットサルの間)。現地集合・現地解散です。",
+      "targetAge": "未就園児",
+      "capacity": 10,
+      "reservationRequired": true,
+      "location": "芋畑（桜区西堀5-8）",
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
       "id": "iwatsuki-2026-11-20-akachan-salon-am",
       "centerId": "iwatsuki",
       "sourceDocumentId": "iwatsuki-2026-11",
@@ -13930,6 +13956,6 @@
       "origin": "regular-hours"
     }
   ],
-  "generatedAt": "2026-11-21T13:12:37.436Z",
+  "generatedAt": "2026-11-21T13:13:31.483Z",
   "version": "1.0.0"
 }

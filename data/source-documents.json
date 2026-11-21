@@ -1506,5 +1506,15 @@
       }
     ],
     "extractedAt": "2026-11-21T13:12:37.258Z"
+  },
+  {
+    "id": "hinadori-2026-11",
+    "centerId": "hinadori",
+    "month": "2026-11",
+    "pdfUrl": "https://hinadori.ed.jp/wp-content/uploads/2026/10/1b5cb02dfc41bd9e51291714843efc4b.pdf",
+    "fetchedAt": "2026-11-21T13:00:00Z",
+    "sha256": "eb245165ae4eab70ff22a43ed0ac5c5f11343756ffea5d531ca195300c488bb5",
+    "closures": [],
+    "extractedAt": "2026-11-21T13:13:31.323Z"
   }
 ]

@@ -1,0 +1,18 @@
+[
+  {
+    "id": "hinadori-2026-11-20-imo-hori",
+    "centerId": "hinadori",
+    "sourceDocumentId": "hinadori-2026-11",
+    "date": "2026-11-20",
+    "startTime": "10:00",
+    "endTime": "10:30",
+    "title": "芋掘り体験",
+    "description": "親子で芋掘り体験をします。採れたさつま芋はお持ち帰りできます。服装：親子で汚れても良い服装・長靴または靴。持ち物：水分補給できるもの。大人用軍手・シャベルは園よりお貸しします。集合場所：芋畑…桜区西堀5-8 (フレンズドッグランとフットサルの間)。現地集合・現地解散です。",
+    "targetAge": "未就園児",
+    "capacity": 10,
+    "reservationRequired": true,
+    "location": "芋畑（桜区西堀5-8）",
+    "kind": "event",
+    "origin": "extracted"
+  }
+]
