@@ -1600,6 +1600,72 @@
         }
       ],
       "extractedAt": "2026-10-29T12:29:27.813Z"
+    },
+    {
+      "id": "omiya-2026-12",
+      "centerId": "omiya",
+      "month": "2026-12",
+      "pdfUrl": "https://www.wakaba-asunaro.jp/library/6662c3046985d13334e93bf0/6afd4b24864e3e328bdfe6ab.pdf",
+      "fetchedAt": "2026-11-21T13:00:00Z",
+      "sha256": "d82b8c922539137598be2a0a75bce0e07ce02b792062b4d6d20fd7dd19684884",
+      "closures": [
+        {
+          "date": "2026-12-07",
+          "scope": "all-day",
+          "quote": "休館日"
+        },
+        {
+          "date": "2026-12-08",
+          "scope": "am",
+          "quote": "<午前>むし歯予防教室・お申込み済の方"
+        },
+        {
+          "date": "2026-12-11",
+          "scope": "am",
+          "quote": "<午前>★ゴスペルコンサート 11:00予約制"
+        },
+        {
+          "date": "2026-12-13",
+          "scope": "am",
+          "quote": "<午前>★うたのコンサート10:30予約制"
+        },
+        {
+          "date": "2026-12-21",
+          "scope": "all-day",
+          "quote": "休館日"
+        },
+        {
+          "date": "2026-12-23",
+          "scope": "all-day",
+          "quote": "★すくすく測定 予約制"
+        },
+        {
+          "date": "2026-12-24",
+          "scope": "all-day",
+          "quote": "★すくすく測定 予約制"
+        },
+        {
+          "date": "2026-12-28",
+          "scope": "pm",
+          "quote": "<午前> ★オンライン<午後>予約制"
+        },
+        {
+          "date": "2026-12-29",
+          "scope": "all-day",
+          "quote": "12/29（火）～1/3（日）は年末年始のためお休みです"
+        },
+        {
+          "date": "2026-12-30",
+          "scope": "all-day",
+          "quote": "12/29（火）～1/3（日）は年末年始のためお休みです"
+        },
+        {
+          "date": "2026-12-31",
+          "scope": "all-day",
+          "quote": "12/29（火）～1/3（日）は年末年始のためお休みです"
+        }
+      ],
+      "extractedAt": "2026-11-21T13:07:01.767Z"
     }
   ],
   "events": [
@@ -10959,8 +11025,381 @@
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours"
+    },
+    {
+      "id": "omiya-2026-12-01-regular-hiroba",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-2026-12",
+      "date": "2026-12-01",
+      "title": "わくわくひろば",
+      "description": "９：００～１２：００ / １３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
+      "id": "omiya-2026-12-02-regular-hiroba",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-2026-12",
+      "date": "2026-12-02",
+      "title": "わくわくひろば",
+      "description": "９：００～１２：００ / １３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
+      "id": "omiya-2026-12-03-regular-hiroba",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-2026-12",
+      "date": "2026-12-03",
+      "title": "わくわくひろば",
+      "description": "９：００～１２：００ / １３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
+      "id": "omiya-2026-12-04-regular-hiroba",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-2026-12",
+      "date": "2026-12-04",
+      "title": "わくわくひろば",
+      "description": "９：００～１２：００ / １３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
+      "id": "omiya-2026-12-05-regular-hiroba",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-2026-12",
+      "date": "2026-12-05",
+      "title": "わくわくひろば",
+      "description": "９：００～１２：００ / １３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
+      "id": "omiya-2026-12-06-regular-hiroba",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-2026-12",
+      "date": "2026-12-06",
+      "title": "わくわくひろば",
+      "description": "９：００～１２：００ / １３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
+      "id": "omiya-2026-12-08-regular-hiroba",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-2026-12",
+      "date": "2026-12-08",
+      "title": "わくわくひろば",
+      "description": "１３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
+      "id": "omiya-2026-12-09-regular-hiroba",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-2026-12",
+      "date": "2026-12-09",
+      "title": "わくわくひろば",
+      "description": "９：００～１２：００ / １３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
+      "id": "omiya-2026-12-09-tsukutte-asobo",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-2026-12",
+      "date": "2026-12-09",
+      "startTime": "10:00",
+      "endTime": "10:30",
+      "title": "作ってあそぼう！",
+      "description": "お子さんと一緒にお絵かきやシールはりなど工作を楽しみましょう。1歳半～3歳未満の親子",
+      "targetAge": "1歳半～3歳未満",
+      "reservationRequired": false,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "omiya-2026-12-10-regular-hiroba",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-2026-12",
+      "date": "2026-12-10",
+      "title": "わくわくひろば",
+      "description": "９：００～１２：００ / １３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
+      "id": "omiya-2026-12-11-gospel-concert",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-2026-12",
+      "date": "2026-12-11",
+      "startTime": "11:00",
+      "title": "ゴスペルコンサート",
+      "description": "ママたちのサークル「リトルライツ」のみなさんによるゴスペルライブコンサートを行います。ぜひ親子でお楽しみください。",
+      "reservationRequired": true,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "omiya-2026-12-11-regular-hiroba",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-2026-12",
+      "date": "2026-12-11",
+      "title": "わくわくひろば",
+      "description": "１３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
+      "id": "omiya-2026-12-12-regular-hiroba",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-2026-12",
+      "date": "2026-12-12",
+      "title": "わくわくひろば",
+      "description": "９：００～１２：００ / １３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
+      "id": "omiya-2026-12-13-regular-hiroba",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-2026-12",
+      "date": "2026-12-13",
+      "title": "わくわくひろば",
+      "description": "１３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
+      "id": "omiya-2026-12-13-uta-concert",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-2026-12",
+      "date": "2026-12-13",
+      "startTime": "10:30",
+      "title": "うたのコンサート",
+      "description": "うたを歌ったり、音楽に合わせてリズムをとったり親子で楽しい時間を過ごしませんか。",
+      "reservationRequired": true,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "omiya-2026-12-14-regular-hiroba",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-2026-12",
+      "date": "2026-12-14",
+      "title": "わくわくひろば",
+      "description": "９：００～１２：００ / １３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
+      "id": "omiya-2026-12-15-happy-birthday",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-2026-12",
+      "date": "2026-12-15",
+      "startTime": "10:30",
+      "title": "12月のハッピーバースデー",
+      "description": "お誕生月のお子さんのお祝いをします。12月のお誕生月のお子さんは、予めお申し込みください。",
+      "reservationRequired": true,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "omiya-2026-12-15-hokenshi",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-2026-12",
+      "date": "2026-12-15",
+      "startTime": "13:00",
+      "endTime": "16:00",
+      "title": "保健師さんとお話",
+      "description": "子育ての悩みや不安などを保健師さんに相談してみませんか。",
+      "reservationRequired": true,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "omiya-2026-12-15-regular-hiroba",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-2026-12",
+      "date": "2026-12-15",
+      "title": "わくわくひろば",
+      "description": "９：００～１２：００ / １３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
+      "id": "omiya-2026-12-16-regular-hiroba",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-2026-12",
+      "date": "2026-12-16",
+      "title": "わくわくひろば",
+      "description": "９：００～１２：００ / １３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
+      "id": "omiya-2026-12-17-regular-hiroba",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-2026-12",
+      "date": "2026-12-17",
+      "title": "わくわくひろば",
+      "description": "９：００～１２：００ / １３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
+      "id": "omiya-2026-12-18-regular-hiroba",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-2026-12",
+      "date": "2026-12-18",
+      "title": "わくわくひろば",
+      "description": "９：００～１２：００ / １３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
+      "id": "omiya-2026-12-19-regular-hiroba",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-2026-12",
+      "date": "2026-12-19",
+      "title": "わくわくひろば",
+      "description": "９：００～１２：００ / １３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
+      "id": "omiya-2026-12-20-regular-hiroba",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-2026-12",
+      "date": "2026-12-20",
+      "title": "わくわくひろば",
+      "description": "９：００～１２：００ / １３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
+      "id": "omiya-2026-12-22-regular-hiroba",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-2026-12",
+      "date": "2026-12-22",
+      "title": "わくわくひろば",
+      "description": "９：００～１２：００ / １３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
+      "id": "omiya-2026-12-22-warabeuta",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-2026-12",
+      "date": "2026-12-22",
+      "startTime": "10:30",
+      "title": "わらべ歌とおはなし",
+      "reservationRequired": false,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "omiya-2026-12-23-measurement",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-2026-12",
+      "date": "2026-12-23",
+      "title": "すくすく測定",
+      "description": "身長・体重を測ってお子さんの成長を見守っていきましょう。",
+      "reservationRequired": true,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "omiya-2026-12-24-measurement",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-2026-12",
+      "date": "2026-12-24",
+      "title": "すくすく測定",
+      "description": "身長・体重を測ってお子さんの成長を見守っていきましょう。",
+      "reservationRequired": true,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "omiya-2026-12-25-regular-hiroba",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-2026-12",
+      "date": "2026-12-25",
+      "title": "わくわくひろば",
+      "description": "９：００～１２：００ / １３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
+      "id": "omiya-2026-12-26-regular-hiroba",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-2026-12",
+      "date": "2026-12-26",
+      "title": "わくわくひろば",
+      "description": "９：００～１２：００ / １３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
+      "id": "omiya-2026-12-27-regular-hiroba",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-2026-12",
+      "date": "2026-12-27",
+      "title": "わくわくひろば",
+      "description": "９：００～１２：００ / １３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
+      "id": "omiya-2026-12-28-online",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-2026-12",
+      "date": "2026-12-28",
+      "startTime": "13:00",
+      "endTime": "16:00",
+      "title": "オンラインわくわくひろば",
+      "description": "支援センターになかなか来られない方とオンライン（zoom）でお会いできたらと思います。簡単な手あそびなどを一緒にしませんか。",
+      "reservationRequired": true,
+      "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
+      "id": "omiya-2026-12-28-regular-hiroba",
+      "centerId": "omiya",
+      "sourceDocumentId": "omiya-2026-12",
+      "date": "2026-12-28",
+      "title": "わくわくひろば",
+      "description": "９：００～１２：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
     }
   ],
-  "generatedAt": "2026-10-29T12:29:28.501Z",
+  "generatedAt": "2026-11-21T13:07:07.118Z",
   "version": "1.0.0"
 }

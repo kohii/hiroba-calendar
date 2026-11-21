@@ -1,0 +1,111 @@
+[
+  {
+    "id": "omiya-2026-12-09-tsukutte-asobo",
+    "centerId": "omiya",
+    "sourceDocumentId": "omiya-2026-12",
+    "date": "2026-12-09",
+    "startTime": "10:00",
+    "endTime": "10:30",
+    "title": "作ってあそぼう！",
+    "description": "お子さんと一緒にお絵かきやシールはりなど工作を楽しみましょう。1歳半～3歳未満の親子",
+    "targetAge": "1歳半～3歳未満",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted"
+  },
+  {
+    "id": "omiya-2026-12-11-gospel-concert",
+    "centerId": "omiya",
+    "sourceDocumentId": "omiya-2026-12",
+    "date": "2026-12-11",
+    "startTime": "11:00",
+    "title": "ゴスペルコンサート",
+    "description": "ママたちのサークル「リトルライツ」のみなさんによるゴスペルライブコンサートを行います。ぜひ親子でお楽しみください。",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted"
+  },
+  {
+    "id": "omiya-2026-12-13-uta-concert",
+    "centerId": "omiya",
+    "sourceDocumentId": "omiya-2026-12",
+    "date": "2026-12-13",
+    "startTime": "10:30",
+    "title": "うたのコンサート",
+    "description": "うたを歌ったり、音楽に合わせてリズムをとったり親子で楽しい時間を過ごしませんか。",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted"
+  },
+  {
+    "id": "omiya-2026-12-15-happy-birthday",
+    "centerId": "omiya",
+    "sourceDocumentId": "omiya-2026-12",
+    "date": "2026-12-15",
+    "startTime": "10:30",
+    "title": "12月のハッピーバースデー",
+    "description": "お誕生月のお子さんのお祝いをします。12月のお誕生月のお子さんは、予めお申し込みください。",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted"
+  },
+  {
+    "id": "omiya-2026-12-15-hokenshi",
+    "centerId": "omiya",
+    "sourceDocumentId": "omiya-2026-12",
+    "date": "2026-12-15",
+    "startTime": "13:00",
+    "endTime": "16:00",
+    "title": "保健師さんとお話",
+    "description": "子育ての悩みや不安などを保健師さんに相談してみませんか。",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted"
+  },
+  {
+    "id": "omiya-2026-12-22-warabeuta",
+    "centerId": "omiya",
+    "sourceDocumentId": "omiya-2026-12",
+    "date": "2026-12-22",
+    "startTime": "10:30",
+    "title": "わらべ歌とおはなし",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted"
+  },
+  {
+    "id": "omiya-2026-12-23-measurement",
+    "centerId": "omiya",
+    "sourceDocumentId": "omiya-2026-12",
+    "date": "2026-12-23",
+    "title": "すくすく測定",
+    "description": "身長・体重を測ってお子さんの成長を見守っていきましょう。",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted"
+  },
+  {
+    "id": "omiya-2026-12-24-measurement",
+    "centerId": "omiya",
+    "sourceDocumentId": "omiya-2026-12",
+    "date": "2026-12-24",
+    "title": "すくすく測定",
+    "description": "身長・体重を測ってお子さんの成長を見守っていきましょう。",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted"
+  },
+  {
+    "id": "omiya-2026-12-28-online",
+    "centerId": "omiya",
+    "sourceDocumentId": "omiya-2026-12",
+    "date": "2026-12-28",
+    "startTime": "13:00",
+    "endTime": "16:00",
+    "title": "オンラインわくわくひろば",
+    "description": "支援センターになかなか来られない方とオンライン（zoom）でお会いできたらと思います。簡単な手あそびなどを一緒にしませんか。",
+    "reservationRequired": true,
+    "kind": "event",
+    "origin": "extracted"
+  }
+]
