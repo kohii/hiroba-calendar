@@ -1763,6 +1763,97 @@
         }
       ],
       "extractedAt": "2026-11-21T13:09:52.695Z"
+    },
+    {
+      "id": "minami-2026-12",
+      "centerId": "minami",
+      "month": "2026-12",
+      "pdfUrl": "https://www.urawanyuyouji.com/admin/wp-content/uploads/2026/11/202612_minami.pdf",
+      "fetchedAt": "2026-11-21T13:00:00Z",
+      "sha256": "f3149af82fcf887e5482459ade4155250e797a71e16a536598ef7cbdf4d6c1b9",
+      "closures": [
+        {
+          "date": "2026-12-07",
+          "scope": "am",
+          "quote": "午前行事のみ"
+        },
+        {
+          "date": "2026-12-08",
+          "scope": "am",
+          "quote": "午前0歳専用"
+        },
+        {
+          "date": "2026-12-09",
+          "scope": "all-day",
+          "quote": "終日測定のみ"
+        },
+        {
+          "date": "2026-12-11",
+          "scope": "am",
+          "quote": "午前1歳専用"
+        },
+        {
+          "date": "2026-12-13",
+          "scope": "am",
+          "quote": "午前行事のみ"
+        },
+        {
+          "date": "2026-12-14",
+          "scope": "all-day",
+          "quote": "休館"
+        },
+        {
+          "date": "2026-12-16",
+          "scope": "all-day",
+          "quote": "終日測定のみ"
+        },
+        {
+          "date": "2026-12-20",
+          "scope": "am",
+          "quote": "午前行事のみ"
+        },
+        {
+          "date": "2026-12-21",
+          "scope": "am",
+          "quote": "午前2歳専用"
+        },
+        {
+          "date": "2026-12-22",
+          "scope": "pm",
+          "quote": "午後行事のみ"
+        },
+        {
+          "date": "2026-12-23",
+          "scope": "all-day",
+          "quote": "終日測定のみ"
+        },
+        {
+          "date": "2026-12-25",
+          "scope": "pm",
+          "quote": "午後行事のみ"
+        },
+        {
+          "date": "2026-12-28",
+          "scope": "all-day",
+          "quote": "休館"
+        },
+        {
+          "date": "2026-12-29",
+          "scope": "all-day",
+          "quote": "年末年始休館（12/29～1/3）"
+        },
+        {
+          "date": "2026-12-30",
+          "scope": "all-day",
+          "quote": "年末年始休館（12/29～1/3）"
+        },
+        {
+          "date": "2026-12-31",
+          "scope": "all-day",
+          "quote": "年末年始休館（12/29～1/3）"
+        }
+      ],
+      "extractedAt": "2026-11-21T13:11:16.025Z"
     }
   ],
   "events": [
@@ -11146,6 +11237,18 @@
       "origin": "extracted"
     },
     {
+      "id": "minami-2026-12-01-regular-hiroba",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-2026-12",
+      "date": "2026-12-01",
+      "title": "にこにこ広場",
+      "description": "9：00～ 12：00 13： 00～ 16：00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "０・１・２歳の親子"
+    },
+    {
       "id": "omiya-2026-12-01-regular-hiroba",
       "centerId": "omiya",
       "sourceDocumentId": "omiya-2026-12",
@@ -11189,6 +11292,18 @@
       "title": "ひろば",
       "kind": "hiroba",
       "origin": "extracted"
+    },
+    {
+      "id": "minami-2026-12-02-regular-hiroba",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-2026-12",
+      "date": "2026-12-02",
+      "title": "にこにこ広場",
+      "description": "9：00～ 12：00 13： 00～ 16：00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "０・１・２歳の親子"
     },
     {
       "id": "omiya-2026-12-02-regular-hiroba",
@@ -11248,6 +11363,32 @@
       "origin": "extracted"
     },
     {
+      "id": "minami-2026-12-03-eigo",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-2026-12",
+      "date": "2026-12-03",
+      "startTime": "10:00",
+      "endTime": "10:30",
+      "title": "えいごであそぼう",
+      "description": "ラフィンイングリッシュスクールの先生と一緒に楽しく英語で遊びませんか？歌やお話で英語に触れる体験を楽しんでみたい方はご参加ください。11:00～にこにこ広場",
+      "targetAge": "2歳対象",
+      "reservationRequired": false,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "minami-2026-12-03-regular-hiroba",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-2026-12",
+      "date": "2026-12-03",
+      "title": "にこにこ広場",
+      "description": "9：00～ 12：00 13： 00～ 16：00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "０・１・２歳の親子"
+    },
+    {
       "id": "omiya-2026-12-03-regular-hiroba",
       "centerId": "omiya",
       "sourceDocumentId": "omiya-2026-12",
@@ -11292,6 +11433,18 @@
       "description": "ウィーク",
       "kind": "hiroba",
       "origin": "extracted"
+    },
+    {
+      "id": "minami-2026-12-04-regular-hiroba",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-2026-12",
+      "date": "2026-12-04",
+      "title": "にこにこ広場",
+      "description": "9：00～ 12：00 13： 00～ 16：00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "０・１・２歳の親子"
     },
     {
       "id": "omiya-2026-12-04-regular-hiroba",
@@ -11340,6 +11493,18 @@
       "origin": "extracted"
     },
     {
+      "id": "minami-2026-12-05-regular-hiroba",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-2026-12",
+      "date": "2026-12-05",
+      "title": "にこにこ広場",
+      "description": "9：00～ 12：00 13： 00～ 16：00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "０・１・２歳の親子"
+    },
+    {
       "id": "omiya-2026-12-05-regular-hiroba",
       "centerId": "omiya",
       "sourceDocumentId": "omiya-2026-12",
@@ -11384,6 +11549,18 @@
       "description": "【プラレールの日】",
       "kind": "hiroba",
       "origin": "extracted"
+    },
+    {
+      "id": "minami-2026-12-06-regular-hiroba",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-2026-12",
+      "date": "2026-12-06",
+      "title": "にこにこ広場",
+      "description": "9：00～ 12：00 13： 00～ 16：00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "０・１・２歳の親子"
     },
     {
       "id": "omiya-2026-12-06-regular-hiroba",
@@ -11432,6 +11609,31 @@
       "origin": "extracted"
     },
     {
+      "id": "minami-2026-12-07-hajime",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-2026-12",
+      "date": "2026-12-07",
+      "startTime": "10:00",
+      "endTime": "11:00",
+      "title": "はじめのいっぽ",
+      "description": "センターに遊びに行ってみたいけど不安だなと感じている方、いっぽ踏み出してみませんか？初めての方同士のおしゃべりやふれあい遊びなどを楽しみましょう。広場のご利用が初めての方対象",
+      "reservationRequired": false,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "minami-2026-12-07-regular-hiroba",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-2026-12",
+      "date": "2026-12-07",
+      "title": "にこにこ広場",
+      "description": "13： 00～ 16：00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "０・１・２歳の親子"
+    },
+    {
       "id": "yono-2026-12-07-christmas",
       "centerId": "yono",
       "sourceDocumentId": "yono-2026-12",
@@ -11455,6 +11657,32 @@
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours"
+    },
+    {
+      "id": "minami-2026-12-08-0sai-hiroba",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-2026-12",
+      "date": "2026-12-08",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "title": "0歳さんの広場",
+      "description": "看護師による育児相談あり（相談のみ予約：4組、①9:00～②9:45～③10:30～④11:15～）。経験豊かな保育園看護師による育児相談を行います。相談室にて行います。（1組30分程度）広場で遊んでいただきながら、順番が来ましたらお声がけします。",
+      "targetAge": "0歳",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
+      "id": "minami-2026-12-08-regular-hiroba",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-2026-12",
+      "date": "2026-12-08",
+      "title": "にこにこ広場",
+      "description": "13： 00～ 16：00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "０・１・２歳の親子"
     },
     {
       "id": "omiya-2026-12-08-regular-hiroba",
@@ -11489,6 +11717,34 @@
       "endTime": "16:00",
       "title": "ひろば",
       "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
+      "id": "minami-2026-12-09-0sai-measurement",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-2026-12",
+      "date": "2026-12-09",
+      "startTime": "09:30",
+      "endTime": "11:30",
+      "title": "0歳身体測定",
+      "description": "測定後遊ぶことはできません。3歳未満のごきょうだいは一緒に測定できます。タオルをお持ちください。今月は、南区保健センターによる【育児相談会】を行います。ご希望の方は、当日受付にてお申し込みください。（先着順）育児相談受付時間9:30～10:00、保健師・管理栄養士・歯科衛生士が相談をお受けいたします。",
+      "targetAge": "0歳",
+      "reservationRequired": false,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "minami-2026-12-09-0sai-measurement-pm",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-2026-12",
+      "date": "2026-12-09",
+      "startTime": "13:30",
+      "endTime": "15:30",
+      "title": "0歳身体測定",
+      "description": "測定後遊ぶことはできません。3歳未満のごきょうだいは一緒に測定できます。タオルをお持ちください。",
+      "targetAge": "0歳",
+      "reservationRequired": false,
+      "kind": "event",
       "origin": "extracted"
     },
     {
@@ -11550,6 +11806,18 @@
       "origin": "extracted"
     },
     {
+      "id": "minami-2026-12-10-regular-hiroba",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-2026-12",
+      "date": "2026-12-10",
+      "title": "にこにこ広場",
+      "description": "9：00～ 12：00 13： 00～ 16：00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "０・１・２歳の親子"
+    },
+    {
       "id": "omiya-2026-12-10-regular-hiroba",
       "centerId": "omiya",
       "sourceDocumentId": "omiya-2026-12",
@@ -11592,6 +11860,31 @@
       "reservationRequired": false,
       "kind": "event",
       "origin": "extracted"
+    },
+    {
+      "id": "minami-2026-12-11-1sai-hiroba",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-2026-12",
+      "date": "2026-12-11",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "title": "1歳さんの広場",
+      "targetAge": "1歳",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
+      "id": "minami-2026-12-11-regular-hiroba",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-2026-12",
+      "date": "2026-12-11",
+      "title": "にこにこ広場",
+      "description": "13： 00～ 16：00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "０・１・２歳の親子"
     },
     {
       "id": "omiya-2026-12-11-gospel-concert",
@@ -11640,6 +11933,18 @@
       "origin": "extracted"
     },
     {
+      "id": "minami-2026-12-12-regular-hiroba",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-2026-12",
+      "date": "2026-12-12",
+      "title": "にこにこ広場",
+      "description": "9：00～ 12：00 13： 00～ 16：00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "０・１・２歳の親子"
+    },
+    {
       "id": "omiya-2026-12-12-regular-hiroba",
       "centerId": "omiya",
       "sourceDocumentId": "omiya-2026-12",
@@ -11684,6 +11989,32 @@
       "reservationRequired": true,
       "kind": "event",
       "origin": "extracted"
+    },
+    {
+      "id": "minami-2026-12-13-papa-mama-craft",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-2026-12",
+      "date": "2026-12-13",
+      "startTime": "10:00",
+      "endTime": "11:00",
+      "title": "パパ＆ママと作ってあそぼう",
+      "description": "おとうさん、おかあさんと一緒に簡単な製作をして楽しみましょう。今月はクリスマスの飾りを作ります。",
+      "capacity": 15,
+      "reservationRequired": true,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "minami-2026-12-13-regular-hiroba",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-2026-12",
+      "date": "2026-12-13",
+      "title": "にこにこ広場",
+      "description": "13： 00～ 16：00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "０・１・２歳の親子"
     },
     {
       "id": "omiya-2026-12-13-regular-hiroba",
@@ -11790,6 +12121,18 @@
       "origin": "extracted"
     },
     {
+      "id": "minami-2026-12-15-regular-hiroba",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-2026-12",
+      "date": "2026-12-15",
+      "title": "にこにこ広場",
+      "description": "9：00～ 12：00 13： 00～ 16：00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "０・１・２歳の親子"
+    },
+    {
       "id": "omiya-2026-12-15-happy-birthday",
       "centerId": "omiya",
       "sourceDocumentId": "omiya-2026-12",
@@ -11860,6 +12203,34 @@
       "origin": "extracted"
     },
     {
+      "id": "minami-2026-12-16-1sai-measurement",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-2026-12",
+      "date": "2026-12-16",
+      "startTime": "09:30",
+      "endTime": "11:30",
+      "title": "1歳身体測定",
+      "description": "測定後遊ぶことはできません。3歳未満のごきょうだいは一緒に測定できます。タオルをお持ちください。",
+      "targetAge": "1歳",
+      "reservationRequired": false,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "minami-2026-12-16-1sai-measurement-pm",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-2026-12",
+      "date": "2026-12-16",
+      "startTime": "13:30",
+      "endTime": "15:30",
+      "title": "1歳身体測定",
+      "description": "測定後遊ぶことはできません。3歳未満のごきょうだいは一緒に測定できます。タオルをお持ちください。",
+      "targetAge": "1歳",
+      "reservationRequired": false,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
       "id": "omiya-2026-12-16-regular-hiroba",
       "centerId": "omiya",
       "sourceDocumentId": "omiya-2026-12",
@@ -11916,6 +12287,31 @@
       "origin": "extracted"
     },
     {
+      "id": "minami-2026-12-17-regular-hiroba",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-2026-12",
+      "date": "2026-12-17",
+      "title": "にこにこ広場",
+      "description": "9：00～ 12：00 13： 00～ 16：00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "０・１・２歳の親子"
+    },
+    {
+      "id": "minami-2026-12-17-warabeuta",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-2026-12",
+      "date": "2026-12-17",
+      "startTime": "10:00",
+      "endTime": "10:30",
+      "title": "わらべ唄とお話会",
+      "description": "お話サークルの方に、わらべ唄と絵本の読み聞かせをしていただきます。11:00～にこにこ広場",
+      "reservationRequired": false,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
       "id": "omiya-2026-12-17-regular-hiroba",
       "centerId": "omiya",
       "sourceDocumentId": "omiya-2026-12",
@@ -11962,6 +12358,18 @@
       "reservationRequired": true,
       "kind": "event",
       "origin": "extracted"
+    },
+    {
+      "id": "minami-2026-12-18-regular-hiroba",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-2026-12",
+      "date": "2026-12-18",
+      "title": "にこにこ広場",
+      "description": "9：00～ 12：00 13： 00～ 16：00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "０・１・２歳の親子"
     },
     {
       "id": "omiya-2026-12-18-regular-hiroba",
@@ -12019,6 +12427,18 @@
       "description": "【ボールプールの日】",
       "kind": "hiroba",
       "origin": "extracted"
+    },
+    {
+      "id": "minami-2026-12-19-regular-hiroba",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-2026-12",
+      "date": "2026-12-19",
+      "title": "にこにこ広場",
+      "description": "9：00～ 12：00 13： 00～ 16：00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "０・１・２歳の親子"
     },
     {
       "id": "omiya-2026-12-19-regular-hiroba",
@@ -12093,6 +12513,32 @@
       "origin": "extracted"
     },
     {
+      "id": "minami-2026-12-20-regular-hiroba",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-2026-12",
+      "date": "2026-12-20",
+      "title": "にこにこ広場",
+      "description": "13： 00～ 16：00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "０・１・２歳の親子"
+    },
+    {
+      "id": "minami-2026-12-20-ryo-live",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-2026-12",
+      "date": "2026-12-20",
+      "startTime": "10:00",
+      "endTime": "10:45",
+      "title": "えいごであそぼう Ryoせんせいのスペシャルライブ",
+      "description": "支援センターみなみで行っている「えいごであそぼう」の石口先生によるスペシャルライブです。人生で一度は耳にしたことのある名曲をカバー。おとうさんおかあさんが聞いていた懐かしい曲をお子さんと一緒に楽しみませんか？",
+      "capacity": 30,
+      "reservationRequired": true,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
       "id": "omiya-2026-12-20-regular-hiroba",
       "centerId": "omiya",
       "sourceDocumentId": "omiya-2026-12",
@@ -12163,6 +12609,31 @@
       "origin": "extracted"
     },
     {
+      "id": "minami-2026-12-21-2sai-hiroba",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-2026-12",
+      "date": "2026-12-21",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "title": "2歳さんの広場",
+      "targetAge": "2歳",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
+      "id": "minami-2026-12-21-regular-hiroba",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-2026-12",
+      "date": "2026-12-21",
+      "title": "にこにこ広場",
+      "description": "13： 00～ 16：00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "０・１・２歳の親子"
+    },
+    {
       "id": "yono-2026-12-21-christmas-craft",
       "centerId": "yono",
       "sourceDocumentId": "yono-2026-12",
@@ -12183,6 +12654,48 @@
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours"
+    },
+    {
+      "id": "minami-2026-12-22-baby-massage-1",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-2026-12",
+      "date": "2026-12-22",
+      "startTime": "13:15",
+      "endTime": "14:15",
+      "title": "ベビーマッサージ",
+      "description": "オイルを使わない、服の上から行う手軽なマッサージです。マッサージを通して親子のふれあいを楽しみましょう。初めての方。床に敷くバスタオルをお持ちください。",
+      "targetAge": "0歳対象",
+      "capacity": 10,
+      "reservationRequired": true,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "minami-2026-12-22-baby-massage-2",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-2026-12",
+      "date": "2026-12-22",
+      "startTime": "14:30",
+      "endTime": "15:30",
+      "title": "ベビーマッサージ",
+      "description": "オイルを使わない、服の上から行う手軽なマッサージです。マッサージを通して親子のふれあいを楽しみましょう。初めての方。床に敷くバスタオルをお持ちください。",
+      "targetAge": "0歳対象",
+      "capacity": 10,
+      "reservationRequired": true,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "minami-2026-12-22-regular-hiroba",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-2026-12",
+      "date": "2026-12-22",
+      "title": "にこにこ広場",
+      "description": "9：00～ 12：00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "０・１・２歳の親子"
     },
     {
       "id": "omiya-2026-12-22-regular-hiroba",
@@ -12226,6 +12739,34 @@
       "endTime": "16:00",
       "title": "ひろば",
       "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
+      "id": "minami-2026-12-23-2sai-measurement",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-2026-12",
+      "date": "2026-12-23",
+      "startTime": "09:30",
+      "endTime": "11:30",
+      "title": "2歳身体測定",
+      "description": "測定後遊ぶことはできません。3歳未満のごきょうだいは一緒に測定できます。タオルをお持ちください。",
+      "targetAge": "2歳",
+      "reservationRequired": false,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "minami-2026-12-23-2sai-measurement-pm",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-2026-12",
+      "date": "2026-12-23",
+      "startTime": "13:30",
+      "endTime": "15:30",
+      "title": "2歳身体測定",
+      "description": "測定後遊ぶことはできません。3歳未満のごきょうだいは一緒に測定できます。タオルをお持ちください。",
+      "targetAge": "2歳",
+      "reservationRequired": false,
+      "kind": "event",
       "origin": "extracted"
     },
     {
@@ -12294,6 +12835,18 @@
       "title": "ひろば",
       "kind": "hiroba",
       "origin": "extracted"
+    },
+    {
+      "id": "minami-2026-12-24-regular-hiroba",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-2026-12",
+      "date": "2026-12-24",
+      "title": "にこにこ広場",
+      "description": "9：00～ 12：00 13： 00～ 16：00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "０・１・２歳の親子"
     },
     {
       "id": "omiya-2026-12-24-measurement",
@@ -12373,6 +12926,46 @@
       "startTime": "10:45",
       "title": "おはなしかい",
       "reservationRequired": false,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "minami-2026-12-25-regular-hiroba",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-2026-12",
+      "date": "2026-12-25",
+      "title": "にこにこ広場",
+      "description": "9：00～ 12：00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "０・１・２歳の親子"
+    },
+    {
+      "id": "minami-2026-12-25-zoom-fureai-1",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-2026-12",
+      "date": "2026-12-25",
+      "startTime": "14:00",
+      "endTime": "14:30",
+      "title": "Zoom 子どもの自己肯定感を育むふれあい遊び",
+      "description": "毎日のタッチケアやふれあい遊びを通して、赤ちゃんの「愛されている実感（自己肯定感）」の土台を育む時間です。おうちで今日からすぐにできるスキンシップのコツをお伝えします。",
+      "capacity": 5,
+      "reservationRequired": true,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "minami-2026-12-25-zoom-fureai-2",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-2026-12",
+      "date": "2026-12-25",
+      "startTime": "15:00",
+      "endTime": "15:30",
+      "title": "Zoom 子どもの自己肯定感を育むふれあい遊び",
+      "description": "毎日のタッチケアやふれあい遊びを通して、赤ちゃんの「愛されている実感（自己肯定感）」の土台を育む時間です。おうちで今日からすぐにできるスキンシップのコツをお伝えします。",
+      "capacity": 5,
+      "reservationRequired": true,
       "kind": "event",
       "origin": "extracted"
     },
@@ -12460,6 +13053,18 @@
       "origin": "extracted"
     },
     {
+      "id": "minami-2026-12-26-regular-hiroba",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-2026-12",
+      "date": "2026-12-26",
+      "title": "にこにこ広場",
+      "description": "9：00～ 12：00 13： 00～ 16：00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "０・１・２歳の親子"
+    },
+    {
       "id": "omiya-2026-12-26-regular-hiroba",
       "centerId": "omiya",
       "sourceDocumentId": "omiya-2026-12",
@@ -12530,6 +13135,18 @@
       "description": "【ブロックの日】",
       "kind": "hiroba",
       "origin": "extracted"
+    },
+    {
+      "id": "minami-2026-12-27-regular-hiroba",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-2026-12",
+      "date": "2026-12-27",
+      "title": "にこにこ広場",
+      "description": "9：00～ 12：00 13： 00～ 16：00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "０・１・２歳の親子"
     },
     {
       "id": "omiya-2026-12-27-regular-hiroba",
@@ -12639,6 +13256,6 @@
       "origin": "regular-hours"
     }
   ],
-  "generatedAt": "2026-11-21T13:09:53.074Z",
+  "generatedAt": "2026-11-21T13:11:16.209Z",
   "version": "1.0.0"
 }
