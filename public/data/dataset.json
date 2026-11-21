@@ -1670,7 +1670,7 @@
           "quote": "12/29（火）～1/3（日）は年末年始のためお休みです"
         }
       ],
-      "extractedAt": "2026-11-21T13:37:56.230Z"
+      "extractedAt": "2026-11-21T13:45:49.103Z"
     },
     {
       "id": "iwatsuki-2026-12",
@@ -1868,7 +1868,7 @@
           "quote": "年末年始休館（12/29～1/3）"
         }
       ],
-      "extractedAt": "2026-11-21T13:37:56.454Z"
+      "extractedAt": "2026-11-21T13:45:48.954Z"
     },
     {
       "id": "urawa-2026-12",
@@ -1959,7 +1959,7 @@
           "quote": "年末年始休館"
         }
       ],
-      "extractedAt": "2026-11-21T13:38:05.247Z"
+      "extractedAt": "2026-11-21T13:45:49.029Z"
     },
     {
       "id": "hinadori-2026-11",
@@ -1975,12 +1975,77 @@
           "quote": "休"
         },
         {
+          "date": "2026-11-07",
+          "scope": "all-day",
+          "quote": "休"
+        },
+        {
+          "date": "2026-11-08",
+          "scope": "all-day",
+          "quote": "休"
+        },
+        {
+          "date": "2026-11-11",
+          "scope": "all-day",
+          "quote": "休"
+        },
+        {
+          "date": "2026-11-13",
+          "scope": "all-day",
+          "quote": "休"
+        },
+        {
+          "date": "2026-11-14",
+          "scope": "all-day",
+          "quote": "休"
+        },
+        {
+          "date": "2026-11-15",
+          "scope": "all-day",
+          "quote": "休"
+        },
+        {
+          "date": "2026-11-16",
+          "scope": "all-day",
+          "quote": "休"
+        },
+        {
+          "date": "2026-11-17",
+          "scope": "all-day",
+          "quote": "休"
+        },
+        {
+          "date": "2026-11-21",
+          "scope": "all-day",
+          "quote": "休"
+        },
+        {
+          "date": "2026-11-22",
+          "scope": "all-day",
+          "quote": "休"
+        },
+        {
           "date": "2026-11-23",
+          "scope": "all-day",
+          "quote": "休"
+        },
+        {
+          "date": "2026-11-28",
+          "scope": "all-day",
+          "quote": "休"
+        },
+        {
+          "date": "2026-11-29",
+          "scope": "all-day",
+          "quote": "休"
+        },
+        {
+          "date": "2026-11-30",
           "scope": "all-day",
           "quote": "休"
         }
       ],
-      "extractedAt": "2026-11-21T13:38:05.338Z"
+      "extractedAt": "2026-11-21T13:45:49.171Z"
     }
   ],
   "events": [
@@ -11727,6 +11792,17 @@
       "origin": "extracted"
     },
     {
+      "id": "minami-2026-12-03-hiroba-11am",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-2026-12",
+      "date": "2026-12-03",
+      "startTime": "11:00",
+      "endTime": "12:00",
+      "title": "にこにこ広場（11:00～）",
+      "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
       "id": "minami-2026-12-03-regular-hiroba",
       "centerId": "minami",
       "sourceDocumentId": "minami-2026-12",
@@ -12157,10 +12233,8 @@
       "centerId": "omiya",
       "sourceDocumentId": "omiya-2026-12",
       "date": "2026-12-08",
-      "startTime": "10:00",
-      "endTime": "10:30",
       "title": "むし歯予防教室",
-      "description": "お申込み済の方対象",
+      "description": "お申込み済の方対象。午前開催。",
       "reservationRequired": true,
       "kind": "event",
       "origin": "extracted"
@@ -12963,6 +13037,17 @@
       "origin": "extracted"
     },
     {
+      "id": "minami-2026-12-17-hiroba-11am",
+      "centerId": "minami",
+      "sourceDocumentId": "minami-2026-12",
+      "date": "2026-12-17",
+      "startTime": "11:00",
+      "endTime": "12:00",
+      "title": "にこにこ広場（11:00～）",
+      "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
       "id": "minami-2026-12-17-regular-hiroba",
       "centerId": "minami",
       "sourceDocumentId": "minami-2026-12",
@@ -13033,7 +13118,7 @@
       "endTime": "11:30",
       "title": "サンサンサロン",
       "description": "公認心理士・発達心理学講師・子育て支援員に相談をされたことのある方や、発達に不安や心配のあるお子さんとご家族は、ふれあいの場としてお気軽にご利用ください。ゆったりと遊びながら安心して過ごせるように子育て支援員が寄り添います。",
-      "reservationRequired": false,
+      "reservationRequired": true,
       "kind": "event",
       "origin": "extracted"
     },
@@ -14191,6 +14276,6 @@
       "origin": "regular-hours"
     }
   ],
-  "generatedAt": "2026-11-21T13:38:10.559Z",
+  "generatedAt": "2026-11-21T13:45:53.963Z",
   "version": "1.0.0"
 }

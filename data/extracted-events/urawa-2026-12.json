@@ -220,7 +220,7 @@
     "endTime": "11:30",
     "title": "サンサンサロン",
     "description": "公認心理士・発達心理学講師・子育て支援員に相談をされたことのある方や、発達に不安や心配のあるお子さんとご家族は、ふれあいの場としてお気軽にご利用ください。ゆったりと遊びながら安心して過ごせるように子育て支援員が寄り添います。",
-    "reservationRequired": false,
+    "reservationRequired": true,
     "kind": "event",
     "origin": "extracted"
   },

@@ -1236,7 +1236,7 @@
         "quote": "12/29（火）～1/3（日）は年末年始のためお休みです"
       }
     ],
-    "extractedAt": "2026-11-21T13:37:56.230Z"
+    "extractedAt": "2026-11-21T13:45:49.103Z"
   },
   {
     "id": "iwatsuki-2026-12",
@@ -1434,7 +1434,7 @@
         "quote": "年末年始休館（12/29～1/3）"
       }
     ],
-    "extractedAt": "2026-11-21T13:37:56.454Z"
+    "extractedAt": "2026-11-21T13:45:48.954Z"
   },
   {
     "id": "urawa-2026-12",
@@ -1525,7 +1525,7 @@
         "quote": "年末年始休館"
       }
     ],
-    "extractedAt": "2026-11-21T13:38:05.247Z"
+    "extractedAt": "2026-11-21T13:45:49.029Z"
   },
   {
     "id": "hinadori-2026-11",
@@ -1541,11 +1541,76 @@
         "quote": "休"
       },
       {
+        "date": "2026-11-07",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-11-08",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-11-11",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-11-13",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-11-14",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-11-15",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-11-16",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-11-17",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-11-21",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-11-22",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
         "date": "2026-11-23",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-11-28",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-11-29",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-11-30",
         "scope": "all-day",
         "quote": "休"
       }
     ],
-    "extractedAt": "2026-11-21T13:38:05.338Z"
+    "extractedAt": "2026-11-21T13:45:49.171Z"
   }
 ]
