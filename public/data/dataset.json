@@ -1707,6 +1707,62 @@
         }
       ],
       "extractedAt": "2026-11-21T13:08:38.345Z"
+    },
+    {
+      "id": "yono-2026-12",
+      "centerId": "yono",
+      "month": "2026-12",
+      "pdfUrl": "https://www.himawarikkoland.com/library/67e0faf1ee78e14239888cb6/6afe4c65f8fb6145d1b3f50b.pdf",
+      "fetchedAt": "2026-11-21T13:00:00Z",
+      "sha256": "3dae29c97b0dd7158187a5ceea30c7fa0c916d589bdf50c9a63de8642ace56ba",
+      "closures": [
+        {
+          "date": "2026-12-07",
+          "scope": "am",
+          "quote": "★午前はお申込者のみとなります。"
+        },
+        {
+          "date": "2026-12-08",
+          "scope": "all-day",
+          "quote": "休館日"
+        },
+        {
+          "date": "2026-12-19",
+          "scope": "am",
+          "quote": "★午前はお申込者のみとなります。"
+        },
+        {
+          "date": "2026-12-20",
+          "scope": "am",
+          "quote": "★午前はお申込者のみとなります。"
+        },
+        {
+          "date": "2026-12-22",
+          "scope": "all-day",
+          "quote": "休館日"
+        },
+        {
+          "date": "2026-12-23",
+          "scope": "am",
+          "quote": "★午前はお申込者のみとなります。"
+        },
+        {
+          "date": "2026-12-29",
+          "scope": "all-day",
+          "quote": "12月29日(火)～1月3日(日)休館"
+        },
+        {
+          "date": "2026-12-30",
+          "scope": "all-day",
+          "quote": "12月29日(火)～1月3日(日)休館"
+        },
+        {
+          "date": "2026-12-31",
+          "scope": "all-day",
+          "quote": "12月29日(火)～1月3日(日)休館"
+        }
+      ],
+      "extractedAt": "2026-11-21T13:09:52.695Z"
     }
   ],
   "events": [
@@ -11101,6 +11157,17 @@
       "origin": "regular-hours"
     },
     {
+      "id": "yono-2026-12-01-regular-hiroba",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-01",
+      "title": "ぴよぴよ広場",
+      "description": "９：００～１２：００ １３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
       "id": "iwatsuki-2026-12-02-ehon-mama",
       "centerId": "iwatsuki",
       "sourceDocumentId": "iwatsuki-2026-12",
@@ -11135,6 +11202,29 @@
       "origin": "regular-hours"
     },
     {
+      "id": "yono-2026-12-02-akachan-ohanashi",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-02",
+      "startTime": "10:30",
+      "title": "赤ちゃんおはなし会",
+      "description": "与野図書館の方が来て、絵本の読み聞かせとわらべ歌を行います。予約不要、参加者のみ入室可。10分前までにお越しください。参加以外の方は11:00～利用できます。",
+      "reservationRequired": false,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "yono-2026-12-02-regular-hiroba",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-02",
+      "title": "ぴよぴよ広場",
+      "description": "９：００～１２：００ １３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
       "id": "iwatsuki-2026-12-03-hiroba",
       "centerId": "iwatsuki",
       "sourceDocumentId": "iwatsuki-2026-12",
@@ -11164,6 +11254,17 @@
       "date": "2026-12-03",
       "title": "わくわくひろば",
       "description": "９：００～１２：００ / １３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
+      "id": "yono-2026-12-03-regular-hiroba",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-03",
+      "title": "ぴよぴよ広場",
+      "description": "９：００～１２：００ １３：００～１６：００",
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours"
@@ -11204,6 +11305,17 @@
       "origin": "regular-hours"
     },
     {
+      "id": "yono-2026-12-04-regular-hiroba",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-04",
+      "title": "ぴよぴよ広場",
+      "description": "９：００～１２：００ １３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
       "id": "iwatsuki-2026-12-05-hiroba",
       "centerId": "iwatsuki",
       "sourceDocumentId": "iwatsuki-2026-12",
@@ -11234,6 +11346,17 @@
       "date": "2026-12-05",
       "title": "わくわくひろば",
       "description": "９：００～１２：００ / １３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
+      "id": "yono-2026-12-05-regular-hiroba",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-05",
+      "title": "ぴよぴよ広場",
+      "description": "９：００～１２：００ １３：００～１６：００",
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours"
@@ -11274,6 +11397,17 @@
       "origin": "regular-hours"
     },
     {
+      "id": "yono-2026-12-06-regular-hiroba",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-06",
+      "title": "ぴよぴよ広場",
+      "description": "９：００～１２：００ １３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
       "id": "iwatsuki-2026-12-07-hiroba",
       "centerId": "iwatsuki",
       "sourceDocumentId": "iwatsuki-2026-12",
@@ -11296,6 +11430,31 @@
       "description": "【プラレールの日】",
       "kind": "hiroba",
       "origin": "extracted"
+    },
+    {
+      "id": "yono-2026-12-07-christmas",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-07",
+      "startTime": "10:30",
+      "title": "楽しいクリスマス",
+      "description": "クリスマスソングに合わせて楽器に触れたりして、みんなで楽しく過ごします。対象：歩ける子、定員：15組",
+      "targetAge": "歩ける子",
+      "capacity": 15,
+      "reservationRequired": true,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "yono-2026-12-07-regular-hiroba",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-07",
+      "title": "ぴよぴよ広場",
+      "description": "１３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
     },
     {
       "id": "omiya-2026-12-08-regular-hiroba",
@@ -11358,6 +11517,17 @@
       "origin": "extracted"
     },
     {
+      "id": "yono-2026-12-09-regular-hiroba",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-09",
+      "title": "ぴよぴよ広場",
+      "description": "９：００～１２：００ １３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
       "id": "iwatsuki-2026-12-10-hiroba",
       "centerId": "iwatsuki",
       "sourceDocumentId": "iwatsuki-2026-12",
@@ -11386,6 +11556,17 @@
       "date": "2026-12-10",
       "title": "わくわくひろば",
       "description": "９：００～１２：００ / １３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
+      "id": "yono-2026-12-10-regular-hiroba",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-10",
+      "title": "ぴよぴよ広場",
+      "description": "９：００～１２：００ １３：００～１６：００",
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours"
@@ -11436,6 +11617,17 @@
       "origin": "regular-hours"
     },
     {
+      "id": "yono-2026-12-11-regular-hiroba",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-11",
+      "title": "ぴよぴよ広場",
+      "description": "９：００～１２：００ １３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
       "id": "iwatsuki-2026-12-12-hiroba",
       "centerId": "iwatsuki",
       "sourceDocumentId": "iwatsuki-2026-12",
@@ -11454,6 +11646,17 @@
       "date": "2026-12-12",
       "title": "わくわくひろば",
       "description": "９：００～１２：００ / １３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
+      "id": "yono-2026-12-12-regular-hiroba",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-12",
+      "title": "ぴよぴよ広場",
+      "description": "９：００～１２：００ １３：００～１６：００",
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours"
@@ -11506,6 +11709,17 @@
       "origin": "extracted"
     },
     {
+      "id": "yono-2026-12-13-regular-hiroba",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-13",
+      "title": "ぴよぴよ広場",
+      "description": "９：００～１２：００ １３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
       "id": "iwatsuki-2026-12-14-hiroba",
       "centerId": "iwatsuki",
       "sourceDocumentId": "iwatsuki-2026-12",
@@ -11536,6 +11750,17 @@
       "date": "2026-12-14",
       "title": "わくわくひろば",
       "description": "９：００～１２：００ / １３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
+      "id": "yono-2026-12-14-regular-hiroba",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-14",
+      "title": "ぴよぴよ広場",
+      "description": "９：００～１２：００ １３：００～１６：００",
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours"
@@ -11601,6 +11826,17 @@
       "origin": "regular-hours"
     },
     {
+      "id": "yono-2026-12-15-regular-hiroba",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-15",
+      "title": "ぴよぴよ広場",
+      "description": "９：００～１２：００ １３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
       "id": "iwatsuki-2026-12-16-birthday",
       "centerId": "iwatsuki",
       "sourceDocumentId": "iwatsuki-2026-12",
@@ -11635,6 +11871,29 @@
       "origin": "regular-hours"
     },
     {
+      "id": "yono-2026-12-16-akachan-ohanashi",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-16",
+      "startTime": "10:30",
+      "title": "赤ちゃんおはなし会",
+      "description": "与野図書館の方が来て、絵本の読み聞かせとわらべ歌を行います。予約不要、参加者のみ入室可。10分前までにお越しください。参加以外の方は11:00～利用できます。",
+      "reservationRequired": false,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "yono-2026-12-16-regular-hiroba",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-16",
+      "title": "ぴよぴよ広場",
+      "description": "９：００～１２：００ １３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
       "id": "iwatsuki-2026-12-17-hiroba",
       "centerId": "iwatsuki",
       "sourceDocumentId": "iwatsuki-2026-12",
@@ -11663,6 +11922,17 @@
       "date": "2026-12-17",
       "title": "わくわくひろば",
       "description": "９：００～１２：００ / １３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
+      "id": "yono-2026-12-17-regular-hiroba",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-17",
+      "title": "ぴよぴよ広場",
+      "description": "９：００～１２：００ １３：００～１６：００",
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours"
@@ -11705,6 +11975,28 @@
       "origin": "regular-hours"
     },
     {
+      "id": "yono-2026-12-18-christmas-craft",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-18",
+      "title": "クリスマス制作コーナー",
+      "description": "『サンタさんのツリーハウス』が作れます。お気軽にご参加ください。フォトコーナーもご用意します。クリスマスの雰囲気を楽しみましょう。予約不要",
+      "reservationRequired": false,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "yono-2026-12-18-regular-hiroba",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-18",
+      "title": "ぴよぴよ広場",
+      "description": "９：００～１２：００ １３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
       "id": "iwatsuki-2026-12-19-hiroba",
       "centerId": "iwatsuki",
       "sourceDocumentId": "iwatsuki-2026-12",
@@ -11735,6 +12027,43 @@
       "date": "2026-12-19",
       "title": "わくわくひろば",
       "description": "９：００～１２：００ / １３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
+      "id": "yono-2026-12-19-christmas-craft",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-19",
+      "title": "クリスマス制作コーナー",
+      "description": "『サンタさんのツリーハウス』が作れます。",
+      "reservationRequired": false,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "yono-2026-12-19-futago",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-19",
+      "startTime": "10:00",
+      "endTime": "11:30",
+      "title": "ふたごタイム",
+      "description": "ふたご限定（0～3歳未満）。対象・定員：乳幼児親子 15組",
+      "targetAge": "ふたご限定（0～3歳未満）",
+      "capacity": 15,
+      "reservationRequired": true,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "yono-2026-12-19-regular-hiroba",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-19",
+      "title": "ぴよぴよ広場",
+      "description": "１３：００～１６：００",
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours"
@@ -11775,6 +12104,41 @@
       "origin": "regular-hours"
     },
     {
+      "id": "yono-2026-12-20-christmas-craft",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-20",
+      "title": "クリスマス制作コーナー",
+      "description": "『サンタさんのツリーハウス』が作れます。",
+      "reservationRequired": false,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "yono-2026-12-20-kouku-care",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-20",
+      "startTime": "10:30",
+      "title": "口腔ケア講座",
+      "description": "講師：中央区保健センター歯科衛生士。歯の磨き方やむし歯予防を学びます。定員：5組",
+      "capacity": 5,
+      "reservationRequired": true,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "yono-2026-12-20-regular-hiroba",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-20",
+      "title": "ぴよぴよ広場",
+      "description": "１３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
       "id": "iwatsuki-2026-12-21-hiroba",
       "centerId": "iwatsuki",
       "sourceDocumentId": "iwatsuki-2026-12",
@@ -11797,6 +12161,28 @@
       "description": "【ボールプールの日】",
       "kind": "hiroba",
       "origin": "extracted"
+    },
+    {
+      "id": "yono-2026-12-21-christmas-craft",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-21",
+      "title": "クリスマス制作コーナー",
+      "description": "『サンタさんのツリーハウス』が作れます。",
+      "reservationRequired": false,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "yono-2026-12-21-regular-hiroba",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-21",
+      "title": "ぴよぴよ広場",
+      "description": "９：００～１２：００ １３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
     },
     {
       "id": "omiya-2026-12-22-regular-hiroba",
@@ -11854,6 +12240,40 @@
       "origin": "extracted"
     },
     {
+      "id": "yono-2026-12-23-birthday",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-23",
+      "startTime": "10:30",
+      "title": "お誕生会",
+      "description": "お誕生月のお友達に手作りのカードと冠をプレゼントしてお祝いします。ねんねのお友達はタオルをご持参下さい。お誕生会までに3歳を迎えた方もご参加できます。",
+      "reservationRequired": false,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "yono-2026-12-23-christmas-craft",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-23",
+      "title": "クリスマス制作コーナー",
+      "description": "『サンタさんのツリーハウス』が作れます。",
+      "reservationRequired": false,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "yono-2026-12-23-regular-hiroba",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-23",
+      "title": "ぴよぴよ広場",
+      "description": "１３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
       "id": "iwatsuki-2026-12-24-hiroba",
       "centerId": "iwatsuki",
       "sourceDocumentId": "iwatsuki-2026-12",
@@ -11887,6 +12307,54 @@
       "origin": "extracted"
     },
     {
+      "id": "yono-2026-12-24-christmas-craft",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-24",
+      "title": "クリスマス制作コーナー",
+      "description": "『サンタさんのツリーハウス』が作れます。",
+      "reservationRequired": false,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "yono-2026-12-24-measurement",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-24",
+      "startTime": "09:15",
+      "endTime": "11:15",
+      "title": "のびのび身体測定",
+      "description": "初回に測定カードをお渡しします。予約不要",
+      "reservationRequired": false,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "yono-2026-12-24-measurement-pm",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-24",
+      "startTime": "13:01",
+      "endTime": "15:03",
+      "title": "のびのび身体測定",
+      "description": "初回に測定カードをお渡しします。予約不要",
+      "reservationRequired": false,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "yono-2026-12-24-regular-hiroba",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-24",
+      "title": "ぴよぴよ広場",
+      "description": "９：００～１２：００ １３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
       "id": "iwatsuki-2026-12-25-hiroba-pm",
       "centerId": "iwatsuki",
       "sourceDocumentId": "iwatsuki-2026-12",
@@ -11915,6 +12383,54 @@
       "date": "2026-12-25",
       "title": "わくわくひろば",
       "description": "９：００～１２：００ / １３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
+      "id": "yono-2026-12-25-christmas-craft",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-25",
+      "title": "クリスマス制作コーナー",
+      "description": "『サンタさんのツリーハウス』が作れます。",
+      "reservationRequired": false,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "yono-2026-12-25-measurement",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-25",
+      "startTime": "09:15",
+      "endTime": "11:15",
+      "title": "のびのび身体測定",
+      "description": "初回に測定カードをお渡しします。予約不要",
+      "reservationRequired": false,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "yono-2026-12-25-measurement-pm",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-25",
+      "startTime": "13:01",
+      "endTime": "15:03",
+      "title": "のびのび身体測定",
+      "description": "初回に測定カードをお渡しします。予約不要",
+      "reservationRequired": false,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "yono-2026-12-25-regular-hiroba",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-25",
+      "title": "ぴよぴよ広場",
+      "description": "９：００～１２：００ １３：００～１６：００",
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours"
@@ -11955,6 +12471,43 @@
       "origin": "regular-hours"
     },
     {
+      "id": "yono-2026-12-26-measurement",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-26",
+      "startTime": "09:15",
+      "endTime": "11:15",
+      "title": "のびのび身体測定",
+      "description": "初回に測定カードをお渡しします。予約不要",
+      "reservationRequired": false,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "yono-2026-12-26-measurement-pm",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-26",
+      "startTime": "13:01",
+      "endTime": "15:03",
+      "title": "のびのび身体測定",
+      "description": "初回に測定カードをお渡しします。予約不要",
+      "reservationRequired": false,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "yono-2026-12-26-regular-hiroba",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-26",
+      "title": "ぴよぴよ広場",
+      "description": "９：００～１２：００ １３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
       "id": "iwatsuki-2026-12-27-hiroba",
       "centerId": "iwatsuki",
       "sourceDocumentId": "iwatsuki-2026-12",
@@ -11985,6 +12538,43 @@
       "date": "2026-12-27",
       "title": "わくわくひろば",
       "description": "９：００～１２：００ / １３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
+    },
+    {
+      "id": "yono-2026-12-27-measurement",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-27",
+      "startTime": "09:15",
+      "endTime": "11:15",
+      "title": "のびのび身体測定",
+      "description": "初回に測定カードをお渡しします。予約不要",
+      "reservationRequired": false,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "yono-2026-12-27-measurement-pm",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-27",
+      "startTime": "13:01",
+      "endTime": "15:03",
+      "title": "のびのび身体測定",
+      "description": "初回に測定カードをお渡しします。予約不要",
+      "reservationRequired": false,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "yono-2026-12-27-regular-hiroba",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-27",
+      "title": "ぴよぴよ広場",
+      "description": "９：００～１２：００ １３：００～１６：００",
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours"
@@ -12036,8 +12626,19 @@
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours"
+    },
+    {
+      "id": "yono-2026-12-28-regular-hiroba",
+      "centerId": "yono",
+      "sourceDocumentId": "yono-2026-12",
+      "date": "2026-12-28",
+      "title": "ぴよぴよ広場",
+      "description": "９：００～１２：００ １３：００～１６：００",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours"
     }
   ],
-  "generatedAt": "2026-11-21T13:08:39.014Z",
+  "generatedAt": "2026-11-21T13:09:53.074Z",
   "version": "1.0.0"
 }

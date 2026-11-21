@@ -1273,5 +1273,61 @@
       }
     ],
     "extractedAt": "2026-11-21T13:08:38.345Z"
+  },
+  {
+    "id": "yono-2026-12",
+    "centerId": "yono",
+    "month": "2026-12",
+    "pdfUrl": "https://www.himawarikkoland.com/library/67e0faf1ee78e14239888cb6/6afe4c65f8fb6145d1b3f50b.pdf",
+    "fetchedAt": "2026-11-21T13:00:00Z",
+    "sha256": "3dae29c97b0dd7158187a5ceea30c7fa0c916d589bdf50c9a63de8642ace56ba",
+    "closures": [
+      {
+        "date": "2026-12-07",
+        "scope": "am",
+        "quote": "★午前はお申込者のみとなります。"
+      },
+      {
+        "date": "2026-12-08",
+        "scope": "all-day",
+        "quote": "休館日"
+      },
+      {
+        "date": "2026-12-19",
+        "scope": "am",
+        "quote": "★午前はお申込者のみとなります。"
+      },
+      {
+        "date": "2026-12-20",
+        "scope": "am",
+        "quote": "★午前はお申込者のみとなります。"
+      },
+      {
+        "date": "2026-12-22",
+        "scope": "all-day",
+        "quote": "休館日"
+      },
+      {
+        "date": "2026-12-23",
+        "scope": "am",
+        "quote": "★午前はお申込者のみとなります。"
+      },
+      {
+        "date": "2026-12-29",
+        "scope": "all-day",
+        "quote": "12月29日(火)～1月3日(日)休館"
+      },
+      {
+        "date": "2026-12-30",
+        "scope": "all-day",
+        "quote": "12月29日(火)～1月3日(日)休館"
+      },
+      {
+        "date": "2026-12-31",
+        "scope": "all-day",
+        "quote": "12月29日(火)～1月3日(日)休館"
+      }
+    ],
+    "extractedAt": "2026-11-21T13:09:52.695Z"
   }
 ]
