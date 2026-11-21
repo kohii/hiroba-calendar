@@ -50,10 +50,12 @@ describe("schedule view", () => {
   it("starts at the chosen date and runs to the end of the published months", () => {
     const fromToday = columns(renderSchedule(context(["omiya"]), "2026-10-25"));
     assert.equal(fromToday[0], "10/25");
-    assert.equal(fromToday.at(-1), "11/30");
-    assert.equal(fromToday.length, 37);
+    assert.equal(fromToday.at(-1), "12/31");
+    assert.equal(fromToday.length, 68);
     const nearTheEnd = columns(renderSchedule(context(["omiya"]), "2026-11-28"));
-    assert.deepEqual(nearTheEnd, ["11/28", "11/29", "11/30", "12/1", "12/2", "12/3", "12/4"]);
+    assert.equal(nearTheEnd[0], "11/28");
+    assert.equal(nearTheEnd.at(-1), "12/31");
+    assert.equal(nearTheEnd.length, 34);
   });
 
   it("has a row for each of the user's centers", () => {
