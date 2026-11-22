@@ -423,7 +423,7 @@ describe("published schedule", () => {
     assert.equal(rows("seiga", "2026-10").length, 25);
     assert.equal(rows("hinadori", "2026-10").length, 13);
     assert.equal(rows("seiga", "2026-11").length, 21);
-    assert.equal(rows("hinadori", "2026-11").length, 0);
+    assert.equal(rows("hinadori", "2026-11").length, 11);
     for (const [centerId, month] of [
       ["seiga", "2026-10"],
       ["seiga", "2026-11"],
