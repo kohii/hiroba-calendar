@@ -411,7 +411,7 @@ const nishiEvents = dataset.events.filter(
 - PR に視覚マーク依存項目を明記（例: "hinadori OPEN days need visual confirmation"）
 - **絶対に画像数から日付を推測しない**
 
-**レビュアー（メンテナンスボット）の役割**:
+**画像確認レビュアーの役割**:
 - レンダリングされた画像を日付ごとに目視
 - OPEN 印がある日付を正確にリスト化
 - 抽出データと PDF を `pnpm day-summary` で照合

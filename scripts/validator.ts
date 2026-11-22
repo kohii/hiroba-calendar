@@ -225,16 +225,38 @@ function validateClosures(sourceDoc: SourceDocument, result: ValidationResult): 
  * apply-schedule-model fills the regular hiroba from regularHours minus closures, so an
  * extracted row of it would duplicate that. Other hiroba rows must not cover the closed break.
  */
-function regularHoursErrors(event: any, centerId: string): string[] {
+function regularHoursErrors(
+  event: any,
+  centerId: string,
+  sourceDoc: SourceDocument,
+): string[] {
   const policy = CENTERS.find((c) => c.id === centerId)?.regularHours;
   // apply-schedule-model reclassifies extracted rows by title, so check the kind it will assign.
   if (policy?.decision !== "fill" || classifyTitle(event.title ?? "").kind !== "hiroba") return [];
   const errors: string[] = [];
+
+  // Check if there's an AM or PM closure on this date
+  const closures = (sourceDoc.closures ?? []).filter((c) => c.date === event.date);
+  const hasAllDayClosure = closures.some((c) => c.scope === "all-day");
+  const hasAmClosure = closures.some((c) => c.scope === "am");
+  const hasPmClosure = closures.some((c) => c.scope === "pm");
+
+  // If the event uses the standard title:
+  // - Reject if no closures (would duplicate apply-schedule-model's output)
+  // - Reject if all-day closure (facility should be fully closed)
+  // - Allow if AM or PM closure (explicitly extracted events on partial-closure days are intentional)
   if (event.title === policy.title) {
-    errors.push(
-      `${policy.title} is filled by apply-schedule-model; record the closed half in closures instead`,
-    );
+    if (hasAllDayClosure) {
+      errors.push(
+        `${policy.title} should not be open on an all-day closure`,
+      );
+    } else if (!hasAmClosure && !hasPmClosure) {
+      errors.push(
+        `${policy.title} is filled by apply-schedule-model; record the closed half in closures instead`,
+      );
+    }
   }
+
   if (event.startTime && event.endTime) {
     const windows = [...policy.windows].sort((a, b) => a.start.localeCompare(b.start));
     for (let i = 1; i < windows.length; i++) {
@@ -310,7 +332,7 @@ export function validateExtractedEvents(
       eventResult.valid = false;
     }
 
-    eventResult.errors.push(...regularHoursErrors(event, sourceDoc.centerId));
+    eventResult.errors.push(...regularHoursErrors(event, sourceDoc.centerId, sourceDoc));
     if (eventResult.errors.length > 0) eventResult.valid = false;
 
     // Check event date is in the source document's month
