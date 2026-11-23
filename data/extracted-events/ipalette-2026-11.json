@@ -265,8 +265,7 @@
     "targetAge": "どなたでも",
     "reservationRequired": false,
     "kind": "event",
-    "origin": "extracted",
-    "tags": ["定期開催"]
+    "origin": "extracted"
   },
   {
     "id": "ipalette-2026-11-26-oshiguruma",

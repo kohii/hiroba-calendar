@@ -179,6 +179,34 @@ async function discoverPDFsForCenter(center: Center): Promise<PDFLink[]> {
   }
 }
 
+export interface IPaletteNewsPage {
+  url: string;
+  year: string;
+  month: string;
+}
+
+export function extractIPaletteNewsPages(html: string): IPaletteNewsPage[] {
+  const newsPagePattern = /href="(https:\/\/www\.i-palette\.com\/single-news\/(\d{4})-(\d{2})-i-palette-news\/)"/g;
+  const newsPages: IPaletteNewsPage[] = [];
+  let match;
+  
+  while ((match = newsPagePattern.exec(html)) !== null) {
+    newsPages.push({
+      url: match[1],
+      year: match[2],
+      month: match[3],
+    });
+  }
+  
+  return newsPages;
+}
+
+export function extractIPalettePDFUrl(newsPageHtml: string): string | null {
+  const pdfPattern = /href="(https:\/\/www\.i-palette\.com\/wp\/wp-content\/uploads\/[^"]+\.pdf)"/;
+  const pdfMatch = pdfPattern.exec(newsPageHtml);
+  return pdfMatch ? pdfMatch[1] : null;
+}
+
 async function discoverIPalettePDFs(center: Center): Promise<PDFLink[]> {
   const eventsPageUrl = 'https://www.i-palette.com/events/';
   const discoveredAt = new Date().toISOString();
@@ -197,19 +225,7 @@ async function discoverIPalettePDFs(center: Center): Promise<PDFLink[]> {
     }
     
     const html = await response.text();
-    
-    // Extract links to individual news pages matching pattern /single-news/{YYYY}-{MM}-i-palette-news/
-    const newsPagePattern = /href="(https:\/\/www\.i-palette\.com\/single-news\/(\d{4})-(\d{2})-i-palette-news\/)"/g;
-    const newsPages: Array<{url: string, year: string, month: string}> = [];
-    let match;
-    
-    while ((match = newsPagePattern.exec(html)) !== null) {
-      newsPages.push({
-        url: match[1],
-        year: match[2],
-        month: match[3],
-      });
-    }
+    const newsPages = extractIPaletteNewsPages(html);
     
     // Fetch each news page to extract the PDF URL
     for (const newsPage of newsPages) {
@@ -226,16 +242,13 @@ async function discoverIPalettePDFs(center: Center): Promise<PDFLink[]> {
         }
         
         const newsHtml = await newsResponse.text();
+        const pdfUrl = extractIPalettePDFUrl(newsHtml);
         
-        // Extract PDF URL from the news page
-        const pdfPattern = /href="(https:\/\/www\.i-palette\.com\/wp\/wp-content\/uploads\/[^"]+\.pdf)"/;
-        const pdfMatch = pdfPattern.exec(newsHtml);
-        
-        if (pdfMatch) {
+        if (pdfUrl) {
           links.push({
             centerId: 'ipalette',
             month: `${newsPage.year}-${newsPage.month}`,
-            url: pdfMatch[1],
+            url: pdfUrl,
             discoveredAt,
           });
           console.log(`  ✓ Found PDF for ${newsPage.year}-${newsPage.month}`);

@@ -2116,7 +2116,7 @@
       "fetchedAt": "2026-11-23T23:28:34.732Z",
       "sha256": "7ce6217235805171ca3edbcbac466ba639a245c4b51de0d024db83288b144629",
       "closures": [],
-      "extractedAt": "2026-11-23T23:39:56.050Z"
+      "extractedAt": "2026-11-23T23:45:52.632Z"
     }
   ],
   "events": [
@@ -11447,10 +11447,7 @@
       "targetAge": "どなたでも",
       "reservationRequired": false,
       "kind": "event",
-      "origin": "extracted",
-      "tags": [
-        "定期開催"
-      ]
+      "origin": "extracted"
     },
     {
       "id": "ipalette-2026-11-26-oshiguruma",
@@ -14971,6 +14968,6 @@
       "origin": "regular-hours"
     }
   ],
-  "generatedAt": "2026-11-23T23:39:56.666Z",
+  "generatedAt": "2026-11-23T23:45:53.345Z",
   "version": "1.0.0"
 }
