@@ -559,3 +559,60 @@ describe("holiday file", () => {
     assert.ok(holidays.some((holiday) => holiday.name === "休日"));
   });
 });
+
+describe("weekday-unless-holiday rule", () => {
+  it("closes Wednesday when it's not a holiday", () => {
+    const center: Center = {
+      id: "test",
+      name: "Test",
+      nameJa: "テスト",
+      address: "test",
+      phone: "000-0000",
+      websiteUrl: "https://example.com",
+      closedDays: "水曜日",
+      regularHours: {
+        decision: "fill",
+        sourceUrl: "https://example.com",
+        quote: "9:00～20:00 休館日：毎週水曜日（祝日の場合その翌平日）",
+        decisionNote: "水曜が祝日の場合は開館、翌平日が休館",
+        title: "ひろば",
+        hoursQuote: "9:00～20:00",
+        windows: [{ start: "09:00", end: "20:00" }],
+        openWeekdays: [0, 1, 2, 3, 4, 5, 6],
+        closed: [{ kind: "weekday-unless-holiday", weekday: 3 }],
+      },
+    };
+
+    const sourceDoc: SourceDocument = {
+      id: "test-2027-05",
+      centerId: "test",
+      month: "2027-05",
+      pdfUrl: "https://example.com/test.pdf",
+      fetchedAt: "2027-04-25T00:00:00Z",
+      sha256: "test",
+    };
+
+    // 2027-05-05 is Wednesday and Children's Day (holiday)
+    // 2027-05-06 is Thursday (should be closed as substitute)
+    // 2027-05-12 is Wednesday (not a holiday, should be closed)
+    // 2027-05-14 is Friday (not holiday, should be open)
+    const holidays = ["2027-05-05"];
+
+    const filled = fillRegularHours({
+      events: [],
+      centers: [center],
+      sourceDocuments: [sourceDoc],
+      holidayDates: holidays,
+    });
+
+    const may5 = filled.find((e) => e.date === "2027-05-05");
+    const may6 = filled.find((e) => e.date === "2027-05-06");
+    const may12 = filled.find((e) => e.date === "2027-05-12");
+    const may14 = filled.find((e) => e.date === "2027-05-14");
+
+    assert.ok(may5, "2027-05-05 (Wed holiday) should be open");
+    assert.strictEqual(may6, undefined, "2027-05-06 (Thu substitute) should be closed");
+    assert.strictEqual(may12, undefined, "2027-05-12 (Wed non-holiday) should be closed");
+    assert.ok(may14, "2027-05-14 (Fri) should be open");
+  });
+});

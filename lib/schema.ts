@@ -15,7 +15,8 @@ export type ClosedRule =
   | { kind: "nth-weekday"; nth: number[]; weekday: Weekday }
   | { kind: "sunday-from"; nth: number }
   | { kind: "public-holiday" }
-  | { kind: "month-day-range"; from: string; to: string };
+  | { kind: "month-day-range"; from: string; to: string }
+  | { kind: "weekday-unless-holiday"; weekday: Weekday };
 
 export type ClosureScope = "all-day" | "am" | "pm";
 
@@ -389,16 +390,16 @@ export const CENTERS: Center[] = [
       decision: "fill",
       sourceUrl: "https://www.i-palette.com/about.html",
       quote:
-        "ぱれっとひろば（乳幼児の遊び場） ９:00-12:00 13:00-20:00。令和8年8月17日（月）から、12時ー13時もご利用になれます。1F 利用時間：9:00～20:00 休館日：毎週水曜日（祝日の場合その翌平日） 年末年始（12月29日～1月3日まで）",
+        "ぱれっとひろば 利用時間：9:00～20:00 休館日：毎週水曜日（祝日の場合その翌平日） 年末年始（12月29日～1月3日まで）。令和8年8月17日（月）から、12時ー13時もご利用になれます。",
       decisionNote:
-        "2026年8月17日以降、ぱれっとひろばは9:00-20:00の連続開室。11月は8/17以降なので連続時間帯。予約不要。水曜休館（祝日の場合翌平日）、12/29-1/3休館。予定表の空欄日にひろば行を足す。ほっぺっぺひろばなどの特別イベントは別途抽出。",
+        "2026年8月17日以降、ぱれっとひろばは9:00-20:00の連続開室。11月は8/17以降なので連続時間帯。予約不要。水曜が祝日の場合は開館、翌平日が休館。12/29-1/3休館。予定表の空欄日にひろば行を足す。ほっぺっぺひろばなどの特別イベントは別途抽出。",
       title: "ぱれっとひろば",
       targetAge: "乳幼児親子",
-      hoursQuote: "９:00～20:00",
+      hoursQuote: "9:00～20:00",
       windows: [{ start: "09:00", end: "20:00" }],
       openWeekdays: everyDay,
       closed: [
-        { kind: "nth-weekday", nth: [1, 2, 3, 4, 5], weekday: 3 },
+        { kind: "weekday-unless-holiday", weekday: 3 },
         { kind: "month-day-range", from: "12-29", to: "01-03" },
       ],
     },

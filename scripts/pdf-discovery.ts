@@ -107,6 +107,11 @@ async function discoverPDFsForCenter(center: Center): Promise<PDFLink[]> {
   console.log(`Discovering PDFs for ${center.nameJa}...`);
   
   try {
+    // Special handling for ipalette - fetch individual news pages
+    if (center.id === 'ipalette') {
+      return await discoverIPalettePDFs(center);
+    }
+    
     const response = await fetch(center.websiteUrl, {
       headers: {
         'User-Agent': 'Mozilla/5.0 (compatible; SaitamaCityScheduleApp/1.0)',
@@ -170,6 +175,81 @@ async function discoverPDFsForCenter(center: Center): Promise<PDFLink[]> {
     return links;
   } catch (error) {
     console.error(`Error discovering PDFs for ${center.nameJa}:`, error);
+    return [];
+  }
+}
+
+async function discoverIPalettePDFs(center: Center): Promise<PDFLink[]> {
+  const eventsPageUrl = 'https://www.i-palette.com/events/';
+  const discoveredAt = new Date().toISOString();
+  const links: PDFLink[] = [];
+  
+  try {
+    const response = await fetch(eventsPageUrl, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (compatible; SaitamaCityScheduleApp/1.0)',
+      },
+    });
+    
+    if (!response.ok) {
+      console.error(`Failed to fetch i-palette events page: ${response.status}`);
+      return [];
+    }
+    
+    const html = await response.text();
+    
+    // Extract links to individual news pages matching pattern /single-news/{YYYY}-{MM}-i-palette-news/
+    const newsPagePattern = /href="(https:\/\/www\.i-palette\.com\/single-news\/(\d{4})-(\d{2})-i-palette-news\/)"/g;
+    const newsPages: Array<{url: string, year: string, month: string}> = [];
+    let match;
+    
+    while ((match = newsPagePattern.exec(html)) !== null) {
+      newsPages.push({
+        url: match[1],
+        year: match[2],
+        month: match[3],
+      });
+    }
+    
+    // Fetch each news page to extract the PDF URL
+    for (const newsPage of newsPages) {
+      try {
+        const newsResponse = await fetch(newsPage.url, {
+          headers: {
+            'User-Agent': 'Mozilla/5.0 (compatible; SaitamaCityScheduleApp/1.0)',
+          },
+        });
+        
+        if (!newsResponse.ok) {
+          console.log(`  ⚠️  Failed to fetch ${newsPage.url}: ${newsResponse.status}`);
+          continue;
+        }
+        
+        const newsHtml = await newsResponse.text();
+        
+        // Extract PDF URL from the news page
+        const pdfPattern = /href="(https:\/\/www\.i-palette\.com\/wp\/wp-content\/uploads\/[^"]+\.pdf)"/;
+        const pdfMatch = pdfPattern.exec(newsHtml);
+        
+        if (pdfMatch) {
+          links.push({
+            centerId: 'ipalette',
+            month: `${newsPage.year}-${newsPage.month}`,
+            url: pdfMatch[1],
+            discoveredAt,
+          });
+          console.log(`  ✓ Found PDF for ${newsPage.year}-${newsPage.month}`);
+        } else {
+          console.log(`  ⚠️  No PDF found on ${newsPage.url}`);
+        }
+      } catch (error) {
+        console.log(`  ⚠️  Error fetching ${newsPage.url}:`, error);
+      }
+    }
+    
+    return links;
+  } catch (error) {
+    console.error(`Error discovering i-palette PDFs:`, error);
     return [];
   }
 }
