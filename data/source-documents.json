@@ -1,250 +1,5 @@
 [
   {
-    "id": "nishi-2026-10",
-    "centerId": "nishi",
-    "month": "2026-10",
-    "pdfUrl": "https://seisinkai.ed.jp/wp-content/uploads/2026/09/令和8年度１０月のカレンダー.pdf",
-    "fetchedAt": "2026-10-29T12:00:00Z",
-    "sha256": "e3d5903db3898526be908be2e926fa16e37eee48c95779275204ce33b63030f0",
-    "closures": [
-      {
-        "date": "2026-10-01",
-        "scope": "all-day",
-        "quote": "閉室日"
-      },
-      {
-        "date": "2026-10-02",
-        "scope": "pm",
-        "quote": "ももちゃんタイム 1歳2か月迄 13:00～16:00"
-      },
-      {
-        "date": "2026-10-05",
-        "scope": "pm",
-        "quote": "ももちゃんタイム 1歳2か月迄 身体測定 ※バスタオル持参 13:00～16:00"
-      },
-      {
-        "date": "2026-10-06",
-        "scope": "am",
-        "quote": "歯科衛生士講座 シリーズⅢ「ごはんのはなし」 10:00～12:00 ※10:15開始"
-      },
-      {
-        "date": "2026-10-06",
-        "scope": "pm",
-        "quote": "ももちゃんタイム『あかちゃんの発達講座Ⅰ』 対象：寝返り前まで 13:00～16:00 ※13:15開始"
-      },
-      {
-        "date": "2026-10-08",
-        "scope": "am",
-        "quote": "もぐもぐ教室 離乳食・材料費徴収 (食器・食具持参) 10:30～11:30 ※10:15入室"
-      },
-      {
-        "date": "2026-10-09",
-        "scope": "pm",
-        "quote": "ももちゃんタイム 1歳2か月迄 13:00～16:00"
-      },
-      {
-        "date": "2026-10-12",
-        "scope": "all-day",
-        "quote": "閉室日 スポーツの日"
-      },
-      {
-        "date": "2026-10-13",
-        "scope": "am",
-        "quote": "お芋掘り 10:15～11:00 10時集合 現地集合・現地解散 ※保険料・お芋代有"
-      },
-      {
-        "date": "2026-10-13",
-        "scope": "pm",
-        "quote": "1歳児ランド 1歳以上～2歳未満 13:00～16:00"
-      },
-      {
-        "date": "2026-10-14",
-        "scope": "am",
-        "quote": "ふたごの集い 西区保健センターとの共催 10:00～11:30 ※10:15開始"
-      },
-      {
-        "date": "2026-10-14",
-        "scope": "pm",
-        "quote": "ももちゃんタイム 1歳2か月迄 13:00～16:00"
-      },
-      {
-        "date": "2026-10-15",
-        "scope": "all-day",
-        "quote": "閉室日"
-      },
-      {
-        "date": "2026-10-16",
-        "scope": "pm",
-        "quote": "ももちゃんタイム ママのストレッチ 13:00～16:00 ※13:15開始 ※災害訓練あり"
-      },
-      {
-        "date": "2026-10-19",
-        "scope": "pm",
-        "quote": "ももちゃんタイム 1歳2か月迄 13:00～16:00"
-      },
-      {
-        "date": "2026-10-20",
-        "scope": "am",
-        "quote": "ウェルカムさいたま 10:00～11:30 対象：西区に転入し1年未満の方"
-      },
-      {
-        "date": "2026-10-21",
-        "scope": "am",
-        "quote": "英語であそぼ！ 10:00～12:00 ※10:15開始 ※年齢制限なし"
-      },
-      {
-        "date": "2026-10-21",
-        "scope": "pm",
-        "quote": "ももちゃんタイム 1歳2か月迄 13:00～16:00"
-      },
-      {
-        "date": "2026-10-22",
-        "scope": "am",
-        "quote": "世界のことばでこんにちは！ 10:00～12:00 ※10:15開始"
-      },
-      {
-        "date": "2026-10-23",
-        "scope": "am",
-        "quote": "学びのひろば 防災講座(地震)「防災の備えについて考える」 10:00～12:00 ※10:15開始"
-      },
-      {
-        "date": "2026-10-23",
-        "scope": "pm",
-        "quote": "わらべうたベビーマッサージ 対象：2か月～歩行開始前まで 13:00～16:00 ※13:15開始"
-      },
-      {
-        "date": "2026-10-25",
-        "scope": "am",
-        "quote": "パパサンデーイベント 作って遊ぼう！「パクパクおばけ」 10:00～12:00 ※10:15開始"
-      },
-      {
-        "date": "2026-10-26",
-        "scope": "am",
-        "quote": "ケンちゃんじいちゃんと福話来さん 10:00～12:00 ※10:15開始 オンラインあり"
-      },
-      {
-        "date": "2026-10-26",
-        "scope": "pm",
-        "quote": "ももちゃんタイム ねんねのあかちゃん＋ピヨピヨランド 13:00～16:00"
-      },
-      {
-        "date": "2026-10-27",
-        "scope": "am",
-        "quote": "英語で楽しくリトミック♪ 10:00～12:00 ※10:15開始 ★対象：6か月以上"
-      },
-      {
-        "date": "2026-10-27",
-        "scope": "pm",
-        "quote": "1歳児ランド 1歳以上～2歳未満 13:00～16:00"
-      },
-      {
-        "date": "2026-10-28",
-        "scope": "am",
-        "quote": "10月生まれのお誕生日会＆ハーフバースデー 10:00～11:30 ※10:15開始"
-      },
-      {
-        "date": "2026-10-28",
-        "scope": "pm",
-        "quote": "ももちゃんタイム 1歳2か月迄 13:00～16:00"
-      },
-      {
-        "date": "2026-10-30",
-        "scope": "am",
-        "quote": "ハロウィンパーティー 10:15～11:30 1歳3か月以上 10:00入室"
-      },
-      {
-        "date": "2026-10-30",
-        "scope": "pm",
-        "quote": "ハロウィンパーティー 13:45～15:00 1歳2か月迄 13:30入室"
-      }
-    ],
-    "extractedAt": "2026-10-29T12:29:27.705Z"
-  },
-  {
-    "id": "minuma-2026-10",
-    "centerId": "minuma",
-    "month": "2026-10",
-    "pdfUrl": "https://www.sainoko.net/minuma/pdf/202610minuma.pdf",
-    "fetchedAt": "2026-10-20T06:00:00Z",
-    "sha256": "a6d26e5023426795d73199d27f981c920b89c7e5e43dbb43b5c58dcf882af1c8",
-    "extractedAt": "2026-10-20T06:26:56.851Z"
-  },
-  {
-    "id": "urawa-2026-10",
-    "centerId": "urawa",
-    "month": "2026-10",
-    "pdfUrl": "https://www.urawanyuyouji.com/admin/wp-content/uploads/2026/09/202610_urawa.pdf",
-    "fetchedAt": "2026-10-20T06:00:00Z",
-    "sha256": "0b8b5ef6726c928b6d034b5b5c2af79734258255cf55c59099644f7d135000ab",
-    "extractedAt": "2026-10-20T06:26:56.862Z"
-  },
-  {
-    "id": "seiga-2026-10",
-    "centerId": "seiga",
-    "month": "2026-10",
-    "pdfUrl": "https://seiga.or.jp/wp-content/uploads/e26b4cee4f29eca0566d678a5008904b-1.pdf",
-    "fetchedAt": "2026-10-25T06:00:00Z",
-    "sha256": "19d3811355b860a607ff771f42ebf04c4baa85e2958442f1b495e7d04e7832fc",
-    "closures": [
-      {
-        "date": "2026-10-02",
-        "scope": "all-day",
-        "quote": "休"
-      },
-      {
-        "date": "2026-10-04",
-        "scope": "all-day",
-        "quote": "休"
-      },
-      {
-        "date": "2026-10-09",
-        "scope": "all-day",
-        "quote": "休"
-      },
-      {
-        "date": "2026-10-10",
-        "scope": "all-day",
-        "quote": "休"
-      },
-      {
-        "date": "2026-10-11",
-        "scope": "all-day",
-        "quote": "休"
-      },
-      {
-        "date": "2026-10-12",
-        "scope": "all-day",
-        "quote": "休"
-      },
-      {
-        "date": "2026-10-16",
-        "scope": "all-day",
-        "quote": "休"
-      },
-      {
-        "date": "2026-10-18",
-        "scope": "all-day",
-        "quote": "休"
-      },
-      {
-        "date": "2026-10-23",
-        "scope": "all-day",
-        "quote": "休"
-      },
-      {
-        "date": "2026-10-25",
-        "scope": "all-day",
-        "quote": "休"
-      },
-      {
-        "date": "2026-10-30",
-        "scope": "all-day",
-        "quote": "休"
-      }
-    ],
-    "extractedAt": "2026-10-25T06:20:46.070Z"
-  },
-  {
     "id": "hinadori-2026-10",
     "centerId": "hinadori",
     "month": "2026-10",
@@ -316,6 +71,102 @@
     "extractedAt": "2026-10-25T06:20:46.144Z"
   },
   {
+    "id": "hinadori-2026-11",
+    "centerId": "hinadori",
+    "month": "2026-11",
+    "pdfUrl": "https://hinadori.ed.jp/wp-content/uploads/2026/10/1b5cb02dfc41bd9e51291714843efc4b.pdf",
+    "fetchedAt": "2026-11-21T13:00:00Z",
+    "sha256": "eb245165ae4eab70ff22a43ed0ac5c5f11343756ffea5d531ca195300c488bb5",
+    "closures": [
+      {
+        "date": "2026-11-03",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-11-07",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-11-08",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-11-11",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-11-13",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-11-14",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-11-15",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-11-16",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-11-17",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-11-21",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-11-22",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-11-23",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-11-28",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-11-29",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-11-30",
+        "scope": "all-day",
+        "quote": "休"
+      }
+    ],
+    "extractedAt": "2026-11-21T13:45:49.171Z"
+  },
+  {
+    "id": "ipalette-2026-11",
+    "centerId": "ipalette",
+    "month": "2026-11",
+    "pdfUrl": "https://www.i-palette.com/wp/wp-content/uploads/2026/10/2026-11-i-palette-news.pdf",
+    "fetchedAt": "2026-11-23T23:28:34.732Z",
+    "sha256": "7ce6217235805171ca3edbcbac466ba639a245c4b51de0d024db83288b144629",
+    "closures": [],
+    "extractedAt": "2026-11-23T23:28:37.687Z"
+  },
+  {
     "id": "iwatsuki-2026-10",
     "centerId": "iwatsuki",
     "month": "2026-10",
@@ -378,405 +229,45 @@
     "extractedAt": "2026-10-29T12:26:24.936Z"
   },
   {
-    "id": "seiga-2026-11",
-    "centerId": "seiga",
-    "month": "2026-11",
-    "pdfUrl": "https://seiga.or.jp/wp-content/uploads/6183e480214a45798808b9baa6656d54.pdf",
-    "fetchedAt": "2026-10-29T12:00:00Z",
-    "sha256": "6fb9cdcd2881bbeb543091141b2b2515b778db180b6d19ba4254d52c25f79caa",
+    "id": "iwatsuki-2026-12",
+    "centerId": "iwatsuki",
+    "month": "2026-12",
+    "pdfUrl": "https://kawai-daynursery.jp/wp-content/uploads/2026/11/hina-202612.pdf",
+    "fetchedAt": "2026-11-21T13:00:00Z",
+    "sha256": "bf427bfbc927feb6433451d343d6c2ceee724adc9be5119327bdc2783a2b33e4",
     "closures": [
       {
-        "date": "2026-11-03",
-        "scope": "all-day",
-        "quote": "休"
-      },
-      {
-        "date": "2026-11-06",
-        "scope": "all-day",
-        "quote": "休"
-      },
-      {
-        "date": "2026-11-08",
-        "scope": "all-day",
-        "quote": "休"
-      },
-      {
-        "date": "2026-11-13",
-        "scope": "all-day",
-        "quote": "休"
-      },
-      {
-        "date": "2026-11-15",
-        "scope": "all-day",
-        "quote": "休"
-      },
-      {
-        "date": "2026-11-22",
-        "scope": "all-day",
-        "quote": "休"
-      },
-      {
-        "date": "2026-11-23",
-        "scope": "all-day",
-        "quote": "休"
-      },
-      {
-        "date": "2026-11-27",
-        "scope": "all-day",
-        "quote": "休"
-      },
-      {
-        "date": "2026-11-29",
-        "scope": "all-day",
-        "quote": "休"
-      }
-    ],
-    "extractedAt": "2026-10-29T12:26:24.991Z"
-  },
-  {
-    "id": "yono-2026-10",
-    "centerId": "yono",
-    "month": "2026-10",
-    "pdfUrl": "https://www.himawarikkoland.com/library/67e0faf1ee78e14239888cb6/6aab8fd00d9ae03ba8e0c508.pdf",
-    "fetchedAt": "2026-10-29T12:00:00Z",
-    "sha256": "095cd54a8197f4b2209b3de427022ae1e4ece76390768b1c879579e7c22e073d",
-    "closures": [
-      {
-        "date": "2026-10-12",
-        "scope": "all-day",
-        "quote": "スポーツの日"
-      },
-      {
-        "date": "2026-10-13",
+        "date": "2026-12-08",
         "scope": "all-day",
         "quote": "休館日"
       },
       {
-        "date": "2026-10-16",
-        "scope": "am",
-        "quote": "ウェルカムさいたまの為午前閉館"
+        "date": "2026-12-12",
+        "scope": "pm",
+        "quote": "イベント準備のため午後は休館になります"
       },
       {
-        "date": "2026-10-17",
-        "scope": "am",
-        "quote": "★午前はお申込者のみとなります。"
+        "date": "2026-12-22",
+        "scope": "all-day",
+        "quote": "休館日"
       },
       {
-        "date": "2026-10-18",
-        "scope": "am",
-        "quote": "★午前はお申込者のみとなります。"
+        "date": "2026-12-29",
+        "scope": "all-day",
+        "quote": "休館日"
       },
       {
-        "date": "2026-10-20",
-        "scope": "am",
-        "quote": "★午前はお申込者のみとなります。"
+        "date": "2026-12-30",
+        "scope": "all-day",
+        "quote": "休館日"
       },
       {
-        "date": "2026-10-27",
+        "date": "2026-12-31",
         "scope": "all-day",
         "quote": "休館日"
       }
     ],
-    "extractedAt": "2026-10-29T12:26:25.048Z"
-  },
-  {
-    "id": "yono-2026-11",
-    "centerId": "yono",
-    "month": "2026-11",
-    "pdfUrl": "https://www.himawarikkoland.com/library/67e0faf1ee78e14239888cb6/6ad6bab4055a68706e9f2176.pdf",
-    "fetchedAt": "2026-10-29T12:00:00Z",
-    "sha256": "84d251a2eec0e59005c03d768136a8f5fa466e88393b9184710a08f112945abe",
-    "closures": [
-      {
-        "date": "2026-11-02",
-        "scope": "all-day",
-        "quote": "定期清掃の為 休館"
-      },
-      {
-        "date": "2026-11-03",
-        "scope": "all-day",
-        "quote": "文化の日"
-      },
-      {
-        "date": "2026-11-10",
-        "scope": "all-day",
-        "quote": "休館日"
-      },
-      {
-        "date": "2026-11-11",
-        "scope": "pm",
-        "quote": "★午後はお申込者のみとなります。"
-      },
-      {
-        "date": "2026-11-15",
-        "scope": "am",
-        "quote": "★午前はお申込者のみとなります。"
-      },
-      {
-        "date": "2026-11-19",
-        "scope": "am",
-        "quote": "★午前はお申込者のみとなります。"
-      },
-      {
-        "date": "2026-11-21",
-        "scope": "am",
-        "quote": "★午前はお申込者のみとなります。"
-      },
-      {
-        "date": "2026-11-23",
-        "scope": "all-day",
-        "quote": "勤労感謝の日"
-      },
-      {
-        "date": "2026-11-24",
-        "scope": "all-day",
-        "quote": "休館日"
-      },
-      {
-        "date": "2026-11-29",
-        "scope": "all-day",
-        "quote": "休館日"
-      }
-    ],
-    "extractedAt": "2026-10-29T12:26:25.102Z"
-  },
-  {
-    "id": "omiya-2026-10",
-    "centerId": "omiya",
-    "month": "2026-10",
-    "pdfUrl": "https://www.wakaba-asunaro.jp/library/6662c3046985d13334e93bf0/6aa2318955d0ebeb15ea578c.pdf",
-    "fetchedAt": "2026-10-29T12:00:00Z",
-    "sha256": "5358a49100944a427a04e6c582fb48dc842d680c90048f5c0629568b82ba2810",
-    "closures": [
-      {
-        "date": "2026-10-04",
-        "scope": "am",
-        "quote": "<午前>★講座「災害が来る前に」10:00"
-      },
-      {
-        "date": "2026-10-05",
-        "scope": "all-day",
-        "quote": "休館日"
-      },
-      {
-        "date": "2026-10-08",
-        "scope": "am",
-        "quote": "<午前> 元気アップ講座 申し込み済の方"
-      },
-      {
-        "date": "2026-10-12",
-        "scope": "all-day",
-        "quote": "スポーツの日"
-      },
-      {
-        "date": "2026-10-14",
-        "scope": "am",
-        "quote": "<午前> ★ウエルカムさいたま 予約制"
-      },
-      {
-        "date": "2026-10-19",
-        "scope": "all-day",
-        "quote": "休館日"
-      },
-      {
-        "date": "2026-10-20",
-        "scope": "all-day",
-        "quote": "<午前> ★ミニコンサート 10:30 予約制 <午後> ★保健師さんと お話 予約制"
-      },
-      {
-        "date": "2026-10-27",
-        "scope": "all-day",
-        "quote": "★すくすく測定 予約制"
-      },
-      {
-        "date": "2026-10-28",
-        "scope": "all-day",
-        "quote": "★すくすく測定 予約制"
-      },
-      {
-        "date": "2026-10-29",
-        "scope": "all-day",
-        "quote": "★すくすく測定 予約制"
-      },
-      {
-        "date": "2026-10-30",
-        "scope": "pm",
-        "quote": "<午後> ★オンライン 予約制"
-      }
-    ],
-    "extractedAt": "2026-10-29T12:26:25.156Z"
-  },
-  {
-    "id": "omiya-2026-11",
-    "centerId": "omiya",
-    "month": "2026-11",
-    "pdfUrl": "https://www.wakaba-asunaro.jp/library/6662c3046985d13334e93bf0/6acec02b0e118c59d4e04436.pdf",
-    "fetchedAt": "2026-10-29T12:00:00Z",
-    "sha256": "9bf599ac9524defe6570c9545ea84c436b3a98dbc981fc20cad9724334d4a697",
-    "closures": [
-      {
-        "date": "2026-11-02",
-        "scope": "all-day",
-        "quote": "休館日"
-      },
-      {
-        "date": "2026-11-03",
-        "scope": "all-day",
-        "quote": "文化の日"
-      },
-      {
-        "date": "2026-11-08",
-        "scope": "am",
-        "quote": "<午前>★うたのコンサート 10:30 予約制"
-      },
-      {
-        "date": "2026-11-10",
-        "scope": "all-day",
-        "quote": "孫育て講座 ・お申込み済の方"
-      },
-      {
-        "date": "2026-11-15",
-        "scope": "am",
-        "quote": "<午前>応急手当親子講習 申し込み済の方"
-      },
-      {
-        "date": "2026-11-16",
-        "scope": "all-day",
-        "quote": "休館日"
-      },
-      {
-        "date": "2026-11-17",
-        "scope": "all-day",
-        "quote": "孫育て講座 ・お申込み済の方"
-      },
-      {
-        "date": "2026-11-20",
-        "scope": "am",
-        "quote": "<午前> ★薬剤師さんのお話 10:00 予約制"
-      },
-      {
-        "date": "2026-11-23",
-        "scope": "all-day",
-        "quote": "勤労感謝の日"
-      },
-      {
-        "date": "2026-11-24",
-        "scope": "am",
-        "quote": "<午前> 孫育て講座 ・お申込み済の方"
-      },
-      {
-        "date": "2026-11-25",
-        "scope": "pm",
-        "quote": "<午後> ★保健師さんとお話 予約制"
-      },
-      {
-        "date": "2026-11-26",
-        "scope": "all-day",
-        "quote": "<午前> ★すくすく測定 予約制 <午後> ★育児学級 予約済の方"
-      },
-      {
-        "date": "2026-11-27",
-        "scope": "all-day",
-        "quote": "★すくすく測定 予約制"
-      },
-      {
-        "date": "2026-11-29",
-        "scope": "all-day",
-        "quote": "第5日曜日でお休み"
-      },
-      {
-        "date": "2026-11-30",
-        "scope": "pm",
-        "quote": "<午後> ★オンライン予約制"
-      }
-    ],
-    "extractedAt": "2026-10-29T12:26:25.212Z"
-  },
-  {
-    "id": "urawa-2026-11",
-    "centerId": "urawa",
-    "month": "2026-11",
-    "pdfUrl": "https://www.urawanyuyouji.com/admin/wp-content/uploads/2026/10/202611_urawa.pdf",
-    "fetchedAt": "2026-10-29T12:00:00Z",
-    "sha256": "791470beec54e3f60a6080daa1a5d8b0fc10c70eede4372a2dac8d3a260f06d8",
-    "closures": [
-      {
-        "date": "2026-11-03",
-        "scope": "all-day",
-        "quote": "休館 文化の日"
-      },
-      {
-        "date": "2026-11-04",
-        "scope": "all-day",
-        "quote": "終日 にこにこ広場 お休み"
-      },
-      {
-        "date": "2026-11-05",
-        "scope": "all-day",
-        "quote": "終日 にこにこ広場 お休み"
-      },
-      {
-        "date": "2026-11-06",
-        "scope": "am",
-        "quote": "午前 にこにこ広場 お休み"
-      },
-      {
-        "date": "2026-11-08",
-        "scope": "am",
-        "quote": "午前 にこにこ広場 お休み"
-      },
-      {
-        "date": "2026-11-09",
-        "scope": "all-day",
-        "quote": "休館"
-      },
-      {
-        "date": "2026-11-10",
-        "scope": "all-day",
-        "quote": "終日 にこにこ広場 お休み"
-      },
-      {
-        "date": "2026-11-13",
-        "scope": "am",
-        "quote": "《午前》 1・2歳児専用広場"
-      },
-      {
-        "date": "2026-11-15",
-        "scope": "pm",
-        "quote": "午後 にこにこ広場 お休み"
-      },
-      {
-        "date": "2026-11-17",
-        "scope": "am",
-        "quote": "午前 にこにこ広場 お休み"
-      },
-      {
-        "date": "2026-11-23",
-        "scope": "all-day",
-        "quote": "休館 勤労感謝の日"
-      },
-      {
-        "date": "2026-11-25",
-        "scope": "am",
-        "quote": "《午前》 1・2歳児専用広場"
-      },
-      {
-        "date": "2026-11-26",
-        "scope": "pm",
-        "quote": "午後 にこにこ広場 お休み"
-      },
-      {
-        "date": "2026-11-27",
-        "scope": "pm",
-        "quote": "午後 にこにこ広場 お休み"
-      },
-      {
-        "date": "2026-11-29",
-        "scope": "all-day",
-        "quote": "休館"
-      }
-    ],
-    "extractedAt": "2026-10-29T12:26:25.268Z"
+    "extractedAt": "2026-11-21T13:37:56.300Z"
   },
   {
     "id": "minami-2026-10",
@@ -966,6 +457,313 @@
     "extractedAt": "2026-10-29T12:26:25.380Z"
   },
   {
+    "id": "minami-2026-12",
+    "centerId": "minami",
+    "month": "2026-12",
+    "pdfUrl": "https://www.urawanyuyouji.com/admin/wp-content/uploads/2026/11/202612_minami.pdf",
+    "fetchedAt": "2026-11-21T13:00:00Z",
+    "sha256": "f3149af82fcf887e5482459ade4155250e797a71e16a536598ef7cbdf4d6c1b9",
+    "closures": [
+      {
+        "date": "2026-12-03",
+        "scope": "am",
+        "quote": "11:00～にこにこ広場"
+      },
+      {
+        "date": "2026-12-07",
+        "scope": "am",
+        "quote": "午前行事のみ"
+      },
+      {
+        "date": "2026-12-08",
+        "scope": "am",
+        "quote": "午前0歳専用"
+      },
+      {
+        "date": "2026-12-09",
+        "scope": "all-day",
+        "quote": "終日測定のみ"
+      },
+      {
+        "date": "2026-12-11",
+        "scope": "am",
+        "quote": "午前1歳専用"
+      },
+      {
+        "date": "2026-12-13",
+        "scope": "am",
+        "quote": "午前行事のみ"
+      },
+      {
+        "date": "2026-12-14",
+        "scope": "all-day",
+        "quote": "休館"
+      },
+      {
+        "date": "2026-12-16",
+        "scope": "all-day",
+        "quote": "終日測定のみ"
+      },
+      {
+        "date": "2026-12-17",
+        "scope": "am",
+        "quote": "11:00～にこにこ広場"
+      },
+      {
+        "date": "2026-12-20",
+        "scope": "am",
+        "quote": "午前行事のみ"
+      },
+      {
+        "date": "2026-12-21",
+        "scope": "am",
+        "quote": "午前2歳専用"
+      },
+      {
+        "date": "2026-12-22",
+        "scope": "pm",
+        "quote": "午後行事のみ"
+      },
+      {
+        "date": "2026-12-23",
+        "scope": "all-day",
+        "quote": "終日測定のみ"
+      },
+      {
+        "date": "2026-12-25",
+        "scope": "pm",
+        "quote": "午後行事のみ"
+      },
+      {
+        "date": "2026-12-28",
+        "scope": "all-day",
+        "quote": "休館"
+      },
+      {
+        "date": "2026-12-29",
+        "scope": "all-day",
+        "quote": "年末年始休館（12/29～1/3）"
+      },
+      {
+        "date": "2026-12-30",
+        "scope": "all-day",
+        "quote": "年末年始休館（12/29～1/3）"
+      },
+      {
+        "date": "2026-12-31",
+        "scope": "all-day",
+        "quote": "年末年始休館（12/29～1/3）"
+      }
+    ],
+    "extractedAt": "2026-11-22T06:08:07.967Z"
+  },
+  {
+    "id": "minuma-2026-10",
+    "centerId": "minuma",
+    "month": "2026-10",
+    "pdfUrl": "https://www.sainoko.net/minuma/pdf/202610minuma.pdf",
+    "fetchedAt": "2026-10-20T06:00:00Z",
+    "sha256": "a6d26e5023426795d73199d27f981c920b89c7e5e43dbb43b5c58dcf882af1c8",
+    "extractedAt": "2026-10-20T06:26:56.851Z"
+  },
+  {
+    "id": "minuma-2026-11",
+    "centerId": "minuma",
+    "month": "2026-11",
+    "pdfUrl": "https://www.sainoko.net/minuma/pdf/202611minuma.pdf",
+    "fetchedAt": "2026-10-29T12:00:00Z",
+    "sha256": "89fff20f42bc2fc20b3b6832c9760bb2a7d622e94c3e9828d3bfc14b5a8e21db",
+    "closures": [
+      {
+        "date": "2026-11-03",
+        "scope": "all-day",
+        "quote": "休室日（文化の日）"
+      },
+      {
+        "date": "2026-11-12",
+        "scope": "all-day",
+        "quote": "休室日"
+      },
+      {
+        "date": "2026-11-23",
+        "scope": "all-day",
+        "quote": "休室日（勤労感謝の日）"
+      },
+      {
+        "date": "2026-11-26",
+        "scope": "all-day",
+        "quote": "休室日"
+      },
+      {
+        "date": "2026-11-29",
+        "scope": "all-day",
+        "quote": "休室日"
+      }
+    ],
+    "extractedAt": "2026-10-29T12:29:27.813Z"
+  },
+  {
+    "id": "nishi-2026-10",
+    "centerId": "nishi",
+    "month": "2026-10",
+    "pdfUrl": "https://seisinkai.ed.jp/wp-content/uploads/2026/09/令和8年度１０月のカレンダー.pdf",
+    "fetchedAt": "2026-10-29T12:00:00Z",
+    "sha256": "e3d5903db3898526be908be2e926fa16e37eee48c95779275204ce33b63030f0",
+    "closures": [
+      {
+        "date": "2026-10-01",
+        "scope": "all-day",
+        "quote": "閉室日"
+      },
+      {
+        "date": "2026-10-02",
+        "scope": "pm",
+        "quote": "ももちゃんタイム 1歳2か月迄 13:00～16:00"
+      },
+      {
+        "date": "2026-10-05",
+        "scope": "pm",
+        "quote": "ももちゃんタイム 1歳2か月迄 身体測定 ※バスタオル持参 13:00～16:00"
+      },
+      {
+        "date": "2026-10-06",
+        "scope": "am",
+        "quote": "歯科衛生士講座 シリーズⅢ「ごはんのはなし」 10:00～12:00 ※10:15開始"
+      },
+      {
+        "date": "2026-10-06",
+        "scope": "pm",
+        "quote": "ももちゃんタイム『あかちゃんの発達講座Ⅰ』 対象：寝返り前まで 13:00～16:00 ※13:15開始"
+      },
+      {
+        "date": "2026-10-08",
+        "scope": "am",
+        "quote": "もぐもぐ教室 離乳食・材料費徴収 (食器・食具持参) 10:30～11:30 ※10:15入室"
+      },
+      {
+        "date": "2026-10-09",
+        "scope": "pm",
+        "quote": "ももちゃんタイム 1歳2か月迄 13:00～16:00"
+      },
+      {
+        "date": "2026-10-12",
+        "scope": "all-day",
+        "quote": "閉室日 スポーツの日"
+      },
+      {
+        "date": "2026-10-13",
+        "scope": "am",
+        "quote": "お芋掘り 10:15～11:00 10時集合 現地集合・現地解散 ※保険料・お芋代有"
+      },
+      {
+        "date": "2026-10-13",
+        "scope": "pm",
+        "quote": "1歳児ランド 1歳以上～2歳未満 13:00～16:00"
+      },
+      {
+        "date": "2026-10-14",
+        "scope": "am",
+        "quote": "ふたごの集い 西区保健センターとの共催 10:00～11:30 ※10:15開始"
+      },
+      {
+        "date": "2026-10-14",
+        "scope": "pm",
+        "quote": "ももちゃんタイム 1歳2か月迄 13:00～16:00"
+      },
+      {
+        "date": "2026-10-15",
+        "scope": "all-day",
+        "quote": "閉室日"
+      },
+      {
+        "date": "2026-10-16",
+        "scope": "pm",
+        "quote": "ももちゃんタイム ママのストレッチ 13:00～16:00 ※13:15開始 ※災害訓練あり"
+      },
+      {
+        "date": "2026-10-19",
+        "scope": "pm",
+        "quote": "ももちゃんタイム 1歳2か月迄 13:00～16:00"
+      },
+      {
+        "date": "2026-10-20",
+        "scope": "am",
+        "quote": "ウェルカムさいたま 10:00～11:30 対象：西区に転入し1年未満の方"
+      },
+      {
+        "date": "2026-10-21",
+        "scope": "am",
+        "quote": "英語であそぼ！ 10:00～12:00 ※10:15開始 ※年齢制限なし"
+      },
+      {
+        "date": "2026-10-21",
+        "scope": "pm",
+        "quote": "ももちゃんタイム 1歳2か月迄 13:00～16:00"
+      },
+      {
+        "date": "2026-10-22",
+        "scope": "am",
+        "quote": "世界のことばでこんにちは！ 10:00～12:00 ※10:15開始"
+      },
+      {
+        "date": "2026-10-23",
+        "scope": "am",
+        "quote": "学びのひろば 防災講座(地震)「防災の備えについて考える」 10:00～12:00 ※10:15開始"
+      },
+      {
+        "date": "2026-10-23",
+        "scope": "pm",
+        "quote": "わらべうたベビーマッサージ 対象：2か月～歩行開始前まで 13:00～16:00 ※13:15開始"
+      },
+      {
+        "date": "2026-10-25",
+        "scope": "am",
+        "quote": "パパサンデーイベント 作って遊ぼう！「パクパクおばけ」 10:00～12:00 ※10:15開始"
+      },
+      {
+        "date": "2026-10-26",
+        "scope": "am",
+        "quote": "ケンちゃんじいちゃんと福話来さん 10:00～12:00 ※10:15開始 オンラインあり"
+      },
+      {
+        "date": "2026-10-26",
+        "scope": "pm",
+        "quote": "ももちゃんタイム ねんねのあかちゃん＋ピヨピヨランド 13:00～16:00"
+      },
+      {
+        "date": "2026-10-27",
+        "scope": "am",
+        "quote": "英語で楽しくリトミック♪ 10:00～12:00 ※10:15開始 ★対象：6か月以上"
+      },
+      {
+        "date": "2026-10-27",
+        "scope": "pm",
+        "quote": "1歳児ランド 1歳以上～2歳未満 13:00～16:00"
+      },
+      {
+        "date": "2026-10-28",
+        "scope": "am",
+        "quote": "10月生まれのお誕生日会＆ハーフバースデー 10:00～11:30 ※10:15開始"
+      },
+      {
+        "date": "2026-10-28",
+        "scope": "pm",
+        "quote": "ももちゃんタイム 1歳2か月迄 13:00～16:00"
+      },
+      {
+        "date": "2026-10-30",
+        "scope": "am",
+        "quote": "ハロウィンパーティー 10:15～11:30 1歳3か月以上 10:00入室"
+      },
+      {
+        "date": "2026-10-30",
+        "scope": "pm",
+        "quote": "ハロウィンパーティー 13:45～15:00 1歳2か月迄 13:30入室"
+      }
+    ],
+    "extractedAt": "2026-10-29T12:29:27.705Z"
+  },
+  {
     "id": "nishi-2026-11",
     "centerId": "nishi",
     "month": "2026-11",
@@ -1132,40 +930,156 @@
     "extractedAt": "2026-10-29T12:29:27.761Z"
   },
   {
-    "id": "minuma-2026-11",
-    "centerId": "minuma",
-    "month": "2026-11",
-    "pdfUrl": "https://www.sainoko.net/minuma/pdf/202611minuma.pdf",
+    "id": "omiya-2026-10",
+    "centerId": "omiya",
+    "month": "2026-10",
+    "pdfUrl": "https://www.wakaba-asunaro.jp/library/6662c3046985d13334e93bf0/6aa2318955d0ebeb15ea578c.pdf",
     "fetchedAt": "2026-10-29T12:00:00Z",
-    "sha256": "89fff20f42bc2fc20b3b6832c9760bb2a7d622e94c3e9828d3bfc14b5a8e21db",
+    "sha256": "5358a49100944a427a04e6c582fb48dc842d680c90048f5c0629568b82ba2810",
     "closures": [
+      {
+        "date": "2026-10-04",
+        "scope": "am",
+        "quote": "<午前>★講座「災害が来る前に」10:00"
+      },
+      {
+        "date": "2026-10-05",
+        "scope": "all-day",
+        "quote": "休館日"
+      },
+      {
+        "date": "2026-10-08",
+        "scope": "am",
+        "quote": "<午前> 元気アップ講座 申し込み済の方"
+      },
+      {
+        "date": "2026-10-12",
+        "scope": "all-day",
+        "quote": "スポーツの日"
+      },
+      {
+        "date": "2026-10-14",
+        "scope": "am",
+        "quote": "<午前> ★ウエルカムさいたま 予約制"
+      },
+      {
+        "date": "2026-10-19",
+        "scope": "all-day",
+        "quote": "休館日"
+      },
+      {
+        "date": "2026-10-20",
+        "scope": "all-day",
+        "quote": "<午前> ★ミニコンサート 10:30 予約制 <午後> ★保健師さんと お話 予約制"
+      },
+      {
+        "date": "2026-10-27",
+        "scope": "all-day",
+        "quote": "★すくすく測定 予約制"
+      },
+      {
+        "date": "2026-10-28",
+        "scope": "all-day",
+        "quote": "★すくすく測定 予約制"
+      },
+      {
+        "date": "2026-10-29",
+        "scope": "all-day",
+        "quote": "★すくすく測定 予約制"
+      },
+      {
+        "date": "2026-10-30",
+        "scope": "pm",
+        "quote": "<午後> ★オンライン 予約制"
+      }
+    ],
+    "extractedAt": "2026-10-29T12:26:25.156Z"
+  },
+  {
+    "id": "omiya-2026-11",
+    "centerId": "omiya",
+    "month": "2026-11",
+    "pdfUrl": "https://www.wakaba-asunaro.jp/library/6662c3046985d13334e93bf0/6acec02b0e118c59d4e04436.pdf",
+    "fetchedAt": "2026-10-29T12:00:00Z",
+    "sha256": "9bf599ac9524defe6570c9545ea84c436b3a98dbc981fc20cad9724334d4a697",
+    "closures": [
+      {
+        "date": "2026-11-02",
+        "scope": "all-day",
+        "quote": "休館日"
+      },
       {
         "date": "2026-11-03",
         "scope": "all-day",
-        "quote": "休室日（文化の日）"
+        "quote": "文化の日"
       },
       {
-        "date": "2026-11-12",
+        "date": "2026-11-08",
+        "scope": "am",
+        "quote": "<午前>★うたのコンサート 10:30 予約制"
+      },
+      {
+        "date": "2026-11-10",
         "scope": "all-day",
-        "quote": "休室日"
+        "quote": "孫育て講座 ・お申込み済の方"
+      },
+      {
+        "date": "2026-11-15",
+        "scope": "am",
+        "quote": "<午前>応急手当親子講習 申し込み済の方"
+      },
+      {
+        "date": "2026-11-16",
+        "scope": "all-day",
+        "quote": "休館日"
+      },
+      {
+        "date": "2026-11-17",
+        "scope": "all-day",
+        "quote": "孫育て講座 ・お申込み済の方"
+      },
+      {
+        "date": "2026-11-20",
+        "scope": "am",
+        "quote": "<午前> ★薬剤師さんのお話 10:00 予約制"
       },
       {
         "date": "2026-11-23",
         "scope": "all-day",
-        "quote": "休室日（勤労感謝の日）"
+        "quote": "勤労感謝の日"
+      },
+      {
+        "date": "2026-11-24",
+        "scope": "am",
+        "quote": "<午前> 孫育て講座 ・お申込み済の方"
+      },
+      {
+        "date": "2026-11-25",
+        "scope": "pm",
+        "quote": "<午後> ★保健師さんとお話 予約制"
       },
       {
         "date": "2026-11-26",
         "scope": "all-day",
-        "quote": "休室日"
+        "quote": "<午前> ★すくすく測定 予約制 <午後> ★育児学級 予約済の方"
+      },
+      {
+        "date": "2026-11-27",
+        "scope": "all-day",
+        "quote": "★すくすく測定 予約制"
       },
       {
         "date": "2026-11-29",
         "scope": "all-day",
-        "quote": "休室日"
+        "quote": "第5日曜日でお休み"
+      },
+      {
+        "date": "2026-11-30",
+        "scope": "pm",
+        "quote": "<午後> ★オンライン予約制"
       }
     ],
-    "extractedAt": "2026-10-29T12:29:27.813Z"
+    "extractedAt": "2026-10-29T12:26:25.212Z"
   },
   {
     "id": "omiya-2026-12",
@@ -1239,202 +1153,221 @@
     "extractedAt": "2026-11-21T13:45:49.103Z"
   },
   {
-    "id": "iwatsuki-2026-12",
-    "centerId": "iwatsuki",
-    "month": "2026-12",
-    "pdfUrl": "https://kawai-daynursery.jp/wp-content/uploads/2026/11/hina-202612.pdf",
-    "fetchedAt": "2026-11-21T13:00:00Z",
-    "sha256": "bf427bfbc927feb6433451d343d6c2ceee724adc9be5119327bdc2783a2b33e4",
+    "id": "seiga-2026-10",
+    "centerId": "seiga",
+    "month": "2026-10",
+    "pdfUrl": "https://seiga.or.jp/wp-content/uploads/e26b4cee4f29eca0566d678a5008904b-1.pdf",
+    "fetchedAt": "2026-10-25T06:00:00Z",
+    "sha256": "19d3811355b860a607ff771f42ebf04c4baa85e2958442f1b495e7d04e7832fc",
     "closures": [
       {
-        "date": "2026-12-08",
+        "date": "2026-10-02",
         "scope": "all-day",
-        "quote": "休館日"
+        "quote": "休"
       },
       {
-        "date": "2026-12-12",
-        "scope": "pm",
-        "quote": "イベント準備のため午後は休館になります"
+        "date": "2026-10-04",
+        "scope": "all-day",
+        "quote": "休"
       },
       {
-        "date": "2026-12-22",
+        "date": "2026-10-09",
         "scope": "all-day",
-        "quote": "休館日"
+        "quote": "休"
       },
       {
-        "date": "2026-12-29",
+        "date": "2026-10-10",
         "scope": "all-day",
-        "quote": "休館日"
+        "quote": "休"
       },
       {
-        "date": "2026-12-30",
+        "date": "2026-10-11",
         "scope": "all-day",
-        "quote": "休館日"
+        "quote": "休"
       },
       {
-        "date": "2026-12-31",
+        "date": "2026-10-12",
         "scope": "all-day",
-        "quote": "休館日"
+        "quote": "休"
+      },
+      {
+        "date": "2026-10-16",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-10-18",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-10-23",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-10-25",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-10-30",
+        "scope": "all-day",
+        "quote": "休"
       }
     ],
-    "extractedAt": "2026-11-21T13:37:56.300Z"
+    "extractedAt": "2026-10-25T06:20:46.070Z"
   },
   {
-    "id": "yono-2026-12",
-    "centerId": "yono",
-    "month": "2026-12",
-    "pdfUrl": "https://www.himawarikkoland.com/library/67e0faf1ee78e14239888cb6/6afe4c65f8fb6145d1b3f50b.pdf",
-    "fetchedAt": "2026-11-21T13:00:00Z",
-    "sha256": "3dae29c97b0dd7158187a5ceea30c7fa0c916d589bdf50c9a63de8642ace56ba",
+    "id": "seiga-2026-11",
+    "centerId": "seiga",
+    "month": "2026-11",
+    "pdfUrl": "https://seiga.or.jp/wp-content/uploads/6183e480214a45798808b9baa6656d54.pdf",
+    "fetchedAt": "2026-10-29T12:00:00Z",
+    "sha256": "6fb9cdcd2881bbeb543091141b2b2515b778db180b6d19ba4254d52c25f79caa",
     "closures": [
       {
-        "date": "2026-12-07",
-        "scope": "am",
-        "quote": "★午前はお申込者のみとなります。"
-      },
-      {
-        "date": "2026-12-08",
+        "date": "2026-11-03",
         "scope": "all-day",
-        "quote": "休館日"
+        "quote": "休"
       },
       {
-        "date": "2026-12-19",
-        "scope": "am",
-        "quote": "★午前はお申込者のみとなります。"
-      },
-      {
-        "date": "2026-12-20",
-        "scope": "am",
-        "quote": "★午前はお申込者のみとなります。"
-      },
-      {
-        "date": "2026-12-22",
+        "date": "2026-11-06",
         "scope": "all-day",
-        "quote": "休館日"
+        "quote": "休"
       },
       {
-        "date": "2026-12-23",
-        "scope": "am",
-        "quote": "★午前はお申込者のみとなります。"
-      },
-      {
-        "date": "2026-12-29",
+        "date": "2026-11-08",
         "scope": "all-day",
-        "quote": "12月29日(火)～1月3日(日)休館"
+        "quote": "休"
       },
       {
-        "date": "2026-12-30",
+        "date": "2026-11-13",
         "scope": "all-day",
-        "quote": "12月29日(火)～1月3日(日)休館"
+        "quote": "休"
       },
       {
-        "date": "2026-12-31",
+        "date": "2026-11-15",
         "scope": "all-day",
-        "quote": "12月29日(火)～1月3日(日)休館"
+        "quote": "休"
+      },
+      {
+        "date": "2026-11-22",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-11-23",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-11-27",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-11-29",
+        "scope": "all-day",
+        "quote": "休"
       }
     ],
-    "extractedAt": "2026-11-21T13:37:56.381Z"
+    "extractedAt": "2026-10-29T12:26:24.991Z"
   },
   {
-    "id": "minami-2026-12",
-    "centerId": "minami",
-    "month": "2026-12",
-    "pdfUrl": "https://www.urawanyuyouji.com/admin/wp-content/uploads/2026/11/202612_minami.pdf",
-    "fetchedAt": "2026-11-21T13:00:00Z",
-    "sha256": "f3149af82fcf887e5482459ade4155250e797a71e16a536598ef7cbdf4d6c1b9",
+    "id": "urawa-2026-10",
+    "centerId": "urawa",
+    "month": "2026-10",
+    "pdfUrl": "https://www.urawanyuyouji.com/admin/wp-content/uploads/2026/09/202610_urawa.pdf",
+    "fetchedAt": "2026-10-20T06:00:00Z",
+    "sha256": "0b8b5ef6726c928b6d034b5b5c2af79734258255cf55c59099644f7d135000ab",
+    "extractedAt": "2026-10-20T06:26:56.862Z"
+  },
+  {
+    "id": "urawa-2026-11",
+    "centerId": "urawa",
+    "month": "2026-11",
+    "pdfUrl": "https://www.urawanyuyouji.com/admin/wp-content/uploads/2026/10/202611_urawa.pdf",
+    "fetchedAt": "2026-10-29T12:00:00Z",
+    "sha256": "791470beec54e3f60a6080daa1a5d8b0fc10c70eede4372a2dac8d3a260f06d8",
     "closures": [
       {
-        "date": "2026-12-03",
-        "scope": "am",
-        "quote": "11:00～にこにこ広場"
-      },
-      {
-        "date": "2026-12-07",
-        "scope": "am",
-        "quote": "午前行事のみ"
-      },
-      {
-        "date": "2026-12-08",
-        "scope": "am",
-        "quote": "午前0歳専用"
-      },
-      {
-        "date": "2026-12-09",
+        "date": "2026-11-03",
         "scope": "all-day",
-        "quote": "終日測定のみ"
+        "quote": "休館 文化の日"
       },
       {
-        "date": "2026-12-11",
+        "date": "2026-11-04",
+        "scope": "all-day",
+        "quote": "終日 にこにこ広場 お休み"
+      },
+      {
+        "date": "2026-11-05",
+        "scope": "all-day",
+        "quote": "終日 にこにこ広場 お休み"
+      },
+      {
+        "date": "2026-11-06",
         "scope": "am",
-        "quote": "午前1歳専用"
+        "quote": "午前 にこにこ広場 お休み"
       },
       {
-        "date": "2026-12-13",
+        "date": "2026-11-08",
         "scope": "am",
-        "quote": "午前行事のみ"
+        "quote": "午前 にこにこ広場 お休み"
       },
       {
-        "date": "2026-12-14",
+        "date": "2026-11-09",
         "scope": "all-day",
         "quote": "休館"
       },
       {
-        "date": "2026-12-16",
+        "date": "2026-11-10",
         "scope": "all-day",
-        "quote": "終日測定のみ"
+        "quote": "終日 にこにこ広場 お休み"
       },
       {
-        "date": "2026-12-17",
+        "date": "2026-11-13",
         "scope": "am",
-        "quote": "11:00～にこにこ広場"
+        "quote": "《午前》 1・2歳児専用広場"
       },
       {
-        "date": "2026-12-20",
-        "scope": "am",
-        "quote": "午前行事のみ"
-      },
-      {
-        "date": "2026-12-21",
-        "scope": "am",
-        "quote": "午前2歳専用"
-      },
-      {
-        "date": "2026-12-22",
+        "date": "2026-11-15",
         "scope": "pm",
-        "quote": "午後行事のみ"
+        "quote": "午後 にこにこ広場 お休み"
       },
       {
-        "date": "2026-12-23",
+        "date": "2026-11-17",
+        "scope": "am",
+        "quote": "午前 にこにこ広場 お休み"
+      },
+      {
+        "date": "2026-11-23",
         "scope": "all-day",
-        "quote": "終日測定のみ"
+        "quote": "休館 勤労感謝の日"
       },
       {
-        "date": "2026-12-25",
+        "date": "2026-11-25",
+        "scope": "am",
+        "quote": "《午前》 1・2歳児専用広場"
+      },
+      {
+        "date": "2026-11-26",
         "scope": "pm",
-        "quote": "午後行事のみ"
+        "quote": "午後 にこにこ広場 お休み"
       },
       {
-        "date": "2026-12-28",
+        "date": "2026-11-27",
+        "scope": "pm",
+        "quote": "午後 にこにこ広場 お休み"
+      },
+      {
+        "date": "2026-11-29",
         "scope": "all-day",
         "quote": "休館"
-      },
-      {
-        "date": "2026-12-29",
-        "scope": "all-day",
-        "quote": "年末年始休館（12/29～1/3）"
-      },
-      {
-        "date": "2026-12-30",
-        "scope": "all-day",
-        "quote": "年末年始休館（12/29～1/3）"
-      },
-      {
-        "date": "2026-12-31",
-        "scope": "all-day",
-        "quote": "年末年始休館（12/29～1/3）"
       }
     ],
-    "extractedAt": "2026-11-22T06:08:07.967Z"
+    "extractedAt": "2026-10-29T12:26:25.268Z"
   },
   {
     "id": "urawa-2026-12",
@@ -1528,89 +1461,166 @@
     "extractedAt": "2026-11-21T13:45:49.029Z"
   },
   {
-    "id": "hinadori-2026-11",
-    "centerId": "hinadori",
-    "month": "2026-11",
-    "pdfUrl": "https://hinadori.ed.jp/wp-content/uploads/2026/10/1b5cb02dfc41bd9e51291714843efc4b.pdf",
-    "fetchedAt": "2026-11-21T13:00:00Z",
-    "sha256": "eb245165ae4eab70ff22a43ed0ac5c5f11343756ffea5d531ca195300c488bb5",
+    "id": "yono-2026-10",
+    "centerId": "yono",
+    "month": "2026-10",
+    "pdfUrl": "https://www.himawarikkoland.com/library/67e0faf1ee78e14239888cb6/6aab8fd00d9ae03ba8e0c508.pdf",
+    "fetchedAt": "2026-10-29T12:00:00Z",
+    "sha256": "095cd54a8197f4b2209b3de427022ae1e4ece76390768b1c879579e7c22e073d",
     "closures": [
+      {
+        "date": "2026-10-12",
+        "scope": "all-day",
+        "quote": "スポーツの日"
+      },
+      {
+        "date": "2026-10-13",
+        "scope": "all-day",
+        "quote": "休館日"
+      },
+      {
+        "date": "2026-10-16",
+        "scope": "am",
+        "quote": "ウェルカムさいたまの為午前閉館"
+      },
+      {
+        "date": "2026-10-17",
+        "scope": "am",
+        "quote": "★午前はお申込者のみとなります。"
+      },
+      {
+        "date": "2026-10-18",
+        "scope": "am",
+        "quote": "★午前はお申込者のみとなります。"
+      },
+      {
+        "date": "2026-10-20",
+        "scope": "am",
+        "quote": "★午前はお申込者のみとなります。"
+      },
+      {
+        "date": "2026-10-27",
+        "scope": "all-day",
+        "quote": "休館日"
+      }
+    ],
+    "extractedAt": "2026-10-29T12:26:25.048Z"
+  },
+  {
+    "id": "yono-2026-11",
+    "centerId": "yono",
+    "month": "2026-11",
+    "pdfUrl": "https://www.himawarikkoland.com/library/67e0faf1ee78e14239888cb6/6ad6bab4055a68706e9f2176.pdf",
+    "fetchedAt": "2026-10-29T12:00:00Z",
+    "sha256": "84d251a2eec0e59005c03d768136a8f5fa466e88393b9184710a08f112945abe",
+    "closures": [
+      {
+        "date": "2026-11-02",
+        "scope": "all-day",
+        "quote": "定期清掃の為 休館"
+      },
       {
         "date": "2026-11-03",
         "scope": "all-day",
-        "quote": "休"
+        "quote": "文化の日"
       },
       {
-        "date": "2026-11-07",
+        "date": "2026-11-10",
         "scope": "all-day",
-        "quote": "休"
-      },
-      {
-        "date": "2026-11-08",
-        "scope": "all-day",
-        "quote": "休"
+        "quote": "休館日"
       },
       {
         "date": "2026-11-11",
-        "scope": "all-day",
-        "quote": "休"
-      },
-      {
-        "date": "2026-11-13",
-        "scope": "all-day",
-        "quote": "休"
-      },
-      {
-        "date": "2026-11-14",
-        "scope": "all-day",
-        "quote": "休"
+        "scope": "pm",
+        "quote": "★午後はお申込者のみとなります。"
       },
       {
         "date": "2026-11-15",
-        "scope": "all-day",
-        "quote": "休"
+        "scope": "am",
+        "quote": "★午前はお申込者のみとなります。"
       },
       {
-        "date": "2026-11-16",
-        "scope": "all-day",
-        "quote": "休"
-      },
-      {
-        "date": "2026-11-17",
-        "scope": "all-day",
-        "quote": "休"
+        "date": "2026-11-19",
+        "scope": "am",
+        "quote": "★午前はお申込者のみとなります。"
       },
       {
         "date": "2026-11-21",
-        "scope": "all-day",
-        "quote": "休"
-      },
-      {
-        "date": "2026-11-22",
-        "scope": "all-day",
-        "quote": "休"
+        "scope": "am",
+        "quote": "★午前はお申込者のみとなります。"
       },
       {
         "date": "2026-11-23",
         "scope": "all-day",
-        "quote": "休"
+        "quote": "勤労感謝の日"
       },
       {
-        "date": "2026-11-28",
+        "date": "2026-11-24",
         "scope": "all-day",
-        "quote": "休"
+        "quote": "休館日"
       },
       {
         "date": "2026-11-29",
         "scope": "all-day",
-        "quote": "休"
-      },
-      {
-        "date": "2026-11-30",
-        "scope": "all-day",
-        "quote": "休"
+        "quote": "休館日"
       }
     ],
-    "extractedAt": "2026-11-21T13:45:49.171Z"
+    "extractedAt": "2026-10-29T12:26:25.102Z"
+  },
+  {
+    "id": "yono-2026-12",
+    "centerId": "yono",
+    "month": "2026-12",
+    "pdfUrl": "https://www.himawarikkoland.com/library/67e0faf1ee78e14239888cb6/6afe4c65f8fb6145d1b3f50b.pdf",
+    "fetchedAt": "2026-11-21T13:00:00Z",
+    "sha256": "3dae29c97b0dd7158187a5ceea30c7fa0c916d589bdf50c9a63de8642ace56ba",
+    "closures": [
+      {
+        "date": "2026-12-07",
+        "scope": "am",
+        "quote": "★午前はお申込者のみとなります。"
+      },
+      {
+        "date": "2026-12-08",
+        "scope": "all-day",
+        "quote": "休館日"
+      },
+      {
+        "date": "2026-12-19",
+        "scope": "am",
+        "quote": "★午前はお申込者のみとなります。"
+      },
+      {
+        "date": "2026-12-20",
+        "scope": "am",
+        "quote": "★午前はお申込者のみとなります。"
+      },
+      {
+        "date": "2026-12-22",
+        "scope": "all-day",
+        "quote": "休館日"
+      },
+      {
+        "date": "2026-12-23",
+        "scope": "am",
+        "quote": "★午前はお申込者のみとなります。"
+      },
+      {
+        "date": "2026-12-29",
+        "scope": "all-day",
+        "quote": "12月29日(火)～1月3日(日)休館"
+      },
+      {
+        "date": "2026-12-30",
+        "scope": "all-day",
+        "quote": "12月29日(火)～1月3日(日)休館"
+      },
+      {
+        "date": "2026-12-31",
+        "scope": "all-day",
+        "quote": "12月29日(火)～1月3日(日)休館"
+      }
+    ],
+    "extractedAt": "2026-11-21T13:37:56.381Z"
   }
 ]

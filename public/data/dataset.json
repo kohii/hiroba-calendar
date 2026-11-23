@@ -65,8 +65,10 @@
       "nameJa": "きた",
       "address": "北区宮原町3-432-2 岸ビル201",
       "phone": "048-662-0022",
-      "websiteUrl": "https://www.city.saitama.lg.jp/kosodate/map/category11/",
+      "websiteUrl": "https://kodomo-bunka.jp/support/",
       "closedDays": "第2・第4水曜日",
+      "scheduleType": "image",
+      "scheduleNotes": "Schedule displayed as images on website",
       "regularHours": {
         "decision": "unknown",
         "sourceUrl": "https://kodomo-bunka.jp/support/",
@@ -82,6 +84,8 @@
       "phone": "048-649-3030",
       "websiteUrl": "https://www.wakaba-asunaro.jp/omiya",
       "closedDays": "第1・第3月曜日",
+      "scheduleType": "pdf",
+      "scheduleUrlPattern": "https://www.wakaba-asunaro.jp/library/6662c3046985d13334e93bf0/",
       "regularHours": {
         "decision": "fill",
         "sourceUrl": "https://www.wakaba-asunaro.jp/omiya",
@@ -145,8 +149,10 @@
       "nameJa": "よの",
       "address": "中央区本町東3-5-23 与野本町小学校複合施設いーよの2階",
       "phone": "048-840-1788",
-      "websiteUrl": "https://www.city.saitama.lg.jp/kosodate/map/category11/",
+      "websiteUrl": "https://www.himawarikkoland.com/yono",
       "closedDays": "第2・第4火曜日",
+      "scheduleType": "pdf",
+      "scheduleUrlPattern": "https://www.himawarikkoland.com/yono{YYYYMM}",
       "regularHours": {
         "decision": "fill",
         "sourceUrl": "https://www.himawarikkoland.com/yono",
@@ -198,8 +204,10 @@
       "nameJa": "さくら",
       "address": "桜区栄和6-9-4",
       "phone": "048-859-3031",
-      "websiteUrl": "http://www.ichiju-fukushi.or.jp/sakura.html",
+      "websiteUrl": "http://www.ichiju-fukushi.or.jp/sakuraSch_next.html",
       "closedDays": "第1・第3火曜日",
+      "scheduleType": "not_found",
+      "scheduleNotes": "Schedule not available online - contact center directly",
       "regularHours": {
         "decision": "unknown",
         "sourceUrl": "http://www.ichiju-fukushi.or.jp/sakuraSch_next.html",
@@ -267,8 +275,10 @@
       "nameJa": "みなみ",
       "address": "南区別所7-20-1 サウスピア1階",
       "phone": "048-844-7223",
-      "websiteUrl": "https://www.city.saitama.lg.jp/kosodate/map/category11/",
+      "websiteUrl": "https://www.urawanyuyouji.com/minami/",
       "closedDays": "第2・第4月曜日",
+      "scheduleType": "pdf",
+      "scheduleUrlPattern": "https://www.urawanyuyouji.com/admin/wp-content/uploads/{YYYY}/{MM}/{YYYYMM}_minami.pdf",
       "regularHours": {
         "decision": "fill",
         "sourceUrl": "https://www.urawanyuyouji.com/minami/",
@@ -323,6 +333,8 @@
       "phone": "048-874-7388",
       "websiteUrl": "https://www.instagram.com/shiencenter_midori/",
       "closedDays": "第2・第4水曜日",
+      "scheduleType": "instagram",
+      "scheduleNotes": "Schedule posted on Instagram - requires manual check",
       "regularHours": {
         "decision": "unknown",
         "sourceUrl": "https://www.instagram.com/shiencenter_midori/",
@@ -336,8 +348,10 @@
       "nameJa": "いわつき",
       "address": "岩槻区本町3-1-1 WATSU西館4階",
       "phone": "048-790-0020",
-      "websiteUrl": "https://www.city.saitama.lg.jp/kosodate/map/category11/",
+      "websiteUrl": "https://kawai-daynursery.jp/shiencenter",
       "closedDays": "第2火曜日・WATSU西館休館日",
+      "scheduleType": "pdf",
+      "scheduleUrlPattern": "https://kawai-daynursery.jp/wp-content/uploads/{YYYY}/{MM}/hina-{YYYYMM}.pdf",
       "regularHours": {
         "decision": "unknown",
         "sourceUrl": "https://kawai-daynursery.jp/shiencenter",
@@ -354,7 +368,7 @@
       "websiteUrl": "https://seiga.or.jp/support/",
       "closedDays": "金曜日、祝祭日等休園日、園行事",
       "scheduleType": "pdf",
-      "scheduleNotes": "桜区。子育て支援センター（保育施設併設型）。おたより一覧は https://seiga.or.jp/square/ 。2026-10-25時点で11月号は無い。支援直通は070-1466-8459。",
+      "scheduleNotes": "桜区。子育て支援センター（保育施設併設型）。おたより一覧は https://seiga.or.jp/square/ 。支援直通は070-1466-8459。",
       "regularHours": {
         "decision": "unknown",
         "sourceUrl": "https://seiga.or.jp/wp-content/uploads/e26b4cee4f29eca0566d678a5008904b-1.pdf",
@@ -371,12 +385,66 @@
       "websiteUrl": "https://hinadori.ed.jp/category/support/",
       "closedDays": "OPEN印のない日",
       "scheduleType": "pdf",
-      "scheduleNotes": "桜区。認定こども園の子育て支援ROOM。市の保育施設併設型一覧には無く、市の施設ページは認定こども園 https://www.city.saitama.lg.jp/kosodate/map/category18/p105886.html 。与野ひなどり保育園（中央区本町西2-1-11）とは別。おたよりは https://hinadori.ed.jp/category/support/ 。2026-10-25時点で11月号は無い。",
+      "scheduleNotes": "桜区。認定こども園の子育て支援ROOM。市の保育施設併設型一覧には無く、市の施設ページは認定こども園 https://www.city.saitama.lg.jp/kosodate/map/category18/p105886.html 。与野ひなどり保育園（中央区本町西2-1-11）とは別。おたよりは https://hinadori.ed.jp/category/support/ 。2026-10-29時点で11月号は無い。",
       "regularHours": {
         "decision": "unknown",
         "sourceUrl": "https://hinadori.ed.jp/wp-content/uploads/2026/09/9e44390e5305308ee6397861405a8985.pdf",
         "quote": "予約制 OPEN 印 利用時間 9：00 ～12：20",
         "decisionNote": "10月号はOPEN印の日だけ予約制で開室する。印の無い日は埋めない。同じ予定表のひばり、見学会、入園説明会はOPEN印ではないので抽出しない。"
+      }
+    },
+    {
+      "id": "ipalette",
+      "name": "I-Palette",
+      "nameJa": "さいたま市子ども家庭総合センター あいぱれっと",
+      "address": "浦和区上木崎4-4-10",
+      "phone": "048-829-7043",
+      "websiteUrl": "https://www.i-palette.com/",
+      "closedDays": "毎週水曜日、年末年始",
+      "scheduleType": "pdf",
+      "scheduleUrlPattern": "https://www.i-palette.com/wp/wp-content/uploads/{YYYY}/{MM}/{YYYY}-{nextMM}-i-palette-news.pdf",
+      "scheduleNotes": "さいたま市子ども家庭総合センター。1階のぱれっとひろば（乳幼児の遊び場）が対象。月刊NEWS（前月25日頃公開）と個別イベントページから情報を取得。",
+      "regularHours": {
+        "decision": "fill",
+        "sourceUrl": "https://www.i-palette.com/about.html",
+        "quote": "ぱれっとひろば（乳幼児の遊び場） ９:00-12:00 13:00-20:00。令和8年8月17日（月）から、12時ー13時もご利用になれます。1F 利用時間：9:00～20:00 休館日：毎週水曜日（祝日の場合その翌平日） 年末年始（12月29日～1月3日まで）",
+        "decisionNote": "2026年8月17日以降、ぱれっとひろばは9:00-20:00の連続開室。11月は8/17以降なので連続時間帯。予約不要。水曜休館（祝日の場合翌平日）、12/29-1/3休館。予定表の空欄日にひろば行を足す。ほっぺっぺひろばなどの特別イベントは別途抽出。",
+        "title": "ぱれっとひろば",
+        "targetAge": "乳幼児親子",
+        "hoursQuote": "９:00～20:00",
+        "windows": [
+          {
+            "start": "09:00",
+            "end": "20:00"
+          }
+        ],
+        "openWeekdays": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "closed": [
+          {
+            "kind": "nth-weekday",
+            "nth": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "weekday": 3
+          },
+          {
+            "kind": "month-day-range",
+            "from": "12-29",
+            "to": "01-03"
+          }
+        ]
       }
     }
   ],
@@ -2046,6 +2114,16 @@
         }
       ],
       "extractedAt": "2026-11-21T13:45:49.171Z"
+    },
+    {
+      "id": "ipalette-2026-11",
+      "centerId": "ipalette",
+      "month": "2026-11",
+      "pdfUrl": "https://www.i-palette.com/wp/wp-content/uploads/2026/10/2026-11-i-palette-news.pdf",
+      "fetchedAt": "2026-11-23T23:28:34.732Z",
+      "sha256": "7ce6217235805171ca3edbcbac466ba639a245c4b51de0d024db83288b144629",
+      "closures": [],
+      "extractedAt": "2026-11-23T23:28:37.687Z"
     }
   ],
   "events": [
@@ -6590,6 +6668,31 @@
       "origin": "regular-hours"
     },
     {
+      "id": "ipalette-2026-11-01-anger-management",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-11",
+      "date": "2026-11-01",
+      "startTime": "10:00",
+      "endTime": "11:30",
+      "title": "アンガーマネジメントで笑顔の子育て",
+      "targetAge": "保護者",
+      "reservationRequired": false,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "ipalette-2026-11-01-regular-hiroba",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-11",
+      "date": "2026-11-01",
+      "title": "ぱれっとひろば",
+      "description": "９:00～20:00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "乳幼児親子"
+    },
+    {
       "id": "iwatsuki-2026-11-01-hiroba",
       "centerId": "iwatsuki",
       "sourceDocumentId": "iwatsuki-2026-11",
@@ -6703,6 +6806,53 @@
       "targetAge": "生後6週～未就園",
       "reservationRequired": true,
       "capacity": 6
+    },
+    {
+      "id": "ipalette-2026-11-02-hoppeppe",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-11",
+      "date": "2026-11-02",
+      "startTime": "10:30",
+      "endTime": "12:00",
+      "title": "ほっぺっぺひろば",
+      "description": "少人数でゆったりと遊び、気に入ったおもちゃは借りることができます。",
+      "targetAge": "未就学児と保護者",
+      "reservationRequired": true,
+      "capacity": 15,
+      "kind": "hiroba",
+      "origin": "extracted",
+      "tags": [
+        "おもちゃ図書館"
+      ]
+    },
+    {
+      "id": "ipalette-2026-11-02-hoppeppe-pm",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-11",
+      "date": "2026-11-02",
+      "startTime": "13:15",
+      "endTime": "14:45",
+      "title": "ほっぺっぺひろば",
+      "description": "少人数でゆったりと遊び、気に入ったおもちゃは借りることができます。",
+      "targetAge": "未就学児と保護者",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "extracted",
+      "tags": [
+        "おもちゃ図書館"
+      ]
+    },
+    {
+      "id": "ipalette-2026-11-02-regular-hiroba",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-11",
+      "date": "2026-11-02",
+      "title": "ぱれっとひろば",
+      "description": "９:00～20:00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "乳幼児親子"
     },
     {
       "id": "iwatsuki-2026-11-02-hiroba",
@@ -6876,6 +7026,34 @@
       "kind": "hiroba",
       "origin": "regular-hours",
       "targetAge": "０・１・２歳のお子さんと保護者"
+    },
+    {
+      "id": "ipalette-2026-11-03-kamishibai",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-11",
+      "date": "2026-11-03",
+      "startTime": "10:30",
+      "endTime": "11:00",
+      "title": "絵本の読み語り",
+      "targetAge": "小学生以下",
+      "reservationRequired": false,
+      "kind": "event",
+      "origin": "extracted",
+      "tags": [
+        "定期開催"
+      ]
+    },
+    {
+      "id": "ipalette-2026-11-03-regular-hiroba",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-11",
+      "date": "2026-11-03",
+      "title": "ぱれっとひろば",
+      "description": "９:00～20:00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "乳幼児親子"
     },
     {
       "id": "hinadori-2026-11-04-hiroba",
@@ -7107,6 +7285,34 @@
       "origin": "regular-hours"
     },
     {
+      "id": "ipalette-2026-11-05-kamishibai",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-11",
+      "date": "2026-11-05",
+      "startTime": "10:30",
+      "endTime": "11:00",
+      "title": "紙芝居",
+      "targetAge": "小学生以下",
+      "reservationRequired": false,
+      "kind": "event",
+      "origin": "extracted",
+      "tags": [
+        "定期開催"
+      ]
+    },
+    {
+      "id": "ipalette-2026-11-05-regular-hiroba",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-11",
+      "date": "2026-11-05",
+      "title": "ぱれっとひろば",
+      "description": "９:00～20:00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "乳幼児親子"
+    },
+    {
       "id": "iwatsuki-2026-11-05-hiroba",
       "centerId": "iwatsuki",
       "sourceDocumentId": "iwatsuki-2026-11",
@@ -7316,6 +7522,36 @@
       "targetAge": "生後6週～未就園",
       "reservationRequired": true,
       "capacity": 6
+    },
+    {
+      "id": "ipalette-2026-11-06-regular-hiroba",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-11",
+      "date": "2026-11-06",
+      "title": "ぱれっとひろば",
+      "description": "９:00～20:00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "乳幼児親子"
+    },
+    {
+      "id": "ipalette-2026-11-06-snoezelen",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-11",
+      "date": "2026-11-06",
+      "startTime": "09:30",
+      "endTime": "17:30",
+      "title": "五感をやさしくしげきする部屋 スヌーズレン体験",
+      "description": "感覚をやさしく刺激する部屋で、ゆったりとした時間を体験してみませんか。",
+      "targetAge": "どなたでも",
+      "reservationRequired": true,
+      "capacity": 13,
+      "kind": "event",
+      "origin": "extracted",
+      "tags": [
+        "定期開催"
+      ]
     },
     {
       "id": "iwatsuki-2026-11-06-hiroba",
@@ -7529,6 +7765,36 @@
       "origin": "regular-hours"
     },
     {
+      "id": "ipalette-2026-11-07-regular-hiroba",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-11",
+      "date": "2026-11-07",
+      "title": "ぱれっとひろば",
+      "description": "９:00～20:00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "乳幼児親子"
+    },
+    {
+      "id": "ipalette-2026-11-07-snoezelen",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-11",
+      "date": "2026-11-07",
+      "startTime": "09:30",
+      "endTime": "16:00",
+      "title": "五感をやさしくしげきする部屋 スヌーズレン体験",
+      "description": "感覚をやさしく刺激する部屋で、ゆったりとした時間を体験してみませんか。",
+      "targetAge": "どなたでも",
+      "reservationRequired": true,
+      "capacity": 10,
+      "kind": "event",
+      "origin": "extracted",
+      "tags": [
+        "定期開催"
+      ]
+    },
+    {
       "id": "iwatsuki-2026-11-07-hiroba",
       "centerId": "iwatsuki",
       "sourceDocumentId": "iwatsuki-2026-11",
@@ -7636,6 +7902,18 @@
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours"
+    },
+    {
+      "id": "ipalette-2026-11-08-regular-hiroba",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-11",
+      "date": "2026-11-08",
+      "title": "ぱれっとひろば",
+      "description": "９:00～20:00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "乳幼児親子"
     },
     {
       "id": "iwatsuki-2026-11-08-hiroba",
@@ -7826,6 +8104,18 @@
       "capacity": 6
     },
     {
+      "id": "ipalette-2026-11-09-regular-hiroba",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-11",
+      "date": "2026-11-09",
+      "title": "ぱれっとひろば",
+      "description": "９:00～20:00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "乳幼児親子"
+    },
+    {
       "id": "iwatsuki-2026-11-09-hiroba",
       "centerId": "iwatsuki",
       "sourceDocumentId": "iwatsuki-2026-11",
@@ -7977,6 +8267,50 @@
       "targetAge": "生後6週～未就園",
       "reservationRequired": true,
       "capacity": 6
+    },
+    {
+      "id": "ipalette-2026-11-10-baby-food",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-11",
+      "date": "2026-11-10",
+      "startTime": "10:00",
+      "endTime": "11:30",
+      "title": "作ってみよう幼児食",
+      "description": "1歳になると肉・魚・野菜をしっかり食べることが大切になります。調理デモを見学した後、親子で試食します。大人のメニューにアレンジできる！",
+      "targetAge": "1歳～1歳6か月児と保護者",
+      "reservationRequired": true,
+      "capacity": 6,
+      "kind": "event",
+      "origin": "extracted",
+      "tags": [
+        "抽選"
+      ]
+    },
+    {
+      "id": "ipalette-2026-11-10-evacuation-drill",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-11",
+      "date": "2026-11-10",
+      "startTime": "10:00",
+      "endTime": "11:00",
+      "title": "避難訓練",
+      "description": "あいぱれっと1階で大地震を想定した避難訓練を実施します。避難先の「はらっぱ」では、消火器体験や消防車の見学ができます。消防車の前で、子ども防火服を着て写真を撮ろう！来館者の皆さまのご参加とご協力をお願いいたします。",
+      "targetAge": "どなたでも",
+      "reservationRequired": false,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "ipalette-2026-11-10-regular-hiroba",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-11",
+      "date": "2026-11-10",
+      "title": "ぱれっとひろば",
+      "description": "９:00～20:00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "乳幼児親子"
     },
     {
       "id": "minami-2026-11-10-kango",
@@ -8343,6 +8677,35 @@
       "origin": "regular-hours"
     },
     {
+      "id": "ipalette-2026-11-12-oshiguruma",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-11",
+      "date": "2026-11-12",
+      "startTime": "09:30",
+      "endTime": "11:30",
+      "title": "手押し車であそぼう",
+      "targetAge": "伝い歩きやよちよち歩きの乳幼児",
+      "reservationRequired": false,
+      "capacity": 7,
+      "kind": "event",
+      "origin": "extracted",
+      "tags": [
+        "定期開催"
+      ]
+    },
+    {
+      "id": "ipalette-2026-11-12-regular-hiroba",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-11",
+      "date": "2026-11-12",
+      "title": "ぱれっとひろば",
+      "description": "９:00～20:00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "乳幼児親子"
+    },
+    {
       "id": "iwatsuki-2026-11-12-hiroba",
       "centerId": "iwatsuki",
       "sourceDocumentId": "iwatsuki-2026-11",
@@ -8476,6 +8839,48 @@
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours"
+    },
+    {
+      "id": "ipalette-2026-11-13-asobihiroba-paint",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-11",
+      "date": "2026-11-13",
+      "startTime": "13:30",
+      "endTime": "14:30",
+      "title": "あそびひろば -絵の具のお部屋-",
+      "description": "ビニール袋の上から指で絵の具を触ったり広げたりする、フィンガーペイントを楽しもう！",
+      "targetAge": "幼児（口の中に入れないで遊べる子）",
+      "reservationRequired": true,
+      "capacity": 6,
+      "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
+      "id": "ipalette-2026-11-13-asobihiroba-paint-2",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-11",
+      "date": "2026-11-13",
+      "startTime": "15:30",
+      "endTime": "16:30",
+      "title": "あそびひろば -絵の具のお部屋-",
+      "description": "ビニール袋の上から指で絵の具を触ったり広げたりする、フィンガーペイントを楽しもう！",
+      "targetAge": "幼児（口の中に入れないで遊べる子）",
+      "reservationRequired": true,
+      "capacity": 6,
+      "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
+      "id": "ipalette-2026-11-13-regular-hiroba",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-11",
+      "date": "2026-11-13",
+      "title": "ぱれっとひろば",
+      "description": "９:00～20:00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "乳幼児親子"
     },
     {
       "id": "iwatsuki-2026-11-13-gogo-hiroba",
@@ -8654,6 +9059,18 @@
       "origin": "regular-hours"
     },
     {
+      "id": "ipalette-2026-11-14-regular-hiroba",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-11",
+      "date": "2026-11-14",
+      "title": "ぱれっとひろば",
+      "description": "９:00～20:00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "乳幼児親子"
+    },
+    {
       "id": "iwatsuki-2026-11-14-hiroba",
       "centerId": "iwatsuki",
       "sourceDocumentId": "iwatsuki-2026-11",
@@ -8750,6 +9167,33 @@
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours"
+    },
+    {
+      "id": "ipalette-2026-11-15-parent-child-sports",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-11",
+      "date": "2026-11-15",
+      "startTime": "10:00",
+      "endTime": "11:15",
+      "title": "わくわく親子運動会",
+      "description": "リレー、大玉ころがし、玉入れ、玉投げなどチームに分かれていろいろな競技を行います。親子で楽しく体を動かしましょう！",
+      "targetAge": "3歳児～小学3年生と保護者",
+      "reservationRequired": true,
+      "capacity": 15,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "ipalette-2026-11-15-regular-hiroba",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-11",
+      "date": "2026-11-15",
+      "title": "ぱれっとひろば",
+      "description": "９:00～20:00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "乳幼児親子"
     },
     {
       "id": "iwatsuki-2026-11-15-gogo-hiroba",
@@ -8941,6 +9385,18 @@
       ]
     },
     {
+      "id": "ipalette-2026-11-16-regular-hiroba",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-11",
+      "date": "2026-11-16",
+      "title": "ぱれっとひろば",
+      "description": "９:00～20:00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "乳幼児親子"
+    },
+    {
       "id": "iwatsuki-2026-11-16-hiroba",
       "centerId": "iwatsuki",
       "sourceDocumentId": "iwatsuki-2026-11",
@@ -9109,6 +9565,34 @@
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours"
+    },
+    {
+      "id": "ipalette-2026-11-17-ehon",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-11",
+      "date": "2026-11-17",
+      "startTime": "14:30",
+      "endTime": "15:00",
+      "title": "絵本の読み語り",
+      "targetAge": "小学生以下",
+      "reservationRequired": false,
+      "kind": "event",
+      "origin": "extracted",
+      "tags": [
+        "定期開催"
+      ]
+    },
+    {
+      "id": "ipalette-2026-11-17-regular-hiroba",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-11",
+      "date": "2026-11-17",
+      "title": "ぱれっとひろば",
+      "description": "９:00～20:00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "乳幼児親子"
     },
     {
       "id": "iwatsuki-2026-11-17-hiroba",
@@ -9500,6 +9984,34 @@
       "origin": "regular-hours"
     },
     {
+      "id": "ipalette-2026-11-19-kamishibai",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-11",
+      "date": "2026-11-19",
+      "startTime": "14:30",
+      "endTime": "15:00",
+      "title": "紙芝居",
+      "targetAge": "小学生以下",
+      "reservationRequired": false,
+      "kind": "event",
+      "origin": "extracted",
+      "tags": [
+        "定期開催"
+      ]
+    },
+    {
+      "id": "ipalette-2026-11-19-regular-hiroba",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-11",
+      "date": "2026-11-19",
+      "title": "ぱれっとひろば",
+      "description": "９:00～20:00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "乳幼児親子"
+    },
+    {
       "id": "iwatsuki-2026-11-19-hiroba",
       "centerId": "iwatsuki",
       "sourceDocumentId": "iwatsuki-2026-11",
@@ -9678,6 +10190,18 @@
       "location": "芋畑（桜区西堀5-8）",
       "kind": "event",
       "origin": "extracted"
+    },
+    {
+      "id": "ipalette-2026-11-20-regular-hiroba",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-11",
+      "date": "2026-11-20",
+      "title": "ぱれっとひろば",
+      "description": "９:00～20:00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "乳幼児親子"
     },
     {
       "id": "iwatsuki-2026-11-20-akachan-salon-am",
@@ -9954,6 +10478,35 @@
       ]
     },
     {
+      "id": "ipalette-2026-11-21-asobihiroba",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-11",
+      "date": "2026-11-21",
+      "startTime": "13:30",
+      "endTime": "16:00",
+      "title": "あそびひろば -からだを動かしてあそぼう♪-",
+      "description": "バランス遊びや運動遊びをしましょう。",
+      "targetAge": "幼児と保護者",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "extracted",
+      "tags": [
+        "定期開催"
+      ]
+    },
+    {
+      "id": "ipalette-2026-11-21-regular-hiroba",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-11",
+      "date": "2026-11-21",
+      "title": "ぱれっとひろば",
+      "description": "９:00～20:00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "乳幼児親子"
+    },
+    {
       "id": "iwatsuki-2026-11-21-birthday-photo",
       "centerId": "iwatsuki",
       "sourceDocumentId": "iwatsuki-2026-11",
@@ -10151,6 +10704,35 @@
       ]
     },
     {
+      "id": "ipalette-2026-11-22-regular-hiroba",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-11",
+      "date": "2026-11-22",
+      "title": "ぱれっとひろば",
+      "description": "９:00～20:00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "乳幼児親子"
+    },
+    {
+      "id": "ipalette-2026-11-22-toy-hospital",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-11",
+      "date": "2026-11-22",
+      "startTime": "10:00",
+      "endTime": "12:00",
+      "title": "おもちゃの病院",
+      "description": "ご家庭のおもちゃの修理。部品代（500円程度）がかかる場合があります。おもちゃの状態によっては修理できない場合があります。",
+      "targetAge": "ご家庭のおもちゃの修理希望者",
+      "reservationRequired": false,
+      "kind": "event",
+      "origin": "extracted",
+      "tags": [
+        "定期開催"
+      ]
+    },
+    {
       "id": "iwatsuki-2026-11-22-birthday-photo",
       "centerId": "iwatsuki",
       "sourceDocumentId": "iwatsuki-2026-11",
@@ -10311,6 +10893,18 @@
       ]
     },
     {
+      "id": "ipalette-2026-11-23-regular-hiroba",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-11",
+      "date": "2026-11-23",
+      "title": "ぱれっとひろば",
+      "description": "９:00～20:00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "乳幼児親子"
+    },
+    {
       "id": "hinadori-2026-11-24-hiroba",
       "centerId": "hinadori",
       "sourceDocumentId": "hinadori-2026-11",
@@ -10324,6 +10918,18 @@
       "targetAge": "生後6週～未就園",
       "reservationRequired": true,
       "capacity": 6
+    },
+    {
+      "id": "ipalette-2026-11-24-regular-hiroba",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-11",
+      "date": "2026-11-24",
+      "title": "ぱれっとひろば",
+      "description": "９:00～20:00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "乳幼児親子"
     },
     {
       "id": "minami-2026-11-24-hamigaki",
@@ -10835,6 +11441,35 @@
       "capacity": 6
     },
     {
+      "id": "ipalette-2026-11-26-oshiguruma",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-11",
+      "date": "2026-11-26",
+      "startTime": "09:30",
+      "endTime": "11:30",
+      "title": "手押し車であそぼう",
+      "targetAge": "伝い歩きやよちよち歩きの乳幼児",
+      "reservationRequired": false,
+      "capacity": 7,
+      "kind": "event",
+      "origin": "extracted",
+      "tags": [
+        "定期開催"
+      ]
+    },
+    {
+      "id": "ipalette-2026-11-26-regular-hiroba",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-11",
+      "date": "2026-11-26",
+      "title": "ぱれっとひろば",
+      "description": "９:00～20:00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "乳幼児親子"
+    },
+    {
       "id": "iwatsuki-2026-11-26-hiroba",
       "centerId": "iwatsuki",
       "sourceDocumentId": "iwatsuki-2026-11",
@@ -11041,6 +11676,18 @@
       "targetAge": "生後6週～未就園",
       "reservationRequired": true,
       "capacity": 6
+    },
+    {
+      "id": "ipalette-2026-11-27-regular-hiroba",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-11",
+      "date": "2026-11-27",
+      "title": "ぱれっとひろば",
+      "description": "９:00～20:00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "乳幼児親子"
     },
     {
       "id": "iwatsuki-2026-11-27-gogo-hiroba",
@@ -11284,6 +11931,18 @@
       "origin": "regular-hours"
     },
     {
+      "id": "ipalette-2026-11-28-regular-hiroba",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-11",
+      "date": "2026-11-28",
+      "title": "ぱれっとひろば",
+      "description": "９:00～20:00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "乳幼児親子"
+    },
+    {
       "id": "iwatsuki-2026-11-28-hiroba",
       "centerId": "iwatsuki",
       "sourceDocumentId": "iwatsuki-2026-11",
@@ -11395,6 +12054,30 @@
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours"
+    },
+    {
+      "id": "ipalette-2026-11-29-regular-hiroba",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-11",
+      "date": "2026-11-29",
+      "title": "ぱれっとひろば",
+      "description": "９:00～20:00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "乳幼児親子"
+    },
+    {
+      "id": "ipalette-2026-11-30-regular-hiroba",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-11",
+      "date": "2026-11-30",
+      "title": "ぱれっとひろば",
+      "description": "９:00～20:00",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "regular-hours",
+      "targetAge": "乳幼児親子"
     },
     {
       "id": "iwatsuki-2026-11-30-hiroba",
@@ -14276,6 +14959,6 @@
       "origin": "regular-hours"
     }
   ],
-  "generatedAt": "2026-11-22T06:08:10.601Z",
+  "generatedAt": "2026-11-23T23:30:55.901Z",
   "version": "1.0.0"
 }

@@ -515,6 +515,7 @@ describe("published center policies", () => {
       iwatsuki: "unknown",
       seiga: "unknown",
       hinadori: "unknown",
+      ipalette: "fill",
     });
     for (const center of CENTERS) {
       if (center.regularHours.decision === "unknown") {

@@ -372,4 +372,35 @@ export const CENTERS: Center[] = [
         "10月号はOPEN印の日だけ予約制で開室する。印の無い日は埋めない。同じ予定表のひばり、見学会、入園説明会はOPEN印ではないので抽出しない。",
     },
   },
+  {
+    id: "ipalette",
+    name: "I-Palette",
+    nameJa: "さいたま市子ども家庭総合センター あいぱれっと",
+    address: "浦和区上木崎4-4-10",
+    phone: "048-829-7043",
+    websiteUrl: "https://www.i-palette.com/",
+    closedDays: "毎週水曜日、年末年始",
+    scheduleType: "pdf",
+    scheduleUrlPattern:
+      "https://www.i-palette.com/wp/wp-content/uploads/{YYYY}/{MM}/{YYYY}-{nextMM}-i-palette-news.pdf",
+    scheduleNotes:
+      "さいたま市子ども家庭総合センター。1階のぱれっとひろば（乳幼児の遊び場）が対象。月刊NEWS（前月25日頃公開）と個別イベントページから情報を取得。",
+    regularHours: {
+      decision: "fill",
+      sourceUrl: "https://www.i-palette.com/about.html",
+      quote:
+        "ぱれっとひろば（乳幼児の遊び場） ９:00-12:00 13:00-20:00。令和8年8月17日（月）から、12時ー13時もご利用になれます。1F 利用時間：9:00～20:00 休館日：毎週水曜日（祝日の場合その翌平日） 年末年始（12月29日～1月3日まで）",
+      decisionNote:
+        "2026年8月17日以降、ぱれっとひろばは9:00-20:00の連続開室。11月は8/17以降なので連続時間帯。予約不要。水曜休館（祝日の場合翌平日）、12/29-1/3休館。予定表の空欄日にひろば行を足す。ほっぺっぺひろばなどの特別イベントは別途抽出。",
+      title: "ぱれっとひろば",
+      targetAge: "乳幼児親子",
+      hoursQuote: "９:00～20:00",
+      windows: [{ start: "09:00", end: "20:00" }],
+      openWeekdays: everyDay,
+      closed: [
+        { kind: "nth-weekday", nth: [1, 2, 3, 4, 5], weekday: 3 },
+        { kind: "month-day-range", from: "12-29", to: "01-03" },
+      ],
+    },
+  },
 ];
