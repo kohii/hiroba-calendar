@@ -1,6 +1,6 @@
 # さいたま市子育て支援センタースケジュール抽出スキル
 
-このスキルは、さいたま市の単独型子育て支援センター10箇所と、桜区の菁莪保育園子育て支援センター、ひなどり幼稚園子育て支援ROOMが公開するスケジュールから、イベント情報を抽出してデータセットに統合します。
+このスキルは、さいたま市の単独型子育て支援センター10箇所と、桜区の菁莪保育園子育て支援センター、ひなどり幼稚園子育て支援ROOM、さいたま市子ども家庭総合センター あいぱれっとが公開するスケジュールから、イベント情報を抽出してデータセットに統合します。
 
 ## 概要
 
@@ -331,6 +331,8 @@ pnpm apply-schedule-model
 
 12. **ひなどり幼稚園子育て支援ROOM** (hinadori) - 桜区西堀2-6-18。認定こども園の支援室。市の保育施設併設型一覧の「与野ひなどり保育園 子育て支援センター」（中央区本町西2-1-11、https://www.city.saitama.lg.jp/kosodate/map/category10/p105321.html ）とは別。市の施設ページは認定こども園 https://www.city.saitama.lg.jp/kosodate/map/category18/p105886.html 。おたよりは https://hinadori.ed.jp/category/support/ 。2026年10月号は https://hinadori.ed.jp/2026/09/28/30367/ と https://hinadori.ed.jp/wp-content/uploads/2026/09/9e44390e5305308ee6397861405a8985.pdf 。予約制のOPEN印の日だけ開室。予定表の文字の多くは画像なので `pdftoppm -png` で読む。同じ表の「ひばり」「見学会」「入園説明会」はOPEN印ではない。2026-10-29時点で11月号はカテゴリに無い。
 
+13. **さいたま市子ども家庭総合センター あいぱれっと** (ipalette) - 浦和区上木崎4-4-10。1階のぱれっとひろば（乳幼児の遊び場）が対象。月刊NEWS「あいぱれっとNEWS」は前月25日頃に公開される。イベントページ https://www.i-palette.com/events/ に「あいぱれっとNEWS【令和8年度】○月号」として個別ページ（`/single-news/{YYYY}-{MM}-i-palette-news/`）へのリンクがある。個別ページから PDF（`https://www.i-palette.com/wp/wp-content/uploads/{YYYY}/{MM}/{YYYY}-{nextMM}-i-palette-news.pdf`）をダウンロードする。予定表は calendar-cells レイアウト。ぱれっとひろばは2026年8月17日以降、9:00-20:00の連続開室（予約不要）。水曜休館（祝日の場合翌平日）、12/29-1/3休館。乳幼児・未就学児・親子・保護者向けイベントを抽出。小学生以上のみのイベント（将棋、ビーズワーク教室小学生、うんどうひろば小1-3、放課後子どもひろば、GAME部（中高生））は除外。
+
 ## 抽出パイプライン実行例
 
 Read `/tmp/nishi-2026-10.txt` and write the events to `data/extracted-events/nishi-2026-10.json` before validation. For a calendar grid, read each `## cell` block.
@@ -400,7 +402,7 @@ const nishiEvents = dataset.events.filter(
 施設ごとに公開時期が異なる（前月の何日に出るか）:
 - おおみや: 前月10～14日頃
 - 多くの施設: 前月18～20日頃  
-- みぬま、にし、せいが、ひなどり: 前月23日～月末
+- みぬま、にし、せいが、ひなどり、あいぱれっと: 前月23日～月末（あいぱれっとは25日頃）
 
 ### 視覚マーク検証の責任分担
 

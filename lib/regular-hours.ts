@@ -25,11 +25,32 @@ export function fillRegularHours(input: {
   for (const center of input.centers) {
     const policy = center.regularHours;
     if (policy.decision !== "fill") continue;
+    
+    // Build set of dates closed by weekday-unless-holiday substitute closures
+    const substituteClosed = new Set<string>();
     for (const document of input.sourceDocuments) {
       if (document.centerId !== center.id) continue;
       const month = canonicalizeMonth(document.month);
       if (!month) continue;
       for (const date of datesInMonth(month)) {
+        for (const rule of policy.closed) {
+          if (rule.kind === "weekday-unless-holiday" && holidays.has(date) && weekdayOf(date) === rule.weekday) {
+            // This weekday is a holiday, so it's open. Close the next non-holiday weekday instead.
+            const nextWeekday = findNextNonHolidayWeekday(date, holidays);
+            if (nextWeekday) {
+              substituteClosed.add(nextWeekday);
+            }
+          }
+        }
+      }
+    }
+    
+    for (const document of input.sourceDocuments) {
+      if (document.centerId !== center.id) continue;
+      const month = canonicalizeMonth(document.month);
+      if (!month) continue;
+      for (const date of datesInMonth(month)) {
+        if (substituteClosed.has(date)) continue;
         if (!isOpeningDay(date, policy, holidays)) continue;
         const open = openWindows(policy.windows, closuresOn(document, date));
         if (open.length === 0) continue;
@@ -43,6 +64,20 @@ export function fillRegularHours(input: {
   return [...kept, ...generated].sort(
     (a, b) => a.date.localeCompare(b.date) || a.id.localeCompare(b.id),
   );
+}
+
+function findNextNonHolidayWeekday(date: string, holidays: ReadonlySet<string>): string | null {
+  const start = new Date(`${date}T00:00:00Z`);
+  for (let i = 1; i <= 7; i++) {
+    const next = new Date(start);
+    next.setUTCDate(start.getUTCDate() + i);
+    const nextDate = next.toISOString().slice(0, 10);
+    const nextWeekday = WEEKDAYS[next.getUTCDay()];
+    if (nextWeekday !== undefined && nextWeekday !== 0 && nextWeekday !== 6 && !holidays.has(nextDate)) {
+      return nextDate;
+    }
+  }
+  return null;
 }
 
 function canonicalizeMonth(month: string): string | null {
@@ -91,6 +126,8 @@ function closedRuleMatches(rule: ClosedRule, date: string, holidays: ReadonlySet
       return holidays.has(date);
     case "month-day-range":
       return monthDayInRange(date.slice(5, 10), rule.from, rule.to);
+    case "weekday-unless-holiday":
+      return weekdayOf(date) === rule.weekday && !holidays.has(date);
     default: {
       const unreachable: never = rule;
       return unreachable;

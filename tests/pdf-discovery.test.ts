@@ -1,6 +1,16 @@
 import { describe, it } from "node:test";
 import assert from "node:assert";
-import { extractPDFLinks, monthFromFilename } from "../scripts/pdf-discovery.ts";
+import { readFileSync } from "node:fs";
+import { join, dirname } from "node:path";
+import { fileURLToPath } from "node:url";
+import {
+  extractPDFLinks,
+  monthFromFilename,
+  extractIPaletteNewsPages,
+  extractIPalettePDFUrl,
+} from "../scripts/pdf-discovery.ts";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 describe("PDF link extraction", () => {
   const base = "https://example.com/center/";
@@ -37,5 +47,30 @@ describe("month from filename", () => {
 
   it("rejects month 13", () => {
     assert.strictEqual(monthFromFilename("bad-202613.pdf"), null);
+  });
+});
+
+describe("ipalette discovery", () => {
+  it("extracts news page links from events page", () => {
+    const html = readFileSync(join(__dirname, "fixtures/ipalette-events-page.html"), "utf-8");
+    const newsPages = extractIPaletteNewsPages(html);
+    
+    assert.ok(newsPages.length > 0, "Should find at least one news page");
+    
+    // Check that we find the November 2026 news page
+    const nov2026 = newsPages.find(p => p.year === "2026" && p.month === "11");
+    assert.ok(nov2026, "Should find November 2026 news page");
+    assert.strictEqual(nov2026.url, "https://www.i-palette.com/single-news/2026-11-i-palette-news/");
+  });
+  
+  it("extracts PDF URL from news page", () => {
+    const html = readFileSync(join(__dirname, "fixtures/ipalette-news-2026-11.html"), "utf-8");
+    const pdfUrl = extractIPalettePDFUrl(html);
+    
+    assert.ok(pdfUrl, "Should find PDF URL in news page");
+    assert.strictEqual(
+      pdfUrl,
+      "https://www.i-palette.com/wp/wp-content/uploads/2026/10/2026-11-i-palette-news.pdf"
+    );
   });
 });

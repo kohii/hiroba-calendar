@@ -93,6 +93,8 @@ pnpm download-pdfs
 python3 scripts/extract-pdf-text.py data/pdf-cache/<centerId>-<month>.pdf /tmp/<centerId>-<month>.txt
 ```
 
+**あいぱれっとの PDF 発見**: あいぱれっと（ipalette）の月刊NEWSは `/events/` ページにリンクがありますが、個別ページ（`/single-news/{YYYY}-{MM}-i-palette-news/`）を経由してPDFにアクセスします。自動発見には個別ページのスクレイピングが必要です。
+
 ### AI抽出 (Agent Skill使用)
 
 1. `.cursor/skills/refresh-schedule-data/SKILL.md` を参照
@@ -225,7 +227,7 @@ AI抽出はこれらの異なる形式に対応する必要があります。
 - PDFは各センターが前月下旬に公開（施設により異なる）:
   - おおみや: 前月10～14日頃
   - その他多くの施設: 前月18～20日頃
-  - みぬま、にし、せいが、ひなどり: 前月23日～月末
+  - みぬま、にし、せいが、ひなどり、あいぱれっと: 前月23日～月末（あいぱれっとは25日頃）
 - データ更新は手動実行が必要 (自動化は将来の課題)
 
 ### データの範囲

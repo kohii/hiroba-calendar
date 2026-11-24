@@ -459,9 +459,9 @@ describe("Schema Validation", async () => {
     assert.strictEqual(uniqueIds.size, ids.length);
   });
 
-  it("should have 12 centers registered", async () => {
+  it("should have 13 centers registered", async () => {
     const { CENTERS } = await import("../lib/schema.ts");
-    assert.strictEqual(CENTERS.length, 12);
+    assert.strictEqual(CENTERS.length, 13);
   });
 });
 
