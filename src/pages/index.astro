@@ -1,5 +1,5 @@
 ---
-import '../styles/global.css';
+import AppShell from '../layouts/AppShell.astro';
 
 const title = 'ひろばカレンダー｜さいたま市 子育て支援センターの予定';
 const description = 'さいたま市の子育て支援センターのひろばとイベントの予定を、日付や施設ごとに確認できます';
@@ -8,28 +8,7 @@ const description = 'さいたま市の子育て支援センターのひろば�
 const year = new Date().toLocaleString('en-US', { timeZone: 'Asia/Tokyo', year: 'numeric' });
 ---
 
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="description" content={description}>
-  <meta name="theme-color" content="#fbf8f3" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#1c1a17" media="(prefers-color-scheme: dark)">
-  <title>{title}</title>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-</head>
-<body>
-  <header class="appbar">
-    <div class="appbar-inner">
-      <p class="brand">ひろばカレンダー</p>
-      <div id="scope" class="scope" hidden></div>
-      <button id="edit-centers" type="button" class="appbar-button" aria-label="マイ施設を選ぶ">
-        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.25 4.1 1 5.8L12 16.9l-5.25 2.7 1-5.8L3.5 9.7l5.9-.9z"/></svg>
-      </button>
-    </div>
-  </header>
-
+<AppShell title={title} description={description}>
   <main id="main" class="main" aria-live="polite">
     <p class="loading">読み込み中…</p>
   </main>
@@ -47,17 +26,6 @@ const year = new Date().toLocaleString('en-US', { timeZone: 'Asia/Tokyo', year: 
     </div>
   </footer>
 
-  <nav class="tabbar" aria-label="表示の切り替え">
-    <a class="tab" data-view="schedule" href="./">
-      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></svg>
-      予定
-    </a>
-    <a class="tab" data-view="center" href="?view=center">
-      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-6 8 6M6 10v9h12v-9M10 19v-5h4v5"/></svg>
-      施設
-    </a>
-  </nav>
-
   <dialog id="centers-dialog" class="sheet" aria-labelledby="centers-dialog-title">
     <form method="dialog" class="sheet-inner">
       <div class="sheet-head">
@@ -74,5 +42,4 @@ const year = new Date().toLocaleString('en-US', { timeZone: 'Asia/Tokyo', year: 
   </dialog>
 
   <script src="../scripts/app.ts"></script>
-</body>
-</html>
+</AppShell>
