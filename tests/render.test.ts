@@ -64,8 +64,10 @@ describe("schedule view", () => {
   });
 
   it("asks for centers until some are chosen", () => {
+    // Shows onboarding card when no centers are chosen
     assert.ok(renderSchedule(context([]), "2026-10-25").includes("data-open-centers"));
-    assert.ok(!renderSchedule(context(["omiya"]), "2026-10-25").includes("data-open-centers"));
+    // Shows scope button when centers are chosen
+    assert.ok(renderSchedule(context(["omiya"]), "2026-10-25").includes("data-open-centers"));
   });
 
   it("summarizes hiroba as short hours and events as time and title", () => {

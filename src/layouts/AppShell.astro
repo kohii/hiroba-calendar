@@ -25,10 +25,6 @@ const { title, description, currentPage } = Astro.props;
   <header class="appbar">
     <div class="appbar-inner">
       <a class="brand" href="./">ひろばカレンダー</a>
-      <div id="scope" class="scope" hidden></div>
-      <button id="edit-centers" type="button" class="appbar-button" aria-label="マイ施設を選ぶ">
-        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.25 4.1 1 5.8L12 16.9l-5.25 2.7 1-5.8L3.5 9.7l5.9-.9z"/></svg>
-      </button>
       <a class="appbar-button" href="about" aria-label="このサイトについて" aria-current={currentPage === 'about' ? 'page' : undefined}>
         <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5M12 8h.01"/></svg>
       </a>

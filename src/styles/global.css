@@ -193,6 +193,14 @@ small {
   height: 22px;
 }
 
+.appbar-button[aria-current="page"] {
+  color: var(--ink);
+}
+
+body[data-view="schedule"] .appbar-inner {
+  max-width: 80rem;
+}
+
 /* ---- Layout ---- */
 
 .main {
@@ -654,12 +662,51 @@ body[data-view="schedule"] .footer {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  min-height: 36px;
   padding: 6px 12px;
   border-radius: 999px;
   border: 1px solid var(--line);
   background: var(--surface);
   font-size: 0.8125rem;
   font-weight: 700;
+}
+
+.scope-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 36px;
+  padding: 6px 10px 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--ink-2);
+}
+
+.scope-button[data-active="true"] {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+.scope-count {
+  min-width: 1.5em;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--bg);
+  font-size: 0.6875rem;
+  text-align: center;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 .date-jump input {
@@ -1254,6 +1301,51 @@ body[data-view="schedule"] .footer {
 .dialog-list {
   display: grid;
   gap: 6px;
+}
+
+.dialog-scope {
+  margin-bottom: 8px;
+}
+
+.scope-fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  background: var(--surface-2);
+  border-radius: 999px;
+  padding: 3px;
+}
+
+.scope-option {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.scope-option input {
+  position: absolute;
+  opacity: 0;
+}
+
+.scope-option span {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--ink-2);
+  padding: 6px 12px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.scope-option:has(input:checked) span {
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: var(--shadow);
 }
 
 .center-option {
