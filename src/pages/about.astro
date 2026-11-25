@@ -1,0 +1,124 @@
+---
+import AppShell from '../layouts/AppShell.astro';
+import type { DataSet } from '../../lib/schema.ts';
+
+const title = 'このサイトについて｜ひろばカレンダー';
+const description = 'さいたま市の子育て支援センターのひろばとイベントの予定を、日付や施設ごとに確認できる非公式サイトです';
+
+// Get current year in Asia/Tokyo timezone for copyright
+const year = new Date().toLocaleString('en-US', { timeZone: 'Asia/Tokyo', year: 'numeric' });
+
+// Load dataset to show center information
+let dataset: DataSet | null = null;
+try {
+  const datasetModule = await import('../../public/data/dataset.json');
+  dataset = datasetModule.default as DataSet;
+} catch {
+  // Dataset not available during build
+}
+
+const centers = dataset?.centers ?? [];
+const documents = dataset?.sourceDocuments ?? [];
+
+// Get the latest fetch date
+const fetchedAt = documents.length > 0
+  ? documents.reduce((latest, doc) => doc.fetchedAt > latest ? doc.fetchedAt : latest, documents[0].fetchedAt)
+  : null;
+
+// Group documents by center
+const centerDocuments = new Map<string, typeof documents>();
+for (const center of centers) {
+  centerDocuments.set(center.id, documents.filter(doc => doc.centerId === center.id).sort((a, b) => a.month.localeCompare(b.month)));
+}
+---
+
+<AppShell title={title} description={description} currentPage="about">
+  <main class="main">
+    <section class="about-section">
+      <h1 class="about-title">このサイトについて</h1>
+      <p>さいたま市の子育て支援センターが公開している予定表PDFをまとめて見られるようにした、個人による非公式サイトです。</p>
+    </section>
+
+    <section class="about-section">
+      <div class="notice">
+        <h2 class="notice-title">ご注意</h2>
+        <ul class="notice-list">
+          <li>このサイトはさいたま市や各施設とは関係がありません</li>
+          <li>PDFから自動的に読み取っているため、誤りがある可能性があります</li>
+          <li>イベント等への参加の前には、必ず各施設の予定表でご確認ください</li>
+          <li>このサイトの内容について、施設へ問い合わせないようお願いします</li>
+          <li>「マイ施設」の設定はこの端末にのみ保存されます（他の端末には引き継がれません）</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <h2 class="section-title">収録施設</h2>
+      {centers.map((center) => {
+        const docs = centerDocuments.get(center.id) ?? [];
+        const hasData = docs.length > 0;
+        return (
+          <div class="center-card">
+            <h3 class="center-card-name">{center.nameJa}</h3>
+            <dl class="center-facts">
+              <div><dt>休館</dt><dd>{center.closedDays}</dd></div>
+              <div><dt>住所</dt><dd>{center.address}</dd></div>
+              <div><dt>電話</dt><dd><a href={`tel:${center.phone}`}>{center.phone}</a></dd></div>
+            </dl>
+            <div class="center-links">
+              <a href={center.websiteUrl} target="_blank" rel="noopener noreferrer">
+                公式サイト
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/>
+                </svg>
+              </a>
+            </div>
+            {hasData ? (
+              <details class="center-schedule-details">
+                <summary>取り込み済みの予定表</summary>
+                <ul class="schedule-list">
+                  {docs.map((doc) => {
+                    const monthNum = Number(doc.month.slice(5, 7));
+                    return (
+                      <li>
+                        <a href={doc.pdfUrl} target="_blank" rel="noopener noreferrer">
+                          {monthNum}月の予定表PDF
+                          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/>
+                          </svg>
+                        </a>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </details>
+            ) : (
+              <p class="muted">このサイトでは、この施設の予定表を取り込めていません。予定は<a href={center.websiteUrl} target="_blank" rel="noopener noreferrer">公式サイト</a>でご確認ください。</p>
+            )}
+          </div>
+        );
+      })}
+      {fetchedAt && (
+        <p class="muted" style="margin-top: 16px;">
+          予定表の取得日: {new Date(fetchedAt).toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo', year: 'numeric', month: 'long', day: 'numeric' })}
+        </p>
+      )}
+    </section>
+
+    <section class="about-section">
+      <h2 class="section-title">作者とソースコード</h2>
+      <p>© {year} kohii</p>
+      <div class="center-links" style="margin-top: 8px;">
+        <a href="https://github.com/kohii/hiroba-calendar" target="_blank" rel="noopener noreferrer">
+          <svg class="footer-github-icon" viewBox="0 0 16 16" aria-hidden="true">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+          </svg>
+          GitHub
+        </a>
+      </div>
+      <p class="muted" style="margin-top: 8px;">
+        不具合の報告は <a href="https://github.com/kohii/hiroba-calendar/issues" target="_blank" rel="noopener noreferrer">GitHub の Issues</a> へお願いします。
+      </p>
+    </section>
+  </main>
+</AppShell>
