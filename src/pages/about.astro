@@ -1,6 +1,7 @@
 ---
 import AppShell from '../layouts/AppShell.astro';
 import type { DataSet } from '../../lib/schema.ts';
+import datasetModule from '../../public/data/dataset.json';
 
 const title = 'このサイトについて｜ひろばカレンダー';
 const description = 'さいたま市の子育て支援センターのひろばとイベントの予定を、日付や施設ごとに確認できる非公式サイトです';
@@ -9,16 +10,9 @@ const description = 'さいたま市の子育て支援センターのひろば�
 const year = new Date().toLocaleString('en-US', { timeZone: 'Asia/Tokyo', year: 'numeric' });
 
 // Load dataset to show center information
-let dataset: DataSet | null = null;
-try {
-  const datasetModule = await import('../../public/data/dataset.json');
-  dataset = datasetModule.default as DataSet;
-} catch {
-  // Dataset not available during build
-}
-
-const centers = dataset?.centers ?? [];
-const documents = dataset?.sourceDocuments ?? [];
+const dataset = datasetModule as DataSet;
+const centers = dataset.centers;
+const documents = dataset.sourceDocuments;
 
 // Get the latest fetch date
 const fetchedAt = documents.length > 0

@@ -64,10 +64,16 @@ describe("schedule view", () => {
   });
 
   it("asks for centers until some are chosen", () => {
+    const noSelection = renderSchedule(context([]), "2026-10-25");
+    const withSelection = renderSchedule(context(["omiya"]), "2026-10-25");
+    
     // Shows onboarding card when no centers are chosen
-    assert.ok(renderSchedule(context([]), "2026-10-25").includes("data-open-centers"));
-    // Shows scope button when centers are chosen
-    assert.ok(renderSchedule(context(["omiya"]), "2026-10-25").includes("data-open-centers"));
+    assert.ok(noSelection.includes('class="onboarding"'));
+    
+    // Shows scope button (not onboarding) with count when centers are chosen
+    assert.ok(!withSelection.includes('class="onboarding"'));
+    assert.ok(withSelection.includes('class="scope-button"'));
+    assert.ok(withSelection.includes('マイ施設<span class="scope-count">1'));
   });
 
   it("summarizes hiroba as short hours and events as time and title", () => {
