@@ -193,6 +193,14 @@ small {
   height: 22px;
 }
 
+.appbar-button[aria-current="page"] {
+  color: var(--ink);
+}
+
+body[data-view="schedule"] .appbar-inner {
+  max-width: 80rem;
+}
+
 /* ---- Layout ---- */
 
 .main {
@@ -231,6 +239,15 @@ body[data-view="schedule"] .footer {
   padding: 8px 16px 24px;
   color: var(--ink-3);
   font-size: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-about-link {
+  color: var(--ink-2);
+  font-weight: 600;
+  text-decoration: none;
 }
 
 .footer-links {
@@ -654,12 +671,51 @@ body[data-view="schedule"] .footer {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  min-height: 36px;
   padding: 6px 12px;
   border-radius: 999px;
   border: 1px solid var(--line);
   background: var(--surface);
   font-size: 0.8125rem;
   font-weight: 700;
+}
+
+.scope-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 36px;
+  padding: 6px 10px 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--ink-2);
+}
+
+.scope-button[data-active="true"] {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+.scope-count {
+  min-width: 1.5em;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--bg);
+  font-size: 0.6875rem;
+  text-align: center;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 .date-jump input {
@@ -1256,6 +1312,51 @@ body[data-view="schedule"] .footer {
   gap: 6px;
 }
 
+.dialog-scope {
+  margin-bottom: 8px;
+}
+
+.scope-fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  background: var(--surface-2);
+  border-radius: 999px;
+  padding: 3px;
+}
+
+.scope-option {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.scope-option input {
+  position: absolute;
+  opacity: 0;
+}
+
+.scope-option span {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--ink-2);
+  padding: 6px 12px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.scope-option:has(input:checked) span {
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: var(--shadow);
+}
+
 .center-option {
   display: flex;
   align-items: center;
@@ -1288,4 +1389,73 @@ body[data-view="schedule"] .footer {
 .center-option-address {
   font-size: 0.75rem;
   color: var(--ink-2);
+}
+
+/* ---- About page ---- */
+
+.about-section {
+  margin-top: 24px;
+}
+
+.about-section:first-child {
+  margin-top: 16px;
+}
+
+.about-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.notice-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.notice-list {
+  list-style: disc;
+  padding-left: 1.5em;
+  display: grid;
+  gap: 4px;
+}
+
+.notice-list li {
+  color: var(--ink-2);
+  font-size: 0.875rem;
+}
+
+.center-schedule-details {
+  margin-top: 10px;
+}
+
+.center-schedule-details summary {
+  cursor: pointer;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--ink-2);
+  padding: 4px 0;
+}
+
+.schedule-list {
+  margin-top: 8px;
+  padding-left: 1.5em;
+  list-style: disc;
+  display: grid;
+  gap: 4px;
+}
+
+.schedule-list li {
+  font-size: 0.8125rem;
+}
+
+.schedule-list a {
+  color: var(--ink-2);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.schedule-list .icon {
+  width: 14px;
+  height: 14px;
 }

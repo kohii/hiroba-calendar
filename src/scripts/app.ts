@@ -101,16 +101,8 @@ function centerInScroller(itemSelector: string, scrollerSelector: string) {
   scroller.scrollLeft += target.left - box.left - (box.width - target.width) / 2;
 }
 
-/** Header scope switch and tab bar, which live outside #main. */
+/** Tab bar, which lives outside #main. */
 function renderChrome() {
-  const scope = document.getElementById("scope")!;
-  const showScope = favorites.size > 0 && state.route.view !== "center";
-  scope.hidden = !showScope;
-  if (showScope) {
-    scope.innerHTML = `
-      <a href="${link({ ...state, all: false })}" data-nav="replace" aria-pressed="${!state.all}">マイ施設</a>
-      <a href="${link({ ...state, all: true })}" data-nav="replace" aria-pressed="${state.all}">すべて</a>`;
-  }
   for (const tab of document.querySelectorAll<HTMLAnchorElement>(".tab")) {
     const view = tab.dataset.view;
     tab.setAttribute("aria-current", String(view === state.route.view));
@@ -196,11 +188,20 @@ function bindEvents() {
 
   dialog.addEventListener("change", (event) => {
     const input = event.target;
-    if (input instanceof HTMLInputElement && input.dataset.center)
-      toggleFavorite(input.dataset.center);
+    if (input instanceof HTMLInputElement) {
+      if (input.dataset.center) {
+        toggleFavorite(input.dataset.center);
+      } else if (input.name === "scope") {
+        const all = input.value === "all";
+        navigate(link({ ...state, all }), "replace");
+      }
+    }
   });
   dialog.addEventListener("close", () => {
     if (favoritesKey() !== favoritesAtOpen) render();
+    // Restore focus to the button that opened the dialog
+    const button = document.querySelector<HTMLButtonElement>("[data-open-centers]");
+    if (button) button.focus();
   });
   for (const sheet of [dialog, dayDialog]) {
     sheet.addEventListener("click", (event) => {
@@ -227,9 +228,23 @@ function favoritesKey(): string {
 function openCentersDialog() {
   favoritesAtOpen = favoritesKey();
   const list = dialog.querySelector(".dialog-list")!;
-  list.innerHTML = (dataset?.centers ?? [])
-    .map(
-      (center) => `
+  list.innerHTML = `
+    <li class="dialog-scope">
+      <fieldset class="scope-fieldset">
+        <legend class="visually-hidden">予定に表示する施設</legend>
+        <label class="scope-option">
+          <input type="radio" name="scope" value="favorites" ${!state.all ? "checked" : ""}>
+          <span>マイ施設だけ</span>
+        </label>
+        <label class="scope-option">
+          <input type="radio" name="scope" value="all" ${state.all ? "checked" : ""}>
+          <span>すべて</span>
+        </label>
+      </fieldset>
+    </li>
+    ${(dataset?.centers ?? [])
+      .map(
+        (center) => `
       <li>
         <label class="center-option">
           <input type="checkbox" data-center="${center.id}" ${favorites.has(center.id) ? "checked" : ""}>
@@ -239,8 +254,8 @@ function openCentersDialog() {
           </span>
         </label>
       </li>`,
-    )
-    .join("");
+      )
+      .join("")}`;
   dialog.showModal();
 }
 
@@ -267,7 +282,5 @@ function saveFavorites() {
     // Private browsing can refuse storage; the choice still applies to this visit.
   }
 }
-
-document.getElementById("edit-centers")?.addEventListener("click", openCentersDialog);
 
 init();

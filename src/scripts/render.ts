@@ -53,6 +53,22 @@ export function renderSchedule(ctx: RenderContext, start: string): string {
           .join("")}`,
     )
     .join("");
+
+  const showScopeButton = ctx.favorites.size > 0;
+  const scopeButton = showScopeButton
+    ? ctx.all
+      ? `<button type="button" class="scope-button" data-open-centers aria-haspopup="dialog" data-active="false">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M7 12h10M10 17h4"/></svg>
+          <span class="visually-hidden">表示する施設：</span>すべての施設
+          <svg class="icon icon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>`
+      : `<button type="button" class="scope-button" data-open-centers aria-haspopup="dialog" data-active="true">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M7 12h10M10 17h4"/></svg>
+          <span class="visually-hidden">表示する施設：</span>マイ施設<span class="scope-count">${ctx.favorites.size}<span class="visually-hidden">施設</span></span>
+          <svg class="icon icon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>`
+    : "";
+
   return `
     ${onboarding(ctx)}
     <div class="schedule-toolbar">
@@ -60,6 +76,7 @@ export function renderSchedule(ctx: RenderContext, start: string): string {
         ${icon("calendar")}<span>${start === ctx.today ? "日付を選ぶ" : `${dateText(start)}から`}</span>
         <input type="date" id="date-jump" value="${start}" aria-label="表示を始める日">
       </label>
+      ${scopeButton}
       ${start === ctx.today ? "" : `<a class="today-link" href="${href(ctx, { view: "schedule", date: null })}" data-nav="replace">今日から</a>`}
       <ul class="legend" aria-label="凡例">
         <li><span class="legend-hiroba"></span>ひろば</li>
