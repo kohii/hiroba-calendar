@@ -157,6 +157,112 @@
     "extractedAt": "2026-11-21T13:45:49.171Z"
   },
   {
+    "id": "hinadori-2026-12",
+    "centerId": "hinadori",
+    "month": "2026-12",
+    "pdfUrl": "https://hinadori.ed.jp/wp-content/uploads/2026/11/ec68091b8c125f0b05b137dcb611a3da.pdf",
+    "fetchedAt": "2026-11-27T01:22:10Z",
+    "sha256": "6146f91b590c7bb4a747e23d3bfe65cd45386a88cfe57af1d96e4d43568ec03c",
+    "closures": [
+      {
+        "date": "2026-12-03",
+        "scope": "all-day",
+        "quote": "ひばり"
+      },
+      {
+        "date": "2026-12-05",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-06",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-07",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-10",
+        "scope": "all-day",
+        "quote": "ひばり"
+      },
+      {
+        "date": "2026-12-12",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-13",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-14",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-17",
+        "scope": "all-day",
+        "quote": "ひばり"
+      },
+      {
+        "date": "2026-12-19",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-20",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-21",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-22",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-26",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-27",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-28",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-29",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-30",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-31",
+        "scope": "all-day",
+        "quote": "休"
+      }
+    ],
+    "extractedAt": "2026-11-27T01:35:14.853Z"
+  },
+  {
     "id": "ipalette-2026-11",
     "centerId": "ipalette",
     "month": "2026-11",
@@ -165,6 +271,52 @@
     "sha256": "7ce6217235805171ca3edbcbac466ba639a245c4b51de0d024db83288b144629",
     "closures": [],
     "extractedAt": "2026-11-23T23:45:52.632Z"
+  },
+  {
+    "id": "ipalette-2026-12",
+    "centerId": "ipalette",
+    "month": "2026-12",
+    "pdfUrl": "https://www.i-palette.com/wp/wp-content/uploads/2026/11/2026-12-i-palette-news.pdf",
+    "fetchedAt": "2026-11-27T01:22:10Z",
+    "sha256": "4a98a69bc4f7bbabba1fd3ba01d3536e24fe4c03640f079c49b1590ef18ed4c6",
+    "closures": [
+      {
+        "date": "2026-12-02",
+        "scope": "all-day",
+        "quote": "休館日"
+      },
+      {
+        "date": "2026-12-09",
+        "scope": "all-day",
+        "quote": "休館日"
+      },
+      {
+        "date": "2026-12-16",
+        "scope": "all-day",
+        "quote": "休館日"
+      },
+      {
+        "date": "2026-12-23",
+        "scope": "all-day",
+        "quote": "休館日"
+      },
+      {
+        "date": "2026-12-29",
+        "scope": "all-day",
+        "quote": "休館日"
+      },
+      {
+        "date": "2026-12-30",
+        "scope": "all-day",
+        "quote": "休館日"
+      },
+      {
+        "date": "2026-12-31",
+        "scope": "all-day",
+        "quote": "休館日"
+      }
+    ],
+    "extractedAt": "2026-11-27T01:35:16.561Z"
   },
   {
     "id": "iwatsuki-2026-10",
@@ -603,6 +755,42 @@
     "extractedAt": "2026-10-29T12:29:27.813Z"
   },
   {
+    "id": "minuma-2026-12",
+    "centerId": "minuma",
+    "month": "2026-12",
+    "pdfUrl": "https://www.sainoko.net/minuma/pdf/202612minuma.pdf",
+    "fetchedAt": "2026-11-27T01:22:10Z",
+    "sha256": "6a4f91a2646f8a9712a064f9c7a3c4c51d44018fdf81a1cd359db5b547ce4e5c",
+    "closures": [
+      {
+        "date": "2026-12-10",
+        "scope": "all-day",
+        "quote": "休室日"
+      },
+      {
+        "date": "2026-12-24",
+        "scope": "all-day",
+        "quote": "休室日"
+      },
+      {
+        "date": "2026-12-29",
+        "scope": "all-day",
+        "quote": "年末年始のお休み"
+      },
+      {
+        "date": "2026-12-30",
+        "scope": "all-day",
+        "quote": "年末年始のお休み"
+      },
+      {
+        "date": "2026-12-31",
+        "scope": "all-day",
+        "quote": "年末年始のお休み"
+      }
+    ],
+    "extractedAt": "2026-11-27T01:35:16.317Z"
+  },
+  {
     "id": "nishi-2026-10",
     "centerId": "nishi",
     "month": "2026-10",
@@ -928,6 +1116,162 @@
       }
     ],
     "extractedAt": "2026-10-29T12:29:27.761Z"
+  },
+  {
+    "id": "nishi-2026-12",
+    "centerId": "nishi",
+    "month": "2026-12",
+    "pdfUrl": "https://seisinkai.ed.jp/wp-content/uploads/2026/11/令和8年度12月カレンダー.pdf",
+    "fetchedAt": "2026-11-27T01:22:10Z",
+    "sha256": "7f170832ea3b1f101fff2a684774cfc4a62abe7ad8fc0404ea19033ee0074beb",
+    "closures": [
+      {
+        "date": "2026-12-02",
+        "scope": "pm",
+        "quote": "ももちゃんタイム 1歳2か月迄 身体測定 ※バスタオル持参 13:00～16:00"
+      },
+      {
+        "date": "2026-12-03",
+        "scope": "all-day",
+        "quote": "閉室日"
+      },
+      {
+        "date": "2026-12-04",
+        "scope": "pm",
+        "quote": "ももちゃんタイム 1歳2か月迄 13:00～16:00"
+      },
+      {
+        "date": "2026-12-07",
+        "scope": "pm",
+        "quote": "クリスマス会準備・職員会議のため閉室"
+      },
+      {
+        "date": "2026-12-08",
+        "scope": "am",
+        "quote": "クリスマス会 Ⅰ部10:00入室 10:15～11:30"
+      },
+      {
+        "date": "2026-12-08",
+        "scope": "pm",
+        "quote": "クリスマス会 Ⅱ部13:15入室 13:30～14:45"
+      },
+      {
+        "date": "2026-12-09",
+        "scope": "am",
+        "quote": "英語であそぼ！ 10:00～12:00 ※10:15 開始 ※年齢制限なし"
+      },
+      {
+        "date": "2026-12-10",
+        "scope": "am",
+        "quote": "もぐもぐ教室 離乳食・材料費徴収 (食器・食具持参) 10:30～11:30 ※10:15入室"
+      },
+      {
+        "date": "2026-12-10",
+        "scope": "pm",
+        "quote": "みんなのひろば 13:30～16:00"
+      },
+      {
+        "date": "2026-12-11",
+        "scope": "pm",
+        "quote": "わらべうたベビーマッサージ 対象：2か月～歩行開始前まで 13:00～16:00 ※13:15開始"
+      },
+      {
+        "date": "2026-12-14",
+        "scope": "am",
+        "quote": "12月生まれのお誕生日会🍰＆ハーフバースデー 10:00～11:30 ※10:15開始"
+      },
+      {
+        "date": "2026-12-14",
+        "scope": "pm",
+        "quote": "ももちゃんタイム 1歳2か月迄 13:00～16:00"
+      },
+      {
+        "date": "2026-12-15",
+        "scope": "am",
+        "quote": "英語で楽しくリトミック♪ 10:00～12:00 ※10:15開始 ★対象：6か月以上"
+      },
+      {
+        "date": "2026-12-16",
+        "scope": "am",
+        "quote": "人形劇 クリスマスバージョン 10:00～11:30 ※10:15開始"
+      },
+      {
+        "date": "2026-12-16",
+        "scope": "pm",
+        "quote": "1歳児ランド 1歳以上～2歳未満 13:00～16:00"
+      },
+      {
+        "date": "2026-12-17",
+        "scope": "all-day",
+        "quote": "閉室日"
+      },
+      {
+        "date": "2026-12-18",
+        "scope": "pm",
+        "quote": "ももちゃんタイム ママのストレッチ 13:00～16:00 ※13:15開始"
+      },
+      {
+        "date": "2026-12-20",
+        "scope": "am",
+        "quote": "パパサンデーイベント「もっと、子どもと仲良く遊ぶ方法」講座 10:00～12:00 ※10:15開始"
+      },
+      {
+        "date": "2026-12-21",
+        "scope": "am",
+        "quote": "ケンちゃんじいちゃんと福話来さん 10:00～12:00 ※10：15開始 オンラインあり"
+      },
+      {
+        "date": "2026-12-21",
+        "scope": "pm",
+        "quote": "ももちゃんタイム ねんねのあかちゃん∔ピヨピヨランド 13:00～16:00 ※13:15開始"
+      },
+      {
+        "date": "2026-12-22",
+        "scope": "am",
+        "quote": "22.AM🚙×1～4 歯科衛生士講座 シリーズⅠ「むし歯のはなし」 10:00～12:00 ※10:15開始"
+      },
+      {
+        "date": "2026-12-22",
+        "scope": "pm",
+        "quote": "ももちゃんタイム『あかちゃんの発達講座Ⅱ』対象：あんよの前まで 13:00～16:00 ※13：15開始"
+      },
+      {
+        "date": "2026-12-23",
+        "scope": "am",
+        "quote": "23.🚙AM×1～3 作って遊ぼう！『手型アート クリスマス飾り』★1歳3か月以上 10:00～12:00 ※10:15開始"
+      },
+      {
+        "date": "2026-12-23",
+        "scope": "pm",
+        "quote": "ももちゃんタイム 1歳2か月迄『手型アート クリスマス飾り』13:30～16:00 ※13:45開始"
+      },
+      {
+        "date": "2026-12-24",
+        "scope": "am",
+        "quote": "世界のことばでこんにちは！ 10:00～12:00 ※10:15開始"
+      },
+      {
+        "date": "2026-12-28",
+        "scope": "pm",
+        "quote": "大掃除の為閉室"
+      },
+      {
+        "date": "2026-12-29",
+        "scope": "all-day",
+        "quote": "年末年始 閉室日"
+      },
+      {
+        "date": "2026-12-30",
+        "scope": "all-day",
+        "quote": "年末年始 閉室日"
+      },
+      {
+        "date": "2026-12-31",
+        "scope": "all-day",
+        "quote": "年末年始 閉室日"
+      }
+    ],
+    "extractedAt": "2026-11-27T01:38:52.672Z"
   },
   {
     "id": "omiya-2026-10",
@@ -1273,6 +1617,77 @@
       }
     ],
     "extractedAt": "2026-10-29T12:26:24.991Z"
+  },
+  {
+    "id": "seiga-2026-12",
+    "centerId": "seiga",
+    "month": "2026-12",
+    "pdfUrl": "https://seiga.or.jp/square/せいがのひろば12月号-6/",
+    "fetchedAt": "2026-11-27T01:22:10Z",
+    "sha256": "61811ff8d7c3d6bd3d6b51934032b529514a06c8f44f3d1da0e376185d0b3ffb",
+    "closures": [
+      {
+        "date": "2026-12-04",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-05",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-06",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-11",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-13",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-18",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-20",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-25",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-27",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-29",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-30",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-31",
+        "scope": "all-day",
+        "quote": "休"
+      }
+    ],
+    "extractedAt": "2026-11-27T01:35:15.426Z"
   },
   {
     "id": "urawa-2026-10",
