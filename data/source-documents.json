@@ -157,6 +157,117 @@
     "extractedAt": "2026-11-21T13:45:49.171Z"
   },
   {
+    "id": "hinadori-2026-12",
+    "centerId": "hinadori",
+    "month": "2026-12",
+    "pdfUrl": "https://hinadori.ed.jp/wp-content/uploads/2026/11/ec68091b8c125f0b05b137dcb611a3da.pdf",
+    "fetchedAt": "2026-11-27T01:22:10Z",
+    "sha256": "6146f91b590c7bb4a747e23d3bfe65cd45386a88cfe57af1d96e4d43568ec03c",
+    "closures": [
+      {
+        "date": "2026-12-01",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-03",
+        "scope": "all-day",
+        "quote": "ひばり"
+      },
+      {
+        "date": "2026-12-05",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-06",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-07",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-10",
+        "scope": "all-day",
+        "quote": "ひばり"
+      },
+      {
+        "date": "2026-12-12",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-13",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-14",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-17",
+        "scope": "all-day",
+        "quote": "ひばり"
+      },
+      {
+        "date": "2026-12-19",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-20",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-21",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-22",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-26",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-27",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-28",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-29",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-30",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-31",
+        "scope": "all-day",
+        "quote": "休"
+      }
+    ],
+    "extractedAt": "2026-11-27T01:22:43.959Z"
+  },
+  {
     "id": "ipalette-2026-11",
     "centerId": "ipalette",
     "month": "2026-11",
@@ -165,6 +276,52 @@
     "sha256": "7ce6217235805171ca3edbcbac466ba639a245c4b51de0d024db83288b144629",
     "closures": [],
     "extractedAt": "2026-11-23T23:45:52.632Z"
+  },
+  {
+    "id": "ipalette-2026-12",
+    "centerId": "ipalette",
+    "month": "2026-12",
+    "pdfUrl": "https://www.i-palette.com/wp/wp-content/uploads/2026/11/2026-12-i-palette-news.pdf",
+    "fetchedAt": "2026-11-27T01:22:10Z",
+    "sha256": "4a98a69bc4f7bbabba1fd3ba01d3536e24fe4c03640f079c49b1590ef18ed4c6",
+    "closures": [
+      {
+        "date": "2026-12-02",
+        "scope": "all-day",
+        "quote": "休館日"
+      },
+      {
+        "date": "2026-12-09",
+        "scope": "all-day",
+        "quote": "休館日"
+      },
+      {
+        "date": "2026-12-16",
+        "scope": "all-day",
+        "quote": "休館日"
+      },
+      {
+        "date": "2026-12-23",
+        "scope": "all-day",
+        "quote": "休館日"
+      },
+      {
+        "date": "2026-12-29",
+        "scope": "all-day",
+        "quote": "休館日"
+      },
+      {
+        "date": "2026-12-30",
+        "scope": "all-day",
+        "quote": "休館日"
+      },
+      {
+        "date": "2026-12-31",
+        "scope": "all-day",
+        "quote": "休館日"
+      }
+    ],
+    "extractedAt": "2026-11-27T01:22:44.571Z"
   },
   {
     "id": "iwatsuki-2026-10",
@@ -603,6 +760,42 @@
     "extractedAt": "2026-10-29T12:29:27.813Z"
   },
   {
+    "id": "minuma-2026-12",
+    "centerId": "minuma",
+    "month": "2026-12",
+    "pdfUrl": "https://www.sainoko.net/minuma/pdf/202612minuma.pdf",
+    "fetchedAt": "2026-11-27T01:22:10Z",
+    "sha256": "6a4f91a2646f8a9712a064f9c7a3c4c51d44018fdf81a1cd359db5b547ce4e5c",
+    "closures": [
+      {
+        "date": "2026-12-08",
+        "scope": "all-day",
+        "quote": "設備点検のため休室日"
+      },
+      {
+        "date": "2026-12-21",
+        "scope": "all-day",
+        "quote": "休室日"
+      },
+      {
+        "date": "2026-12-29",
+        "scope": "all-day",
+        "quote": "年末年始のお休み"
+      },
+      {
+        "date": "2026-12-30",
+        "scope": "all-day",
+        "quote": "年末年始のお休み"
+      },
+      {
+        "date": "2026-12-31",
+        "scope": "all-day",
+        "quote": "年末年始のお休み"
+      }
+    ],
+    "extractedAt": "2026-11-27T01:23:33.111Z"
+  },
+  {
     "id": "nishi-2026-10",
     "centerId": "nishi",
     "month": "2026-10",
@@ -928,6 +1121,62 @@
       }
     ],
     "extractedAt": "2026-10-29T12:29:27.761Z"
+  },
+  {
+    "id": "nishi-2026-12",
+    "centerId": "nishi",
+    "month": "2026-12",
+    "pdfUrl": "https://seisinkai.ed.jp/wp-content/uploads/2026/11/令和8年度12月カレンダー.pdf",
+    "fetchedAt": "2026-11-27T01:22:10Z",
+    "sha256": "7f170832ea3b1f101fff2a684774cfc4a62abe7ad8fc0404ea19033ee0074beb",
+    "closures": [
+      {
+        "date": "2026-12-03",
+        "scope": "all-day",
+        "quote": "閉室日"
+      },
+      {
+        "date": "2026-12-07",
+        "scope": "pm",
+        "quote": "クリスマス会準備・職員会議のため閉室"
+      },
+      {
+        "date": "2026-12-17",
+        "scope": "all-day",
+        "quote": "閉室日"
+      },
+      {
+        "date": "2026-12-22",
+        "scope": "am",
+        "quote": "AM×"
+      },
+      {
+        "date": "2026-12-23",
+        "scope": "am",
+        "quote": "AM×"
+      },
+      {
+        "date": "2026-12-28",
+        "scope": "pm",
+        "quote": "大掃除の為閉室"
+      },
+      {
+        "date": "2026-12-29",
+        "scope": "all-day",
+        "quote": "年末年始 閉室日"
+      },
+      {
+        "date": "2026-12-30",
+        "scope": "all-day",
+        "quote": "年末年始 閉室日"
+      },
+      {
+        "date": "2026-12-31",
+        "scope": "all-day",
+        "quote": "年末年始 閉室日"
+      }
+    ],
+    "extractedAt": "2026-11-27T01:23:27.681Z"
   },
   {
     "id": "omiya-2026-10",
@@ -1273,6 +1522,82 @@
       }
     ],
     "extractedAt": "2026-10-29T12:26:24.991Z"
+  },
+  {
+    "id": "seiga-2026-12",
+    "centerId": "seiga",
+    "month": "2026-12",
+    "pdfUrl": "https://seiga.or.jp/square/せいがのひろば12月号-6/",
+    "fetchedAt": "2026-11-27T01:22:10Z",
+    "sha256": "61811ff8d7c3d6bd3d6b51934032b529514a06c8f44f3d1da0e376185d0b3ffb",
+    "closures": [
+      {
+        "date": "2026-12-04",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-05",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-06",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-11",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-13",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-18",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-19",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-20",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-25",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-27",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-29",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-30",
+        "scope": "all-day",
+        "quote": "休"
+      },
+      {
+        "date": "2026-12-31",
+        "scope": "all-day",
+        "quote": "休"
+      }
+    ],
+    "extractedAt": "2026-11-27T01:22:44.251Z"
   },
   {
     "id": "urawa-2026-10",
