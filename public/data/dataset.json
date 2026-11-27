@@ -2127,11 +2127,6 @@
       "sha256": "6146f91b590c7bb4a747e23d3bfe65cd45386a88cfe57af1d96e4d43568ec03c",
       "closures": [
         {
-          "date": "2026-12-01",
-          "scope": "all-day",
-          "quote": "休"
-        },
-        {
           "date": "2026-12-03",
           "scope": "all-day",
           "quote": "ひばり"
@@ -2227,7 +2222,7 @@
           "quote": "休"
         }
       ],
-      "extractedAt": "2026-11-27T01:22:43.959Z"
+      "extractedAt": "2026-11-27T01:35:14.853Z"
     },
     {
       "id": "seiga-2026-12",
@@ -2268,11 +2263,6 @@
           "quote": "休"
         },
         {
-          "date": "2026-12-19",
-          "scope": "all-day",
-          "quote": "休"
-        },
-        {
           "date": "2026-12-20",
           "scope": "all-day",
           "quote": "休"
@@ -2303,7 +2293,7 @@
           "quote": "休"
         }
       ],
-      "extractedAt": "2026-11-27T01:22:44.251Z"
+      "extractedAt": "2026-11-27T01:35:15.426Z"
     },
     {
       "id": "ipalette-2026-12",
@@ -2349,7 +2339,7 @@
           "quote": "休館日"
         }
       ],
-      "extractedAt": "2026-11-27T01:22:44.571Z"
+      "extractedAt": "2026-11-27T01:35:16.561Z"
     },
     {
       "id": "nishi-2026-12",
@@ -2360,9 +2350,19 @@
       "sha256": "7f170832ea3b1f101fff2a684774cfc4a62abe7ad8fc0404ea19033ee0074beb",
       "closures": [
         {
+          "date": "2026-12-02",
+          "scope": "pm",
+          "quote": "ももちゃんタイム 1歳2か月迄 身体測定 ※バスタオル持参 13:00～16:00"
+        },
+        {
           "date": "2026-12-03",
           "scope": "all-day",
           "quote": "閉室日"
+        },
+        {
+          "date": "2026-12-04",
+          "scope": "pm",
+          "quote": "ももちゃんタイム 1歳2か月迄 13:00～16:00"
         },
         {
           "date": "2026-12-07",
@@ -2370,19 +2370,104 @@
           "quote": "クリスマス会準備・職員会議のため閉室"
         },
         {
+          "date": "2026-12-08",
+          "scope": "am",
+          "quote": "クリスマス会 Ⅰ部10:00入室 10:15～11:30"
+        },
+        {
+          "date": "2026-12-08",
+          "scope": "pm",
+          "quote": "クリスマス会 Ⅱ部13:15入室 13:30～14:45"
+        },
+        {
+          "date": "2026-12-09",
+          "scope": "am",
+          "quote": "英語であそぼ！ 10:00～12:00 ※10:15 開始 ※年齢制限なし"
+        },
+        {
+          "date": "2026-12-10",
+          "scope": "am",
+          "quote": "もぐもぐ教室 離乳食・材料費徴収 (食器・食具持参) 10:30～11:30 ※10:15入室"
+        },
+        {
+          "date": "2026-12-11",
+          "scope": "pm",
+          "quote": "わらべうたベビーマッサージ 対象：2か月～歩行開始前まで 13:00～16:00 ※13:15開始"
+        },
+        {
+          "date": "2026-12-14",
+          "scope": "am",
+          "quote": "12月生まれのお誕生日会🍰＆ハーフバースデー 10:00～11:30 ※10:15開始"
+        },
+        {
+          "date": "2026-12-14",
+          "scope": "pm",
+          "quote": "ももちゃんタイム 1歳2か月迄 13:00～16:00"
+        },
+        {
+          "date": "2026-12-15",
+          "scope": "am",
+          "quote": "英語で楽しくリトミック♪ 10:00～12:00 ※10:15開始 ★対象：6か月以上"
+        },
+        {
+          "date": "2026-12-16",
+          "scope": "am",
+          "quote": "人形劇 クリスマスバージョン 10:00～11:30 ※10:15開始"
+        },
+        {
+          "date": "2026-12-16",
+          "scope": "pm",
+          "quote": "1歳児ランド 1歳以上～2歳未満 13:00～16:00"
+        },
+        {
           "date": "2026-12-17",
           "scope": "all-day",
           "quote": "閉室日"
         },
         {
+          "date": "2026-12-18",
+          "scope": "pm",
+          "quote": "ももちゃんタイム ママのストレッチ 13:00～16:00 ※13:15開始"
+        },
+        {
+          "date": "2026-12-20",
+          "scope": "am",
+          "quote": "パパサンデーイベント「もっと、子どもと仲良く遊ぶ方法」講座 10:00～12:00 ※10:15開始"
+        },
+        {
+          "date": "2026-12-21",
+          "scope": "am",
+          "quote": "ケンちゃんじいちゃんと福話来さん 10:00～12:00 ※10：15開始 オンラインあり"
+        },
+        {
+          "date": "2026-12-21",
+          "scope": "pm",
+          "quote": "ももちゃんタイム ねんねのあかちゃん∔ピヨピヨランド 13:00～16:00 ※13:15開始"
+        },
+        {
           "date": "2026-12-22",
           "scope": "am",
-          "quote": "AM×"
+          "quote": "22.AM🚙×1～4 歯科衛生士講座 シリーズⅠ「むし歯のはなし」 10:00～12:00 ※10:15開始"
+        },
+        {
+          "date": "2026-12-22",
+          "scope": "pm",
+          "quote": "ももちゃんタイム『あかちゃんの発達講座Ⅱ』対象：あんよの前まで 13:00～16:00 ※13：15開始"
         },
         {
           "date": "2026-12-23",
           "scope": "am",
-          "quote": "AM×"
+          "quote": "23.🚙AM×1～3 作って遊ぼう！『手型アート クリスマス飾り』★1歳3か月以上 10:00～12:00 ※10:15開始"
+        },
+        {
+          "date": "2026-12-23",
+          "scope": "pm",
+          "quote": "ももちゃんタイム 1歳2か月迄『手型アート クリスマス飾り』13:30～16:00 ※13:45開始"
+        },
+        {
+          "date": "2026-12-24",
+          "scope": "am",
+          "quote": "世界のことばでこんにちは！ 10:00～12:00 ※10:15開始"
         },
         {
           "date": "2026-12-28",
@@ -2405,7 +2490,7 @@
           "quote": "年末年始 閉室日"
         }
       ],
-      "extractedAt": "2026-11-27T01:23:27.681Z"
+      "extractedAt": "2026-11-27T01:35:15.737Z"
     },
     {
       "id": "minuma-2026-12",
@@ -2416,12 +2501,12 @@
       "sha256": "6a4f91a2646f8a9712a064f9c7a3c4c51d44018fdf81a1cd359db5b547ce4e5c",
       "closures": [
         {
-          "date": "2026-12-08",
+          "date": "2026-12-10",
           "scope": "all-day",
-          "quote": "設備点検のため休室日"
+          "quote": "休室日"
         },
         {
-          "date": "2026-12-21",
+          "date": "2026-12-24",
           "scope": "all-day",
           "quote": "休室日"
         },
@@ -2441,7 +2526,7 @@
           "quote": "年末年始のお休み"
         }
       ],
-      "extractedAt": "2026-11-27T01:23:33.111Z"
+      "extractedAt": "2026-11-27T01:35:16.317Z"
     }
   ],
   "events": [
@@ -12590,6 +12675,20 @@
       "origin": "regular-hours"
     },
     {
+      "id": "hinadori-2026-12-01-hiroba",
+      "centerId": "hinadori",
+      "sourceDocumentId": "hinadori-2026-12",
+      "date": "2026-12-01",
+      "startTime": "09:00",
+      "endTime": "12:20",
+      "title": "子育て広場",
+      "description": "予約制 OPEN 好きな時間で入退室ができます。譲り合ってご利用ください。",
+      "targetAge": "生後6週～未就園のお子さまと保護者様",
+      "reservationRequired": true,
+      "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
       "id": "ipalette-2026-12-01-kamishibai",
       "centerId": "ipalette",
       "sourceDocumentId": "ipalette-2026-12",
@@ -12615,13 +12714,27 @@
       "targetAge": "乳幼児親子"
     },
     {
-      "id": "ipalette-2026-12-01-rinyushoku",
+      "id": "ipalette-2026-12-01-rinyushoku-1",
       "centerId": "ipalette",
       "sourceDocumentId": "ipalette-2026-12",
       "date": "2026-12-01",
       "startTime": "09:45",
       "endTime": "10:45",
-      "title": "離乳食講座",
+      "title": "離乳食講座 第1回",
+      "targetAge": "3〜6か月児の保護者",
+      "reservationRequired": true,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
+      "id": "ipalette-2026-12-01-rinyushoku-2",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-12",
+      "date": "2026-12-01",
+      "startTime": "11:00",
+      "endTime": "12:00",
+      "title": "離乳食講座 第2回",
+      "targetAge": "7〜11か月児の保護者",
       "reservationRequired": true,
       "kind": "event",
       "origin": "extracted"
@@ -12661,18 +12774,6 @@
       "targetAge": "０・１・２歳の親子"
     },
     {
-      "id": "minuma-2026-12-01-nenki-haihai",
-      "centerId": "minuma",
-      "sourceDocumentId": "minuma-2026-12",
-      "date": "2026-12-01",
-      "startTime": "13:30",
-      "endTime": "14:30",
-      "title": "ハイハイ期の赤ちゃんの時間",
-      "reservationRequired": false,
-      "kind": "event",
-      "origin": "extracted"
-    },
-    {
       "id": "nishi-2026-12-01-regular-hiroba",
       "centerId": "nishi",
       "sourceDocumentId": "nishi-2026-12",
@@ -12696,17 +12797,29 @@
       "origin": "regular-hours"
     },
     {
-      "id": "seiga-2026-12-01-measurement",
+      "id": "seiga-2026-12-01-hiroba",
       "centerId": "seiga",
       "sourceDocumentId": "seiga-2026-12",
       "date": "2026-12-01",
       "startTime": "07:30",
       "endTime": "12:30",
       "title": "せいがのひろば",
-      "description": "身体測定",
       "targetAge": "生後6週～のお子さまと保護者様1名",
       "reservationRequired": false,
       "kind": "hiroba",
+      "origin": "extracted"
+    },
+    {
+      "id": "seiga-2026-12-01-measurement",
+      "centerId": "seiga",
+      "sourceDocumentId": "seiga-2026-12",
+      "date": "2026-12-01",
+      "startTime": "07:30",
+      "endTime": "12:30",
+      "title": "身体測定",
+      "targetAge": "生後6週～のお子さまと保護者様1名",
+      "reservationRequired": false,
+      "kind": "event",
       "origin": "extracted"
     },
     {
@@ -12755,11 +12868,11 @@
       "date": "2026-12-02",
       "startTime": "09:00",
       "endTime": "12:20",
-      "title": "子育て支援ROOM",
+      "title": "子育て広場",
       "description": "予約制 OPEN 好きな時間で入退室ができます。譲り合ってご利用ください。",
       "targetAge": "生後6週～未就園のお子さまと保護者様",
       "reservationRequired": true,
-      "kind": "event",
+      "kind": "hiroba",
       "origin": "extracted"
     },
     {
@@ -12812,12 +12925,26 @@
       "origin": "extracted"
     },
     {
+      "id": "nishi-2026-12-02-morning-measurement",
+      "centerId": "nishi",
+      "sourceDocumentId": "nishi-2026-12",
+      "date": "2026-12-02",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "title": "みんなのひろば・身体測定",
+      "description": "身体測定あり",
+      "targetAge": "1歳3か月以上",
+      "reservationRequired": false,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
       "id": "nishi-2026-12-02-regular-hiroba",
       "centerId": "nishi",
       "sourceDocumentId": "nishi-2026-12",
       "date": "2026-12-02",
       "title": "みんなのひろば",
-      "description": "午前9:00～12:00 午後13:00～16:00",
+      "description": "午前9:00～12:00",
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours",
@@ -12985,6 +13112,18 @@
       "targetAge": "０・１・２歳の親子"
     },
     {
+      "id": "minuma-2026-12-03-nenki-haihai",
+      "centerId": "minuma",
+      "sourceDocumentId": "minuma-2026-12",
+      "date": "2026-12-03",
+      "startTime": "13:30",
+      "endTime": "14:30",
+      "title": "ハイハイ期の赤ちゃんの時間",
+      "reservationRequired": false,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
       "id": "omiya-2026-12-03-regular-hiroba",
       "centerId": "omiya",
       "sourceDocumentId": "omiya-2026-12",
@@ -13082,11 +13221,11 @@
       "date": "2026-12-04",
       "startTime": "09:00",
       "endTime": "12:20",
-      "title": "子育て支援ROOM",
+      "title": "子育て広場",
       "description": "予約制 OPEN 好きな時間で入退室ができます。譲り合ってご利用ください。",
       "targetAge": "生後6週～未就園のお子さまと保護者様",
       "reservationRequired": true,
-      "kind": "event",
+      "kind": "hiroba",
       "origin": "extracted"
     },
     {
@@ -13106,7 +13245,7 @@
       "centerId": "ipalette",
       "sourceDocumentId": "ipalette-2026-12",
       "date": "2026-12-04",
-      "startTime": "09:00",
+      "startTime": "09:30",
       "endTime": "17:30",
       "title": "スヌーズレン体験",
       "description": "五感をやさしくしげきする部屋。20分入れ替え制",
@@ -13157,8 +13296,8 @@
       "centerId": "minuma",
       "sourceDocumentId": "minuma-2026-12",
       "date": "2026-12-04",
-      "startTime": "13:40",
-      "endTime": "15:00",
+      "startTime": "14:40",
+      "endTime": "16:00",
       "title": "ベビベビとーく",
       "description": "ねんね期",
       "reservationRequired": true,
@@ -13184,7 +13323,7 @@
       "sourceDocumentId": "nishi-2026-12",
       "date": "2026-12-04",
       "title": "みんなのひろば",
-      "description": "午前9:00～12:00 午後13:00～16:00",
+      "description": "午前9:00～12:00",
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours",
@@ -13255,7 +13394,7 @@
       "centerId": "ipalette",
       "sourceDocumentId": "ipalette-2026-12",
       "date": "2026-12-05",
-      "startTime": "09:00",
+      "startTime": "09:30",
       "endTime": "16:00",
       "title": "スヌーズレン体験",
       "description": "五感をやさしくしげきする部屋。20分入れ替え制",
@@ -13352,11 +13491,12 @@
       "centerId": "ipalette",
       "sourceDocumentId": "ipalette-2026-12",
       "date": "2026-12-06",
-      "startTime": "09:00",
+      "startTime": "09:30",
       "endTime": "10:30",
       "title": "親子で運動ってたのしいね",
-      "targetAge": "幼児と保護者",
-      "reservationRequired": false,
+      "targetAge": "2歳〜年長と保護者",
+      "capacity": 10,
+      "reservationRequired": true,
       "kind": "event",
       "origin": "extracted"
     },
@@ -13558,18 +13698,6 @@
       "targetAge": "０・１・２歳の親子"
     },
     {
-      "id": "minuma-2026-12-07-kosodate-salon-momo",
-      "centerId": "minuma",
-      "sourceDocumentId": "minuma-2026-12",
-      "date": "2026-12-07",
-      "startTime": "09:00",
-      "endTime": "11:30",
-      "title": "子育てサロン もも",
-      "reservationRequired": true,
-      "kind": "event",
-      "origin": "extracted"
-    },
-    {
       "id": "minuma-2026-12-07-nenki-craft",
       "centerId": "minuma",
       "sourceDocumentId": "minuma-2026-12",
@@ -13651,11 +13779,11 @@
       "date": "2026-12-08",
       "startTime": "09:00",
       "endTime": "12:20",
-      "title": "子育て支援ROOM",
+      "title": "子育て広場",
       "description": "予約制 OPEN 好きな時間で入退室ができます。譲り合ってご利用ください。",
       "targetAge": "生後6週～未就園のお子さまと保護者様",
       "reservationRequired": true,
-      "kind": "event",
+      "kind": "hiroba",
       "origin": "extracted"
     },
     {
@@ -13666,6 +13794,7 @@
       "startTime": "10:15",
       "endTime": "11:15",
       "title": "ハワイアンリトミック",
+      "targetAge": "1歳6か月児〜2歳児",
       "reservationRequired": true,
       "kind": "event",
       "origin": "extracted"
@@ -13743,6 +13872,7 @@
       "endTime": "14:45",
       "title": "クリスマス会 Ⅱ部",
       "description": "サンタさんがプレゼントを持って来てくれるよ🎅 13:15入室 ※午前午後共に時間厳守",
+      "targetAge": "1歳2か月迄",
       "reservationRequired": true,
       "kind": "event",
       "origin": "extracted"
@@ -13756,21 +13886,10 @@
       "endTime": "11:30",
       "title": "クリスマス会 Ⅰ部",
       "description": "サンタさんがプレゼントを持って来てくれるよ🎅 10:00入室 ※午前午後共に時間厳守",
+      "targetAge": "1歳3か月以上",
       "reservationRequired": true,
       "kind": "event",
       "origin": "extracted"
-    },
-    {
-      "id": "nishi-2026-12-08-regular-hiroba",
-      "centerId": "nishi",
-      "sourceDocumentId": "nishi-2026-12",
-      "date": "2026-12-08",
-      "title": "みんなのひろば",
-      "description": "午前9:00～12:00 午後13:00～16:00",
-      "reservationRequired": false,
-      "kind": "hiroba",
-      "origin": "regular-hours",
-      "targetAge": "０～３歳未満 (３歳を迎えた年の３月まで利用可 )"
     },
     {
       "id": "omiya-2026-12-08-mushiba",
@@ -13840,11 +13959,11 @@
       "date": "2026-12-09",
       "startTime": "09:00",
       "endTime": "12:20",
-      "title": "子育て支援ROOM",
+      "title": "子育て広場",
       "description": "予約制 OPEN 好きな時間で入退室ができます。譲り合ってご利用ください。",
       "targetAge": "生後6週～未就園のお子さまと保護者様",
       "reservationRequired": true,
-      "kind": "event",
+      "kind": "hiroba",
       "origin": "extracted"
     },
     {
@@ -13900,6 +14019,18 @@
       "origin": "extracted"
     },
     {
+      "id": "minuma-2026-12-09-kosodate-salon-momo",
+      "centerId": "minuma",
+      "sourceDocumentId": "minuma-2026-12",
+      "date": "2026-12-09",
+      "startTime": "10:00",
+      "endTime": "11:30",
+      "title": "子育てサロン もも",
+      "reservationRequired": true,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
       "id": "nishi-2026-12-09-eigo",
       "centerId": "nishi",
       "sourceDocumentId": "nishi-2026-12",
@@ -13917,7 +14048,7 @@
       "sourceDocumentId": "nishi-2026-12",
       "date": "2026-12-09",
       "title": "みんなのひろば",
-      "description": "午前9:00～12:00 午後13:00～16:00",
+      "description": "午後13:00～16:00",
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours",
@@ -14029,10 +14160,9 @@
       "centerId": "ipalette",
       "sourceDocumentId": "ipalette-2026-12",
       "date": "2026-12-10",
-      "startTime": "09:00",
+      "startTime": "09:30",
       "endTime": "11:30",
       "title": "手押し車であそぼう",
-      "description": "バランス遊びや運動遊びをしましょう",
       "targetAge": "伝い歩きやよちよち歩きの乳幼児",
       "capacity": 7,
       "reservationRequired": false,
@@ -14074,15 +14204,16 @@
       "targetAge": "０・１・２歳の親子"
     },
     {
-      "id": "minuma-2026-12-10-nenki",
-      "centerId": "minuma",
-      "sourceDocumentId": "minuma-2026-12",
+      "id": "nishi-2026-12-10-afternoon-hiroba",
+      "centerId": "nishi",
+      "sourceDocumentId": "nishi-2026-12",
       "date": "2026-12-10",
-      "startTime": "14:40",
+      "startTime": "13:30",
       "endTime": "16:00",
-      "title": "ねんね期の赤ちゃんの時間",
+      "title": "みんなのひろば",
+      "description": "13:30～16:00",
       "reservationRequired": false,
-      "kind": "event",
+      "kind": "hiroba",
       "origin": "extracted"
     },
     {
@@ -14104,7 +14235,7 @@
       "sourceDocumentId": "nishi-2026-12",
       "date": "2026-12-10",
       "title": "みんなのひろば",
-      "description": "午前9:00～12:00 午後13:00～16:00",
+      "description": "午後13:00～16:00",
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours",
@@ -14164,11 +14295,11 @@
       "date": "2026-12-11",
       "startTime": "09:00",
       "endTime": "12:20",
-      "title": "子育て支援ROOM",
+      "title": "子育て広場",
       "description": "予約制 OPEN 好きな時間で入退室ができます。譲り合ってご利用ください。",
       "targetAge": "生後6週～未就園のお子さまと保護者様",
       "reservationRequired": true,
-      "kind": "event",
+      "kind": "hiroba",
       "origin": "extracted"
     },
     {
@@ -14249,7 +14380,7 @@
       "sourceDocumentId": "nishi-2026-12",
       "date": "2026-12-11",
       "title": "みんなのひろば",
-      "description": "午前9:00～12:00 午後13:00～16:00",
+      "description": "午前9:00～12:00",
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours",
@@ -14431,9 +14562,9 @@
       "startTime": "13:30",
       "endTime": "15:30",
       "title": "ミニくまでをつくろう",
-      "description": "オリジナルの熊手をつくり、福を招き入れましょう。申込：12/8（火）～定員に達する迄",
-      "targetAge": "2歳児と保護者",
-      "capacity": 12,
+      "description": "オリジナルの熊手をつくり、福を招き入れましょう。申込：11/29（日）～定員に達する迄",
+      "targetAge": "どなたでも",
+      "capacity": 24,
       "reservationRequired": true,
       "kind": "event",
       "origin": "extracted"
@@ -14610,19 +14741,6 @@
       "origin": "extracted"
     },
     {
-      "id": "minuma-2026-12-14-eigo",
-      "centerId": "minuma",
-      "sourceDocumentId": "minuma-2026-12",
-      "date": "2026-12-14",
-      "startTime": "11:20",
-      "endTime": "11:35",
-      "title": "えいごあそび",
-      "description": "手遊びや絵本など、英語にふれてみよう♪赤ちゃんからどうぞ",
-      "reservationRequired": true,
-      "kind": "event",
-      "origin": "extracted"
-    },
-    {
       "id": "minuma-2026-12-14-massage",
       "centerId": "minuma",
       "sourceDocumentId": "minuma-2026-12",
@@ -14660,18 +14778,6 @@
       "reservationRequired": true,
       "kind": "event",
       "origin": "extracted"
-    },
-    {
-      "id": "nishi-2026-12-14-regular-hiroba",
-      "centerId": "nishi",
-      "sourceDocumentId": "nishi-2026-12",
-      "date": "2026-12-14",
-      "title": "みんなのひろば",
-      "description": "午前9:00～12:00 午後13:00～16:00",
-      "reservationRequired": false,
-      "kind": "hiroba",
-      "origin": "regular-hours",
-      "targetAge": "０～３歳未満 (３歳を迎えた年の３月まで利用可 )"
     },
     {
       "id": "omiya-2026-12-14-regular-hiroba",
@@ -14715,11 +14821,11 @@
       "date": "2026-12-15",
       "startTime": "09:00",
       "endTime": "12:20",
-      "title": "子育て支援ROOM",
+      "title": "子育て広場",
       "description": "予約制 OPEN 好きな時間で入退室ができます。譲り合ってご利用ください。",
       "targetAge": "生後6週～未就園のお子さまと保護者様",
       "reservationRequired": true,
-      "kind": "event",
+      "kind": "hiroba",
       "origin": "extracted"
     },
     {
@@ -14730,10 +14836,9 @@
       "startTime": "10:00",
       "endTime": "12:00",
       "title": "ダブルケアカフェ＠あいぱれっと",
-      "description": "子育てと介護、子育てと障害児のケアなど、同時並行でケアを行っている方同士の交流の場です。申込：11/29（日）～定員に達する迄",
+      "description": "子育てと介護、子育てと障害児のケアなど、同時並行でケアを行っている方同士の交流の場です。出入り自由。お子さん同伴の場合は事前にお知らせください。",
       "targetAge": "ダブルケア当事者",
-      "capacity": 24,
-      "reservationRequired": true,
+      "reservationRequired": false,
       "kind": "event",
       "origin": "extracted"
     },
@@ -14812,26 +14917,14 @@
       "origin": "extracted"
     },
     {
-      "id": "minuma-2026-12-15-futago",
+      "id": "minuma-2026-12-15-eigo",
       "centerId": "minuma",
       "sourceDocumentId": "minuma-2026-12",
       "date": "2026-12-15",
-      "startTime": "10:00",
-      "endTime": "12:00",
-      "title": "ふたご・みつご・きょうだいサロン",
-      "reservationRequired": true,
-      "kind": "event",
-      "origin": "extracted"
-    },
-    {
-      "id": "minuma-2026-12-15-mama-stretch",
-      "centerId": "minuma",
-      "sourceDocumentId": "minuma-2026-12",
-      "date": "2026-12-15",
-      "startTime": "13:30",
-      "endTime": "14:30",
-      "title": "産後＆子育て中のからだを整えるストレッチ講座",
-      "description": "当プログラム初参加の方が優先です",
+      "startTime": "11:20",
+      "endTime": "11:35",
+      "title": "えいごあそび",
+      "description": "手遊びや絵本など、英語にふれてみよう♪赤ちゃんからどうぞ",
       "reservationRequired": true,
       "kind": "event",
       "origin": "extracted"
@@ -14842,7 +14935,7 @@
       "sourceDocumentId": "nishi-2026-12",
       "date": "2026-12-15",
       "title": "みんなのひろば",
-      "description": "午前9:00～12:00 午後13:00～16:00",
+      "description": "午後13:00～16:00",
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours",
@@ -14942,11 +15035,11 @@
       "date": "2026-12-16",
       "startTime": "09:00",
       "endTime": "12:20",
-      "title": "子育て支援ROOM",
+      "title": "子育て広場",
       "description": "予約制 OPEN 好きな時間で入退室ができます。譲り合ってご利用ください。",
       "targetAge": "生後6週～未就園のお子さまと保護者様",
       "reservationRequired": true,
-      "kind": "event",
+      "kind": "hiroba",
       "origin": "extracted"
     },
     {
@@ -15014,6 +15107,18 @@
       "origin": "extracted"
     },
     {
+      "id": "minuma-2026-12-16-futago",
+      "centerId": "minuma",
+      "sourceDocumentId": "minuma-2026-12",
+      "date": "2026-12-16",
+      "startTime": "10:00",
+      "endTime": "11:30",
+      "title": "ふたご・みつご・きょうだいサロン",
+      "reservationRequired": true,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
       "id": "nishi-2026-12-16-afternoon-1sai",
       "centerId": "nishi",
       "sourceDocumentId": "nishi-2026-12",
@@ -15037,18 +15142,6 @@
       "reservationRequired": true,
       "kind": "event",
       "origin": "extracted"
-    },
-    {
-      "id": "nishi-2026-12-16-regular-hiroba",
-      "centerId": "nishi",
-      "sourceDocumentId": "nishi-2026-12",
-      "date": "2026-12-16",
-      "title": "みんなのひろば",
-      "description": "午前9:00～12:00 午後13:00～16:00",
-      "reservationRequired": false,
-      "kind": "hiroba",
-      "origin": "regular-hours",
-      "targetAge": "０～３歳未満 (３歳を迎えた年の３月まで利用可 )"
     },
     {
       "id": "omiya-2026-12-16-regular-hiroba",
@@ -15314,11 +15407,11 @@
       "date": "2026-12-18",
       "startTime": "09:00",
       "endTime": "12:20",
-      "title": "子育て支援ROOM",
+      "title": "子育て広場",
       "description": "予約制 OPEN 好きな時間で入退室ができます。譲り合ってご利用ください。",
       "targetAge": "生後6週～未就園のお子さまと保護者様",
       "reservationRequired": true,
-      "kind": "event",
+      "kind": "hiroba",
       "origin": "extracted"
     },
     {
@@ -15385,6 +15478,19 @@
       "origin": "extracted"
     },
     {
+      "id": "minuma-2026-12-18-mama-stretch",
+      "centerId": "minuma",
+      "sourceDocumentId": "minuma-2026-12",
+      "date": "2026-12-18",
+      "startTime": "13:30",
+      "endTime": "14:30",
+      "title": "産後＆子育て中のからだを整えるストレッチ講座",
+      "description": "当プログラム初参加の方が優先です",
+      "reservationRequired": true,
+      "kind": "event",
+      "origin": "extracted"
+    },
+    {
       "id": "nishi-2026-12-18-afternoon-momochan-stretch",
       "centerId": "nishi",
       "sourceDocumentId": "nishi-2026-12",
@@ -15403,7 +15509,7 @@
       "sourceDocumentId": "nishi-2026-12",
       "date": "2026-12-18",
       "title": "みんなのひろば",
-      "description": "午前9:00～12:00 午後13:00～16:00",
+      "description": "午前9:00～12:00",
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours",
@@ -15467,6 +15573,20 @@
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours"
+    },
+    {
+      "id": "ipalette-2026-12-19-asobi",
+      "centerId": "ipalette",
+      "sourceDocumentId": "ipalette-2026-12",
+      "date": "2026-12-19",
+      "startTime": "13:30",
+      "endTime": "16:00",
+      "title": "あそびひろば",
+      "description": "バランス遊びや運動遊びをしましょう",
+      "targetAge": "幼児と保護者",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "extracted"
     },
     {
       "id": "ipalette-2026-12-19-regular-hiroba",
@@ -15538,6 +15658,19 @@
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours"
+    },
+    {
+      "id": "seiga-2026-12-19-hiroba",
+      "centerId": "seiga",
+      "sourceDocumentId": "seiga-2026-12",
+      "date": "2026-12-19",
+      "startTime": "07:30",
+      "endTime": "12:30",
+      "title": "せいがのひろば",
+      "targetAge": "生後6週～のお子さまと保護者様1名",
+      "reservationRequired": false,
+      "kind": "hiroba",
+      "origin": "extracted"
     },
     {
       "id": "urawa-2026-12-19-regular-hiroba",
@@ -15681,7 +15814,7 @@
       "sourceDocumentId": "nishi-2026-12",
       "date": "2026-12-20",
       "title": "みんなのひろば",
-      "description": "午前9:00～12:00 午後13:00～16:00",
+      "description": "午後13:00～16:00",
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours",
@@ -15841,8 +15974,8 @@
       "centerId": "minuma",
       "sourceDocumentId": "minuma-2026-12",
       "date": "2026-12-21",
-      "startTime": "14:40",
-      "endTime": "16:00",
+      "startTime": "13:40",
+      "endTime": "15:00",
       "title": "ねんね期の赤ちゃんの時間",
       "reservationRequired": false,
       "kind": "event",
@@ -15886,18 +16019,6 @@
       "reservationRequired": true,
       "kind": "event",
       "origin": "extracted"
-    },
-    {
-      "id": "nishi-2026-12-21-regular-hiroba",
-      "centerId": "nishi",
-      "sourceDocumentId": "nishi-2026-12",
-      "date": "2026-12-21",
-      "title": "みんなのひろば",
-      "description": "午前9:00～12:00 午後13:00～16:00",
-      "reservationRequired": false,
-      "kind": "hiroba",
-      "origin": "regular-hours",
-      "targetAge": "０～３歳未満 (３歳を迎えた年の３月まで利用可 )"
     },
     {
       "id": "seiga-2026-12-21-hiroba",
@@ -15954,8 +16075,10 @@
       "startTime": "10:00",
       "endTime": "11:00",
       "title": "コンシェルジュといっしょ",
-      "description": "ゲーム・ふれあい遊び、絵本の読み語りなど、一緒に楽しい時間を過ごしましょう",
-      "reservationRequired": false,
+      "description": "ゲーム・ふれあい遊び、絵本の読み語りなど、一緒に楽しい時間を過ごしましょう。申込：12/8（火）～定員に達する迄",
+      "targetAge": "2歳児と保護者",
+      "capacity": 12,
+      "reservationRequired": true,
       "kind": "event",
       "origin": "extracted"
     },
@@ -16052,18 +16175,6 @@
       "origin": "extracted"
     },
     {
-      "id": "nishi-2026-12-22-regular-hiroba",
-      "centerId": "nishi",
-      "sourceDocumentId": "nishi-2026-12",
-      "date": "2026-12-22",
-      "title": "みんなのひろば",
-      "description": "午後13:00～16:00",
-      "reservationRequired": false,
-      "kind": "hiroba",
-      "origin": "regular-hours",
-      "targetAge": "０～３歳未満 (３歳を迎えた年の３月まで利用可 )"
-    },
-    {
       "id": "omiya-2026-12-22-regular-hiroba",
       "centerId": "omiya",
       "sourceDocumentId": "omiya-2026-12",
@@ -16132,11 +16243,11 @@
       "date": "2026-12-23",
       "startTime": "09:00",
       "endTime": "12:20",
-      "title": "子育て支援ROOM",
+      "title": "子育て広場",
       "description": "予約制 OPEN 好きな時間で入退室ができます。譲り合ってご利用ください。",
       "targetAge": "生後6週～未就園のお子さまと保護者様",
       "reservationRequired": true,
-      "kind": "event",
+      "kind": "hiroba",
       "origin": "extracted"
     },
     {
@@ -16227,18 +16338,6 @@
       "reservationRequired": true,
       "kind": "event",
       "origin": "extracted"
-    },
-    {
-      "id": "nishi-2026-12-23-regular-hiroba",
-      "centerId": "nishi",
-      "sourceDocumentId": "nishi-2026-12",
-      "date": "2026-12-23",
-      "title": "みんなのひろば",
-      "description": "午後13:00～16:00",
-      "reservationRequired": false,
-      "kind": "hiroba",
-      "origin": "regular-hours",
-      "targetAge": "０～３歳未満 (３歳を迎えた年の３月まで利用可 )"
     },
     {
       "id": "omiya-2026-12-23-measurement",
@@ -16356,10 +16455,9 @@
       "centerId": "ipalette",
       "sourceDocumentId": "ipalette-2026-12",
       "date": "2026-12-24",
-      "startTime": "09:00",
+      "startTime": "09:30",
       "endTime": "11:30",
       "title": "手押し車であそぼう",
-      "description": "バランス遊びや運動遊びをしましょう",
       "targetAge": "伝い歩きやよちよち歩きの乳幼児",
       "capacity": 7,
       "reservationRequired": false,
@@ -16406,7 +16504,7 @@
       "sourceDocumentId": "nishi-2026-12",
       "date": "2026-12-24",
       "title": "みんなのひろば",
-      "description": "午前9:00～12:00 午後13:00～16:00",
+      "description": "午後13:00～16:00",
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "regular-hours",
@@ -16515,11 +16613,11 @@
       "date": "2026-12-25",
       "startTime": "09:00",
       "endTime": "12:20",
-      "title": "子育て支援ROOM",
+      "title": "子育て広場",
       "description": "予約制 OPEN 好きな時間で入退室ができます。譲り合ってご利用ください。",
       "targetAge": "生後6週～未就園のお子さまと保護者様",
       "reservationRequired": true,
-      "kind": "event",
+      "kind": "hiroba",
       "origin": "extracted"
     },
     {
@@ -17027,8 +17125,8 @@
       "centerId": "minuma",
       "sourceDocumentId": "minuma-2026-12",
       "date": "2026-12-28",
-      "startTime": "14:40",
-      "endTime": "16:00",
+      "startTime": "13:40",
+      "endTime": "15:00",
       "title": "ねんね期の赤ちゃんの時間",
       "reservationRequired": false,
       "kind": "event",
@@ -17095,6 +17193,6 @@
       "origin": "regular-hours"
     }
   ],
-  "generatedAt": "2026-11-27T01:23:40.326Z",
+  "generatedAt": "2026-11-27T01:35:20.781Z",
   "version": "1.0.0"
 }

@@ -1,5 +1,19 @@
 [
   {
+    "id": "nishi-2026-12-02-morning-measurement",
+    "centerId": "nishi",
+    "sourceDocumentId": "nishi-2026-12",
+    "date": "2026-12-02",
+    "startTime": "09:00",
+    "endTime": "12:00",
+    "title": "みんなのひろば・身体測定",
+    "description": "身体測定あり",
+    "targetAge": "1歳3か月以上",
+    "reservationRequired": false,
+    "kind": "event",
+    "origin": "extracted"
+  },
+  {
     "id": "nishi-2026-12-02-afternoon-momochan",
     "centerId": "nishi",
     "sourceDocumentId": "nishi-2026-12",
@@ -35,6 +49,7 @@
     "endTime": "11:30",
     "title": "クリスマス会 Ⅰ部",
     "description": "サンタさんがプレゼントを持って来てくれるよ🎅 10:00入室 ※午前午後共に時間厳守",
+    "targetAge": "1歳3か月以上",
     "reservationRequired": true,
     "kind": "event",
     "origin": "extracted"
@@ -48,6 +63,7 @@
     "endTime": "14:45",
     "title": "クリスマス会 Ⅱ部",
     "description": "サンタさんがプレゼントを持って来てくれるよ🎅 13:15入室 ※午前午後共に時間厳守",
+    "targetAge": "1歳2か月迄",
     "reservationRequired": true,
     "kind": "event",
     "origin": "extracted"
@@ -75,6 +91,19 @@
     "description": "離乳食・材料費徴収 (食器・食具持参) 10:15入室",
     "reservationRequired": true,
     "kind": "event",
+    "origin": "extracted"
+  },
+  {
+    "id": "nishi-2026-12-10-afternoon-hiroba",
+    "centerId": "nishi",
+    "sourceDocumentId": "nishi-2026-12",
+    "date": "2026-12-10",
+    "startTime": "13:30",
+    "endTime": "16:00",
+    "title": "みんなのひろば",
+    "description": "13:30～16:00",
+    "reservationRequired": false,
+    "kind": "hiroba",
     "origin": "extracted"
   },
   {
