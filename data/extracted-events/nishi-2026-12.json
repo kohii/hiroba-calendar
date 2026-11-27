@@ -102,6 +102,7 @@
     "endTime": "16:00",
     "title": "みんなのひろば",
     "description": "13:30～16:00",
+    "targetAge": "０～３歳未満 (３歳を迎えた年の３月まで利用可 )",
     "reservationRequired": false,
     "kind": "hiroba",
     "origin": "extracted"

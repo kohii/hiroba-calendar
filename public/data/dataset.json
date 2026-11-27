@@ -2390,6 +2390,11 @@
           "quote": "もぐもぐ教室 離乳食・材料費徴収 (食器・食具持参) 10:30～11:30 ※10:15入室"
         },
         {
+          "date": "2026-12-10",
+          "scope": "pm",
+          "quote": "みんなのひろば 13:30～16:00"
+        },
+        {
           "date": "2026-12-11",
           "scope": "pm",
           "quote": "わらべうたベビーマッサージ 対象：2か月～歩行開始前まで 13:00～16:00 ※13:15開始"
@@ -2490,7 +2495,7 @@
           "quote": "年末年始 閉室日"
         }
       ],
-      "extractedAt": "2026-11-27T01:35:15.737Z"
+      "extractedAt": "2026-11-27T01:38:52.672Z"
     },
     {
       "id": "minuma-2026-12",
@@ -14212,6 +14217,7 @@
       "endTime": "16:00",
       "title": "みんなのひろば",
       "description": "13:30～16:00",
+      "targetAge": "０～３歳未満 (３歳を迎えた年の３月まで利用可 )",
       "reservationRequired": false,
       "kind": "hiroba",
       "origin": "extracted"
@@ -14228,18 +14234,6 @@
       "reservationRequired": true,
       "kind": "event",
       "origin": "extracted"
-    },
-    {
-      "id": "nishi-2026-12-10-regular-hiroba",
-      "centerId": "nishi",
-      "sourceDocumentId": "nishi-2026-12",
-      "date": "2026-12-10",
-      "title": "みんなのひろば",
-      "description": "午後13:00～16:00",
-      "reservationRequired": false,
-      "kind": "hiroba",
-      "origin": "regular-hours",
-      "targetAge": "０～３歳未満 (３歳を迎えた年の３月まで利用可 )"
     },
     {
       "id": "omiya-2026-12-10-regular-hiroba",
@@ -17193,6 +17187,6 @@
       "origin": "regular-hours"
     }
   ],
-  "generatedAt": "2026-11-27T01:35:20.781Z",
+  "generatedAt": "2026-11-27T01:38:53.337Z",
   "version": "1.0.0"
 }
